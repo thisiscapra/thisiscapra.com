@@ -6,7 +6,7 @@
 
 get_header(); ?>
 <div class="content">
-	<div class="highlightContent">
+	<div class="highlight-content">
 		<h2>We'd like to share with you.</h2>
 		<h4>We believe that educating and nurturing others is the best way to make everyone's life a little better.  So, this is the place you'll find information about things we've found insightful, practical or interesting. We also might talk about our company sometimes too.</h4>
 	</div>

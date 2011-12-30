@@ -83,11 +83,11 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <body <?php body_class('ie6'); ?>> <!--<![endif]-->
 
   <div id="container">
-    <header id="mainHead" role="banner">
+    <header id="masthead" role="banner">
     	<div class="content">
 	      	<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 	    
-		    <nav id="mainNav">
+		    <nav id="main-nav">
 		    	<ul>
 					<li>
 						<a href="<?php bloginfo('url') ?>/expertise" title="expertise" 
@@ -107,12 +107,9 @@
 						<a href="<?php bloginfo('url') ?>/contact" title="contact" 
 						class="<?php if ( is_page("contact")) {?>selected<?php } ?>">contact</a>
 					</li>
-					<li>
-					 <a href="#">menu</a>
-					</li>
 				</ul>
-			</nav>
+			</nav><!-- end main-nav -->
 		</div>
-	</header>
+	</header><!-- end masthead -->
 
 
