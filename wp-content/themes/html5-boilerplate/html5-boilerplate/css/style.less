@@ -218,9 +218,12 @@ button {  width: auto; overflow: visible; }
  * 
  * © 2011 Bitstream Inc
 */
-/*---------colors---------------------------------------*/
+
+/* --- colours --- */
 
 @link: #158e84;
+@button-hover: #08302d;
+
 
  @font-face {font-family: 'Minister-Boo';src: url('webfonts/16BB58_0.eot');src: url('webfonts/16BB58_0.eot?#iefix') format('embedded-opentype'),url('webfonts/16BB58_0.woff') format('woff'),url('webfonts/16BB58_0.ttf') format('truetype'),url('webfonts/16BB58_0.svg#wf') format('svg');}
 
@@ -247,7 +250,7 @@ h2{
 	font-size: 55px;
 	letter-spacing: -0.02em;
 	line-height: 1em;
-	.big{
+	&.big{
   	font-size: 75px;
   	line-height: 0.9em;
   	margin-top: 30px;
@@ -257,7 +260,6 @@ h2{
   	letter-spacing: -0.08em;
   }
 }
-
 
 *+html h2.big{font-size: 70px;}
 
@@ -341,26 +343,19 @@ nav#mainNav{
 	overflow: hidden;
 	float: right;
 	margin-top: 30px;
+	ul li{
+  	float: left;
+    a{
+    	font-size: 23px;
+    	padding: 20px;
+    	color: #000;
+      &.selected, &.blog, &.projects, &:hover{
+        color: @link;
+      }
+    }
+  }
 }
 
-nav#mainNav ul li{
-	float: left;
-}
-
-nav#mainNav ul li a{
-	font-size: 23px;
-	padding: 20px;
-	color: #000;
-}
-
-nav#mainNav ul li a.selected, body.single nav#mainNav ul li a.blog,
-body.blog nav#mainNav ul li a.blog, .page-template-projectsingle-php nav#mainNav ul li a.projects{
-	color: @link;
-}
-
-nav#mainNav ul li a:hover{
-	color: #158e84;
-}
 
 a.button, input[type=submit]{
 	border: none;
@@ -375,10 +370,9 @@ a.button, input[type=submit]{
  	-moz-border-radius: 5px; 	
  	-webkit-border-radius: 5px;
  	text-decoration: none;
-}
-
-a.button:hover, input[type=submit]:hover{
-	background-color: #08302d;
+  &:hover{
+  	background-color: @button-hover;
+  }
 }
 
 /*footer*/

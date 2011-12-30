@@ -372,7 +372,7 @@ button {
  * 
  * © 2011 Bitstream Inc
 */
-/*---------colors---------------------------------------*/
+/* --- colours --- */
 @font-face {
   font-family: 'Minister-Boo';
   src: url('webfonts/16BB58_0.eot');
@@ -401,7 +401,7 @@ h2 {
   letter-spacing: -0.02em;
   line-height: 1em;
 }
-h2 .big {
+h2.big {
   font-size: 75px;
   line-height: 0.9em;
   margin-top: 30px;
@@ -492,11 +492,8 @@ nav#mainNav ul li a {
   color: #000;
 }
 nav#mainNav ul li a.selected,
-body.single nav#mainNav ul li a.blog,
-body.blog nav#mainNav ul li a.blog,
-.page-template-projectsingle-php nav#mainNav ul li a.projects {
-  color: #158e84;
-}
+nav#mainNav ul li a.blog,
+nav#mainNav ul li a.projects,
 nav#mainNav ul li a:hover {
   color: #158e84;
 }
