@@ -302,8 +302,7 @@ colours
 
 @white: #fff;
 @black: #000;
-@link: #137e75;
-@nav-link: #158e84;
+@link: #158e84;
 @button-hover: #08302d;
 @border-green: #2e837c;
 @light-grey: #c7c7c7;
@@ -323,28 +322,7 @@ global mixins
   position: relative;
 }
 
-.content{
-	width: 960px;
-	margin: 0 auto;
-}
-
-a{
-	text-decoration: none;
-	color: @link;
-}
-
-br.clear{
-	clear: both;
-}
-
-/* text styles */
-strong, b{
-	font-weight: 900;
-}
-
-.small, a.small{
-	font-size: 0.85em;
-}
+strong, b{font-weight: 900;}
 
 /* ------------------------
 body
@@ -367,17 +345,7 @@ global container
 headings
 ------------------------ */
 
-h1 a{
-	background: url(../../images/logo.jpg) no-repeat 0 0;
-	width: 260px;
-	height: 78px;
-	display: block;
-	text-indent: -99999px;
-	float: left;
-	margin-top: 6px;
-}
-
-h2, h3, h4, nav#main-nav ul li a, a.button, input[type=submit]{
+h2, h3, h4, nav#mainNav ul li a, a.button, input[type=submit]{
 	font-family: 'Minister', Georgia, serif;
 	font-weight: 100;
 }
@@ -433,79 +401,24 @@ h6{
 	}
 }
 
-/* ------------------------
-footer
------------------------- */
 
-footer#main-footer{
-	background: @black url(../../images/footer_hill.gif) repeat-x 50%  0;
-	min-height: 300px;
-	padding-top: 100px;
+
+
+a{
+	text-decoration: none;
+	color: #137e75;
+}
+
+br.clear{
 	clear: both;
-	color: @light-grey;
-	h2{
-		font-size: 30px;
-		color: @dark-grey;
-	}
-	ul{
-		overflow: hidden;
-	}
-	li{
-		list-style: none;
-		float: left;
-		width: 190px;
-		margin-right: 50px;
-	}
-	li.last{
-		margin-right: 0;
-	}
-	p{
-		margin-top: 20px;
-	}
-	p.registration{
-		margin: 70px 0 40px;
-		text-align: center;
-		color: @dark-grey;
-	}
 }
 
-/* social media */
-ul.twitter{
-	list-style: none outside none;
-	margin: 0;
+.small, a.small{font-size: 0.85em;}
+
+.content{
+	width: 960px;
+	margin: 0 auto;
 }
-
-a.linked-in-link, a.facebook-link, a.twit-link{
-	background: url("../../images/social_links.png") no-repeat scroll 0 0 transparent;
-	display: block;
-	float: left;
-	height: 32px;
-	margin: 20px 0 10px;	
-	opacity: 0.85;
-	text-indent: -99999px;
-	width: 35px;
-	&:hover{
-		opacity: 1;
-	}
-}
-
-a.facebook-link{
-	background-position: -36px 0;
-}
-
-a.twit-link{
-	background-position: -72px 0;
-}
-
-a.twitter-link, .twitter-timestamp{
-	color: #777777;
-	font-size: 10px;
-}
-
-
-/* ------------------------
-main & navigation
------------------------- */
 
 #main{
 	margin-top: 50px;
@@ -513,7 +426,7 @@ main & navigation
 	float: left;
 }
 
-header#masthead{
+header#mainHead{
 	border-top: 3px solid @border-green;
 	border-bottom: 1px solid @black;
 	overflow: hidden;
@@ -521,7 +434,18 @@ header#masthead{
 	height: 100px;
 }
 
-nav#main-nav{
+
+h1 a{
+	background: url(../../images/logo.jpg) no-repeat 0 0;
+	width: 260px;
+	height: 78px;
+	display: block;
+	text-indent: -99999px;
+	float: left;
+	margin-top: 6px;
+}
+
+nav#mainNav{
 	overflow: hidden;
 	float: right;
 	margin-top: 30px;
@@ -532,11 +456,12 @@ nav#main-nav{
     	padding: 20px;
     	color: @black;
       &.selected, &.blog, &.projects, &:hover{
-        color: @nav-link;
+        color: @link;
       }
     }
   }
 }
+
 
 a.button, input[type=submit]{
 	border: none;
@@ -554,6 +479,74 @@ a.button, input[type=submit]{
   }
 }
 
+/*footer*/
+
+
+footer#mainFooter{
+	background: @black url(../../images/footer_hill.gif) repeat-x 50%  0;
+	min-height: 300px;
+	padding-top: 100px;
+	clear: both;
+	color: @light-grey;
+}
+
+ul.twitter{
+	list-style: none;
+	margin: 0;
+}
+
+a.linkedInLink, a.facebookLink, a.twitterLink{
+	width: 35px;
+	height: 32px;
+	display: block;
+	float: left;
+	background: url(../../images/social_links.png) no-repeat 0 0;
+	text-indent: -99999px;
+	opacity: 0.85;
+	margin: 20px 0 10px;
+}
+
+a.facebookLink{background-position: -36px 0;}
+a.twitterLink{background-position: -72px 0;}
+
+a.linkedInLink:hover, a.facebookLink:hover, a.twitterLink:hover{
+	opacity: 1;
+}
+
+a.twitter-link, .twitter-timestamp{
+	font-size: 10px;
+	color: @dark-grey;
+}
+
+footer#mainFooter h2{
+	font-size: 30px;
+	color: @dark-grey;
+}
+
+footer#mainFooter p{
+	margin-top: 20px;
+}
+
+footer#mainFooter ul{
+	overflow: hidden;
+}
+
+footer#mainFooter li{
+	list-style: none;
+	float: left;
+	width: 190px;
+	margin-right: 50px;
+}
+
+footer#mainFooter li.last{
+	margin-right: 0;
+}
+
+footer#mainFooter p.registration{
+	margin: 70px 0 40px;
+	text-align: center;
+	color: @dark-grey;
+}
 
 
 /*start page*/
