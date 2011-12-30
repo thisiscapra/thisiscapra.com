@@ -1,17 +1,20 @@
-/* 
+/* --------------------------------------------------
+Site: Capra Limited
+URL: http://thisiscapra.com/
+Updated: 30.12.2011
+-------------------------------------------------- */
+/* -------------------------------------------------- 
   style.css contains a reset, font normalization and some base styles.
-  
   credit is left where credit is due.
   additionally, much inspiration was taken from these projects:
     yui.yahooapis.com/2.8.1/build/base/base.css
     camendesign.com/design/
-    praegnanz.de/weblog/htmlcssjs-kickstart
-*/
-/* 
+    praegnanz.de/weblog/htmlcssjs-kickstart */
+/*
   html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
   v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
   html5doctor.com/html-5-reset-stylesheet/
-*/
+-------------------------------------------------- */
 html,
 body,
 div,
@@ -151,15 +154,15 @@ input, select {
   vertical-align: middle;
 }
 /* END RESET CSS */
-/*
+/* -------------------------------------------------- 
 fonts.css from the YUI Library: developer.yahoo.com/yui/
-          Please refer to developer.yahoo.com/yui/fonts/ for font sizing percentages
+  Please refer to developer.yahoo.com/yui/fonts/ for font sizing percentages
 
 There are three custom edits:
  * remove arial, helvetica from explicit font stack
  * make the line-height relative and unit-less
  * remove the pre, code styles
-*/
+-------------------------------------------------- */
 body {
   font: 13px sans-serif;
   *font-size: small;
@@ -174,25 +177,24 @@ select, input, textarea {
   font: 99% sans-serif;
 }
 /* normalize monospace sizing 
- * en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome
- */
+ * en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
 pre,
 code,
 kbd,
 samp {
   font-family: monospace, sans-serif;
 }
-/* 
- * minimal base styles 
- */
-/* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */body,
+/* minimal base styles */
+/* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+body,
 select,
 input,
 textarea {
   color: #000;
 }
 /* Headers (h1,h2,etc) have no default font-size or margin,
-   you'll want to define those yourself. *//* www.aestheticallyloyal.com/public/optimize-legibility/ */h1,
+   you'll want to define those yourself. *//* www.aestheticallyloyal.com/public/optimize-legibility/ */
+h1,
 h2,
 h3,
 h4,
@@ -252,7 +254,7 @@ pre {
 
 }
 /* align checkboxes, radios, text inputs with their label
-   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css */
 input[type="radio"] {
   vertical-align: text-bottom;
 }
@@ -302,9 +304,7 @@ button {
 .ie7 img {
   -ms-interpolation-mode: bicubic;
 }
-/* 
- * Non-semantic helper classes 
- */
+/* Non-semantic helper classes */
 /* for image replacement */
 .ir {
   display: block;
@@ -350,9 +350,13 @@ button {
 .clearfix {
   display: block;
 }
-/* Primary Styles
-    Author: Kat Neville, http://thisiscapra.com
- */
+/* --------------------------------------------------
+Primary Styles
+Author: Kat Neville, http://thisiscapra.com/
+-------------------------------------------------- */
+/* ------------------------
+@font-face
+------------------------ */
 /* @license
  * MyFonts Webfont Build ID 1489752, 2011-11-10T08:49:56-0500
  * 
@@ -372,21 +376,35 @@ button {
  * 
  * © 2011 Bitstream Inc
 */
-/* --- colours --- */
 @font-face {
   font-family: 'Minister-Boo';
   src: url('webfonts/16BB58_0.eot');
   src: url('webfonts/16BB58_0.eot?#iefix') format('embedded-opentype'), url('webfonts/16BB58_0.woff') format('woff'), url('webfonts/16BB58_0.ttf') format('truetype'), url('webfonts/16BB58_0.svg#wf') format('svg');
 }
+/* ------------------------
+colours
+------------------------ */
+/* ------------------------
+global mixins
+------------------------ */
+strong, b {
+  font-weight: 900;
+}
+/* ------------------------
+body
+------------------------ */
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 200;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: #ffffff;
 }
-strong, b {
-  font-weight: 900;
-}
+/* ------------------------
+global container
+------------------------ */
+/* ------------------------
+headings
+------------------------ */
 h2,
 h3,
 h4,
@@ -410,11 +428,9 @@ h2.big {
 h2 span.tighten {
   letter-spacing: -0.08em;
 }
+/* IE 7 */
 * + html h2.big {
   font-size: 70px;
-}
-h2 span.tighten {
-  letter-spacing: -0.08em;
 }
 h3 {
   font-size: 35px;
@@ -426,6 +442,7 @@ h4 {
   line-height: 1.2em;
   margin: 15px 0 10px;
 }
+/* IE 7 */
 * + html h4 {
   font-size: 19px;
 }
@@ -506,9 +523,12 @@ a.button, input[type=submit] {
   margin: 5px 0;
   display: inline-block;
   line-height: 1em;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  behavior: url(../javascripts/PIE.htc);
+  position: relative;
   text-decoration: none;
 }
 a.button:hover, input[type=submit]:hover {
