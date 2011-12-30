@@ -770,14 +770,8 @@ cf-ol li input[type="url"] {
 .contact-form label.not-required, cf-ol label.not-required {
   font-weight: 200;
 }
-.contact-form label.not-required.two-lines, cf-ol label.not-required.two-lines {
+.contact-form label.two-lines, cf-ol label.two-lines {
   line-height: 0.8em;
-}
-.contact-form label small, cf-ol label small {
-  font-size: 9px;
-  color: #777777;
-  line-height: 0.8em;
-  font-weight: 200;
 }
 .link-love {
   margin-left: 100px;
@@ -843,7 +837,7 @@ projects
 .project-nav ul li a:hover, .project-nav ul li a.selected {
   opacity: 1;
 }
-.project-nav ul li a:hover img, .project-nav ul li a.selected img {
+.project-nav ul li a img {
   border: 1px solid #dfdfdf;
 }
 #project-single {
