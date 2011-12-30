@@ -300,9 +300,14 @@ Author: Kat Neville, http://thisiscapra.com/
 colours
 ------------------------ */
 
+@white: #fff;
+@black: #000;
 @link: #158e84;
 @button-hover: #08302d;
-@white: #fff;
+@border-green: #2e837c;
+@light-grey: #c7c7c7;
+@lighter-grey: #dfdfdf;
+@dark-grey: #777;
 
 /* ------------------------
 global mixins
@@ -422,8 +427,8 @@ br.clear{
 }
 
 header#mainHead{
-	border-top: 3px solid #2e837c;
-	border-bottom: 1px solid #000;
+	border-top: 3px solid @border-green;
+	border-bottom: 1px solid @black;
 	overflow: hidden;
 	padding: 20px 0 5px;
 	height: 100px;
@@ -449,7 +454,7 @@ nav#mainNav{
     a{
     	font-size: 23px;
     	padding: 20px;
-    	color: #000;
+    	color: @black;
       &.selected, &.blog, &.projects, &:hover{
         color: @link;
       }
@@ -460,8 +465,8 @@ nav#mainNav{
 
 a.button, input[type=submit]{
 	border: none;
-	background: #000;
-	color: #fff;
+	background: @black;
+	color: @white;
 	font-size: 20px;
 	padding: 9px 12px 8px;
 	margin: 5px 0;
@@ -478,11 +483,11 @@ a.button, input[type=submit]{
 
 
 footer#mainFooter{
-	background: #000 url(../../images/footer_hill.gif) repeat-x 50%  0;
+	background: @black url(../../images/footer_hill.gif) repeat-x 50%  0;
 	min-height: 300px;
 	padding-top: 100px;
 	clear: both;
-	color: #c7c7c7;
+	color: @light-grey;
 }
 
 ul.twitter{
@@ -510,12 +515,12 @@ a.linkedInLink:hover, a.facebookLink:hover, a.twitterLink:hover{
 
 a.twitter-link, .twitter-timestamp{
 	font-size: 10px;
-	color: #777;
+	color: @dark-grey;
 }
 
 footer#mainFooter h2{
 	font-size: 30px;
-	color: #777;
+	color: @dark-grey;
 }
 
 footer#mainFooter p{
@@ -540,7 +545,7 @@ footer#mainFooter li.last{
 footer#mainFooter p.registration{
 	margin: 70px 0 40px;
 	text-align: center;
-	color: #777;
+	color: @dark-grey;
 }
 
 
@@ -586,7 +591,7 @@ body.home .homeContent{
 /*blog pages!*/
 article{
 	padding: 20px 0;
-	border-bottom: 1px solid #dfdfdf;
+	border-bottom: 1px solid @lighter-grey;
 }
 
 article p a{
@@ -616,7 +621,7 @@ article footer a, .categories a, .comment-reply-link{
 	font-size: 10px;
 	text-transform: uppercase;
 	background: #f2f2f2;
-	border: 1px solid #dfdfdf;
+	border: 1px solid @lighter-grey;
 	display: inline-block;
 	line-height: 1em;
 	padding: 5px 5px 1px;
@@ -694,7 +699,7 @@ a.rss:hover{background-position: 0 -39px;}
 
 .contactForm label small, .linklove{
 	font-size: 9px;
-	color: #777;
+	color: @dark-grey;
 	line-height: 0.8em;
 	font-weight: 200;
 }
@@ -712,7 +717,7 @@ a.rss:hover{background-position: 0 -39px;}
 .contactForm li input[type="text"], .contactForm li input[type="email"], .contactForm li input[type="url"],
 .cf-ol li input[type="text"]{
 	width: 235px;
-	border: 1px solid #dfdfdf;
+	border: 1px solid @lighter-grey;
 	font-size: 1.2em;
 	padding: 5px;
 }
@@ -721,7 +726,7 @@ a.rss:hover{background-position: 0 -39px;}
 	font-family: Helvetica, Arial, sans-serif;
 	width: 410px;
 	height: 150px;
-	border: 1px solid #dfdfdf;
+	border: 1px solid @lighter-grey;
 	font-size: 1.2em;
 	padding: 5px;
 	font-weight: 200;
@@ -746,7 +751,7 @@ a.rss:hover{background-position: 0 -39px;}
 }
 
 .commentlist img.avatar{
-	border: 3px solid #000;
+	border: 3px solid @black;
 	float: left;
 	margin-right: 20px;
 }
@@ -757,7 +762,7 @@ a.rss:hover{background-position: 0 -39px;}
 
 .commentlist time{
 	font-size: 10px;
-	color: #777;
+	color: @dark-grey;
 }
 
 .commentlist p, .commentlist nav{
@@ -778,7 +783,7 @@ a.rss:hover{background-position: 0 -39px;}
 /*projects*/
 
 .projectNav{
-	border-bottom: 1px solid #dfdfdf;
+	border-bottom: 1px solid @lighter-grey;
 }
 
 .projectNav ul{
@@ -797,7 +802,7 @@ a.rss:hover{background-position: 0 -39px;}
 }
 
 .projectNav ul li a img{
-	border: 1px solid #dfdfdf;
+	border: 1px solid @lighter-grey;
 }
 
 .projectNav ul li a:hover, .projectNav ul li a.selected{
@@ -831,11 +836,11 @@ a.rss:hover{background-position: 0 -39px;}
 }
 
 .projectsBox{
-	background-color: #fff;
+	background-color: @white;
 	width: 940px;
 	height: 520px;
-	border: 10px solid #000;
-	border-bottom: 33px solid #000;
+	border: 10px solid @black;
+	border-bottom: 33px solid @black;
 	position: relative;
 	margin: 20px 0 30px;
 }
@@ -850,7 +855,7 @@ a.rss:hover{background-position: 0 -39px;}
 }
 
 .hentry .alignleft{
-	border: 8px solid #000;
+	border: 8px solid @black;
 	margin: 20px 30px 20px -100px;
 	display: block;
 	float: left;
@@ -869,8 +874,8 @@ a.rss:hover{background-position: 0 -39px;}
 /*this is for the projects overview page and for the three featured projects on the homepage*/
 .page-template-projects-php .wp-caption, .page-template-startpage-php .wp-caption{
 	display: block;
-	border: 8px solid #000;
-	background-color: #000;
+	border: 8px solid @black;
+	background-color: @black;
 	width: 215px !important;
 	height: 215px;
 	position: relative;
@@ -883,7 +888,7 @@ a.rss:hover{background-position: 0 -39px;}
 }
 
 .page-template-projects-php .wp-caption-text, .page-template-startpage-php .wp-caption-text{
-	color: #fff;
+	color: @white;
 	margin: 0;
 	width: 195px;
 	background: url(../../images/black.png) repeat 0 0;
@@ -950,7 +955,7 @@ ul.team li.third{
 }
 
 ul.team img{
-	border: 8px solid #000;
+	border: 8px solid @black;
 }
 
 ul.team h4{

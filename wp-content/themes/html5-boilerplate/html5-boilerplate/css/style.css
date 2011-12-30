@@ -481,7 +481,7 @@ br.clear {
 }
 header#mainHead {
   border-top: 3px solid #2e837c;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000000;
   overflow: hidden;
   padding: 20px 0 5px;
   height: 100px;
@@ -506,7 +506,7 @@ nav#mainNav ul li {
 nav#mainNav ul li a {
   font-size: 23px;
   padding: 20px;
-  color: #000;
+  color: #000000;
 }
 nav#mainNav ul li a.selected,
 nav#mainNav ul li a.blog,
@@ -516,8 +516,8 @@ nav#mainNav ul li a:hover {
 }
 a.button, input[type=submit] {
   border: none;
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
   font-size: 20px;
   padding: 9px 12px 8px;
   margin: 5px 0;
@@ -567,11 +567,11 @@ a.linkedInLink:hover, a.facebookLink:hover, a.twitterLink:hover {
 }
 a.twitter-link, .twitter-timestamp {
   font-size: 10px;
-  color: #777;
+  color: #777777;
 }
 footer#mainFooter h2 {
   font-size: 30px;
-  color: #777;
+  color: #777777;
 }
 footer#mainFooter p {
   margin-top: 20px;
@@ -591,7 +591,7 @@ footer#mainFooter li.last {
 footer#mainFooter p.registration {
   margin: 70px 0 40px;
   text-align: center;
-  color: #777;
+  color: #777777;
 }
 /*start page*/
 .highlightContent {
@@ -719,7 +719,7 @@ a.rss:hover {
 }
 .contactForm label small, .linklove {
   font-size: 9px;
-  color: #777;
+  color: #777777;
   line-height: 0.8em;
   font-weight: 200;
 }
@@ -767,7 +767,7 @@ a.rss:hover {
   margin: 0;
 }
 .commentlist img.avatar {
-  border: 3px solid #000;
+  border: 3px solid #000000;
   float: left;
   margin-right: 20px;
 }
@@ -776,7 +776,7 @@ a.rss:hover {
 }
 .commentlist time {
   font-size: 10px;
-  color: #777;
+  color: #777777;
 }
 .commentlist p, .commentlist nav {
   margin-left: 75px;
@@ -833,11 +833,11 @@ a.rss:hover {
   overflow: hidden;
 }
 .projectsBox {
-  background-color: #fff;
+  background-color: #ffffff;
   width: 940px;
   height: 520px;
-  border: 10px solid #000;
-  border-bottom: 33px solid #000;
+  border: 10px solid #000000;
+  border-bottom: 33px solid #000000;
   position: relative;
   margin: 20px 0 30px;
 }
@@ -849,7 +849,7 @@ a.rss:hover {
   margin: 0;
 }
 .hentry .alignleft {
-  border: 8px solid #000;
+  border: 8px solid #000000;
   margin: 20px 30px 20px -100px;
   display: block;
   float: left;
@@ -866,8 +866,8 @@ a.rss:hover {
 /*this is for the projects overview page and for the three featured projects on the homepage*/
 .page-template-projects-php .wp-caption, .page-template-startpage-php .wp-caption {
   display: block;
-  border: 8px solid #000;
-  background-color: #000;
+  border: 8px solid #000000;
+  background-color: #000000;
   width: 215px !important;
   height: 215px;
   position: relative;
@@ -878,7 +878,7 @@ a.rss:hover {
   margin-right: 0;
 }
 .page-template-projects-php .wp-caption-text, .page-template-startpage-php .wp-caption-text {
-  color: #fff;
+  color: #ffffff;
   margin: 0;
   width: 195px;
   background: url(../../images/black.png) repeat 0 0;
@@ -937,7 +937,7 @@ ul.team li.third {
   margin-right: 0;
 }
 ul.team img {
-  border: 8px solid #000;
+  border: 8px solid #000000;
 }
 ul.team h4 {
   margin-bottom: 0;
