@@ -25,7 +25,7 @@
     <div><?php next_comments_link() ?></div>
   </nav>
 
-  <ol class="commentlist">
+  <ol class="comment-list">
   <?php wp_list_comments('type=comment&callback=mytheme_comment'); ?>
   </ol>
 
@@ -55,7 +55,7 @@
   <div class="cancel-comment-reply">
     <small><?php cancel_comment_reply_link(); ?></small>
   </div>
-<ul class="contactForm">
+<ul class="contact-form">
   <?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
   <p>You must be <a href="<?php echo wp_login_url( get_permalink() ); ?>">logged in</a> to post a comment.</p>
   <?php else : ?>

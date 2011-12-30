@@ -574,10 +574,7 @@ nav#main-nav ul li a {
   padding: 20px;
   color: #000000;
 }
-nav#main-nav ul li a.selected,
-nav#main-nav ul li a.blog,
-nav#main-nav ul li a.projects,
-nav#main-nav ul li a:hover {
+nav#main-nav ul li a.selected, nav#main-nav ul li a:hover {
   color: #158e84;
 }
 a.button, input[type=submit] {
@@ -620,7 +617,7 @@ start page
   height: 1200px;
   overflow: visible;
   position: relative;
-  top: 100px;
+  top: 200px;
   z-index: -1;
 }
 /* IE 7 */
@@ -631,7 +628,8 @@ body.page-template-projects-php .content {
   margin-bottom: 100px;
 }
 .home-content {
-  margin-top: -600px;
+  margin-top: -500px;
+  padding-bottom: 100px;
 }
 /* IE 7 */
 * + html body.home .home-content {
@@ -699,7 +697,7 @@ article footer ul {
 .categories a:hover, .comment-reply-link:hover {
   background-color: #fafafa;
 }
-.page-template-projectsingle-php article, .page-template-expertise-php article, .page-template-startpage-php article {
+.page-template-project-single-php article, .page-template-expertise-php article, .page-template-startpage-php article {
   border-bottom: none;
 }
 aside#sidebar {
@@ -731,49 +729,27 @@ a.rss:hover {
 /* ------------------------
 comments
 ------------------------ */
-.contactForm {
+.contact-form, cf-ol {
   list-style: none;
   margin: 20px 0;
 }
-.cf-ol {
-  list-style: none;
-  margin: 20px 0 0;
-}
-.contactForm li, .cf-ol li {
+.contact-form li, cf-ol li {
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
 }
-.contactForm label, .cf-ol label {
-  width: 100px;
-  float: left;
-  font-weight: bold;
-}
-.contactForm label small, .linklove {
-  font-size: 9px;
-  color: #777777;
-  line-height: 0.8em;
-  font-weight: 200;
-}
-.linklove {
-  margin-left: 100px;
-}
-.contactForm label.notRequired, .cf-ol #li--3 label {
-  font-weight: 200;
-}
-.contactForm label.twoLines {
-  line-height: 0.8em;
-}
-.contactForm li input[type="text"],
-.contactForm li input[type="email"],
-.contactForm li input[type="url"],
-.cf-ol li input[type="text"] {
+.contact-form li input[type="text"],
+cf-ol li input[type="text"],
+.contact-form li input[type="email"],
+cf-ol li input[type="email"],
+.contact-form li input[type="url"],
+cf-ol li input[type="url"] {
   width: 235px;
   border: 1px solid #dfdfdf;
   font-size: 1.2em;
   padding: 5px;
 }
-.contactForm textarea, .cf-ol textarea {
+.contact-form textarea, cf-ol textarea {
   font-family: Helvetica, Arial, sans-serif;
   width: 410px;
   height: 150px;
@@ -783,73 +759,104 @@ comments
   font-weight: 200;
   line-height: 1.5em;
 }
-#allowed_tags {
+.contact-form input#submit, cf-ol input#submit {
+  margin-left: 100px;
+}
+.contact-form label, cf-ol label {
+  width: 100px;
+  float: left;
+  font-weight: bold;
+}
+.contact-form label.not-required, cf-ol label.not-required {
+  font-weight: 200;
+}
+.contact-form label.not-required.two-lines, cf-ol label.not-required.two-lines {
+  line-height: 0.8em;
+}
+.contact-form label small, cf-ol label small {
+  font-size: 9px;
+  color: #777777;
+  line-height: 0.8em;
+  font-weight: 200;
+}
+.link-love {
+  margin-left: 100px;
+  font-size: 9px;
+  color: #777777;
+  line-height: 0.8em;
+  font-weight: 200;
+}
+#allowed-tags {
   margin-left: 100px;
   font-size: 10px;
   width: 420px;
 }
-.contactForm input#submit, #sendbutton {
+#send-button {
   margin-left: 100px;
-}
-#sendbutton {
   margin-top: 0;
 }
-.commentlist {
+.comment-list {
   list-style: none;
   margin: 0;
 }
-.commentlist img.avatar {
+.comment-list img.avatar {
   border: 3px solid #000000;
   float: left;
   margin-right: 20px;
 }
-.commentlist h4 {
+.comment-list h4 {
   margin-top: 0;
 }
-.commentlist time {
+.comment-list time {
   font-size: 10px;
   color: #777777;
 }
-.commentlist p, .commentlist nav {
+.comment-list p, .comment-list nav {
   margin-left: 75px;
 }
-.commentlist .children {
+.comment-list .children {
   list-style: none;
   margin: 0;
 }
-.commentlist .children li {
+.comment-list .children li {
   padding-left: 30px;
   background: url(../../images/arrow.png) no-repeat 0 30px;
 }
-/*projects*/
-.projectNav {
+/* ------------------------
+projects
+------------------------ */
+.project-nav {
   border-bottom: 1px solid #dfdfdf;
 }
-.projectNav ul {
+.project-nav ul {
   width: 960px;
   margin: 5px auto -2px;
   overflow: hidden;
 }
-.projectNav ul li {
+.project-nav ul li {
   float: left;
   margin-right: 5px;
 }
-.projectNav ul li a {
+.project-nav ul li a {
   opacity: 0.2;
 }
-.projectNav ul li a img {
-  border: 1px solid #dfdfdf;
-}
-.projectNav ul li a:hover, .projectNav ul li a.selected {
+.project-nav ul li a:hover, .project-nav ul li a.selected {
   opacity: 1;
 }
-#projectSingle {
+.project-nav ul li a:hover img, .project-nav ul li a.selected img {
+  border: 1px solid #dfdfdf;
+}
+#project-single {
   margin: 40px auto;
 }
 .columns {
   overflow: hidden;
   list-style: none;
   margin: 0;
+}
+.columns ul {
+  margin: 0 0 10px 0;
+  overflow: hidden;
 }
 .columns li {
   width: 290px;
@@ -860,11 +867,7 @@ comments
   width: 200px;
   margin-right: 0;
 }
-.columns ul {
-  margin: 0 0 10px 0;
-  overflow: hidden;
-}
-.projectsBox {
+.projects-box {
   background-color: #ffffff;
   width: 940px;
   height: 520px;
@@ -873,14 +876,16 @@ comments
   position: relative;
   margin: 20px 0 30px;
 }
-/*post images*/
+/* ------------------------
+post images
+------------------------ */
 .size-medium {
   float: left;
 }
 .size-full {
   margin: 0;
 }
-.hentry .alignleft {
+.hentry .align-left {
   border: 8px solid #000000;
   margin: 20px 30px 20px -100px;
   display: block;
@@ -927,10 +932,10 @@ comments
   display: block;
   font-weight: normal;
 }
-.page-template-projects-php .wp-caption:hover .wp-caption-text, .page-template-startpage-php .wp-caption:hover .wp-caption-text {
+.page-template-projects-php .wp-caption:hover .wp-caption-text {
   opacity: 1;
 }
-a.previous, a.next {
+a.previous {
   background: url(../../images/portfolio_arrow.png) no-repeat 0 -18px;
   width: 20px;
   height: 20px;
@@ -938,35 +943,35 @@ a.previous, a.next {
   text-indent: -99999px;
   float: right;
 }
+a.previous:hover {
+  background-position: 0 0;
+}
 a.next {
+  background: url(../../images/portfolio_arrow.png) no-repeat 0 -18px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  text-indent: -99999px;
+  float: right;
   background-position: -22px -18px;
 }
 a.next:hover {
   background-position: -22px 0;
-}
-a.previous:hover {
-  background-position: 0 0;
 }
 img.spinner {
   position: absolute;
   top: 230px;
   left: 450px;
 }
-/*team*/
+/* ------------------------
+the team
+------------------------ */
 ul.team {
   overflow: hidden;
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
-}
-ul.team li {
-  width: 230px;
-  margin: 30px 70px 30px 0;
-  float: left;
-}
-ul.team li.third {
-  margin-right: 0;
 }
 ul.team img {
   border: 8px solid #000000;
@@ -977,10 +982,19 @@ ul.team h4 {
 ul.team h6 {
   margin: 0 0 10px;
 }
-/* 
- * print styles
- * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/ 
- */
+ul.team li {
+  width: 230px;
+  margin: 30px 70px 30px 0;
+  float: left;
+}
+ul.team li.third {
+  margin-right: 0;
+}
+/* --------------------------------------------------
+Print Styles
+inlined to avoid required HTTP connection
+www.phpied.com/delay-loading-your-print-css/ 
+-------------------------------------------------- */
 @media print {
   * {
     background: transparent !important;
@@ -1019,9 +1033,7 @@ ul.team h6 {
     page-break-after: avoid;
   }
 }
-/*
- * Media queries for responsive design
- */
+/* Media queries for responsive design */
 @media all and (orientation: portrait) {
   /* Style adjustments for portrait mode goes here */
 }

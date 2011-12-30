@@ -5,7 +5,7 @@ Template Name: projects-single
 
 get_header(); ?>
 
-<nav class="projectNav">
+<nav class="project-nav">
 	<ul>
 		<li>
 			<a class="<?php if ( is_page("totomerch")) {?>selected<?php } ?>" href="<?php bloginfo('url') ?>/projects/totomerch">
@@ -100,14 +100,14 @@ get_header(); ?>
 	</ul>
 </nav>
 
-<div id="projectSingle" role="main" class="content">
+<div id="project-single" role="main" class="content">
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   <article class="post" id="post-<?php the_ID(); ?>">
   
     <?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
 
-    <div class="projectsBox">
+    <div class="projects-box">
       	<img id="x_portfolio" class="size-full" src="<?php echo get_post_meta($post->ID, "images", true); ?>" width="940" height="520" />
 	    <a id="x_next" class="next" href="#">Next</a>
 	    <a id="x_prev"  class="previous" href="#">Previous</a>
