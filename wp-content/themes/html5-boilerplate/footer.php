@@ -4,7 +4,7 @@
  * @subpackage HTML5_Boilerplate
  */
 ?>
-  <footer id="mainFooter">
+  <footer id="main-footer">
   	<div class="content">
   	
   	
@@ -30,9 +30,9 @@
 	  		</li>
 	  		<li>
 		      	<h2>see us socially</h2>
-		      	<a class="linkedInLink" href="http://www.linkedin.com/companies/capra-limited">linkedIn</a>
-		      	<a class="facebookLink" href="http://en-gb.facebook.com/pages/Capra-Limited/141585689219947">Facebook</a>
-		      	<a class="twitterLink" href="http://twitter.com/thisiscapra">twitter</a>
+		      	<a class="linked-in-link" href="http://www.linkedin.com/companies/capra-limited">linkedIn</a>
+		      	<a class="facebook-link" href="http://en-gb.facebook.com/pages/Capra-Limited/141585689219947">Facebook</a>
+		      	<a class="twit-link" href="http://twitter.com/thisiscapra">twitter</a>
 		      	<br class="clear" />
 		      	<?php twitter_messages('thisiscapra', 1, true, true, 'by @kassy4', false, false, false); ?>
 	      	</li>
