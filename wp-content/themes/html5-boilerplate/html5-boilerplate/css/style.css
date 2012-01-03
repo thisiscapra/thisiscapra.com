@@ -377,7 +377,7 @@ Author: Kat Neville, http://thisiscapra.com/
  * © 2011 Bitstream Inc
 */
 @font-face {
-  font-family: 'Minister-Boo';
+  font-family: 'Minister';
   src: url('webfonts/16BB58_0.eot');
   src: url('webfonts/16BB58_0.eot?#iefix') format('embedded-opentype'), url('webfonts/16BB58_0.woff') format('woff'), url('webfonts/16BB58_0.ttf') format('truetype'), url('webfonts/16BB58_0.svg#wf') format('svg');
 }
@@ -563,11 +563,11 @@ start page
   top: -320px;
 }
 body.page-template-projects-php .content {
-  margin-bottom: 100px;
+  margin-bottom: 0px;
 }
 .home-content {
-  margin-top: -500px;
-  padding-bottom: 100px;
+  margin-top: -550px;
+  padding-bottom: 30px;
 }
 /* IE 7 */
 * + html body.home .home-content {
@@ -969,7 +969,7 @@ footer#main-footer p {
   margin-top: 20px;
 }
 footer#main-footer p.registration {
-  margin: 70px 0 40px;
+  margin: 70px 0 0px;
   text-align: center;
   color: #777777;
 }
