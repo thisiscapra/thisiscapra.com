@@ -1,11 +1,11 @@
 /* --------------------------------------------------
 Site: Capra Limited
 URL: http://thisiscapra.com/
-Updated: 30.12.2011
+Updated: 03.01.2012
 -------------------------------------------------- */
 
 /* -------------------------------------------------- 
-  style.css contains a reset, font normalization and some base styles.
+  style.css contains a reset, font normalisation and some base styles.
   credit is left where credit is due.
   additionally, much inspiration was taken from these projects:
     yui.yahooapis.com/2.8.1/build/base/base.css
@@ -434,75 +434,6 @@ h6{
 }
 
 /* ------------------------
-footer
------------------------- */
-
-footer#main-footer{
-	background: @black url(../../images/footer_hill.gif) repeat-x 50%  0;
-	min-height: 300px;
-	padding-top: 100px;
-	clear: both;
-	color: @light-grey;
-	h2{
-		font-size: 30px;
-		color: @dark-grey;
-	}
-	ul{
-		overflow: hidden;
-	}
-	li{
-		list-style: none;
-		float: left;
-		width: 190px;
-		margin-right: 50px;
-		&.last{
-			margin-right: 0;
-		}
-	}
-	p{
-		margin-top: 20px;
-		&.registration{
-			margin: 70px 0 40px;
-			text-align: center;
-			color: @dark-grey;
-		}
-	}
-}
-
-/* social media */
-ul.twitter{
-	list-style: none outside none;
-	margin: 0;
-}
-
-a.linked-in-link, a.facebook-link, a.twit-link{
-	background: url("../../images/social_links.png") no-repeat scroll 0 0 transparent;
-	display: block;
-	float: left;
-	height: 32px;
-	margin: 20px 0 10px;	
-	opacity: 0.85;
-	text-indent: -99999px;
-	width: 35px;
-	&:hover{
-		opacity: 1;
-	}
-}
-
-a.facebook-link{
-	background-position: -36px 0;
-}
-
-a.twit-link{
-	background-position: -72px 0;
-}
-
-a.twitter-link, .twitter-timestamp{
-	color: #777777;
-	font-size: 10px;
-}
-
-/* ------------------------
 masthead & navigation
 ------------------------ */
 
@@ -594,6 +525,94 @@ body.page-template-projects-php .content{
 /* IE 7 */
 *+html body.home .home-content{
 	margin-top: -990px;
+}
+
+/* ------------------------
+projects
+------------------------ */
+
+.project-nav{
+	border-bottom: 1px solid @lighter-grey;
+	ul{
+		width: 960px;
+		margin: 5px auto -2px;
+		overflow: hidden;
+		li{
+			float: left;
+			margin-right: 5px;
+			a{
+				opacity: 0.2;
+				&:hover, &.selected{
+				opacity: 1;
+				}
+				img{
+					border: 1px solid @lighter-grey;
+				}
+			}
+		}
+	}
+}
+
+#project-single{
+	margin: 40px auto;
+}
+
+.columns{
+	overflow: hidden;
+	list-style: none;
+	margin: 0;
+	ul{
+		margin: 0 0 10px 0;
+		overflow: hidden;
+	}
+	li{
+		width: 290px;
+		margin: 0 80px 0 0;
+		float: left;
+		&.last{
+			width: 200px;
+			margin-right: 0;
+		}
+	}
+}
+
+.projects-box{
+	background-color: @white;
+	width: 940px;
+	height: 520px;
+	border: 10px solid @black;
+	border-bottom: 33px solid @black;
+	position: relative;
+	margin: 20px 0 30px;
+}
+
+/* ------------------------
+expertise (the team)
+------------------------ */
+
+ul.team {
+	overflow: hidden;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	img{
+		border: 8px solid @black;
+	}
+	h4{
+		margin-bottom: 0;
+	}
+	h6{
+		margin: 0 0 10px;
+	}
+	li{
+		width: 230px;
+		margin: 30px 70px 30px 0;
+		float: left;
+		&.third{
+			margin-right: 0;	
+		}
+	}
 }
 
 /* ------------------------
@@ -696,153 +715,117 @@ a.rss{
 }
 
 /* ------------------------
-comments
+comments & contact form
 ------------------------ */
 
-.contact-form, cf-ol{
-	list-style: none;
+.contact-form{
+	list-style: none outside none;
 	margin: 20px 0;
+}
+
+.cf-ol{
+  list-style: none outside none;
+  margin: 20px 0 0;
+}
+
+.contact-form, .cf-ol{
 	li{
-		margin: 0;
-		padding: 0;
-		margin-bottom: 10px;
-		input[type="text"], input[type="email"], input[type="url"]{
-			width: 235px;
+	  margin: 0 0 10px;
+	  padding: 0;
+  	input[type="text"], input[type="email"], input[type="url"]{
 			border: 1px solid @lighter-grey;
 			font-size: 1.2em;
 			padding: 5px;
+			width: 235px;
 		}
-	}
-	textarea{
-		font-family: Helvetica, Arial, sans-serif;
-		width: 410px;
-		height: 150px;
-		border: 1px solid @lighter-grey;
-		font-size: 1.2em;
-		padding: 5px;
-		font-weight: 200;
-		line-height: 1.5em;
-	}
-	input#submit{
-		margin-left: 100px;
-	}
-	label{
-		width: 100px;
-		float: left;
-		font-weight: bold;
-		&.not-required{
-			font-weight: 200;
-		}
-		&.two-lines{
+  }
+  input#submit{
+  margin-left: 100px;
+  }
+  label{
+	  float: left;
+	  font-weight: bold;
+	  width: 100px;
+	  &.two-lines {
 			line-height: 0.8em;
 		}
+		&.notRequired{
+  		font-weight: 200;
+		}
+	  small{
+	    color: @dark-grey;
+		  font-size: 9px;
+		  font-weight: 200;
+		  line-height: 0.8em;
+	  }
+	}
+	textarea{
+	  border: 1px solid #DFDFDF;
+	  font-family: Helvetica,Arial,sans-serif;
+	  font-size: 1.2em;
+	  font-weight: 200;
+	  height: 150px;
+	  line-height: 1.5em;
+	  padding: 5px;
+	  width: 410px;
 	}
 }
 
-.link-love{
+.linklove{
+  color: @dark-grey;
+  font-size: 9px;
+  font-weight: 200;
+  line-height: 0.8em;
 	margin-left: 100px;
-	font-size: 9px;
-	color: @dark-grey;
-	line-height: 0.8em;
-	font-weight: 200;
+}
+
+.cf-ol #li--3 label{
+  font-weight: 200;
+}
+
+#allowed_tags{
+  font-size: 10px;
+  margin-left: 100px;
+  width: 420px;
+}
+
+#sendbutton{
+  margin-top: 0;
+  margin-left: 100px;
 }
 
 #allowed-tags{
-	margin-left: 100px;
-	font-size: 10px;
-	width: 420px;
-}
-
-#send-button{
-	margin-left: 100px;
-	margin-top: 0;
+margin-left: 100px;
+font-size: 10px;
+width: 420px;
 }
 
 .comment-list{
-	list-style: none;
-	margin: 0;
-	img.avatar{
-		border: 3px solid @black;
-		float: left;
-		margin-right: 20px;
+  list-style: none outside none;
+  margin: 0;
+  img.avatar{
+	  border: 3px solid #000000;
+	  float: left;
+	  margin-right: 20px;
 	}
 	h4{
-		margin-top: 0;
+  	margin-top: 0;
 	}
 	time{
-		font-size: 10px;
-		color: @dark-grey;
+	  color: #777777;
+	  font-size: 10px;
 	}
 	p, nav{
 		margin-left: 75px;
 	}
-	.children{
-		list-style: none;
+	&.children {
+		list-style: none outside none;
 		margin: 0;
-		li{
-			padding-left: 30px;
-			background: url(../../images/arrow.png) no-repeat 0 30px;
+		li {
+		  background: url("../../images/arrow.png") no-repeat scroll 0 30px transparent;
+		  padding-left: 30px;
 		}
 	}
-}
-
-/* ------------------------
-projects
------------------------- */
-
-.project-nav{
-	border-bottom: 1px solid @lighter-grey;
-	ul{
-		width: 960px;
-		margin: 5px auto -2px;
-		overflow: hidden;
-		li{
-			float: left;
-			margin-right: 5px;
-			a{
-				opacity: 0.2;
-				&:hover, &.selected{
-				opacity: 1;
-				}
-				img{
-					border: 1px solid @lighter-grey;
-				}
-			}
-		}
-	}
-}
-
-#project-single{
-	margin: 40px auto;
-}
-
-.columns{
-	overflow: hidden;
-	list-style: none;
-	margin: 0;
-	ul{
-		margin: 0 0 10px 0;
-		overflow: hidden;
-	}
-	li{
-		width: 290px;
-		margin: 0 80px 0 0;
-		float: left;
-		&.last{
-			width: 200px;
-			margin-right: 0;
-		}
-	}
-}
-
-.projects-box{
-	background-color: @white;
-	width: 940px;
-	height: 520px;
-	border: 10px solid @black;
-	border-bottom: 33px solid @black;
-	position: relative;
-	margin: 20px 0 30px;
 }
 
 /* ------------------------
@@ -857,7 +840,7 @@ post images
 	margin: 0;	
 }
 
-.hentry .align-left{
+.hentry .alignleft{
 	border: 8px solid @black;
 	margin: 20px 30px 20px -100px;
 	display: block;
@@ -948,32 +931,72 @@ img.spinner{
 }
 
 /* ------------------------
-the team
+footer
 ------------------------ */
 
-ul.team {
-	overflow: hidden;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	img{
-		border: 8px solid @black;
+footer#main-footer{
+	background: @black url(../../images/footer_hill.gif) repeat-x 50%  0;
+	min-height: 300px;
+	padding-top: 100px;
+	clear: both;
+	color: @light-grey;
+	h2{
+		font-size: 30px;
+		color: @dark-grey;
 	}
-	h4{
-		margin-bottom: 0;
-	}
-	h6{
-		margin: 0 0 10px;
+	ul{
+		overflow: hidden;
 	}
 	li{
-		width: 230px;
-		margin: 30px 70px 30px 0;
+		list-style: none;
 		float: left;
-		&.third{
-			margin-right: 0;	
+		width: 190px;
+		margin-right: 50px;
+		&.last{
+			margin-right: 0;
 		}
 	}
+	p{
+		margin-top: 20px;
+		&.registration{
+			margin: 70px 0 40px;
+			text-align: center;
+			color: @dark-grey;
+		}
+	}
+}
+
+/* social media */
+ul.twitter{
+	list-style: none outside none;
+	margin: 0;
+}
+
+a.linked-in-link, a.facebook-link, a.twit-link{
+	background: url("../../images/social_links.png") no-repeat scroll 0 0 transparent;
+	display: block;
+	float: left;
+	height: 32px;
+	margin: 20px 0 10px;	
+	opacity: 0.85;
+	text-indent: -99999px;
+	width: 35px;
+	&:hover{
+		opacity: 1;
+	}
+}
+
+a.facebook-link{
+	background-position: -36px 0;
+}
+
+a.twit-link{
+	background-position: -72px 0;
+}
+
+a.twitter-link, .twitter-timestamp{
+	color: #777777;
+	font-size: 10px;
 }
 
 /* --------------------------------------------------

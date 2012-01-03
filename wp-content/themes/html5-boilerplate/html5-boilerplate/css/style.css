@@ -1,10 +1,10 @@
 /* --------------------------------------------------
 Site: Capra Limited
 URL: http://thisiscapra.com/
-Updated: 30.12.2011
+Updated: 03.01.2012
 -------------------------------------------------- */
 /* -------------------------------------------------- 
-  style.css contains a reset, font normalization and some base styles.
+  style.css contains a reset, font normalisation and some base styles.
   credit is left where credit is due.
   additionally, much inspiration was taken from these projects:
     yui.yahooapis.com/2.8.1/build/base/base.css
@@ -485,68 +485,6 @@ h6 strong {
   font-weight: 600;
 }
 /* ------------------------
-footer
------------------------- */
-footer#main-footer {
-  background: #000000 url(../../images/footer_hill.gif) repeat-x 50% 0;
-  min-height: 300px;
-  padding-top: 100px;
-  clear: both;
-  color: #c7c7c7;
-}
-footer#main-footer h2 {
-  font-size: 30px;
-  color: #777777;
-}
-footer#main-footer ul {
-  overflow: hidden;
-}
-footer#main-footer li {
-  list-style: none;
-  float: left;
-  width: 190px;
-  margin-right: 50px;
-}
-footer#main-footer li.last {
-  margin-right: 0;
-}
-footer#main-footer p {
-  margin-top: 20px;
-}
-footer#main-footer p.registration {
-  margin: 70px 0 40px;
-  text-align: center;
-  color: #777777;
-}
-/* social media */
-ul.twitter {
-  list-style: none outside none;
-  margin: 0;
-}
-a.linked-in-link, a.facebook-link, a.twit-link {
-  background: url("../../images/social_links.png") no-repeat scroll 0 0 transparent;
-  display: block;
-  float: left;
-  height: 32px;
-  margin: 20px 0 10px;
-  opacity: 0.85;
-  text-indent: -99999px;
-  width: 35px;
-}
-a.linked-in-link:hover, a.facebook-link:hover, a.twit-link:hover {
-  opacity: 1;
-}
-a.facebook-link {
-  background-position: -36px 0;
-}
-a.twit-link {
-  background-position: -72px 0;
-}
-a.twitter-link, .twitter-timestamp {
-  color: #777777;
-  font-size: 10px;
-}
-/* ------------------------
 masthead & navigation
 ------------------------ */
 #main {
@@ -634,6 +572,87 @@ body.page-template-projects-php .content {
 /* IE 7 */
 * + html body.home .home-content {
   margin-top: -990px;
+}
+/* ------------------------
+projects
+------------------------ */
+.project-nav {
+  border-bottom: 1px solid #dfdfdf;
+}
+.project-nav ul {
+  width: 960px;
+  margin: 5px auto -2px;
+  overflow: hidden;
+}
+.project-nav ul li {
+  float: left;
+  margin-right: 5px;
+}
+.project-nav ul li a {
+  opacity: 0.2;
+}
+.project-nav ul li a:hover, .project-nav ul li a.selected {
+  opacity: 1;
+}
+.project-nav ul li a img {
+  border: 1px solid #dfdfdf;
+}
+#project-single {
+  margin: 40px auto;
+}
+.columns {
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+}
+.columns ul {
+  margin: 0 0 10px 0;
+  overflow: hidden;
+}
+.columns li {
+  width: 290px;
+  margin: 0 80px 0 0;
+  float: left;
+}
+.columns li.last {
+  width: 200px;
+  margin-right: 0;
+}
+.projects-box {
+  background-color: #ffffff;
+  width: 940px;
+  height: 520px;
+  border: 10px solid #000000;
+  border-bottom: 33px solid #000000;
+  position: relative;
+  margin: 20px 0 30px;
+}
+/* ------------------------
+expertise (the team)
+------------------------ */
+ul.team {
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+ul.team img {
+  border: 8px solid #000000;
+}
+ul.team h4 {
+  margin-bottom: 0;
+}
+ul.team h6 {
+  margin: 0 0 10px;
+}
+ul.team li {
+  width: 230px;
+  margin: 30px 70px 30px 0;
+  float: left;
+}
+ul.team li.third {
+  margin-right: 0;
 }
 /* ------------------------
 blog pages
@@ -727,70 +746,87 @@ a.rss:hover {
   background-position: 0 -39px;
 }
 /* ------------------------
-comments
+comments & contact form
 ------------------------ */
-.contact-form, cf-ol {
-  list-style: none;
+.contact-form {
+  list-style: none outside none;
   margin: 20px 0;
 }
-.contact-form li, cf-ol li {
-  margin: 0;
+.cf-ol {
+  list-style: none outside none;
+  margin: 20px 0 0;
+}
+.contact-form li, .cf-ol li {
+  margin: 0 0 10px;
   padding: 0;
-  margin-bottom: 10px;
 }
 .contact-form li input[type="text"],
-cf-ol li input[type="text"],
+.cf-ol li input[type="text"],
 .contact-form li input[type="email"],
-cf-ol li input[type="email"],
+.cf-ol li input[type="email"],
 .contact-form li input[type="url"],
-cf-ol li input[type="url"] {
+.cf-ol li input[type="url"] {
+  border: 1px solid #dfdfdf;
+  font-size: 1.2em;
+  padding: 5px;
   width: 235px;
-  border: 1px solid #dfdfdf;
-  font-size: 1.2em;
-  padding: 5px;
 }
-.contact-form textarea, cf-ol textarea {
-  font-family: Helvetica, Arial, sans-serif;
-  width: 410px;
-  height: 150px;
-  border: 1px solid #dfdfdf;
-  font-size: 1.2em;
-  padding: 5px;
-  font-weight: 200;
-  line-height: 1.5em;
-}
-.contact-form input#submit, cf-ol input#submit {
+.contact-form input#submit, .cf-ol input#submit {
   margin-left: 100px;
 }
-.contact-form label, cf-ol label {
-  width: 100px;
+.contact-form label, .cf-ol label {
   float: left;
   font-weight: bold;
+  width: 100px;
 }
-.contact-form label.not-required, cf-ol label.not-required {
-  font-weight: 200;
-}
-.contact-form label.two-lines, cf-ol label.two-lines {
+.contact-form label.two-lines, .cf-ol label.two-lines {
   line-height: 0.8em;
 }
-.link-love {
-  margin-left: 100px;
-  font-size: 9px;
+.contact-form label.notRequired, .cf-ol label.notRequired {
+  font-weight: 200;
+}
+.contact-form label small, .cf-ol label small {
   color: #777777;
-  line-height: 0.8em;
+  font-size: 9px;
   font-weight: 200;
+  line-height: 0.8em;
+}
+.contact-form textarea, .cf-ol textarea {
+  border: 1px solid #DFDFDF;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: 200;
+  height: 150px;
+  line-height: 1.5em;
+  padding: 5px;
+  width: 410px;
+}
+.linklove {
+  color: #777777;
+  font-size: 9px;
+  font-weight: 200;
+  line-height: 0.8em;
+  margin-left: 100px;
+}
+.cf-ol #li--3 label {
+  font-weight: 200;
+}
+#allowed_tags {
+  font-size: 10px;
+  margin-left: 100px;
+  width: 420px;
+}
+#sendbutton {
+  margin-top: 0;
+  margin-left: 100px;
 }
 #allowed-tags {
   margin-left: 100px;
   font-size: 10px;
   width: 420px;
 }
-#send-button {
-  margin-left: 100px;
-  margin-top: 0;
-}
 .comment-list {
-  list-style: none;
+  list-style: none outside none;
   margin: 0;
 }
 .comment-list img.avatar {
@@ -802,73 +838,19 @@ cf-ol li input[type="url"] {
   margin-top: 0;
 }
 .comment-list time {
-  font-size: 10px;
   color: #777777;
+  font-size: 10px;
 }
 .comment-list p, .comment-list nav {
   margin-left: 75px;
 }
-.comment-list .children {
-  list-style: none;
+.comment-list.children {
+  list-style: none outside none;
   margin: 0;
 }
-.comment-list .children li {
+.comment-list.children li {
+  background: url("../../images/arrow.png") no-repeat scroll 0 30px transparent;
   padding-left: 30px;
-  background: url(../../images/arrow.png) no-repeat 0 30px;
-}
-/* ------------------------
-projects
------------------------- */
-.project-nav {
-  border-bottom: 1px solid #dfdfdf;
-}
-.project-nav ul {
-  width: 960px;
-  margin: 5px auto -2px;
-  overflow: hidden;
-}
-.project-nav ul li {
-  float: left;
-  margin-right: 5px;
-}
-.project-nav ul li a {
-  opacity: 0.2;
-}
-.project-nav ul li a:hover, .project-nav ul li a.selected {
-  opacity: 1;
-}
-.project-nav ul li a img {
-  border: 1px solid #dfdfdf;
-}
-#project-single {
-  margin: 40px auto;
-}
-.columns {
-  overflow: hidden;
-  list-style: none;
-  margin: 0;
-}
-.columns ul {
-  margin: 0 0 10px 0;
-  overflow: hidden;
-}
-.columns li {
-  width: 290px;
-  margin: 0 80px 0 0;
-  float: left;
-}
-.columns li.last {
-  width: 200px;
-  margin-right: 0;
-}
-.projects-box {
-  background-color: #ffffff;
-  width: 940px;
-  height: 520px;
-  border: 10px solid #000000;
-  border-bottom: 33px solid #000000;
-  position: relative;
-  margin: 20px 0 30px;
 }
 /* ------------------------
 post images
@@ -879,7 +861,7 @@ post images
 .size-full {
   margin: 0;
 }
-.hentry .align-left {
+.hentry .alignleft {
   border: 8px solid #000000;
   margin: 20px 30px 20px -100px;
   display: block;
@@ -958,31 +940,66 @@ img.spinner {
   left: 450px;
 }
 /* ------------------------
-the team
+footer
 ------------------------ */
-ul.team {
+footer#main-footer {
+  background: #000000 url(../../images/footer_hill.gif) repeat-x 50% 0;
+  min-height: 300px;
+  padding-top: 100px;
+  clear: both;
+  color: #c7c7c7;
+}
+footer#main-footer h2 {
+  font-size: 30px;
+  color: #777777;
+}
+footer#main-footer ul {
   overflow: hidden;
+}
+footer#main-footer li {
   list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-ul.team img {
-  border: 8px solid #000000;
-}
-ul.team h4 {
-  margin-bottom: 0;
-}
-ul.team h6 {
-  margin: 0 0 10px;
-}
-ul.team li {
-  width: 230px;
-  margin: 30px 70px 30px 0;
   float: left;
+  width: 190px;
+  margin-right: 50px;
 }
-ul.team li.third {
+footer#main-footer li.last {
   margin-right: 0;
+}
+footer#main-footer p {
+  margin-top: 20px;
+}
+footer#main-footer p.registration {
+  margin: 70px 0 40px;
+  text-align: center;
+  color: #777777;
+}
+/* social media */
+ul.twitter {
+  list-style: none outside none;
+  margin: 0;
+}
+a.linked-in-link, a.facebook-link, a.twit-link {
+  background: url("../../images/social_links.png") no-repeat scroll 0 0 transparent;
+  display: block;
+  float: left;
+  height: 32px;
+  margin: 20px 0 10px;
+  opacity: 0.85;
+  text-indent: -99999px;
+  width: 35px;
+}
+a.linked-in-link:hover, a.facebook-link:hover, a.twit-link:hover {
+  opacity: 1;
+}
+a.facebook-link {
+  background-position: -36px 0;
+}
+a.twit-link {
+  background-position: -72px 0;
+}
+a.twitter-link, .twitter-timestamp {
+  color: #777777;
+  font-size: 10px;
 }
 /* --------------------------------------------------
 Print Styles
