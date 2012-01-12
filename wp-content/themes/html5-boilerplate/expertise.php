@@ -62,6 +62,12 @@ get_header(); ?>
 			<p>Capra works closely with KickCode, a small development agency that provides excellent, high quality coding services. 
 			 Our partnership allows us to provide our clients with the best possible products. </p>
 		</li>
+		<li>
+			<img src="<?php bloginfo('url'); ?>/wp-content/themes/html5-boilerplate/images/team_jena.jpg" alt="KickCode" />
+			<h4>Jena Birch</h4>
+			<h6>Web Designer</h6>
+			<p>Jena is a designer and front-end coder who loves to build unique, hand-crafted websites. She spends her spare time drinking peppermint tea, obsessing over Formula 1 and chasing around after her whippet, Indy. Jena works part-time for Capra. </p>
+		</li>
 	</ul>
 	<br class="clear" />
 </div>
