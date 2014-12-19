@@ -1,0 +1,70 @@
+// font-family: 'Knockout 48 A', 'Knockout 48 B'; font-weight: 400; font-style: normal;
+// font-family: ; font-weight: 400; font-style: normal;
+// font-family: 'Quarto A', 'Quarto B'; font-weight: 700; font-style: normal;
+
+@import "partials/common";
+@import "partials/reset";
+
+html {
+  height:100%;
+  width:100%;
+}
+body {
+  font: 400 150%/1.5 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
+  min-height: 100%;
+  position: relative;
+  width:100%;
+}
+
+// Typography
+
+h1,h2,h3,h4 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+// Links
+
+a {
+  color: #000;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+  &:hover {
+    color: #000;
+  }
+}
+
+// Header 
+
+#header {
+  left: 0;
+  padding: 2em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+#menu {
+  li {
+    display: inline;
+    margin-right: 2em;
+    &:nth-child(2) {
+      margin-right: 200px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+#logo {
+  left: 50%;
+  margin-left: -40px;
+  position: absolute;
+  top: 1.5em;
+  .logo-left {
+    fill: #000;
+  }
+  .logo-right {
+    fill: #000;
+  }
+}

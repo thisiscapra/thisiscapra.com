@@ -1,0 +1,27 @@
+// SASS setup items
+
+// Box sizing
+@mixin box-sizing($sizing-type) {
+  -moz-box-sizing:$sizing-type;
+  -webkit-box-sizing:$sizing-type;
+  box-sizing:$sizing-type;
+}
+
+// Transitions
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+// @extend %clearfix;
+%clearfix {
+  &:after {
+    display: table;
+    content: "";
+    zoom: 1;
+    clear: both;
+  }
+}
