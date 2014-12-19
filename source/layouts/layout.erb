@@ -16,11 +16,12 @@
 </head>
 <body id="capra" class="page-<%= page_classes %>">
   <%= partial "header" %>
+  <%= partial "featured_projects" if current_page.path == "index.html" %>
   <main role="main">
     <%= yield %>
   </main>
   <%= partial "footer" %>
-  <%= partial "javascripts" %>
+  <%= javascript_include_tag "application" %>
   <script>
       var _gaq = [['_setAccount', 'UA-15656719-1'], ['_trackPageview']];
       (function(d, t) {

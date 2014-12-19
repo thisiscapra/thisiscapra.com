@@ -1,0 +1,5 @@
+---
+title: New Blog
+date: 2014/08/20
+tags: middleman, blog
+---

@@ -37,6 +37,12 @@ page "/sitemap.xml", :layout => false
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+activate :blog do |blog|
+  blog.layout = "blog"
+  blog.prefix = "blog"
+  blog.permalink = "{year}/{month}/{day}/{title}.html"
+end
+
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload, :host => "thisiscapra.dev"

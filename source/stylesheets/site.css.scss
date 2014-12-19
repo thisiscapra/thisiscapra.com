@@ -5,33 +5,67 @@
 @import "partials/common";
 @import "partials/reset";
 
+// Colors
+
+$dark-grey: #161616;
+
 html {
   height:100%;
   width:100%;
 }
 body {
+  color: $dark-grey;
   font: 400 150%/1.5 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
   min-height: 100%;
+  height: 100%;
   position: relative;
   width:100%;
+}
+img {
+  display: block;
+  max-width: 100%;
 }
 
 // Typography
 
 h1,h2,h3,h4 {
   font-weight: 700;
-  margin: 0;
-  padding: 0;
+}
+h1 {
+  font-size: 1.75em;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+h2 {
+  font-size: 1.75em;
+  margin-bottom: 0.5em;
+}
+p {
+  margin: 0 0 1.5em;
 }
 
 // Links
 
 a {
-  color: #000;
+  color: $dark-grey;
   text-decoration: none;
   @include transition(color 0.1s linear);
   &:hover {
-    color: #000;
+    color: $dark-grey;
+  }
+}
+
+.button {
+  background-color: $dark-grey;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  margin: 0 auto;
+  padding:0.6em 2em;
+  text-align: center;
+  &:hover {
+    color: #fff;
+    @include transition(background-color 0.1s linear);
   }
 }
 
@@ -43,8 +77,9 @@ a {
   position: absolute;
   right: 0;
   text-align: center;
+  z-index: 100;
 }
-#menu {
+nav {
   li {
     display: inline;
     margin-right: 2em;
@@ -62,9 +97,294 @@ a {
   position: absolute;
   top: 1.5em;
   .logo-left {
-    fill: #000;
+    fill: #fff;
   }
   .logo-right {
-    fill: #000;
+    fill: #e1e1e1;
+  }
+}
+
+// Footer
+
+#footer {
+  border-top: 1px solid #e1e1e1;
+  padding: 3em 0;
+  text-align: center;
+}
+
+// Homepage 
+
+.featured {
+  background-color: $dark-grey;
+  color: #fff;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  article {
+    display: none;
+    height: 100%;
+    padding-top: 150px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 10;
+    @include box-sizing(border-box);
+    a {
+      font-weight: 700;
+    }
+  }
+}
+
+.intro {
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 3em 2em;
+  text-align: center;
+  width: 100%;
+  @include box-sizing(border-box);
+  > h1 {
+    text-align: center;
+  }
+}
+
+// For featured homepage items overwrite colours using body class
+
+body.alfred {
+  a {
+    color: #fff;
+    &:hover {
+      color: #9653c5;
+    }
+  }
+  .button {
+    background-color: #5C1F87;
+    &:hover {
+      background-color: darken(#5C1F87, 5%);
+      color: #fff;
+    }
+  }
+  #logo {
+    .logo-left {
+      fill: #fff;
+    }
+    .logo-right {
+      fill: #9653c5;
+    }
+  }
+  .featured {
+    color: #9653c5;
+    @include gradient-directional(#5C1F87, #431366, 45deg);
+    &:after {
+      background: url('/images/alfred-app-background.png') no-repeat center bottom;
+      background-size: 87%;
+      bottom: -10%;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+    &:before {
+      bottom: 0;
+      content: '';
+      height: 30px;
+      left: 0;
+      opacity: 0.2;
+      position: absolute;
+      right: 0;
+      z-index: 10;
+      @include gradient-directional(#000, transparent, 0);
+    }
+    article:nth-child(1) {
+      display: block;
+      position: relative;
+    }
+  }
+  #footer {
+    a {
+      color: #9653c5;
+      &:hover {
+        color: $dark-grey;
+      }
+    }
+  }
+}
+
+body.trickets {
+  a {
+    color: #fff;
+    &:hover {
+      color: #cec3b7;
+    }
+  }
+  .button {
+    background-color: #281304;
+    &:hover {
+      background-color: darken(#281304, 5%);
+      color: #fff;
+    } 
+  }
+  #logo {
+    .logo-left {
+      fill: #fff;
+    }
+    .logo-right {
+      fill: #cec3b7;
+    }
+  }
+  .featured {
+    background: #281304 url('/images/trickets-background.jpg') no-repeat bottom center;
+    background-size: cover;
+    color: #cec3b7;
+    article:nth-child(2) {
+      display: block;
+    }
+  }
+  #footer {
+    a {
+      color: #cec3b7;
+      &:hover {
+        color: $dark-grey;
+      }
+    }
+  }
+}
+
+body.eightfifty {
+  a {
+    color: #fff;
+    &:hover {
+      color: #00ae5a;
+    }
+  }
+  .button {
+    background-color: #00ae5a;
+    &:hover {
+      background-color: darken(#00ae5a, 5%);
+      color: #fff;
+    } 
+  }
+  #logo {
+    .logo-left {
+      fill: #fff;
+    }
+    .logo-right {
+      fill: #00ae5a;
+    }
+  }
+  .featured {
+    background: url('/images/8-50-background.jpg') no-repeat center;
+    background-size: cover;
+    color: #00ae5a;
+    article:nth-child(3) {
+      display: block;
+    }
+  }
+  #footer {
+    a {
+      color: #00ae5a;
+      &:hover {
+        color: $dark-grey;
+      }
+    }
+  }
+}
+
+body.alton-convent {
+  a {
+    color: #fff;
+    &:hover {
+      color: #003f77;
+    }
+  }
+  .button {
+    background-color: #003f77;
+    &:hover {
+      background-color: darken(#003f77, 5%);
+      color: #fff;
+    } 
+  }
+  #logo {
+    .logo-left {
+      fill: #fff;
+    }
+    .logo-right {
+      fill: #003f77;
+    }
+  }
+  .featured {
+    background: url('/images/alton-convent-background.jpg') no-repeat center;
+    color: #fff;
+    article:nth-child(4) {
+      display: block;
+    }
+  }
+  #footer {
+    a {
+      color: #003f77;
+      &:hover {
+        color: $dark-grey;
+      }
+    }
+  }
+}
+
+// Work page 
+
+.page-work {
+  nav {
+    a {
+      color: #fff;
+      &:hover {
+        color: #383838;
+      }
+    }
+  }
+  #logo {
+    .logo-right {
+      fill: #383838;
+    }
+  }
+  #footer {
+    a {
+      color: $dark-grey;
+      &:hover {
+        color: #383838;
+      }
+    }
+  }
+}
+.work {
+  background-color: $dark-grey;
+  color: #fff;
+  padding: 7em 0;
+  text-align: center;
+  ul {
+    letter-spacing: -4px;
+    margin: 0 auto;
+    max-width: 1000px;
+    word-spacing: -4px;
+    width: 100%;
+    li {
+      display: inline-block;
+      list-style: none;
+      letter-spacing: 0;
+      position: relative;
+      word-spacing: 0;
+      vertical-align: top;
+      width: 33%;
+      @include transition(all 0.1s linear);
+      &:hover {
+        box-shadow: 0 0 15px #000;
+        z-index: 10;
+        transform: scale(1.02);
+      }
+      h2 {
+        display: none;
+      }
+    }
   }
 }
