@@ -22,6 +22,7 @@ body {
   height: 100%;
   position: relative;
   width:100%;
+  @include transition(background-color 0.1s linear);
 }
 section {
   padding: 6em 2em 3em;
@@ -159,7 +160,7 @@ nav {
 
 // For featured homepage items overwrite colours using body class
 
-body.alfred,
+body.alfred-app,
 body.work_alfred-app {
   a {
     color: #fff;
@@ -230,13 +231,13 @@ body.trickets {
   a {
     color: #fff;
     &:hover {
-      color: #cec3b7;
+      color: #509203;
     }
   }
   .button {
     background-color: #281304;
     &:hover {
-      background-color: darken(#281304, 5%);
+      background-color: #509203;
       color: #fff;
     } 
   }
@@ -266,7 +267,7 @@ body.trickets {
   }
 }
 
-body.eightfifty {
+body.sports-digest-8-50 {
   a {
     color: #fff;
     &:hover {
@@ -302,6 +303,12 @@ body.eightfifty {
       &:hover {
         color: $dark-grey;
       }
+    }
+  }
+  .work {
+    background-color: darken(#00ae5a, 5%);
+    > h1 {
+      color: #00ae5a;
     }
   }
 }
@@ -391,9 +398,9 @@ body.alton-convent {
     word-spacing: 0;
     vertical-align: top;
     width: 33%;
-    @include transition(all 0.1s linear);
+    @include transition(all 0.01s linear);
     &:hover {
-      box-shadow: 0 0 15px #000;
+      box-shadow: 0 0 15px rgba(#000, 0.5);
       z-index: 10;
       transform: scale(1.02);
     }

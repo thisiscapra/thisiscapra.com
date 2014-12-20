@@ -13,7 +13,7 @@ client:
       - 'alfred-image-two.jpg'
     testimonial: 'blah blah blah'
   - name: '8-50'
-    url: '8-50'
+    url: 'sports-digest-8-50'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 

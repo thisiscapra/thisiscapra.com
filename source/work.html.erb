@@ -4,7 +4,7 @@
   <h1>Our work</h1>
   <ul class="work-list">
     <% data.work_items.client.each_with_index do |client, index| %>
-      <li>
+      <li id="<%= client.url %>" class="client">
         <% link_to("/work/#{client.url}/") do %>
           <%= image_tag(client.image_thumb, :alt => "") %>
           <h2><%= client.name %></h2>
