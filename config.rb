@@ -49,6 +49,7 @@ activate :blog do |blog|
   blog.layout = "blog"
   blog.prefix = "blog"
   blog.permalink = "{year}/{month}/{day}/{title}.html"
+  blog.paginate = true
 end
 
 # Reload the browser automatically whenever files change

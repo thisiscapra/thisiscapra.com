@@ -1,0 +1,13 @@
+---
+title: covestor
+date: '2012-03-07'
+tags: []
+---
+
+#Covestor
+
+
+###Compare Model Managers and then make the same trades as them
+
+
+[soliloquy id="1024"]

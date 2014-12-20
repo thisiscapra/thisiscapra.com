@@ -1,5 +1,9 @@
 <% wrap_layout :layout do %>
-  <article>
-    <%= yield %>
-  </article>
+  <section class="blog">
+    <article>
+      <h1><%= current_page.title %></h1>
+      <time datetime="current_page.date.strftime('%b %e %G')"><%= current_page.date.strftime('%b %e, %G') %></time>
+      <%= yield %>
+    </article>
+  </section>
 <% end %>

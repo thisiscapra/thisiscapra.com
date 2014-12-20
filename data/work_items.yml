@@ -1,13 +1,102 @@
 client: 
   - name: 'Alfred App'
-    url: 'alfred-app'
+    url: '/alfred-app/'
+    link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
-      "<li>Something</li>
-      <li>Some task</li>"
-    image_path: "images/work/alfred-app"
+      '<li>Something</li>
+      <li>Some task</li>'
+    image_path: 'images/work/alfred-app'
+    image_thumb: 'alfred-app-thumb.jpg'
     images:
-      - "alfred-image-one.png"
-      - "alfred-image-two.jpg"
+      - 'alfred-image-one.png'
+      - 'alfred-image-two.jpg'
+    testimonial: 'blah blah blah'
+  - name: '8-50'
+    url: '/8-50/'
     link: 'http://alfredapp.com'
+    intro: 'I am the intro'
+    what_we_did: 
+      '<li>Something</li>
+      <li>Some task</li>'
+    image_path: 'images/work/8-50'
+    image_thumb: '8-50-thumb.jpg'
+    images:
+    testimonial: 'blah blah blah'
+  - name: 'Trickets'
+    url: '/trickets/'
+    link: 'http://alfredapp.com'
+    intro: 'I am the intro'
+    what_we_did: 
+      '<li>Something</li>
+      <li>Some task</li>'
+    image_path: 'images/work/8-50'
+    image_thumb: 'trickets-thumb.jpg'
+    images:
+    testimonial: 'blah blah blah'
+  - name: 'Alton Convent School'
+    url: '/alton-convent-school/'
+    link: 'http://alfredapp.com'
+    intro: 'I am the intro'
+    what_we_did: 
+      '<li>Something</li>
+      <li>Some task</li>'
+    image_path: 'images/work/alton-convent-school'
+    image_thumb: 'alton-convent-thumb.jpg'
+    images:
+    testimonial: 'blah blah blah'
+  - name: 'Mind the Product'
+    url: '/mind-the-product/'
+    link: 'http://alfredapp.com'
+    intro: 'I am the intro'
+    what_we_did: 
+      '<li>Something</li>
+      <li>Some task</li>'
+    image_path: 'images/work/mind-the-product'
+    image_thumb: 'mtp-thumb.jpg'
+    images:
+    testimonial: 'blah blah blah'
+  - name: 'Back Page Football'
+    url: '/backpagefootball/'
+    link: 'http://alfredapp.com'
+    intro: 'I am the intro'
+    what_we_did: 
+      '<li>Something</li>
+      <li>Some task</li>'
+    image_path: 'images/work/backpagefootball'
+    image_thumb: 'backpagefootball-thumb.jpg'
+    images:
+    testimonial: 'blah blah blah'
+  - name: 'Toto'
+    url: '/toto/'
+    link: 'http://alfredapp.com'
+    intro: 'I am the intro'
+    what_we_did: 
+      '<li>Something</li>
+      <li>Some task</li>'
+    image_path: 'images/work/toto'
+    image_thumb: 'toto-thumb.jpg'
+    images:
+    testimonial: 'blah blah blah'
+  - name: 'Cold Claim'
+    url: '/cold-claim/'
+    link: 'http://alfredapp.com'
+    intro: 'I am the intro'
+    what_we_did: 
+      '<li>Something</li>
+      <li>Some task</li>'
+    image_path: 'images/work/toto'
+    image_thumb: 'cold-claim-thumb.jpg'
+    images:
+    testimonial: 'blah blah blah'
+  - name: 'Super Better'
+    url: '/super-better/'
+    link: 'http://alfredapp.com'
+    intro: 'I am the intro'
+    what_we_did: 
+      '<li>Something</li>
+      <li>Some task</li>'
+    image_path: 'images/work/super-better'
+    image_thumb: 'super-better-thumb.jpg'
+    images:
     testimonial: 'blah blah blah'

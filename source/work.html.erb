@@ -3,11 +3,11 @@
 <section class="work">
   <h1>Our work</h1>
   <ul class="work-list">
-    <% data.work.items.each_with_index do |item, index| %>
+    <% data.work_items.client.each_with_index do |client, index| %>
       <li>
-        <% link_to(item.link) do %>
-          <%= image_tag(item.img, :alt => "") %>
-          <h2><%= item.name %></h2>
+        <% link_to("/work/#{client.link}") do %>
+          <%= image_tag(client.image_thumb, :alt => "") %>
+          <h2><%= client.name %></h2>
         <% end %>
       </li>
     <% end %>

@@ -1,0 +1,24 @@
+---
+title: Hacked!
+date: '2012-06-25'
+tags:
+- company-news
+---
+
+I noticed a considerable spike in traffic on Friday and an initial viewing of my analytics didn't reveal why.  I put it down to a mystery until I received an email from a lady saying that I had hacked her email and sent an email to all her contacts with a link to my website.  She finished with, "Not cool."
+
+**It is indeed not cool.**
+ It turns out, the Capra website was hacked as well-- who knows where my vulnerability lay; maybe my password wasn't strong enough on my ftp, or a multitude of other things that could go wrong, and they got in.  So, they hack people's websites and set up pages deep in their system.  Then they hack other people's emails sending links to the hacked page.  I'm not actually sure what the point of it was, but hopefully I have done a full clean, changed all my passwords and will no longer be a pawn in their hacking ways.
+
+If you have arrived on the Capra website from an email link, please do the following:
+
+*Do not click on any links on the page they sent you to
+
+	
+*Delete the email immediately
+
+	
+*Run a virus scan on both your web browser and your files
+
+	
+*Change your email password as soon as possible.

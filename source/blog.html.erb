@@ -2,23 +2,31 @@
 pageable: true
 per_page: 10
 ---
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
+<section class="blog">
+  
+  <% if paginate && num_pages > 1 %>
+    <small>Page <%= page_number %> of <%= num_pages %></small>
+
+    <% if prev_page %>
+      <p class="read-more"><%= link_to 'Previous page', prev_page %></p>
+    <% end %>
   <% end %>
-<% end %>
 
-<% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
-<% end %>
-
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
+  <% page_articles.each_with_index do |article, i| %>
+    <article>
+      <h2><%= link_to article.title, article %></h2>
+      <time datetime="article.date.strftime('%b %e %G')"><%= article.date.strftime('%b %e, %G') %></time>
+      <p><%= Nokogiri::HTML(article.summary).text %></p>
+      <p class="read-more"><%= link_to("Read more...", article) %></p>
+    </article>
+    
   <% end %>
-<% end %>
+
+  <% if paginate %>
+    <% if next_page %>
+      <p class="read-more"><%= link_to 'Next page', next_page %></p>
+    <% end %>
+  <% end %>
+
+</section>

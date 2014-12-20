@@ -8,6 +8,8 @@
 // Colors
 
 $dark-grey: #161616;
+$link-blue: #0645AD;
+$blog-green: #009B77;
 
 html {
   height:100%;
@@ -403,3 +405,56 @@ body.alton-convent {
 
 // Individual client pages
 
+
+// Blog 
+
+.page-blog {
+  a {
+    color: $link-blue;
+    &:hover {
+      color: darken($link-blue, 10%);
+    }
+  }
+  #logo {
+    .logo-left {
+      fill: lighten($link-blue, 30%);
+    }
+    .logo-right {
+      fill: $link-blue;
+    }
+  }
+  .blog {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    h1,h2 {
+      margin: 0;
+      text-align: center;
+    }
+    small {
+      color: lighten($link-blue, 30%);
+      display: block;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+    time {
+      color: lighten($link-blue, 30%);
+      display: block;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+    .read-more {
+      text-align: center;
+    }
+    article {
+      margin-bottom: 3em;
+      img {
+        display: block;
+        margin: 0 auto 2em;
+      }
+      > p {
+        text-indent: 1em;
+      }
+    }
+  }
+}
