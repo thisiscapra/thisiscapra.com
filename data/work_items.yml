@@ -1,6 +1,6 @@
 client: 
   - name: 'Alfred App'
-    url: '/alfred-app/'
+    url: 'alfred-app'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
@@ -13,7 +13,7 @@ client:
       - 'alfred-image-two.jpg'
     testimonial: 'blah blah blah'
   - name: '8-50'
-    url: '/8-50/'
+    url: '8-50'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
@@ -24,7 +24,7 @@ client:
     images:
     testimonial: 'blah blah blah'
   - name: 'Trickets'
-    url: '/trickets/'
+    url: 'trickets'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
@@ -35,7 +35,7 @@ client:
     images:
     testimonial: 'blah blah blah'
   - name: 'Alton Convent School'
-    url: '/alton-convent-school/'
+    url: 'alton-convent-school'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
@@ -46,7 +46,7 @@ client:
     images:
     testimonial: 'blah blah blah'
   - name: 'Mind the Product'
-    url: '/mind-the-product/'
+    url: 'mind-the-product'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
@@ -57,7 +57,7 @@ client:
     images:
     testimonial: 'blah blah blah'
   - name: 'Back Page Football'
-    url: '/backpagefootball/'
+    url: 'backpagefootball'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
@@ -68,7 +68,7 @@ client:
     images:
     testimonial: 'blah blah blah'
   - name: 'Toto'
-    url: '/toto/'
+    url: 'toto'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
@@ -79,7 +79,7 @@ client:
     images:
     testimonial: 'blah blah blah'
   - name: 'Cold Claim'
-    url: '/cold-claim/'
+    url: 'cold-claim'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
@@ -90,7 +90,7 @@ client:
     images:
     testimonial: 'blah blah blah'
   - name: 'Super Better'
-    url: '/super-better/'
+    url: 'super-better'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
