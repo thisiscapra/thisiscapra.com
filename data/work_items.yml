@@ -1,0 +1,13 @@
+client: 
+  - name: 'Alfred App'
+    url: 'alfred-app'
+    intro: 'I am the intro'
+    what_we_did: 
+      "<li>Something</li>
+      <li>Some task</li>"
+    image_path: "images/work/alfred-app"
+    images:
+      - "alfred-image-one.png"
+      - "alfred-image-two.jpg"
+    link: 'http://alfredapp.com'
+    testimonial: 'blah blah blah'

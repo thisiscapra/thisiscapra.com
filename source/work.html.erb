@@ -1,6 +1,8 @@
+<% content_for(:title, "Our work") %>
+
 <section class="work">
   <h1>Our work</h1>
-  <ul>
+  <ul class="work-list">
     <% data.work.items.each_with_index do |item, index| %>
       <li>
         <% link_to(item.link) do %>

@@ -30,6 +30,14 @@ page "/sitemap.xml", :layout => false
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
+data.work_items.client.each do |client|
+  proxy "/work/#{client.url}.html", "/work-item.html", locals: { 
+    client: client,
+    title: client.name,
+    description: client.intro
+  }, :ignore => true
+end
+
 ###
 # Helpers
 ###
@@ -50,12 +58,17 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
+  # Set the page title
   def page_title
-    if current_page.data.title
-      "#{current_page.data.title} - Capra"
+    if content_for?(:title)
+      "#{yield_content(:title)} - Capra Design"
     else
-      "Capra"
+      "Capra Design"
     end
+  end
+  # Active nav items
+  def nav_active(page)
+    current_page.url == page ? {:class => 'active'} : {}
   end
 end
 

@@ -1,10 +1,8 @@
----
-title: Home
----
+<% content_for(:title, "Home") %>
 
 <section class="intro">
   <h1>Capra designs &amp; builds Web Sites, Apps &amp; games with a focus on ease of use and fun!</h1>
   <p>Chromecast, trivia, cartoons, and fun. Our studio helped Google craft a multiplayer game to demonstrate the potential of the Chromecast as an emerging software platform. The result is a multi-player, multi-screen, multi-media extravaganza launched simultaneously across Android, iPhone and iPad.</p>
-  <%= link_to("Find out more", "/about", :class => "button") %>
+  <%= link_to("Find out more", "/about", class: "button") %>
 </section>
 

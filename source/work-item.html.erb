@@ -1,0 +1,21 @@
+<% content_for(:title, client.name) %>
+
+<section class="work work-item">
+  
+  <h1><%= client.name %></h1>
+
+  <p><%= client.intro %></p>
+
+  <ul class="what-we-did">
+    <%= client.what_we_did %>
+  </ul>
+
+  <%= link_to("Live project", client.link, class: "button") %>
+
+  <% if client.images %>
+    <% client.images.each_with_index do |image, index| %>
+      <%= image_tag("#{client.image_path}/#{image}") %>
+    <% end %>
+  <% end %>
+
+</section>

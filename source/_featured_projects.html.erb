@@ -1,18 +1,10 @@
 <section class="featured">
-  <article>
-    <h2>Designed to make you more productive.</h2>
-    <%= link_to("View project »", "work/alfredapp") %>
-  </article>
-  <article>
-    <h2>Trickits helps reclaim wonder in our natural world.</h2>
-    <%= link_to("View project »", "work/trickets") %>
-  </article>
-  <article>
-    <h2>Simple sports news, for both Android and iOS.</h2>
-    <%= link_to("View project »", "work/8-50") %>
-  </article>
-  <article>
-    <h2>Top marks for a leading independent school.</h2>
-    <%= link_to("View project »", "work/alton-convent-school") %>
-  </article>
+
+  <% data.featured.items.each_with_index do |item, index| %>
+    <article>
+      <h2><%= item.title %></h2>
+      <%= link_to("View project »", item.link) %>
+    </article>
+  <% end %>
+
 </section>

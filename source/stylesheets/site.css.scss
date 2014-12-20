@@ -21,6 +21,9 @@ body {
   position: relative;
   width:100%;
 }
+section {
+  padding: 6em 2em 3em;
+}
 img {
   display: block;
   max-width: 100%;
@@ -119,6 +122,8 @@ nav {
   color: #fff;
   min-height: 100%;
   height: 100%;
+  min-height: 800px;
+  padding: 0;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -152,10 +157,17 @@ nav {
 
 // For featured homepage items overwrite colours using body class
 
-body.alfred {
+body.alfred,
+body.work_alfred-app {
   a {
     color: #fff;
     &:hover {
+      color: #9653c5;
+    }
+  }
+  nav {
+    &:hover,
+    &.active {
       color: #9653c5;
     }
   }
@@ -178,16 +190,6 @@ body.alfred {
     color: #9653c5;
     @include gradient-directional(#5C1F87, #431366, 45deg);
     &:after {
-      background: url('/images/alfred-app-background.png') no-repeat center bottom;
-      background-size: 87%;
-      bottom: -10%;
-      content: '';
-      height: 100%;
-      left: 0;
-      position: absolute;
-      width: 100%;
-    }
-    &:before {
       bottom: 0;
       content: '';
       height: 30px;
@@ -199,8 +201,11 @@ body.alfred {
       @include gradient-directional(#000, transparent, 0);
     }
     article:nth-child(1) {
+      background: url('/images/alfred-app-background.png') no-repeat center bottom;
+      background-size: 95%;
       display: block;
-      position: relative;
+      margin: 0 auto;
+      max-width: 1177px;
     }
   }
   #footer {
@@ -209,6 +214,12 @@ body.alfred {
       &:hover {
         color: $dark-grey;
       }
+    }
+  }
+  .work {
+    @include gradient-directional(#5C1F87, #431366, 45deg);
+    > h1 {
+      color: #9653c5;
     }
   }
 }
@@ -338,7 +349,8 @@ body.alton-convent {
   nav {
     a {
       color: #fff;
-      &:hover {
+      &:hover,
+      &.active {
         color: #383838;
       }
     }
@@ -360,31 +372,34 @@ body.alton-convent {
 .work {
   background-color: $dark-grey;
   color: #fff;
-  padding: 7em 0;
+  padding: 7em 2em;
   text-align: center;
-  ul {
-    letter-spacing: -4px;
-    margin: 0 auto;
-    max-width: 1000px;
-    word-spacing: -4px;
-    width: 100%;
-    li {
-      display: inline-block;
-      list-style: none;
-      letter-spacing: 0;
-      position: relative;
-      word-spacing: 0;
-      vertical-align: top;
-      width: 33%;
-      @include transition(all 0.1s linear);
-      &:hover {
-        box-shadow: 0 0 15px #000;
-        z-index: 10;
-        transform: scale(1.02);
-      }
-      h2 {
-        display: none;
-      }
+}
+.work-list {
+  letter-spacing: -4px;
+  margin: 0 auto;
+  max-width: 1000px;
+  word-spacing: -4px;
+  width: 100%;
+  li {
+    display: inline-block;
+    list-style: none;
+    letter-spacing: 0;
+    position: relative;
+    word-spacing: 0;
+    vertical-align: top;
+    width: 33%;
+    @include transition(all 0.1s linear);
+    &:hover {
+      box-shadow: 0 0 15px #000;
+      z-index: 10;
+      transform: scale(1.02);
+    }
+    h2 {
+      display: none;
     }
   }
 }
+
+// Individual client pages
+
