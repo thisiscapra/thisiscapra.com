@@ -5,11 +5,7 @@
 @import "partials/common";
 @import "partials/reset";
 
-// Colors
-
-$dark-grey: #161616;
-$link-blue: #0645AD;
-$blog-green: #009B77;
+// Basic layout setup
 
 html {
   height:100%;
@@ -17,15 +13,14 @@ html {
 }
 body {
   color: $dark-grey;
-  font: 400 150%/1.5 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
+  font: 400 125%/1.5 'Whitney SSm A', 'Whitney SSm B', 'Helvetica Neue', Arial, serif;
   min-height: 100%;
   height: 100%;
   position: relative;
   width:100%;
-  @include transition(background-color 0.1s linear);
 }
 section {
-  padding: 6em 2em 3em;
+  padding: 7em 2em 3em;
 }
 img {
   display: block;
@@ -35,16 +30,26 @@ img {
 // Typography
 
 h1,h2,h3,h4 {
+  font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
   font-weight: 700;
+  text-align: center;
 }
 h1 {
-  font-size: 1.75em;
+  font-size: 2em;
   line-height: 1.2;
   margin-bottom: 1em;
 }
 h2 {
-  font-size: 1.75em;
+  font-size: 2em;
   margin-bottom: 0.5em;
+}
+h3 {
+  font-size: 1.75em;
+  margin-bottom: 0.75em;
+}
+h4 {
+  font-size: 1.5em;
+  margin-bottom: 0.75em;
 }
 p {
   margin: 0 0 1.5em;
@@ -86,6 +91,9 @@ a {
   z-index: 100;
 }
 nav {
+  font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
   li {
     display: inline;
     margin-right: 2em;
@@ -140,9 +148,6 @@ nav {
     width: 100%;
     z-index: 10;
     @include box-sizing(border-box);
-    a {
-      font-weight: 700;
-    }
   }
 }
 
@@ -156,42 +161,21 @@ nav {
   > h1 {
     text-align: center;
   }
+  > p {
+    text-indent: 1em;
+    text-align: left;
+  }
 }
 
-// For featured homepage items overwrite colours using body class
+// Per client body class changes
 
-body.alfred-app,
-body.work_alfred-app {
-  a {
-    color: #fff;
-    &:hover {
-      color: #9653c5;
-    }
-  }
-  nav {
-    &:hover,
-    &.active {
-      color: #9653c5;
-    }
-  }
-  .button {
-    background-color: #5C1F87;
-    &:hover {
-      background-color: darken(#5C1F87, 5%);
-      color: #fff;
-    }
-  }
-  #logo {
-    .logo-left {
-      fill: #fff;
-    }
-    .logo-right {
-      fill: #9653c5;
-    }
-  }
+// Alfred
+
+body.alfred-app {
+  @include colour-scheme($alfred-color, $lighten: false);
   .featured {
-    color: #9653c5;
-    @include gradient-directional(#5C1F87, #431366, 45deg);
+    color: lighten($alfred-color, 15%);
+    @include gradient-directional($alfred-color, darken($alfred-color, 10%), 45deg);
     &:after {
       bottom: 0;
       content: '';
@@ -211,44 +195,10 @@ body.work_alfred-app {
       max-width: 1177px;
     }
   }
-  #footer {
-    a {
-      color: #9653c5;
-      &:hover {
-        color: $dark-grey;
-      }
-    }
-  }
-  .work {
-    @include gradient-directional(#5C1F87, #431366, 45deg);
-    > h1 {
-      color: #9653c5;
-    }
-  }
 }
 
 body.trickets {
-  a {
-    color: #fff;
-    &:hover {
-      color: #509203;
-    }
-  }
-  .button {
-    background-color: #281304;
-    &:hover {
-      background-color: #509203;
-      color: #fff;
-    } 
-  }
-  #logo {
-    .logo-left {
-      fill: #fff;
-    }
-    .logo-right {
-      fill: #cec3b7;
-    }
-  }
+  @include colour-scheme($trickets-color, $lighten: false);
   .featured {
     background: #281304 url('/images/trickets-background.jpg') no-repeat bottom center;
     background-size: cover;
@@ -257,38 +207,10 @@ body.trickets {
       display: block;
     }
   }
-  #footer {
-    a {
-      color: #cec3b7;
-      &:hover {
-        color: $dark-grey;
-      }
-    }
-  }
 }
 
 body.sports-digest-8-50 {
-  a {
-    color: #fff;
-    &:hover {
-      color: #00ae5a;
-    }
-  }
-  .button {
-    background-color: #00ae5a;
-    &:hover {
-      background-color: darken(#00ae5a, 5%);
-      color: #fff;
-    } 
-  }
-  #logo {
-    .logo-left {
-      fill: #fff;
-    }
-    .logo-right {
-      fill: #00ae5a;
-    }
-  }
+  @include colour-scheme($sports-digest-color, $lighten: false);
   .featured {
     background: url('/images/8-50-background.jpg') no-repeat center;
     background-size: cover;
@@ -297,44 +219,10 @@ body.sports-digest-8-50 {
       display: block;
     }
   }
-  #footer {
-    a {
-      color: #00ae5a;
-      &:hover {
-        color: $dark-grey;
-      }
-    }
-  }
-  .work {
-    background-color: darken(#00ae5a, 5%);
-    > h1 {
-      color: #00ae5a;
-    }
-  }
 }
 
-body.alton-convent {
-  a {
-    color: #fff;
-    &:hover {
-      color: #003f77;
-    }
-  }
-  .button {
-    background-color: #003f77;
-    &:hover {
-      background-color: darken(#003f77, 5%);
-      color: #fff;
-    } 
-  }
-  #logo {
-    .logo-left {
-      fill: #fff;
-    }
-    .logo-right {
-      fill: #003f77;
-    }
-  }
+body.alton-convent-school {
+  @include colour-scheme($alton-convent-color, $lighten: false);
   .featured {
     background: url('/images/alton-convent-background.jpg') no-repeat center;
     color: #fff;
@@ -342,12 +230,59 @@ body.alton-convent {
       display: block;
     }
   }
-  #footer {
-    a {
-      color: #003f77;
-      &:hover {
-        color: $dark-grey;
-      }
+}
+
+body.mind-the-product {
+  @include colour-scheme($mtp-color, $lighten: false);
+  .featured {
+    background: url('/images/alton-convent-background.jpg') no-repeat center;
+    color: #fff;
+    article:nth-child(4) {
+      display: block;
+    }
+  }
+}
+
+body.backpagefootball {
+  @include colour-scheme($backpagefootball-color, $lighten: false);
+  .featured {
+    background: url('/images/alton-convent-background.jpg') no-repeat center;
+    color: #fff;
+    article:nth-child(4) {
+      display: block;
+    }
+  }
+}
+
+body.toto {
+  @include colour-scheme($toto-color, $lighten: false);
+  .featured {
+    background: url('/images/alton-convent-background.jpg') no-repeat center;
+    color: #fff;
+    article:nth-child(4) {
+      display: block;
+    }
+  }
+}
+
+body.cold-claim {
+  @include colour-scheme($cold-claim-color, $lighten: false);
+  .featured {
+    background: url('/images/alton-convent-background.jpg') no-repeat center;
+    color: #fff;
+    article:nth-child(4) {
+      display: block;
+    }
+  }
+}
+
+body.super-better {
+  @include colour-scheme($super-better-color, $lighten: false);
+  .featured {
+    background: url('/images/alton-convent-background.jpg') no-repeat center;
+    color: #fff;
+    article:nth-child(4) {
+      display: block;
     }
   }
 }
@@ -355,34 +290,7 @@ body.alton-convent {
 // Work page 
 
 .page-work {
-  nav {
-    a {
-      color: #fff;
-      &:hover,
-      &.active {
-        color: #383838;
-      }
-    }
-  }
-  #logo {
-    .logo-right {
-      fill: #383838;
-    }
-  }
-  #footer {
-    a {
-      color: $dark-grey;
-      &:hover {
-        color: #383838;
-      }
-    }
-  }
-}
-.work {
-  background-color: $dark-grey;
-  color: #fff;
-  padding: 7em 2em;
-  text-align: center;
+  @include colour-scheme($dark-grey, $lighten: false);
 }
 .work-list {
   letter-spacing: -4px;
@@ -400,7 +308,7 @@ body.alton-convent {
     width: 33%;
     @include transition(all 0.01s linear);
     &:hover {
-      box-shadow: 0 0 15px rgba(#000, 0.5);
+      box-shadow: 0 0 30px rgba(#000, 0.3);
       z-index: 10;
       transform: scale(1.02);
     }

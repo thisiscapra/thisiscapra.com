@@ -1,5 +1,74 @@
 // SASS setup items
 
+// Colors
+
+$dark-grey: #222222;
+$link-blue: #0645AD;
+$blog-green: #009B77;
+
+$alfred-color: #5C1F87;
+$trickets-color: #221913;
+$sports-digest-color: #00ae5a;
+$alton-convent-color: #003f77;
+$mtp-color: #0084b5;
+$backpagefootball-color: #9bcb5d;
+$toto-color: #a4a4a4;
+$cold-claim-color: #2eb19c;
+$super-better-color: #b7378b;
+
+// Mixins
+
+// Color schemes
+
+@mixin colour-scheme($color, $lighten) {
+  a {
+    color: #fff;
+    &:hover {
+      color: #9653c5;
+    }
+  }
+  nav {
+    a.hover,
+    a.active {
+      color: lighten($color, 20%);
+    }
+  }
+  .button {
+    background-color: $color;
+    &:hover {
+      background-color: darken($color, 5%);
+      color: #fff;
+    }
+  }
+  #logo {
+    .logo-left {
+      fill: #fff;
+      @include transition(fill 0.1s linear);
+    }
+    .logo-right {
+      fill: lighten($color, 20%);
+      @include transition(fill 0.1s linear);
+    }
+  }
+  #footer {
+    a {
+      color: $color;
+      &:hover {
+        color: $dark-grey;
+      }
+    }
+  }
+  .work {
+    background-color: $color;
+    @include transition(background-color 0.1s linear);
+    > h1 {
+      color: lighten($color, 20%);
+      @include transition(fill 0.1s linear);
+    }
+    color: #fff;
+  }
+}
+
 // Box sizing
 @mixin box-sizing($sizing-type) {
   -moz-box-sizing:$sizing-type;
@@ -26,6 +95,8 @@
   background-image: -o-linear-gradient($deg, $startColor, $endColor); // Opera 11.10
   background-image: linear-gradient($deg, $startColor, $endColor); // The standard
 }
+
+// Extends
 
 // @extend %clearfix;
 %clearfix {

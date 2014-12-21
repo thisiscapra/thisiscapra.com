@@ -71,6 +71,10 @@ helpers do
   def nav_active(page)
     current_page.url == page ? {:class => 'active'} : {}
   end
+  # Custom page classes
+  def custom_page_classes
+    "page-#{page_classes} #{yield_content(:page_class) if content_for?(:page_class)}"
+  end
 end
 
 # Fix bug with build errors and typography fonts

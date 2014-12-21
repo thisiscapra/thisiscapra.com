@@ -14,7 +14,7 @@
     <%= javascript_include_tag("html5shiv.min.js") %>
   <![endif]-->
 </head>
-<body id="capra" class="page-<%= page_classes %>">
+<body id="capra" class="<%= custom_page_classes %>">
   <%= partial "header" %>
   <%= partial "featured_projects" if current_page.path == "index.html" %>
   <main role="main">
