@@ -1,12 +1,13 @@
 <% content_for(:title, "Our work") %>
 
-<section class="work">
+<section class="work content">
   <h1>Our work</h1>
   <ul class="work-list">
     <% data.work_items.client.each_with_index do |client, index| %>
       <li id="<%= client.url %>" class="client">
         <% link_to("/work/#{client.url}/") do %>
-          <%= image_tag(client.image_thumb, :alt => "") %>
+          <% image_url = "#{client.image_path}/#{client.image_thumb}" %>
+          <%= image_tag(image_url, :alt => "") %>
           <h2><%= client.name %></h2>
         <% end %>
       </li>

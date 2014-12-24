@@ -2,21 +2,52 @@
 <% content_for(:page_class, client.url) %>
 
 <section class="work work-item">
-  
-  <h1><%= client.name %></h1>
 
-  <p><%= client.intro %></p>
+  <header class="client-header">
+    
+    <h1><%= client.name %></h1>
 
-  <ul class="what-we-did">
-    <%= client.what_we_did %>
-  </ul>
-
-  <%= link_to("Live project", client.link, class: "button") %>
-
-  <% if client.images %>
-    <% client.images.each_with_index do |image, index| %>
-      <%= image_tag("#{client.image_path}/#{image}") %>
+    <% if client.link %>
+      <p class="project-link"><%= link_to("Live project »", client.link) %></p>
     <% end %>
-  <% end %>
+
+    <%= image_tag("#{client.image_path}/#{client.image_featured}", :alt => "") %>
+
+    <%= partial "page_navigation" %>
+
+  </header>
+
+  <div>
+
+    <p class="intro"><%= client.intro %></p>
+
+    <% if client.what_we_did %>
+      <div class="what-we-did">
+        <ul>
+          <% client.what_we_did.each_with_index do |item, index| %>
+            <li><%= item %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <hr>
+
+    <% if client.images %>
+      <div class="gallery">
+        <% client.images.each_with_index do |image, index| %>
+          <% if index == 2 %>
+            <hr>
+            <%= partial "client_blockquote", :locals => {:client => client}  %>
+            <hr>
+          <% end %>
+          <figure class="image">
+            <%= image_tag("#{client.image_path}/#{image}") %>
+          </figure>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
 
 </section>

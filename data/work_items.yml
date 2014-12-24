@@ -2,24 +2,34 @@ client:
   - name: 'Alfred App'
     url: 'alfred-app'
     link: 'http://alfredapp.com'
-    intro: 'I am the intro'
+    intro: 'Launch apps and files on your Mac without lifting your hands off the keyboard. Alfred learns which apps you use most and prioritises them when you search. Increase your productivity with handy filter keywords, and ward off RSI, making your mouse almost obsolete!'
     what_we_did: 
-      '<li>Something</li>
-      <li>Some task</li>'
-    image_path: 'images/work/alfred-app'
+      - 'Branding & logo design'
+      - 'Marketing materials'
+      - 'Iconography'
+      - 'Responsive Web design & Build'
+      - 'OSX Application design'
+    image_path: 'work/alfred-app'
+    image_featured: 'alfred-app-featured.png'
     image_thumb: 'alfred-app-thumb.jpg'
     images:
-      - 'alfred-image-one.png'
-      - 'alfred-image-two.jpg'
-    testimonial: 'blah blah blah'
+      - 'alfred-logo.png'
+      - 'alfred-icons.png'
+      - 'alfred-site.jpg'
+      - 'alfred-remote.jpg'
+    testimonial: "Kat's turnaround speed, real-time iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. She is the perfect mix of right brain, left brain, and extreme charisma. I would work with her again in a heartbeat and wish I could have her on every project."
+    cite: "Vero Peperrel, Alfred App"
   - name: '8-50'
     url: 'sports-digest-8-50'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
-      '<li>Something</li>
-      <li>Some task</li>'
-    image_path: 'images/work/8-50'
+      - 'Branding & logo design'
+      - 'Marketing materials'
+      - 'Iconography'
+      - 'Responsive Web design & Build'
+    image_path: 'work/sports-digest-8-50'
+    image_featured: '8-50-featured.jpg'
     image_thumb: '8-50-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
@@ -28,9 +38,12 @@ client:
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
-      '<li>Something</li>
-      <li>Some task</li>'
-    image_path: 'images/work/8-50'
+      - 'Branding & logo design'
+      - 'Marketing materials'
+      - 'Iconography'
+      - 'Responsive Web design & Build'
+    image_path: 'work/trickets'
+    image_featured: 'trickets-featured.jpg'
     image_thumb: 'trickets-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
@@ -39,9 +52,12 @@ client:
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
-      '<li>Something</li>
-      <li>Some task</li>'
-    image_path: 'images/work/alton-convent-school'
+      - 'Branding & logo design'
+      - 'Marketing materials'
+      - 'Iconography'
+      - 'Responsive Web design & Build'
+    image_path: 'work/alton-convent-school'
+    image_featured: 'alton-convent-featured.jpg'
     image_thumb: 'alton-convent-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
@@ -50,9 +66,12 @@ client:
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
-      '<li>Something</li>
-      <li>Some task</li>'
-    image_path: 'images/work/mind-the-product'
+      - 'Branding & logo design'
+      - 'Marketing materials'
+      - 'Iconography'
+      - 'Responsive Web design & Build'
+    image_path: 'work/mind-the-product'
+    image_featured: 'mind-the-product-featured.jpg'
     image_thumb: 'mtp-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
@@ -61,9 +80,12 @@ client:
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
-      '<li>Something</li>
-      <li>Some task</li>'
-    image_path: 'images/work/backpagefootball'
+      - 'Branding & logo design'
+      - 'Marketing materials'
+      - 'Iconography'
+      - 'Responsive Web design & Build'
+    image_path: 'work/backpagefootball'
+    image_featured: 'backpagefootball-featured.jpg'
     image_thumb: 'backpagefootball-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
@@ -72,9 +94,12 @@ client:
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
-      '<li>Something</li>
-      <li>Some task</li>'
-    image_path: 'images/work/toto'
+      - 'Branding & logo design'
+      - 'Marketing materials'
+      - 'Iconography'
+      - 'Responsive Web design & Build'
+    image_path: 'work/toto'
+    image_featured: 'toto-featured.jpg'
     image_thumb: 'toto-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
@@ -83,9 +108,12 @@ client:
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
-      '<li>Something</li>
-      <li>Some task</li>'
-    image_path: 'images/work/toto'
+      - 'Branding & logo design'
+      - 'Marketing materials'
+      - 'Iconography'
+      - 'Responsive Web design & Build'
+    image_path: 'work/cold-claim'
+    image_featured: 'cold-claim-featured.jpg'
     image_thumb: 'cold-claim-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
@@ -94,9 +122,12 @@ client:
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
-      '<li>Something</li>
-      <li>Some task</li>'
-    image_path: 'images/work/super-better'
+      - 'Branding & logo design'
+      - 'Marketing materials'
+      - 'Iconography'
+      - 'Responsive Web design & Build'
+    image_path: 'work/super-better'
+    image_featured: 'super-better-featured.jpg'
     image_thumb: 'super-better-thumb.jpg'
     images:
     testimonial: 'blah blah blah'

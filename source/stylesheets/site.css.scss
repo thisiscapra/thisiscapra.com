@@ -13,7 +13,8 @@ html {
 }
 body {
   color: $dark-grey;
-  font: 400 125%/1.5 'Whitney SSm A', 'Whitney SSm B', 'Helvetica Neue', Arial, serif;
+  font: 400 125%/1.5 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
+  //font: 400 125%/1.5 'Whitney SSm A', 'Whitney SSm B', 'Helvetica Neue', Arial, serif;
   min-height: 100%;
   height: 100%;
   position: relative;
@@ -24,7 +25,16 @@ section {
 }
 img {
   display: block;
+  margin: 0 auto;
   max-width: 100%;
+}
+hr {
+  background-color: #e1e1e1;
+  border: 0;
+  clear:both;
+  height: 1px;
+  margin: 2em 0 3em;
+  width: 100%;
 }
 
 // Typography
@@ -35,9 +45,9 @@ h1,h2,h3,h4 {
   text-align: center;
 }
 h1 {
-  font-size: 2em;
+  font-size: 4em;
   line-height: 1.2;
-  margin-bottom: 1em;
+  margin-bottom: 0.7em;
 }
 h2 {
   font-size: 2em;
@@ -52,8 +62,32 @@ h4 {
   margin-bottom: 0.75em;
 }
 p {
-  margin: 0 0 1.5em;
+  margin: 0 auto 1.5em;
+  max-width: 700px;
+  width: 100%;
+  &.intro {
+    font-size: 1.4em;
+    text-align: left;
+    &:first-letter {
+      float: left;
+      line-height: 1;
+      font-size: 3em;
+      font-weight: 700;
+      margin: 0 0.2em 0 0;
+    }
+  }
 }
+figure {
+  text-align: center;
+  blockquote {
+    font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 2em;
+  }
+}
+
 
 // Links
 
@@ -66,15 +100,57 @@ a {
   }
 }
 
+// Forms 
+
+input, textarea {
+  border: 0;
+  display: block;
+  font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
+  font-size: 1.2em;
+  padding: 0.6em;
+  @include box-sizing(border-box);
+  width: 100%;
+  &[type="radio"],
+  &[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    width: auto;
+  }
+}
+textarea {
+  min-height: 200px;
+}
+label {
+  display: block;
+  margin-bottom: 0.2em;
+  > input {
+    display: inline-block;
+    margin-right: 0.5em;
+    position: relative;
+    top: -2px;
+    vertical-align: middle;
+  }
+}
+fieldset {
+  > div {
+    margin-bottom: 1em;
+  }
+}
+
 .button {
   background-color: $dark-grey;
+  border: none;
   color: #fff;
   display: inline-block;
+  font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
   font-weight: 700;
+  font-size: 1.2em;
   margin: 0 auto;
   padding:0.6em 2em;
   text-align: center;
   &:hover {
+    background-color: darken($dark-grey, 10%);
     color: #fff;
     @include transition(background-color 0.1s linear);
   }
@@ -151,7 +227,7 @@ nav {
   }
 }
 
-.intro {
+.home-intro {
   margin: 0 auto;
   max-width: 700px;
   padding: 3em 2em;
@@ -159,6 +235,7 @@ nav {
   width: 100%;
   @include box-sizing(border-box);
   > h1 {
+    font-size: 2em;
     text-align: center;
   }
   > p {
@@ -172,23 +249,11 @@ nav {
 // Alfred
 
 body.alfred-app {
-  @include colour-scheme($alfred-color, $lighten: false);
+  @include colour-scheme($alfred-color, $button: true, $lighten: true);
   .featured {
-    color: lighten($alfred-color, 15%);
-    @include gradient-directional($alfred-color, darken($alfred-color, 10%), 45deg);
-    &:after {
-      bottom: 0;
-      content: '';
-      height: 30px;
-      left: 0;
-      opacity: 0.2;
-      position: absolute;
-      right: 0;
-      z-index: 10;
-      @include gradient-directional(#000, transparent, 0);
-    }
+    @extend %header-shadow;
     article:nth-child(1) {
-      background: url('/images/alfred-app-background.png') no-repeat center bottom;
+      background: url('/images/work/alfred-app/alfred-app-featured.png') no-repeat center bottom;
       background-size: 95%;
       display: block;
       margin: 0 auto;
@@ -198,9 +263,9 @@ body.alfred-app {
 }
 
 body.trickets {
-  @include colour-scheme($trickets-color, $lighten: false);
+  @include colour-scheme($trickets-color, $button: true, $lighten: true);
   .featured {
-    background: #281304 url('/images/trickets-background.jpg') no-repeat bottom center;
+    background: #281304 url('/images/work/trickets/trickets-featured.jpg') no-repeat bottom center;
     background-size: cover;
     color: #cec3b7;
     article:nth-child(2) {
@@ -210,87 +275,59 @@ body.trickets {
 }
 
 body.sports-digest-8-50 {
-  @include colour-scheme($sports-digest-color, $lighten: false);
+  @include colour-scheme($sports-digest-color, $button: true, $lighten: true);
   .featured {
-    background: url('/images/8-50-background.jpg') no-repeat center;
+    background: url('/images/work/sports-digest-8-50/8-50-background.jpg') no-repeat center;
     background-size: cover;
     color: #00ae5a;
     article:nth-child(3) {
       display: block;
     }
   }
+  &.page-index {
+    @include colour-scheme($sports-digest-color, $button: true, $lighten: false);
+  }
 }
 
 body.alton-convent-school {
-  @include colour-scheme($alton-convent-color, $lighten: false);
+  @include colour-scheme($alton-convent-color, $button: true, $lighten: true);
   .featured {
-    background: url('/images/alton-convent-background.jpg') no-repeat center;
+    background: url('/images/work/alton-convent-school/alton-convent-background.jpg') no-repeat center;
+    background-size: cover;
     color: #fff;
     article:nth-child(4) {
       display: block;
     }
+  }
+  &.page-index {
+    @include colour-scheme($alton-convent-color, $button: true, $lighten: false);
   }
 }
 
 body.mind-the-product {
-  @include colour-scheme($mtp-color, $lighten: false);
-  .featured {
-    background: url('/images/alton-convent-background.jpg') no-repeat center;
-    color: #fff;
-    article:nth-child(4) {
-      display: block;
-    }
-  }
+  @include colour-scheme($mtp-color, $button: true, $lighten: true);
 }
 
 body.backpagefootball {
-  @include colour-scheme($backpagefootball-color, $lighten: false);
-  .featured {
-    background: url('/images/alton-convent-background.jpg') no-repeat center;
-    color: #fff;
-    article:nth-child(4) {
-      display: block;
-    }
-  }
+  @include colour-scheme($backpagefootball-color, $button: true, $lighten: true);
 }
 
 body.toto {
-  @include colour-scheme($toto-color, $lighten: false);
-  .featured {
-    background: url('/images/alton-convent-background.jpg') no-repeat center;
-    color: #fff;
-    article:nth-child(4) {
-      display: block;
-    }
-  }
+  @include colour-scheme($toto-color, $button: true, $lighten: true);
 }
 
 body.cold-claim {
-  @include colour-scheme($cold-claim-color, $lighten: false);
-  .featured {
-    background: url('/images/alton-convent-background.jpg') no-repeat center;
-    color: #fff;
-    article:nth-child(4) {
-      display: block;
-    }
-  }
+  @include colour-scheme($cold-claim-color, $button: true, $lighten: true);
 }
 
 body.super-better {
-  @include colour-scheme($super-better-color, $lighten: false);
-  .featured {
-    background: url('/images/alton-convent-background.jpg') no-repeat center;
-    color: #fff;
-    article:nth-child(4) {
-      display: block;
-    }
-  }
+  @include colour-scheme($super-better-color, $button: true, $lighten: true);
 }
 
 // Work page 
 
 .page-work {
-  @include colour-scheme($dark-grey, $lighten: false);
+  @include colour-scheme($dark-grey, $button: true, $lighten: true);
 }
 .work-list {
   letter-spacing: -4px;
@@ -315,6 +352,81 @@ body.super-better {
     h2 {
       display: none;
     }
+  }
+}
+.work-nav {
+  li {
+    list-style: none;
+    margin-top: -60px;
+    top: 50%;
+    position: fixed;
+    z-index: 100;
+    &.next {
+      right: 0;
+    }
+    &.prev {
+      left: 0;
+    }
+  }
+  a {
+    display: block;
+    font-size: 2em;
+    line-height: 0.5;
+    padding: 0.8em 0.8em 1em;
+    text-align: center;
+    > span {
+      display: none;
+    }
+  }
+}
+.work-item {
+  padding: 0;
+  > div:not(.featured) {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 3em 2em;
+    width: 100%;
+    @include box-sizing(border-box);
+  }
+  h1 {
+    margin-bottom: 0.2em;
+  }
+  p {
+    max-width: 100%;
+    width: 100%;
+    &.intro {
+      float: left;
+      margin-right: 10%;
+      width: 60%;
+    }
+  }
+  .client-header {
+    padding: 7em 2em 0;
+    position: relative;
+    @include box-sizing(border-box);
+    @extend %header-shadow;
+  }
+}
+.project-link {
+  text-align: center;
+}
+.what-we-did {
+  float: left;
+  font-size: 1.2em;
+  width: 30%;
+  h2 {
+    margin: 0;
+    text-align: left;
+  }
+  li {
+    margin-bottom: 0.27em;
+  }
+}
+.gallery {
+  .image {
+    background-color: #f2f2f2;
+    margin-bottom: 2em;
+    padding: 3em;
   }
 }
 
@@ -371,5 +483,65 @@ body.super-better {
         text-indent: 1em;
       }
     }
+  }
+}
+
+// About page
+
+body.page-about {
+  @include colour-scheme($about-red, $button: true, $lighten: true);
+}
+
+// Contact page 
+
+body.page-contact {
+  @include colour-scheme($contact-green, $button: true, $lighten: true);
+  text-align: center;
+  section {
+    padding-bottom: 6em;
+  }
+}
+.contact-menu {
+  border-top: 1px solid lighten($contact-green,15%);
+  border-right: 1px solid lighten($contact-green,15%);
+  margin: 0 auto;
+  max-width: 700px;
+  overflow: hidden;
+  width: 100%;
+  @include box-sizing(border-box);
+  li {
+    border-left: 1px solid lighten($contact-green,15%);
+    border-bottom: 1px solid lighten($contact-green,15%);
+    display: inline;
+    float: left;
+    width: 50%;
+    @include box-sizing(border-box);
+    > a {
+      display: block;
+      padding: 0.8em;
+    }
+    &.active {
+      border-bottom: 0;
+    }
+  }
+}
+.contact-form {
+  border-left: 1px solid lighten($contact-green,15%);
+  border-right: 1px solid lighten($contact-green,15%);
+  border-bottom: 1px solid lighten($contact-green,15%);
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 1em;
+  text-align: left;
+  width: 100%;
+  @include box-sizing(border-box);
+  @include transition(opacity 0.01s linear);
+  &.hidden {
+    display: none;
+    opacity: 0;
+  }
+  &.active {
+    display: block;
+    opacity: 1;
   }
 }

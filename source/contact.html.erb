@@ -1,7 +1,86 @@
 <% content_for(:title, "Contact us") %>
 
-<section class="contact">
+<section class="contact content">
   
   <h1>Contact us</h1>
+
+  <h3>What would you like to do?</h3>
+
+  <ul class="contact-menu">
+    <li><%= link_to('I have a project', '#project', class: 'tab') %></li>
+    <li><%= link_to('I want to say hi!', '#general', class: 'tab') %></li>
+  </ul>
+
+  <div id="project" class="contact-form">
+    <h2>Project enquiry</h2>
+    <form accept-charset="UTF-8" action="https://formkeep.com/f/1a6c6b44dad8" method="POST">
+      <input type="hidden" name="utf8" value="✓">
+      <fieldset>
+        <div>
+          <label>Your Name</label>
+          <input type="text" name="name" placeholder="Your Name">
+        </div>
+        <div>
+          <label>Your Email</label>
+          <input type="email" name="email" placeholder="Your Email">
+        </div>
+        <div>
+          <label>Your Website</label>
+          <input type="url" name="url" placeholder="Your Website">
+        </div>
+        <div>
+          <label>Your Company</label>
+          <input type="text" name="company" placeholder="Your Company">
+        </div>
+        <div>
+          <label>Telephone number</label>
+          <input type="number" name="telephone" placeholder="Your telephone number">
+        </div>
+        <div>
+          <h3>What is your project budget?</h3>
+          <label for="budget_4000_7500"><input type="radio" id="budget_4000_7500" name="budget" value="$4,000-$7,500"> $4,000-$7,500</label>
+          <label for="budget_7500_10000"><input type="radio" id="budget_7500_10000" name="budget" value="$7,500-$10,000"> $7,500-$10,000</label>
+          <label for="budget_10000_20000"><input type="radio" id="budget_10000_20000" name="budget" value="$10,000-$20,000"> $10,000-$20,000</label>
+          <label for="budget_20000_plus"><input type="radio" id="budget_20000_plus" name="budget" value="Over $20,000"> Over $20,000</label>
+        </div>
+        <div>
+          <h3>What type of project is it?</h3>
+          <label for="website"><input type="radio" id="website" name="type" value="Website"> Website</label>
+          <label for="web_app"><input type="radio" id="web_app" name="type" value="Web Application"> Web Application</label>
+          <label for="mobile_app"><input type="radio" id="mobile_app" name="type" value="Mobile Application"> Mobile Application</label>
+          <label for="other"><input type="radio" id="other" name="type" value="IOther"> Other</label>
+        </div>
+        <div>
+          <h3>Project description</h3>
+          <textarea name="description"></textarea>
+        </div>
+        <input type="submit" name="" value="Send enquiry" class="button">
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="general" class="contact-form">
+    <h2>General enquiry</h2>
+    <form accept-charset="UTF-8" action="https://formkeep.com/f/45a9c78e89dc" method="POST">
+      <input type="hidden" name="utf8" value="✓">
+      <fieldset>
+        <div>
+          <label for="general_name">Your name</label>
+          <input type="text" name="general_name" placeholder="Your Name">
+        </div>
+        <div>
+          <label for="general_email">Email</label>
+          <input type="email" name="general_email" placeholder="Your Email">
+        </div>
+        <div>
+          <label for="general_email">Enquiry</label>
+          <textarea name="general_description" placeholder="Your enquiry"></textarea>
+        </div>
+        <div>
+          <input type="submit" name="" value="Send enquiry" class="button">
+        </div>
+      </fieldset>
+    </form>
+  </div>
 
 </section>

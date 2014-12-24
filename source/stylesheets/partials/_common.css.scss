@@ -4,7 +4,9 @@
 
 $dark-grey: #222222;
 $link-blue: #0645AD;
-$blog-green: #009B77;
+$pantone-green: #009B77;
+$about-red: #d30013;
+$contact-green: #00C36A;
 
 $alfred-color: #5C1F87;
 $trickets-color: #221913;
@@ -20,24 +22,39 @@ $super-better-color: #b7378b;
 
 // Color schemes
 
-@mixin colour-scheme($color, $lighten) {
+@mixin colour-scheme($color, $button, $lighten) {
+
+  $feat_color: $color !default;
+
+  @if $lighten {
+    $feat_color: lighten($color, 20%);
+  }
+
   a {
-    color: #fff;
+    color: $color;
     &:hover {
-      color: #9653c5;
+      color: darken($color, 5%);
     }
   }
-  nav {
-    a.hover,
-    a.active {
-      color: lighten($color, 20%);
-    }
-  }
-  .button {
-    background-color: $color;
-    &:hover {
-      background-color: darken($color, 5%);
+  nav, header {
+    a {
       color: #fff;
+      &.active,
+      &:hover {
+        color: $feat_color;
+      }
+    }
+  }
+  blockquote {
+    color: $color;
+  }
+  @if $button {
+    .button {
+      background-color: $color;
+      &:hover {
+        background-color: darken($color, 5%);
+        color: #fff;
+      }
     }
   }
   #logo {
@@ -46,7 +63,7 @@ $super-better-color: #b7378b;
       @include transition(fill 0.1s linear);
     }
     .logo-right {
-      fill: lighten($color, 20%);
+      fill: $feat_color;
       @include transition(fill 0.1s linear);
     }
   }
@@ -58,14 +75,25 @@ $super-better-color: #b7378b;
       }
     }
   }
-  .work {
+  .content,
+  .featured,
+  .client-header {
     background-color: $color;
-    @include transition(background-color 0.1s linear);
-    > h1 {
-      color: lighten($color, 20%);
+    @include transition(background 0.1s linear);
+    h1, h2 , h3 {
+      color: $feat_color;
       @include transition(fill 0.1s linear);
     }
     color: #fff;
+  }
+  .work-nav {
+    a {
+      background-color: rgba(darken($color, 5%), 0.5);
+      &:hover {
+        background-color: rgba(darken($color, 5%), 0.8);
+        color: #fff;
+      }
+    }
   }
 }
 
@@ -105,5 +133,20 @@ $super-better-color: #b7378b;
     content: "";
     zoom: 1;
     clear: both;
+  }
+}
+
+// @extend %header-shadow;
+%header-shadow {
+  &:after {
+    bottom: 0;
+    content: '';
+    height: 30px;
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    @include gradient-directional(#000, transparent, 0);
   }
 }
