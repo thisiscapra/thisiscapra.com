@@ -1,5 +1,6 @@
-client: 
+clients: 
   - name: 'Alfred App'
+    title: 'Designed to make you more productive.'
     url: 'alfred-app'
     link: 'http://alfredapp.com'
     intro: 'Launch apps and files on your Mac without lifting your hands off the keyboard. Alfred learns which apps you use most and prioritises them when you search. Increase your productivity with handy filter keywords, and ward off RSI, making your mouse almost obsolete!'
@@ -10,7 +11,7 @@ client:
       - 'Responsive Web design & Build'
       - 'OSX Application design'
     image_path: 'work/alfred-app'
-    image_featured: 'alfred-app-featured.png'
+    image_featured: 'alfred-app-featured.jpg'
     image_thumb: 'alfred-app-thumb.jpg'
     images:
       - 'alfred-logo.png'
@@ -20,6 +21,7 @@ client:
     testimonial: "Kat's turnaround speed, real-time iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. She is the perfect mix of right brain, left brain, and extreme charisma. I would work with her again in a heartbeat and wish I could have her on every project."
     cite: "Vero Peperrel, Alfred App"
   - name: '8-50'
+    title: 'Simple sports news, for both Android and iOS.'
     url: 'sports-digest-8-50'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
@@ -34,6 +36,7 @@ client:
     images:
     testimonial: 'blah blah blah'
   - name: 'Trickets'
+    title: 'Trickits helps reclaim wonder in our natural world.'
     url: 'trickets'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
@@ -48,6 +51,7 @@ client:
     images:
     testimonial: 'blah blah blah'
   - name: 'Alton Convent School'
+    title: 'Top marks for a leading independent school.'
     url: 'alton-convent-school'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'

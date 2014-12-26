@@ -11,7 +11,7 @@
       <p class="project-link"><%= link_to("Live project »", client.link) %></p>
     <% end %>
 
-    <%= image_tag("#{client.image_path}/#{client.image_featured}", :alt => "") %>
+    <%= image_tag("#{client.image_path}/#{client.image_featured}", :alt => "") if client.image_featured %>
 
     <%= partial "page_navigation" %>
 
@@ -36,10 +36,8 @@
     <% if client.images %>
       <div class="gallery">
         <% client.images.each_with_index do |image, index| %>
-          <% if index == 2 %>
-            <hr>
+          <% if index == 2 && client.testimonial %>
             <%= partial "client_blockquote", :locals => {:client => client}  %>
-            <hr>
           <% end %>
           <figure class="image">
             <%= image_tag("#{client.image_path}/#{image}") %>

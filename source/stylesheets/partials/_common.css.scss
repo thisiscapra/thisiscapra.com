@@ -51,6 +51,7 @@ $super-better-color: #b7378b;
   @if $button {
     .button {
       background-color: $color;
+      color: #fff;
       &:hover {
         background-color: darken($color, 5%);
         color: #fff;
@@ -85,6 +86,12 @@ $super-better-color: #b7378b;
       @include transition(fill 0.1s linear);
     }
     color: #fff;
+    a {
+      color: #fff;
+      &:hover {
+        color: $feat_color;
+      }
+    }
   }
   .work-nav {
     a {

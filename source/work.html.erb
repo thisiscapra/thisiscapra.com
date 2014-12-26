@@ -3,7 +3,7 @@
 <section class="work content">
   <h1>Our work</h1>
   <ul class="work-list">
-    <% data.work_items.client.each_with_index do |client, index| %>
+    <% data.work_items.clients.each_with_index do |client, index| %>
       <li id="<%= client.url %>" class="client">
         <% link_to("/work/#{client.url}/") do %>
           <% image_url = "#{client.image_path}/#{client.image_thumb}" %>

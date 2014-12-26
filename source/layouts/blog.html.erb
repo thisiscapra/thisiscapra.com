@@ -1,9 +1,11 @@
 <% wrap_layout :layout do %>
   <section class="blog">
-    <article>
-      <h1><%= current_page.title %></h1>
-      <time datetime="current_page.date.strftime('%b %e %G')"><%= current_page.date.strftime('%b %e, %G') %></time>
-      <%= yield %>
+    <article itemscope itemtype="http://schema.org/Article">
+      <h1 itemprop="name"><%= current_page.title %></h1>
+      <time itemprop="datePublished" datetime="current_page.date.strftime('%b %e %G')"><%= current_page.date.strftime('%b %e, %G') %></time>
+      <div itemprop="articleBody">
+        <%= yield %>
+      </div>
     </article>
   </section>
 <% end %>

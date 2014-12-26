@@ -1,9 +1,9 @@
 <section class="featured">
 
-  <% data.featured.items.each_with_index do |item, index| %>
+  <% data.work_items.clients.each_with_index do |client, index| %>
     <article>
-      <h2><%= item.title %></h2>
-      <%= link_to("View project »", item.link) %>
+      <h2><%= client.title %></h2>
+      <%= link_to("View project »", "/work/#{client.url}/") %>
     </article>
   <% end %>
 
