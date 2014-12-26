@@ -1,4 +1,5 @@
 clients: 
+  # Alfred
   - name: 'Alfred App'
     title: 'Designed to make you more productive.'
     url: 'alfred-app'
@@ -20,6 +21,7 @@ clients:
       - 'alfred-remote.jpg'
     testimonial: "Kat's turnaround speed, real-time iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. She is the perfect mix of right brain, left brain, and extreme charisma. I would work with her again in a heartbeat and wish I could have her on every project."
     cite: "Vero Peperrel, Alfred App"
+  # 8-50
   - name: '8-50'
     title: 'Simple sports news, for both Android and iOS.'
     url: 'sports-digest-8-50'
@@ -35,6 +37,7 @@ clients:
     image_thumb: '8-50-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
+  # Trickets
   - name: 'Trickets'
     title: 'Trickits helps reclaim wonder in our natural world.'
     url: 'trickets'
@@ -50,6 +53,7 @@ clients:
     image_thumb: 'trickets-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
+  # Alton Convent School
   - name: 'Alton Convent School'
     title: 'Top marks for a leading independent school.'
     url: 'alton-convent-school'
@@ -65,6 +69,7 @@ clients:
     image_thumb: 'alton-convent-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
+  # Mind the product
   - name: 'Mind the Product'
     url: 'mind-the-product'
     link: 'http://alfredapp.com'
@@ -79,6 +84,7 @@ clients:
     image_thumb: 'mtp-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
+  # Back Page Football
   - name: 'Back Page Football'
     url: 'backpagefootball'
     link: 'http://alfredapp.com'
@@ -93,6 +99,7 @@ clients:
     image_thumb: 'backpagefootball-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
+  # Toto
   - name: 'Toto'
     url: 'toto'
     link: 'http://alfredapp.com'
@@ -107,6 +114,7 @@ clients:
     image_thumb: 'toto-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
+  # Cold Claim
   - name: 'Cold Claim'
     url: 'cold-claim'
     link: 'http://alfredapp.com'
@@ -121,6 +129,7 @@ clients:
     image_thumb: 'cold-claim-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
+  # Super Better
   - name: 'Super Better'
     url: 'super-better'
     link: 'http://alfredapp.com'
