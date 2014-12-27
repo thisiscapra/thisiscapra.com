@@ -24,11 +24,7 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
 
   // Adding random classes to the homepage
   if(hasClass(body, 'page-index') ) {
-<<<<<<< HEAD
-    var bodyClasses = ['alfred-app','trickits','sports-digest-8-50','alton-convent-school'];
-=======
-    var bodyClasses = ['alfred-app','sports-digest-8-50','trickets','alton-convent-school'];
->>>>>>> a8fe59a7e095e12e60cb6b62865f89d09339d9c5
+    var bodyClasses = ['alfred-app','sports-digest-8-50','trickits','alton-convent-school'];
     var randomClass = Math.floor(Math.random()*bodyClasses.length);
     addClass(body, bodyClasses[randomClass]);
   } 

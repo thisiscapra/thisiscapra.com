@@ -291,13 +291,8 @@ body.trickits {
   .featured {
     background-color: $trickits-color;
     color: #cec3b7;
-<<<<<<< HEAD
-    article:nth-child(2) {
-      background: url('/images/work/trickits/trickits-featured.jpg') no-repeat bottom center;
-=======
     article:nth-child(3) {
-      background: url('/images/work/trickets/trickets-featured.jpg') no-repeat bottom center;
->>>>>>> a8fe59a7e095e12e60cb6b62865f89d09339d9c5
+      background: url('/images/work/trickits/trickits-featured.jpg') no-repeat bottom center;
       background-size: 100%;
       display: block;
       margin: 0 auto;
