@@ -4,7 +4,7 @@
     <% if p.url == current_page.url %>
       <% next_page = pages[index+1]  %>
       <% prev_page = pages[index-1] %>
-      <li class="prev"><%= link_to("<span>Prev</span> «", prev_page.url) unless index == 19 %></li>
+      <li class="prev"><%= link_to("<span>Prev</span> «", prev_page.url) unless index == 23 %></li>
       <li class="next"><%= link_to("<span>Next</span> »", next_page.url) unless index == pages.size - 1 %></li>
     <% end %>
   <% end %>

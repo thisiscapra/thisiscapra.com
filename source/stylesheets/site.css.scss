@@ -13,8 +13,8 @@ html {
 }
 body {
   color: $dark-grey;
-  font: 400 125%/1.5 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
-  //font: 400 125%/1.5 'Whitney SSm A', 'Whitney SSm B', 'Helvetica Neue', Arial, serif;
+  //font: 400 125%/1.5 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
+  font: 400 125%/1.5 'Sentinel SSm A', 'Sentinel SSm B', 'Georgia', sans-serif;
   min-height: 100%;
   height: 100%;
   position: relative;
@@ -39,7 +39,7 @@ hr {
 
 // Typography
 
-h1,h2,h3,h4 {
+h1,h2,h3,h4, p:first-of-type:first-letter {
   font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
   font-weight: 700;
   text-align: center;
@@ -66,7 +66,7 @@ p {
   max-width: 700px;
   width: 100%;
   &.intro {
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-align: left;
     &:first-letter {
       float: left;
@@ -77,14 +77,26 @@ p {
     }
   }
 }
+strong {
+  color: #000;
+  font-weight: 700;
+}
 figure {
   text-align: center;
   blockquote {
     font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
+    font-style: italic;
     font-size: 1.6em;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     padding: 0 2em;
+    &:before {
+      content: '“';
+      font-size: 3em;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 0.2;
+    }
   }
 }
 
@@ -167,7 +179,7 @@ fieldset {
   z-index: 100;
 }
 nav {
-  font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
+  //font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
   font-size: 1.2em;
   font-weight: 400;
   li {
@@ -229,6 +241,10 @@ nav {
     z-index: 10;
     @include box-sizing(border-box);
   }
+  h2 {
+    font-size: 4em;
+    line-height: 1;
+  }
   a {
     color: #fff;
   }
@@ -242,7 +258,7 @@ nav {
   width: 100%;
   @include box-sizing(border-box);
   > h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
   }
   > p {
@@ -275,7 +291,7 @@ body.trickets {
   .featured {
     background-color: $trickets-color;
     color: #cec3b7;
-    article:nth-child(2) {
+    article:nth-child(3) {
       background: url('/images/work/trickets/trickets-featured.jpg') no-repeat bottom center;
       background-size: 100%;
       display: block;
@@ -291,7 +307,7 @@ body.sports-digest-8-50 {
     background: url('/images/work/sports-digest-8-50/8-50-background.jpg') no-repeat center;
     background-size: cover;
     color: $sports-digest-color;
-    article:nth-child(3) {
+    article:nth-child(2) {
       display: block;
     }
   }
@@ -424,7 +440,7 @@ body.super-better {
 }
 .what-we-did {
   float: left;
-  font-size: 1.2em;
+  //font-size: 1.2em;
   width: 30%;
   h2 {
     margin: 0;
