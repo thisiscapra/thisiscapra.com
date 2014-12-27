@@ -69,7 +69,9 @@ clients:
     images:
       - 'alton-convent-site-1.jpg'
       - 'alton-convent-site-2.jpg'
+      - 'alton-convent-mobile.jpg'
       - 'alton-convent-site-3.jpg'
+      - 'alton-convent-tablet.jpg'
       - 'alton-convent-site-4.jpg'
     testimonial: 'blah blah blah'
   # Mind the product
@@ -90,17 +92,21 @@ clients:
   # Back Page Football
   - name: 'Back Page Football'
     url: 'backpagefootball'
-    link: 'http://alfredapp.com'
+    link: 'http://backpagefootball.com'
     intro: 'I am the intro'
     what_we_did: 
       - 'Branding & logo design'
-      - 'Marketing materials'
-      - 'Iconography'
+      - 'Customised Wordpress CMS'
       - 'Responsive Web design & Build'
+      - 'Marketing materials'
     image_path: 'work/backpagefootball'
     image_featured: 'backpagefootball-featured.jpg'
     image_thumb: 'backpagefootball-thumb.jpg'
     images:
+      - 'backpagefootball-site-1.jpg'
+      - 'backpagefootball-mobile.jpg'
+      - 'backpagefootball-site-2.jpg'
+      - 'backpagefootball-site-3.jpg'
     testimonial: 'blah blah blah'
   # Toto
   - name: 'Toto'

@@ -39,7 +39,7 @@ hr {
 
 // Typography
 
-h1,h2,h3,h4, p:first-of-type:first-letter {
+h1,h2,h3,h4, .intro:first-of-type:first-letter {
   font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
   font-weight: 700;
   text-align: center;
@@ -180,7 +180,7 @@ fieldset {
 }
 nav {
   //font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
-  font-size: 1.2em;
+  //font-size: 1.2em;
   font-weight: 400;
   li {
     display: inline;
