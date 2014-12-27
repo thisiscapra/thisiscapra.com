@@ -1,7 +1,7 @@
 clients: 
   # Alfred
   - name: 'Alfred App'
-    title: 'Designed to make you more productive.'
+    title: 'Designed to be productive.'
     url: 'alfred-app'
     link: 'http://alfredapp.com'
     intro: 'Launch apps and files on your Mac without lifting your hands off the keyboard. Alfred learns which apps you use most and prioritises them when you search. Increase your productivity with handy filter keywords, and ward off RSI, making your mouse almost obsolete!'
@@ -23,8 +23,9 @@ clients:
     cite: "Vero Peperrel, Alfred App"
   # 8-50
   - name: '8-50'
-    title: 'Simple sports news, for both Android and iOS.'
+    title: 'Simple sports news.'
     url: 'sports-digest-8-50'
+
     link: 'http://850sportsapp.com'
     intro: "It's just ten minutes before work starts, and you need to catch up with all the sports you missed this weekend. 850 aims to create a simple, beautiful sports digest, curated and written by sports writers for the busy sports enthusiast. With bold colours and a quickly scannable format, it has lofty goals to become the go-to sports app.  850's founder came to us looking to create a functioning prototype he could present to investors.  We designed and built (using Phonegap) an iPhone and Android apps that are now available for download."
     what_we_did: 
@@ -60,19 +61,24 @@ clients:
     testimonial: 'blah blah blah'
   # Alton Convent School
   - name: 'Alton Convent School'
-    title: 'Top marks for a leading independent school.'
+    title: 'Beautifully educated.'
     url: 'alton-convent-school'
     link: 'http://alfredapp.com'
     intro: 'I am the intro'
     what_we_did: 
-      - 'Branding & logo design'
-      - 'Marketing materials'
-      - 'Iconography'
+      - 'Customised Wordpress CMS'
       - 'Responsive Web design & Build'
+      - 'Marketing materials'
     image_path: 'work/alton-convent-school'
     image_featured: 'alton-convent-featured.jpg'
     image_thumb: 'alton-convent-thumb.jpg'
     images:
+      - 'alton-convent-site-1.jpg'
+      - 'alton-convent-site-2.jpg'
+      - 'alton-convent-mobile.jpg'
+      - 'alton-convent-site-3.jpg'
+      - 'alton-convent-tablet.jpg'
+      - 'alton-convent-site-4.jpg'
     testimonial: 'blah blah blah'
   # Mind the product
   - name: 'Mind the Product'
@@ -92,17 +98,21 @@ clients:
   # Back Page Football
   - name: 'Back Page Football'
     url: 'backpagefootball'
-    link: 'http://alfredapp.com'
+    link: 'http://backpagefootball.com'
     intro: 'I am the intro'
     what_we_did: 
       - 'Branding & logo design'
-      - 'Marketing materials'
-      - 'Iconography'
+      - 'Customised Wordpress CMS'
       - 'Responsive Web design & Build'
+      - 'Marketing materials'
     image_path: 'work/backpagefootball'
     image_featured: 'backpagefootball-featured.jpg'
     image_thumb: 'backpagefootball-thumb.jpg'
     images:
+      - 'backpagefootball-site-1.jpg'
+      - 'backpagefootball-mobile.jpg'
+      - 'backpagefootball-site-2.jpg'
+      - 'backpagefootball-site-3.jpg'
     testimonial: 'blah blah blah'
   # Toto
   - name: 'Toto'

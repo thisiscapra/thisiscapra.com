@@ -45,7 +45,7 @@ $super-better-color: #b7378b;
       }
     }
   }
-  blockquote {
+  .intro:first-of-type:first-letter, blockquote {
     color: $color;
   }
   @if $button {
