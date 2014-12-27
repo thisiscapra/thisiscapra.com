@@ -97,7 +97,7 @@ $super-better-color: #b7378b;
     a {
       background-color: rgba(darken($color, 5%), 0.5);
       &:hover {
-        background-color: rgba(darken($color, 5%), 0.8);
+        background-color: rgba(darken($color, 5%), 1);
         color: #fff;
       }
     }
@@ -155,5 +155,16 @@ $super-better-color: #b7378b;
     right: 0;
     z-index: 10;
     @include gradient-directional(#000, transparent, 0);
+  }
+}
+
+// @extend %first-letter
+%first-letter {
+  &:first-letter {
+    float: left;
+    line-height: 1;
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0 0.2em 0 0;
   }
 }

@@ -1,6 +1,6 @@
 <% wrap_layout :layout do %>
   <section class="blog">
-    <article itemscope itemtype="http://schema.org/Article">
+    <article itemscope itemtype="http://schema.org/Article" class="blog-entry">
       <h1 itemprop="name"><%= current_page.title %></h1>
       <time itemprop="datePublished" datetime="current_page.date.strftime('%b %e %G')"><%= current_page.date.strftime('%b %e, %G') %></time>
       <div itemprop="articleBody">

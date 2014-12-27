@@ -39,7 +39,7 @@ hr {
 
 // Typography
 
-h1,h2,h3,h4, .intro:first-of-type:first-letter {
+h1,h2,h3,h4, .intro:first-of-type:first-letter, .blog-entry div>p:first-of-type:first-letter {
   font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
   font-weight: 700;
   text-align: center;
@@ -68,13 +68,7 @@ p {
   &.intro {
     font-size: 1.2em;
     text-align: left;
-    &:first-letter {
-      float: left;
-      line-height: 1;
-      font-size: 3em;
-      font-weight: 700;
-      margin: 0 0.2em 0 0;
-    }
+    @extend %first-letter
   }
 }
 strong {
@@ -117,7 +111,7 @@ a {
 input, textarea {
   border: 0;
   display: block;
-  font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
+  font-family: 'Sentinel SSm A', 'Sentinel SSm B', 'Georgia', sans-serif;
   font-size: 1.2em;
   padding: 0.6em;
   @include box-sizing(border-box);
@@ -402,6 +396,7 @@ body.super-better {
     line-height: 0.5;
     padding: 0.8em 0.8em 1em;
     text-align: center;
+    @include transition(background-color 0.1s linear);
     > span {
       display: none;
     }
@@ -514,6 +509,9 @@ body.super-better {
         text-indent: 1em;
       }
     }
+    .blog-entry div>p:first-of-type:first-letter {
+      @extend %first-letter;
+    }
   }
 }
 
@@ -521,6 +519,9 @@ body.super-better {
 
 body.page-about {
   @include colour-scheme($about-red, $button: true, $lighten: true);
+  .intro:first-of-type:first-letter {
+    color: #fff;
+  }
 }
 
 // Contact page 
