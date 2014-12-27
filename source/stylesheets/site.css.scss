@@ -270,13 +270,13 @@ body.alfred-app {
   }
 }
 
-body.trickets {
-  @include colour-scheme($trickets-color, $button: true, $lighten: true);
+body.trickits {
+  @include colour-scheme($trickits-color, $button: true, $lighten: true);
   .featured {
-    background-color: $trickets-color;
+    background-color: $trickits-color;
     color: #cec3b7;
     article:nth-child(2) {
-      background: url('/images/work/trickets/trickets-featured.jpg') no-repeat bottom center;
+      background: url('/images/work/trickits/trickits-featured.jpg') no-repeat bottom center;
       background-size: 100%;
       display: block;
       margin: 0 auto;

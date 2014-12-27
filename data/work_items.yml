@@ -25,32 +25,37 @@ clients:
   - name: '8-50'
     title: 'Simple sports news, for both Android and iOS.'
     url: 'sports-digest-8-50'
-    link: 'http://alfredapp.com'
-    intro: 'I am the intro'
+    link: 'http://850sportsapp.com'
+    intro: "It's just ten minutes before work starts, and you need to catch up with all the sports you missed this weekend. 850 aims to create a simple, beautiful sports digest, curated and written by sports writers for the busy sports enthusiast. With bold colours and a quickly scannable format, it has lofty goals to become the go-to sports app.  850's founder came to us looking to create a functioning prototype he could present to investors.  We designed and built (using Phonegap) an iPhone and Android apps that are now available for download."
     what_we_did: 
       - 'Branding & logo design'
-      - 'Marketing materials'
-      - 'Iconography'
+      - 'App design'
+      - 'iOS and Android build and release'
       - 'Responsive Web design & Build'
     image_path: 'work/sports-digest-8-50'
     image_featured: '8-50-featured.jpg'
     image_thumb: '8-50-thumb.jpg'
     images:
-    testimonial: 'blah blah blah'
-  # Trickets
-  - name: 'Trickets'
+    testimonial: "I've worked with Kat and Ollie on numberous projects over the years for many different companies and they are always the first people I turn to when I need a high quality product to be delivered. 850 Sports Digest was the most intense project we have worked on together yet with me setting tight budgets and pushing on delivery times and asking the world of the quality of the look and feel and features. But as always, they delivered above expectation and even advised me when they thought my thinking was on the wrong track. With their long, flawless track record in design, UI /UX and even front-end development, this kind of two way relationship is very valuable and my app is a much better product because of it."
+    cite: 'Jon Bishop, 850 founder'
+  # Trickits
+  - name: 'Trickits'
     title: 'Trickits helps reclaim wonder in our natural world.'
-    url: 'trickets'
-    link: 'http://alfredapp.com'
-    intro: 'I am the intro'
+    url: 'trickits'
+    link: 'http://trickits.com'
+    intro: "We are living in a world where children are glued to TVs, computers and mobile devices.  In an effort to help kids learn the basics of the scientific method, exploration outdoors and a sense of natural wonder, we have been involved in designing and developing the Trickits app, a digital version of the highly successful camps run by award-winning Courtney Watkins. The app is still in testing and development and should be launched sometime in 2015."
     what_we_did: 
-      - 'Branding & logo design'
-      - 'Marketing materials'
-      - 'Iconography'
-      - 'Responsive Web design & Build'
-    image_path: 'work/trickets'
-    image_featured: 'trickets-featured.jpg'
-    image_thumb: 'trickets-thumb.jpg'
+      - 'Branding'
+      - 'Game design'
+      - 'Interface design'
+      - 'Basic animations'
+      - 'Project management'
+      - 'Web design'
+      - 'Testing'
+      - 'Kickstarter campaign'
+    image_path: 'work/trickits'
+    image_featured: 'trickits-featured.jpg'
+    image_thumb: 'trickits-thumb.jpg'
     images:
     testimonial: 'blah blah blah'
   # Alton Convent School
@@ -102,45 +107,52 @@ clients:
   # Toto
   - name: 'Toto'
     url: 'toto'
-    link: 'http://alfredapp.com'
-    intro: 'I am the intro'
+    link: 'http://totomerch.com'
+    intro: "After demoing a well-received prototype, Totomerch wished to expand their app from a restrictive flash application to a robust app that reflected all of their user feedback. Their aim was to make it easy for bands to sell one-off merchandise so they wouldn't have to keep lots of stock. Toto needed a design that was clean but also up to date and modern enough for this hip crowd. The site also needed to be easy to use. I used neutral backgrounds with subtle textures and bold calls-to-action to lead the users through the website."
     what_we_did: 
-      - 'Branding & logo design'
-      - 'Marketing materials'
-      - 'Iconography'
-      - 'Responsive Web design & Build'
+      - 'User interface design'
+      - 'Web design'
+      - 'Basic white-label design'
     image_path: 'work/toto'
     image_featured: 'toto-featured.jpg'
     image_thumb: 'toto-thumb.jpg'
     images:
-    testimonial: 'blah blah blah'
   # Cold Claim
   - name: 'Cold Claim'
     url: 'cold-claim'
-    link: 'http://alfredapp.com'
-    intro: 'I am the intro'
+    link: 'http://coldclaim.com'
+    intro: "The place is Antarctica. The year is 2049. Your mission is to locate and extract what is now Earth’s most precious resource: Paleo Water. As expedition leader prepare to navigate harsh terrain, prospect for Paleo, discover artifacts, and claim coldly contested land... while outwitting your rivals and protecting your reputation. In the spirit of Settlers of Catan and Kingdom Builder, Cold Claim is a strategic board game for two to four players via iPad Game Center, pass-and-play or physical boardgame. It was designed working in collaboration with Natron Baxter and the iPad version was developed alongside Jackson Maynard. We lead the design and build of this iPad game, board game and supporting website."
     what_we_did: 
-      - 'Branding & logo design'
-      - 'Marketing materials'
-      - 'Iconography'
-      - 'Responsive Web design & Build'
+      - 'Game design'
+      - 'Interface design'
+      - 'Writing simple AI'
+      - 'Illustration'
+      - 'Copy editing'
+      - 'Branding'
+      - 'Project management'
+      - 'Web design'
+      - 'Testing'
+      - 'Physical board game prototype'
     image_path: 'work/cold-claim'
     image_featured: 'cold-claim-featured.jpg'
     image_thumb: 'cold-claim-thumb.jpg'
     images:
-    testimonial: 'blah blah blah'
+    testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with. She is one of those people you look forward to getting on a 7 a.m. client call with. One of those people who make a 6-hour brainstorming marathon feel like a treat and not a trial. Her relentless optimism and ability to keep the momentum going in the dark times that come with any long term project makes her a true delight to work with. In short, Kat is the complete package. She has my complete trust, total respect, and my highest recommendation."
+    cite: "Mathias Crawford, game designer for ColdClaim"
   # Super Better
   - name: 'Super Better'
     url: 'super-better'
-    link: 'http://alfredapp.com'
-    intro: 'I am the intro'
+    link: 'http://superbetter.com'
+    intro: "SuperBetter is Jane McGonigal's game that helps you achieve your health goals — or recover from an illness or injury — by increasing your personal resilience. Resilience means staying curious, optimistic and motivated even in the face of the toughest challenges. After working on implementing the front end (html/css) of Superbetter Version 1 (which was designed by Ryan Larson and Natron Baxter), I got involved in designing Version 2, where I worked on making history and tracking your progress in a gameful way more delightful. We were the designers for the original version of the iPhone app, based on the web version, which was built to focus users on quick and easy access to their daily gaming activities. It simplified forms, focused on fun images and celebrations."
     what_we_did: 
-      - 'Branding & logo design'
-      - 'Marketing materials'
-      - 'Iconography'
-      - 'Responsive Web design & Build'
+      - 'Concept design'
+      - 'Game design'
+      - 'Interface design'
+      - 'HTML/css integration in Ruby backend'
+      - 'iOS app design'
     image_path: 'work/super-better'
     image_featured: 'super-better-featured.jpg'
     image_thumb: 'super-better-thumb.jpg'
     images:
-    testimonial: 'blah blah blah'
+    testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I've never found that talent wrapped in such an energetic, positive, problem-solving personality."
+    cite: "Chelsea Howe, Game Designer for SuperBetter"
