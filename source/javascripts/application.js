@@ -18,30 +18,34 @@ var removeClass = function (elem, className) {
   }
 }
 
-if ( 'querySelector' in document && 'addEventListener' in window ) {
-
-  var body = document.querySelector('body');
-
-  // Adding random classes to the homepage
+// Adding random classes to the homepage
+function addBodyClass() {
   if(hasClass(body, 'page-index') ) {
     var bodyClasses = ['alfred-app','sports-digest-8-50','trickits','alton-convent-school'];
     var randomClass = Math.floor(Math.random()*bodyClasses.length);
     addClass(body, bodyClasses[randomClass]);
-  } 
+  }
+}
 
-  // Fading background colours on the work page
-  var clients = document.getElementsByClassName("client");
-  [].forEach.call(clients, function(client){
-    client.addEventListener("mouseover", clientHover, false);
-    client.addEventListener("mouseout", clientHoverOut, false);
-    var clientID = client.getAttribute("id");
-  });
+if ( 'querySelector' in document && 'addEventListener' in window ) {
+
+  var body = document.querySelector('body');
+
+  addBodyClass();
+
   function clientHover(evt) {
     addClass(body, this.getAttribute("id"));
   }
   function clientHoverOut(evt) {
     removeClass(body, this.getAttribute("id"));
   }
+
+  // Fading background colours on the work page
+  var clients = document.getElementsByClassName("client");
+  [].forEach.call(clients, function(client){
+    client.addEventListener("mouseover", clientHover, false);
+    client.addEventListener("mouseout", clientHoverOut, false);
+  });
 
   // Tabs on the contact page
   var tab_contents = document.getElementsByClassName("contact-form");
@@ -63,4 +67,12 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     }, false);
   });
 
+}
+
+// IE8 only
+
+if (document.all && document.querySelector && !document.addEventListener) {
+  var body = document.querySelector('body');
+  addBodyClass();
+  addClass(body, 'ie8');
 }

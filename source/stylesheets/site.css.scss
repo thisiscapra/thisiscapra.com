@@ -22,6 +22,10 @@ body {
 }
 section {
   padding: 7em 2em 3em;
+  @include box-sizing(border-box);
+  @media screen and (max-width: 550px) {
+    padding: 7em 1em 3em;
+  }
 }
 img {
   display: block;
@@ -39,7 +43,7 @@ hr {
 
 // Typography
 
-h1,h2,h3,h4, .intro:first-of-type:first-letter, .blog-entry div>p:first-of-type:first-letter {
+h1, h2, h3, h4, .intro:first-of-type:first-letter, .blog-entry div>p:first-of-type:first-letter {
   font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
   font-weight: 700;
   text-align: center;
@@ -48,9 +52,14 @@ h1 {
   font-size: 4em;
   line-height: 1;
   margin-bottom: 0.8em;
+  text-align: center;
+  @media screen and (max-width: 550px) {
+    font-size: 3em;
+  }
 }
 h2 {
   font-size: 2em;
+  line-height: 1.2;
   margin-bottom: 0.5em;
 }
 h3 {
@@ -68,7 +77,10 @@ p {
   &.intro {
     font-size: 1.2em;
     text-align: left;
-    @extend %first-letter
+    @extend %first-letter;
+    @media screen and (max-width: 550px) {
+      font-size: 1em;
+    }
   }
 }
 strong {
@@ -90,6 +102,9 @@ figure {
       font-style: normal;
       font-weight: 700;
       line-height: 0.2;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 1.2em;
     }
   }
 }
@@ -141,6 +156,12 @@ label {
 fieldset {
   > div {
     margin-bottom: 1em;
+    &:last-child {
+      margin: 0;
+    }
+    &.radios > label {
+      text-align: center;
+    }
   }
 }
 
@@ -171,6 +192,9 @@ fieldset {
   right: 0;
   text-align: center;
   z-index: 100;
+  @media screen and (max-width: 550px) {
+    padding: 2em 0;
+  }
 }
 nav {
   //font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
@@ -185,15 +209,38 @@ nav {
     &:last-child {
       margin-right: 0;
     }
+    @media screen and (max-width: 650px) {
+      margin-right: 1.5em;
+      &:nth-child(2) {
+        margin-right: 160px;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 0.7em;
+      margin-right: 1em;
+      &:nth-child(2) {
+        margin-right: 70px;
+      }
+    }
   }
 }
 #logo {
   left: 50%;
+  height: 73px;
   margin-left: -40px;
   opacity: 1;
   position: absolute;
-  top: 1.5em;
+  overflow: hidden;
+  top: 1em;
+  width: 80px;
   @include transition(opacity 0.1s linear);
+  > svg {
+    display: inline-block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+  }
   .logo-left {
     fill: #fff;
   }
@@ -203,6 +250,11 @@ nav {
   &:hover {
     opacity: 0.5;
   }
+  @media screen and (max-width: 550px) {
+    top: 2em;
+    margin-left: -20px;
+    width: 40px;
+  }
 }
 
 // Footer
@@ -211,6 +263,9 @@ nav {
   border-top: 1px solid #e1e1e1;
   padding: 3em 0;
   text-align: center;
+  ul {
+    list-style: none;
+  }
 }
 
 // Homepage 
@@ -238,9 +293,21 @@ nav {
   h2 {
     font-size: 4em;
     line-height: 1;
+    @media screen and (max-width: 900px) {
+      font-size: 3em;
+    }
+    @media screen and (max-width: 700px) {
+      font-size: 2.5em;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 2em;
+    }
   }
   a {
     color: #fff;
+  }
+  @media screen and (max-width: 650px) {
+    min-height: 100%;
   }
 }
 
@@ -256,8 +323,15 @@ nav {
     text-align: center;
   }
   > p {
-    text-indent: 1em;
+    // text-indent: 1em;
     text-align: left;
+  }
+  @media screen and (max-width: 550px) {
+    padding: 3em 1em;
+    max-width: 100%;
+    h1 {
+      font-size: 2em;
+    }
   }
 }
 
@@ -270,12 +344,15 @@ body.alfred-app {
   .featured {
     background-color: $alfred-color;
     @extend %header-shadow;
-    article:nth-child(1) {
+    article.ft-alfred-app {
       background: url('/images/work/alfred-app/alfred-app-background.jpg') no-repeat center bottom;
       background-size: 100%;
       display: block;
       margin: 0 auto;
       max-width: 1200px;
+      @media screen and (max-width: 800px) {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -285,12 +362,15 @@ body.trickits {
   .featured {
     background-color: $trickits-color;
     color: #cec3b7;
-    article:nth-child(3) {
+    article.ft-trickits {
       background: url('/images/work/trickits/trickits-featured.jpg') no-repeat bottom center;
       background-size: 100%;
       display: block;
       margin: 0 auto;
       max-width: 1200px;
+      @media screen and (max-width: 800px) {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -301,7 +381,7 @@ body.sports-digest-8-50 {
     background: url('/images/work/sports-digest-8-50/8-50-background.jpg') no-repeat center;
     background-size: cover;
     color: $sports-digest-color;
-    article:nth-child(2) {
+    article.ft-sports-digest-8-50 {
       display: block;
     }
   }
@@ -316,7 +396,7 @@ body.alton-convent-school {
     background: url('/images/work/alton-convent-school/alton-convent-background.jpg') no-repeat center;
     background-size: cover;
     color: #fff;
-    article:nth-child(4) {
+    article.ft-alton-convent-school {
       display: block;
     }
   }
@@ -375,12 +455,19 @@ body.super-better {
       display: none;
     }
   }
+  @media screen and (max-width: 550px) {
+    max-width: 100%;
+    li {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 .work-nav {
   li {
     list-style: none;
     margin-top: -60px;
-    top: 50%;
+    bottom: 50%;
     position: fixed;
     z-index: 100;
     &.next {
@@ -401,15 +488,30 @@ body.super-better {
       display: none;
     }
   }
+  @media screen and (max-width: 550px) {
+    li {
+      bottom: 0;
+      position: absolute;
+      width: 50%;
+      > a {
+        line-height: 0.5;
+        padding: 0.3em 0.3em 0.5em;
+      }
+    }
+  }
 }
 .work-item {
   padding: 0;
-  > div:not(.featured) {
+  > div {
     margin: 0 auto;
     max-width: 1000px;
     padding: 3em 2em;
     width: 100%;
     @include box-sizing(border-box);
+    @media screen and (max-width: 550px) {
+      max-width: 100%;
+      padding: 3em 1em;
+    }
   }
   h1 {
     margin-bottom: 0.2em;
@@ -421,10 +523,14 @@ body.super-better {
       float: left;
       margin-right: 10%;
       width: 60%;
+      @media screen and (max-width: 700px) {
+        float: none;
+        width: 100%;
+      }
     }
   }
   .client-header {
-    padding: 7em 2em 0;
+    padding: 7em 0 0;
     position: relative;
     @include box-sizing(border-box);
     //@extend %header-shadow;
@@ -444,12 +550,20 @@ body.super-better {
   li {
     margin-bottom: 0.27em;
   }
+  @media screen and (max-width: 700px) {
+    float: none;
+    margin-left: 1em;
+    width: 100%;
+  }
 }
 .gallery {
   .image {
     background-color: #f2f2f2;
     margin-bottom: 2em;
     padding: 3em;
+    @media screen and (max-width: 800px) {
+      padding: 1em;
+    }
   }
 }
 
@@ -480,6 +594,9 @@ body.super-better {
     margin: 0 auto;
     max-width: 600px;
     width: 100%;
+    @media screen and (max-width: 675px) {
+      max-width: 100%;
+    }
     h1,h2 {
       margin: 0;
       text-align: center;
@@ -557,6 +674,16 @@ body.page-contact {
       border-bottom: 0;
     }
   }
+  @media screen and (max-width: 500px) {
+    border:0;
+    li {
+      border: 0;
+      border: 1px solid lighten($contact-green,15%);
+      display: block;
+      float: none;
+      width: 100%;
+    }
+  }
 }
 .contact-form {
   border-left: 1px solid lighten($contact-green,15%);
@@ -576,5 +703,29 @@ body.page-contact {
   &.active {
     display: block;
     opacity: 1;
+  }
+}
+
+// Some ie8 fixes 
+.ie8 {
+  #logo {
+    background: url('../images/logo.png') no-repeat center;
+    height: 80px;
+    width: 80px;
+  }
+  nav {
+    margin-right: -45px;
+    li:first-child + li {
+      margin-right: 200px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .work-item {
+    > div:first-child {
+      margin: 0 auto;
+      width: 1000px;
+    }
   }
 }
