@@ -43,7 +43,7 @@ hr {
 
 // Typography
 
-h1,h2,h3,h4, .intro:first-of-type:first-letter, .blog-entry div>p:first-of-type:first-letter {
+h1, h2, h3, h4, .intro:first-of-type:first-letter, .blog-entry div>p:first-of-type:first-letter {
   font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
   font-weight: 700;
   text-align: center;
@@ -52,6 +52,7 @@ h1 {
   font-size: 4em;
   line-height: 1;
   margin-bottom: 0.8em;
+  text-align: center;
   @media screen and (max-width: 550px) {
     font-size: 3em;
   }
@@ -155,6 +156,12 @@ label {
 fieldset {
   > div {
     margin-bottom: 1em;
+    &:last-child {
+      margin: 0;
+    }
+    &.radios > label {
+      text-align: center;
+    }
   }
 }
 
@@ -219,10 +226,11 @@ nav {
 }
 #logo {
   left: 50%;
-  height: auto;
+  height: 73px;
   margin-left: -40px;
   opacity: 1;
   position: absolute;
+  overflow: hidden;
   top: 1em;
   width: 80px;
   @include transition(opacity 0.1s linear);
@@ -255,6 +263,9 @@ nav {
   border-top: 1px solid #e1e1e1;
   padding: 3em 0;
   text-align: center;
+  ul {
+    list-style: none;
+  }
 }
 
 // Homepage 
@@ -333,7 +344,7 @@ body.alfred-app {
   .featured {
     background-color: $alfred-color;
     @extend %header-shadow;
-    article:nth-child(1) {
+    article.ft-alfred-app {
       background: url('/images/work/alfred-app/alfred-app-background.jpg') no-repeat center bottom;
       background-size: 100%;
       display: block;
@@ -351,7 +362,7 @@ body.trickits {
   .featured {
     background-color: $trickits-color;
     color: #cec3b7;
-    article:nth-child(3) {
+    article.ft-trickits {
       background: url('/images/work/trickits/trickits-featured.jpg') no-repeat bottom center;
       background-size: 100%;
       display: block;
@@ -370,7 +381,7 @@ body.sports-digest-8-50 {
     background: url('/images/work/sports-digest-8-50/8-50-background.jpg') no-repeat center;
     background-size: cover;
     color: $sports-digest-color;
-    article:nth-child(2) {
+    article.ft-sports-digest-8-50 {
       display: block;
     }
   }
@@ -385,7 +396,7 @@ body.alton-convent-school {
     background: url('/images/work/alton-convent-school/alton-convent-background.jpg') no-repeat center;
     background-size: cover;
     color: #fff;
-    article:nth-child(4) {
+    article.ft-alton-convent-school {
       display: block;
     }
   }
@@ -491,7 +502,7 @@ body.super-better {
 }
 .work-item {
   padding: 0;
-  > div:not(.client-header) {
+  > div {
     margin: 0 auto;
     max-width: 1000px;
     padding: 3em 2em;
@@ -692,5 +703,29 @@ body.page-contact {
   &.active {
     display: block;
     opacity: 1;
+  }
+}
+
+// Some ie8 fixes 
+.ie8 {
+  #logo {
+    background: url('../images/logo.png') no-repeat center;
+    height: 80px;
+    width: 80px;
+  }
+  nav {
+    margin-right: -45px;
+    li:first-child + li {
+      margin-right: 200px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .work-item {
+    > div:first-child {
+      margin: 0 auto;
+      width: 1000px;
+    }
   }
 }

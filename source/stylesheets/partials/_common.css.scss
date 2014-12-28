@@ -162,9 +162,9 @@ $super-better-color: #b7378b;
 %first-letter {
   &:first-letter {
     float: left;
-    line-height: 1;
+    line-height: 0.55;
     font-size: 3em;
     font-weight: 700;
-    margin: 0 0.2em 0 0;
+    margin: 15px 0.2em 0 0;
   }
 }

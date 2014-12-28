@@ -26,7 +26,6 @@ clients:
   - name: '8-50'
     title: 'Simple sports news.'
     url: 'sports-digest-8-50'
-
     link: 'http://850sportsapp.com'
     intro: "It's just ten minutes before work starts, and you need to catch up with all the sports you missed this weekend. 850 aims to create a simple, beautiful sports digest, curated and written by sports writers for the busy sports enthusiast. With bold colours and a quickly scannable format, it has lofty goals to become the go-to sports app.  850's founder came to us looking to create a functioning prototype he could present to investors.  We designed and built (using Phonegap) an iPhone and Android apps that are now available for download."
     what_we_did: 

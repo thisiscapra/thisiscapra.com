@@ -16,6 +16,7 @@
 # With no layout
 # page "/path/to/file.html", :layout => false
 
+page "/404.html", :layout => false
 page "/sitemap.xml", :layout => false
 
 # With alternative layout
@@ -65,6 +66,14 @@ helpers do
       "#{yield_content(:title)} - Capra Design"
     else
       "Capra Design"
+    end
+  end
+  # Set the page description
+  def page_description
+    if content_for?(:description)
+      "#{yield_content(:description)}"
+    else
+      "Hello, I'm Kat. I design websites, games & apps. Like goats, I like playful work, am curious about the world, and enjoy working within the herd to make great things."
     end
   end
   # Active nav items
