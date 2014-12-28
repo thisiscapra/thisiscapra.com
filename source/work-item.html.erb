@@ -36,7 +36,10 @@
     <% if client.images %>
       <div class="gallery">
         <% client.images.each_with_index do |image, index| %>
-          <% if index == 2 && client.testimonial %>
+          <% if index == 2 && client.sub_text %>
+            <p class="sub-text"><%= client.sub_text  %></p>
+          <% end %>
+          <% if index == 4 && client.testimonial %>
             <%= partial "client_blockquote", :locals => {:client => client}  %>
           <% end %>
           <figure class="image">

@@ -1,4 +1,4 @@
-<% pages = sitemap.resources.find_all{|p| p.source_file.match(/work/) } %>
+<% pages = sitemap.resources.find_all{|p| p.source_file.match(/work/) and not p.source_file.match(/images/) } %>
 <ul class="work-nav">
   <% pages.each_with_index do |p, index| %>
     <% if p.url == current_page.url %>

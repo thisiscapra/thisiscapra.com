@@ -27,7 +27,8 @@ clients:
     title: 'Simple sports news.'
     url: 'sports-digest-8-50'
     link: 'http://850sportsapp.com'
-    intro: "It's just ten minutes before work starts, and you need to catch up with all the sports you missed this weekend. 850 aims to create a simple, beautiful sports digest, curated and written by sports writers for the busy sports enthusiast. With bold colours and a quickly scannable format, it has lofty goals to become the go-to sports app.  850's founder came to us looking to create a functioning prototype he could present to investors.  We designed and built (using Phonegap) an iPhone and Android apps that are now available for download."
+    intro: "It's just ten minutes before work starts, and you need to catch up with all the sports you missed this weekend. 850 aims to create a simple, beautiful sports digest, curated and written by sports writers for the busy sports enthusiast. With bold colours and a quickly scannable format, it has lofty goals to become the go-to sports app."
+    sub_text: "850's founder came to us looking to create a functioning prototype he could present to investors.  We designed and built (using Phonegap) an iPhone and Android apps that are now available for download."
     what_we_did: 
       - 'Branding & logo design'
       - 'App design'
@@ -83,8 +84,9 @@ clients:
   # Mind the product
   - name: 'Mind the Product'
     url: 'mind-the-product'
-    link: 'http://alfredapp.com'
-    intro: "MindtheProduct was a very popular meetup group, and in 2012, they launched their very first conference. The design was a simple one page conference website, based on their colours and circles, which moved as you scrolled. Because we were both so pleased with last year's efforts, we knew we had to come up with something fun and different for this year's conference. The canvas was perfect: with very little content, we could let the design breath and really speak to product managers. After all, this was meant to inspire product managers to make great, innovative products. The website's homepage features a video background from last year's conference. Then in 2013..."
+    link: 'http://mtpcon.com/'
+    intro: "MindtheProduct was a very popular meetup group, and in 2012, they launched their very first conference. The design was a simple one page conference website, based on their colours and circles, which moved as you scrolled."
+    sub_text: "Because we were both so pleased with last year's efforts, we knew we had to come up with something fun and different for this year's conference.. The canvas was perfect: with very little content, we could let the design breath and really speak to product managers. After all, this was meant to inspire product managers to make great, innovative products. The website's homepage features a video background from last year's conference. Then in 2013..."
     what_we_did: 
       - 'Responsive Web design & Build'
       - 'HTML/css integration'
@@ -125,7 +127,8 @@ clients:
   - name: 'Toto'
     url: 'toto'
     link: 'http://totomerch.com'
-    intro: "After demoing a well-received prototype, Totomerch wished to expand their app from a restrictive flash application to a robust app that reflected all of their user feedback. Their aim was to make it easy for bands to sell one-off merchandise so they wouldn't have to keep lots of stock. Toto needed a design that was clean but also up to date and modern enough for this hip crowd. The site also needed to be easy to use. I used neutral backgrounds with subtle textures and bold calls-to-action to lead the users through the website."
+    intro: "After demoing a well-received prototype, Totomerch wished to expand their app from a restrictive flash application to a robust app that reflected all of their user feedback. Their aim was to make it easy for bands to sell one-off merchandise so they wouldn't have to keep lots of stock."
+    sub_text: "Toto needed a design that was clean but also up to date and modern enough for this hip crowd. The site also needed to be easy to use. I used neutral backgrounds with subtle textures and bold calls-to-action to lead the users through the website."
     what_we_did: 
       - 'User interface design'
       - 'Web design'
@@ -142,7 +145,8 @@ clients:
   - name: 'Cold Claim'
     url: 'cold-claim'
     link: 'http://coldclaim.com'
-    intro: "The place is Antarctica. The year is 2049. Your mission is to locate and extract what is now Earth’s most precious resource: Paleo Water. As expedition leader prepare to navigate harsh terrain, prospect for Paleo, discover artifacts, and claim coldly contested land... while outwitting your rivals and protecting your reputation. In the spirit of Settlers of Catan and Kingdom Builder, Cold Claim is a strategic board game for two to four players via iPad Game Center, pass-and-play or physical boardgame. It was designed working in collaboration with Natron Baxter and the iPad version was developed alongside Jackson Maynard. We lead the design and build of this iPad game, board game and supporting website."
+    intro: "The place is Antarctica. The year is 2049. Your mission is to locate and extract what is now Earth’s most precious resource: Paleo Water. As expedition leader prepare to navigate harsh terrain, prospect for Paleo, discover artifacts, and claim coldly contested land... while outwitting your rivals and protecting your reputation. In the spirit of Settlers of Catan and Kingdom Builder, Cold Claim is a strategic board game for two to four players via iPad Game Center, pass-and-play or physical boardgame."
+    sub_text: "It was designed working in collaboration with Natron Baxter and the iPad version was developed alongside Jackson Maynard. We lead the design and build of this iPad game, board game and supporting website."
     what_we_did: 
       - 'Game design'
       - 'Interface design'
@@ -170,7 +174,8 @@ clients:
   - name: 'Super Better'
     url: 'super-better'
     link: 'http://superbetter.com'
-    intro: "SuperBetter is Jane McGonigal's game that helps you achieve your health goals — or recover from an illness or injury — by increasing your personal resilience. Resilience means staying curious, optimistic and motivated even in the face of the toughest challenges. After working on implementing the front end (html/css) of Superbetter Version 1 (which was designed by Ryan Larson and Natron Baxter), I got involved in designing Version 2, where I worked on making history and tracking your progress in a gameful way more delightful. We were the designers for the original version of the iPhone app, based on the web version, which was built to focus users on quick and easy access to their daily gaming activities. It simplified forms, focused on fun images and celebrations."
+    intro: "SuperBetter is Jane McGonigal's game that helps you achieve your health goals — or recover from an illness or injury — by increasing your personal resilience. Resilience means staying curious, optimistic and motivated even in the face of the toughest challenges."
+    sub_text: "After working on implementing the front end (html/css) of Superbetter Version 1 (which was designed by Ryan Larson and Natron Baxter), I got involved in designing Version 2, where I worked on making history and tracking your progress in a gameful way more delightful. We were the designers for the original version of the iPhone app, based on the web version, which was built to focus users on quick and easy access to their daily gaming activities. It simplified forms, focused on fun images and celebrations."
     what_we_did: 
       - 'Concept design'
       - 'Game design'
