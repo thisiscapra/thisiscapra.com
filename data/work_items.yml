@@ -85,17 +85,24 @@ clients:
   - name: 'Mind the Product'
     url: 'mind-the-product'
     link: 'http://alfredapp.com'
-    intro: 'I am the intro'
+    intro: "MindtheProduct was a very popular meetup group, and in 2012, they launched their very first conference. The design was a simple one page conference website, based on their colours and circles, which moved as you scrolled. Because we were both so pleased with last year's efforts, we knew we had to come up with something fun and different for this year's conference. The canvas was perfect: with very little content, we could let the design breath and really speak to product managers. After all, this was meant to inspire product managers to make great, innovative products. The website's homepage features a video background from last year's conference. Then in 2013..."
     what_we_did: 
-      - 'Branding & logo design'
-      - 'Marketing materials'
-      - 'Iconography'
       - 'Responsive Web design & Build'
+      - 'HTML/css integration'
+      - 'Wordpress CMS'
     image_path: 'work/mind-the-product'
     image_featured: 'mind-the-product-featured.jpg'
     image_thumb: 'mtp-thumb.jpg'
     images:
-    testimonial: 'blah blah blah'
+      - 'mtp-2012.png'
+      - 'mtp-2013.png'
+      - 'mtp-location-2013.png'
+      - 'mtp-2012-2013-mobile.jpg'
+      - 'mtp-2014-mobile.jpg'
+      - 'mtp-2015.jpg'
+      - 'mtp-sf.jpg'
+    testimonial: 'Kat is a superstar designer and a true partner to Mind the Product. She has developed all of our conference websites off minimal briefs and built amazing, engaging sites that truly represent and help elevate our forward thinking brand.'
+    cite: 'Martin Eriksson, founder of MindTheProduct'
   # Back Page Football
   - name: 'Back Page Football'
     url: 'backpagefootball'
@@ -128,6 +135,10 @@ clients:
     image_featured: 'toto-featured.jpg'
     image_thumb: 'toto-thumb.jpg'
     images:
+    - 'toto-home.jpg'
+    - 'toto-choose.jpg'
+    - 'toto-dashboard.jpg'
+    - 'toto-selling-tools.jpg'
   # Cold Claim
   - name: 'Cold Claim'
     url: 'cold-claim'
@@ -148,6 +159,12 @@ clients:
     image_featured: 'cold-claim-featured.jpg'
     image_thumb: 'cold-claim-thumb.jpg'
     images:
+      - 'cold-claim-logo.jpg'
+      - 'cold-claim-zoomed-out.jpg'
+      - 'cold-claim-zoomed-in.jpg'
+      - 'cold-claim-detail.jpg'
+      - 'cold-claim-web.jpg'
+      - 'cold-claim-mobile.jpg'
     testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with. She is one of those people you look forward to getting on a 7 a.m. client call with. One of those people who make a 6-hour brainstorming marathon feel like a treat and not a trial. Her relentless optimism and ability to keep the momentum going in the dark times that come with any long term project makes her a true delight to work with. In short, Kat is the complete package. She has my complete trust, total respect, and my highest recommendation."
     cite: "Mathias Crawford, game designer for ColdClaim"
   # Super Better
@@ -165,5 +182,13 @@ clients:
     image_featured: 'super-better-featured.jpg'
     image_thumb: 'super-better-thumb.jpg'
     images:
+      - 'sb-app-quest.jpg'
+      - 'sb-app-completion.jpg'
+      - 'sb-web-hq.jpg'
+      - 'sb-web-quest-list.jpg'
+      - 'sb-quest.jpg'
+      - 'sb-web-powerup.jpg'
+      - 'sb-web-badguy.jpg'
+      - 'sb-web-complete.jpg'
     testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I've never found that talent wrapped in such an energetic, positive, problem-solving personality."
     cite: "Chelsea Howe, Game Designer for SuperBetter"
