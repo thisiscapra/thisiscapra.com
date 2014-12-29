@@ -4,12 +4,14 @@ clients:
     title: 'Designed to be productive.'
     url: 'alfred-app'
     link: 'http://alfredapp.com'
-    intro: 'Launch apps and files on your Mac without lifting your hands off the keyboard. Alfred learns which apps you use most and prioritises them when you search. Increase your productivity with handy filter keywords, and ward off RSI, making your mouse almost obsolete!'
+    intro: "Alfred App is a quick launcher for OSX that has become the defacto app of it's kind used by tens of thousands of Mac users worldwide. Capra has been involved since its inception working on design across the board from OSX Icon Design and branding through to marketing materials and the web presence."
+    sub_text: "Alfred's popularity has meant our design and build skills have been put in front of a user base spread acrooss the globe, we worked closely with Andrew & Vero to realise their vision and evolve it over the past 5 years as they introduce new versions and features."
     what_we_did: 
       - 'Branding & logo design'
+      - 'Web design'
+      - 'Responsive build'
       - 'Marketing materials'
       - 'Iconography'
-      - 'Responsive Web design & Build'
       - 'OSX Application design'
     image_path: 'work/alfred-app'
     image_featured: 'alfred-app-featured.jpg'
@@ -23,7 +25,7 @@ clients:
     testimonial: "Kat's turnaround speed, real-time iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. She is the perfect mix of right brain, left brain, and extreme charisma. I would work with her again in a heartbeat and wish I could have her on every project."
     cite: "Vero Peperrel, Alfred App"
   # 8-50
-  - name: '8-50'
+  - name: '8-50 Sports Digest'
     title: 'Simple sports news.'
     url: 'sports-digest-8-50'
     link: 'http://850sportsapp.com'
@@ -32,8 +34,10 @@ clients:
     what_we_did: 
       - 'Branding & logo design'
       - 'App design'
-      - 'iOS and Android build and release'
-      - 'Responsive Web design & Build'
+      - 'PhoneGap developement'
+      - 'iOS & Android build'
+      - 'Web design'
+      - 'Responsive build'
     image_path: 'work/sports-digest-8-50'
     image_featured: '8-50-featured.jpg'
     image_thumb: '8-50-thumb.jpg'
@@ -64,11 +68,16 @@ clients:
   - name: 'Alton Convent School'
     title: 'Beautifully educated.'
     url: 'alton-convent-school'
-    link: 'http://alfredapp.com'
-    intro: 'I am the intro'
+    link: 'http://altonconvent.org.uk'
+    intro: "Alton Convent had an outdated drupal system that was proving very difficult to update and didn't have the flexibility the school needed to move forward. They came to use with a simple brief, 'Make it beautiful, easy to use and stand out from the crowd'. We duly obliged building the new site on a customised wordpress install with extended scalability, a beautiful design based around full screen photography and a fully responsive front end build to work across all devices."
+    sub_text: "The design has become a benchmark for other school sites to follow with compliments from both staff and parents. Some of the more advanced features they required were a fully featued events calendar, the ability to upload new photography across the site within specific categories and integration with their existing systems within the school. Wordpress gave us the basis to do all this and more while still delivering on performance."
     what_we_did: 
-      - 'Customised Wordpress CMS'
-      - 'Responsive Web design & Build'
+      - 'Web design'
+      - 'Branding'
+      - 'Project management'
+      - 'Wordpress CMS'
+      - 'Photo Gallery' 
+      - 'Responsive build'
       - 'Marketing materials'
     image_path: 'work/alton-convent-school'
     image_featured: 'alton-convent-featured.jpg'
@@ -88,9 +97,10 @@ clients:
     intro: "MindtheProduct was a very popular meetup group, and in 2012, they launched their very first conference. The design was a simple one page conference website, based on their colours and circles, which moved as you scrolled."
     sub_text: "Because we were both so pleased with last year's efforts, we knew we had to come up with something fun and different for this year's conference.. The canvas was perfect: with very little content, we could let the design breath and really speak to product managers. After all, this was meant to inspire product managers to make great, innovative products. The website's homepage features a video background from last year's conference. Then in 2013..."
     what_we_did: 
-      - 'Responsive Web design & Build'
-      - 'HTML/css integration'
-      - 'Wordpress CMS'
+      - 'Web design'
+      - 'Responsive build'
+      - 'HTML/CSS integration'
+      - 'Wordpress Multi-Site'
     image_path: 'work/mind-the-product'
     image_featured: 'mind-the-product-featured.jpg'
     image_thumb: 'mtp-thumb.jpg'
@@ -180,7 +190,7 @@ clients:
       - 'Concept design'
       - 'Game design'
       - 'Interface design'
-      - 'HTML/css integration in Ruby backend'
+      - 'HTML/CSS integration in Ruby backend'
       - 'iOS app design'
     image_path: 'work/super-better'
     image_featured: 'super-better-featured.jpg'
