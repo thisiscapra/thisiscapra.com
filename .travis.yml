@@ -1,3 +1,5 @@
+script:  bundle exec middleman build
+
 deploy:
   provider: heroku
   api_key:
@@ -6,3 +8,4 @@ deploy:
   on:
     repo: thisiscapra/Capra
     branch: new-site
+  run: "bundle exec middleman build"
