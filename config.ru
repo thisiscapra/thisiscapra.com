@@ -3,8 +3,8 @@
 
 # run Middleman.server
 
-require 'rack'
-require 'rack/request'
+# require 'rack'
+# require 'rack/request'
 
 if ENV['RACK_ENV'] == 'development'
 

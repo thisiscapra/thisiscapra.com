@@ -520,6 +520,7 @@ body.super-better {
     max-width: 100%;
     width: 100%;
     &.intro {
+      font-size: 1em;
       float: left;
       margin-right: 10%;
       width: 60%;
@@ -545,6 +546,7 @@ body.super-better {
 }
 .what-we-did {
   float: left;
+  margin-bottom: 2em;
   //font-size: 1.2em;
   width: 30%;
   h2 {
