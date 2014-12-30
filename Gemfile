@@ -8,7 +8,7 @@ gem "middleman-blog"
 #gem "middleman-blog-editor"
 gem "nokogiri"
 gem "puma"
-gem "rack-contrib"
+gem 'rake'
 
 group :development do
   # Live-reloading plugin
