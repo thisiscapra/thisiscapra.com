@@ -5,6 +5,5 @@ deploy:
     secure: CBA3cgeyLSLm+yccOWodozR6sMTuQoV4o7/F736auvqrrgJxFyQ3CyT0jC97SiNkEDRV3ewjA/GOxdMoKgo7bZUJgliT/xdzJ+WFQ64F+7rRf11z2iJT8xOGb5DJpvmok4Ve6Wcjy/vhuXpSVBJ1O7bsMZB41Y+YtR+b9YnWAl0=
   app: capra
   on:
-    repo: thisiscapra/Capra
+    #repo: thisiscapra/Capra
     branch: new-site
-  run: 'git push heroku master'
