@@ -29,7 +29,7 @@ clients:
     title: 'Simple sports news.'
     url: 'sports-digest-8-50'
     link: 'http://850sportsapp.com'
-    intro: "It's just ten minutes before work starts, and you need to catch up with all the sports you missed this weekend. 850 aims to create a simple, beautiful sports digest, curated and written by talented sports writers. With bold colours and a quickly scannable format, it has lofty goals to become the world's best sports app."
+    intro: "It's just ten minutes before work starts, and you need to catch up with the sports you missed this weekend. 850 aims to create a simple, beautiful sports digest, curated and written by talented sports writers. With bold colours and a scannable format, it has lofty goals to become the world's best sports app."
     sub_text: "850's founder came to us looking to create a functioning prototype he could present to investors.  We designed and built (using Phonegap) an iPhone and Android apps that are now available for download. We will be continuing to refine this beta version to more sports and more simple, elegant features."
     what_we_did: 
       - 'Branding & logo design'
@@ -94,15 +94,15 @@ clients:
   - name: 'Mind the Product'
     url: 'mind-the-product'
     link: 'http://mtpcon.com/'
-    intro: "MindtheProduct was a very popular meetup group, and in 2012, they launched their very first conference. Kat, one of Capra's lead designers, was approached to come up with something simple, fun and elegant. The design was a simple one-page conference website, based on their brand's colours and circle logo. The circles  moved as you scrolled. See <a href='http://mtpcon.com/london/2012'>Mind the Product 2012</a> for the live site."
-    sub_text: "Because we were both so pleased with the first year's efforts, we knew we had to come up with something fun and different for the second year's conference. 2013 website's homepage features a video background from last year's conference. See <a href='http://mtpcon.com/london/2013'>Mind the Product 2013</a> for the live site. The canvas was perfect: with very little content, we could let the design breath and really speak to product managers. After all, this was meant to inspire product managers to make great, innovative products.  Then in 2014, the conference grew up.  We created a website that could be modified through Wordpress, and could be reused for future years too. See <a href='http://mtpcon.com/london/2014'>Mind the Product 2014</a> for the live site. The build needed to be flexible enough to adapt to multiple locations (San Francisco and London this year!), pre-conference (no speakers, just teasers), full conference (speakers, tickets for sale) and post conference (wrap up, thank you and archiving).  We continue to work with Martin and the rest of the MindTheProduct team to keep their website fresh!"
+    intro: "MindtheProduct is a very popular meetup group for product managers, and in 2012 they launched their very first conference. Kat was approached to come up with a simple, fun and elegant design. The first year's website was a simple one-page design, based on their brand's colours and circle logo, where the circles moved as you scrolled. See <a href='http://mtpcon.com/london/2012'>Mind the Product 2012</a> for the live site."
+    sub_text: "Because we were both so pleased with the first year's efforts, we knew we had to come up with something fun and different for the second year's conference. 2013 website's homepage features a video background from last year's conference. See <a href='http://mtpcon.com/london/2013'>Mind the Product 2013</a> for the live site. The canvas was perfect: with very little content, we could let the design breath and really speak to product managers. After all, this was meant to inspire product managers to make great, innovative products!  Then in 2014, the founders decided to go for simple and practical.  We created a website that could be modified through Wordpress, and could be reused for future years too. See <a href='http://mtpcon.com/london/2014'>Mind the Product 2014</a> for the  2014 site. The build needed to be flexible enough to adapt to multiple locations (San Francisco and London this year!), pre-conference (no speakers, just teasers), full conference (speakers, tickets for sale) and post conference (wrap up, thank you and archiving).  We continue to work with Martin and the rest of the MindTheProduct team to keep their website fresh!"
     what_we_did: 
       - 'Web design'
       - 'Responsive build'
       - 'HTML/CSS integration'
       - 'Wordpress Multi-Site'
     image_path: 'work/mind-the-product'
-    image_featured: 'mind-the-product-featured.jpg'
+    image_featured: 'mind-the-product-featured.png'
     image_thumb: 'mtp-thumb.jpg'
     images:
       - 'mtp-2012.png'
