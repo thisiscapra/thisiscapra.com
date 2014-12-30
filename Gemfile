@@ -12,6 +12,6 @@ gem 'rake'
 
 group :development do
   # Live-reloading plugin
-  gem 'unicorn'
   gem "middleman-livereload", "~> 3.1.0"
+  gem 'travis'
 end

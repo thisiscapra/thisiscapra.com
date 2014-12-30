@@ -8,9 +8,11 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
+    backports (3.6.4)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     chunky_png (1.3.3)
+    coderay (1.1.0)
     coffee-script (2.3.0)
       coffee-script-source
       execjs
@@ -31,11 +33,25 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
+    ethon (0.7.1)
+      ffi (>= 1.3.0)
     eventmachine (1.0.4)
     execjs (2.2.2)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.9.1)
+      faraday (>= 0.7.4, < 0.10)
     ffi (1.9.6)
+    gh (0.13.2)
+      addressable
+      backports
+      faraday (~> 0.8)
+      multi_json (~> 1.0)
+      net-http-persistent (>= 2.7)
+      net-http-pipeline
     haml (4.0.6)
       tilt
+    highline (1.6.21)
     hike (1.2.3)
     hitimes (1.2.2)
     hooks (0.4.0)
@@ -43,12 +59,14 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.6.11)
     json (1.8.1)
-    kgio (2.9.2)
     kramdown (1.5.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     listen (2.8.4)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
+    method_source (0.8.2)
     middleman (3.3.7)
       coffee-script (~> 2.2)
       compass (>= 1.0.0, < 2.0.0)
@@ -86,9 +104,12 @@ GEM
       sprockets (~> 2.12.1)
       sprockets-helpers (~> 1.1.0)
       sprockets-sass (~> 1.3.0)
-    mini_portile (0.6.1)
+    mini_portile (0.6.2)
     minitest (5.5.0)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
+    net-http-persistent (2.9.4)
+    net-http-pipeline (1.0.1)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     padrino-helpers (0.12.4)
@@ -97,19 +118,26 @@ GEM
       tilt (~> 1.4.1)
     padrino-support (0.12.4)
       activesupport (>= 3.1)
+    pry (0.9.12.6)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     puma (2.10.2)
       rack (>= 1.1, < 2.0)
+    pusher-client (0.6.0)
+      json
+      websocket (~> 1.0)
     rack (1.6.0)
     rack-livereload (0.3.15)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    raindrops (0.13.0)
     rake (10.4.2)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     sass (3.4.9)
+    slop (3.6.0)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -125,16 +153,26 @@ GEM
     tilt (1.4.1)
     timers (4.0.1)
       hitimes
+    travis (1.7.4)
+      addressable (~> 2.3)
+      backports
+      faraday (~> 0.9)
+      faraday_middleware (~> 0.9, >= 0.9.1)
+      gh (~> 0.13)
+      highline (~> 1.6)
+      launchy (~> 2.1)
+      pry (~> 0.9, < 0.10)
+      pusher-client (~> 0.4)
+      typhoeus (~> 0.6, >= 0.6.8)
+    typhoeus (0.6.9)
+      ethon (>= 0.7.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uber (0.0.12)
     uglifier (2.6.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unicorn (4.8.3)
-      kgio (~> 2.6)
-      rack
-      raindrops (~> 0.7)
+    websocket (1.2.1)
 
 PLATFORMS
   ruby
@@ -146,4 +184,4 @@ DEPENDENCIES
   nokogiri
   puma
   rake
-  unicorn
+  travis
