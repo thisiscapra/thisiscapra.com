@@ -7,6 +7,8 @@ gem "middleman", "~>3.3.7"
 gem "middleman-blog"
 #gem "middleman-blog-editor"
 gem "nokogiri"
+gem "puma"
+gem "rack-contrib"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

@@ -119,7 +119,7 @@ clients:
     url: 'backpagefootball'
     link: 'http://backpagefootball.com'
     intro: "Capra was approached by Kevin as he had an idea for a curated newspaper style approach to football blogging. Being a keen football fan this fitted perfectly within our remit and we created a stunning design sitting on top of a multi-site Wordpress build so they could rollout other sports at the touch of a button."
-    sub_text: "Backpagefootball now has a user base of over 10,000 readers every month and has been featured on <a href="http://www.siteinspire.com/websites/2298-back-page-football">Site Inspire</a> amongst others. The responsive design and CMS has allowed the site to elvove and expand globally to become one of the top sports blogs of it's kind while still staying true to its roots.""
+    sub_text: "Backpagefootball now has a user base of over 10,000 readers every month and has been featured on <a href='http://www.siteinspire.com/websites/2298-back-page-football'>Site Inspire</a> amongst others. The responsive design and CMS has allowed the site to elvove and expand globally to become one of the top sports blogs of it's kind while still staying true to its roots."
     what_we_did: 
       - 'Web design'
       - 'Branding & logo design'
