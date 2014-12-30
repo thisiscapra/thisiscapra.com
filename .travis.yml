@@ -7,3 +7,4 @@ deploy:
   on:
     repo: thisiscapra/Capra
     branch: new-site
+  run: 'git push heroku master'
