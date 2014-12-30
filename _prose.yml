@@ -1,0 +1,23 @@
+prose:
+  rooturl: 'source/blog'
+  media: 'source/images'
+  metadata:
+    source/blog:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "author"
+        field:
+          element: "text"
+          label: "Author"
+          value: ""
+      # - name: "tags"
+      #   field:
+      #     element: "multiselect"
+      #     label: "Tags"
+      #     alterable: true
+      #     options:
+      #       - name: 'Tech'
+      #         value: 'tech'
