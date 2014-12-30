@@ -1,3 +1,4 @@
+language: ruby
 deploy:
   provider: heroku
   api_key:
