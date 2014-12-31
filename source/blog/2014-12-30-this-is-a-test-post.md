@@ -1,6 +1,6 @@
 ---
-published: true
-date: '2014-12-30'
+published: false
+date: "2014-12-30"
 title: This is a test post
 ---
 
