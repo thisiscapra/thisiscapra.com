@@ -2,7 +2,7 @@
 title: Copyright laws
 date: '2011-02-16'
 tags:
-- legalities
+  - legalities
 ---
 
 You already know how to build a website, design creative layouts, and find clients who want to use your skills for their businesses. Where you don’t want to be caught out is in liability issues that will not only hurt the business you are working with, but also your reputation as a designer.

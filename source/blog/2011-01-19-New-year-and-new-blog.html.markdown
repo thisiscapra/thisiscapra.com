@@ -2,7 +2,7 @@
 title: New year and new blog!
 date: '2011-01-19'
 tags:
-- company-news
+  - company-news
 ---
 
 Capra turns one year old today.  Happy birthday to us! To celebrate, we've decided to start a long overdue blog so we can share all the lovely things we've been learning.  This site is an extension of the previous one - there's more space for project screenshots and more detail about our work and our approach.

@@ -2,7 +2,7 @@
 title: 'What’s a Matter[box]? '
 date: '2011-01-25'
 tags:
-- marketing
+  - marketing
 ---
 
 In the ever-changing world of marketing and branding, companies need to develop new ideas to keep people interested. Matterbox offers a great way to do this. It's a box filled with various products that is delivered to the address you provide when you sign up. By relying on word of mouth, it's becoming very popular.

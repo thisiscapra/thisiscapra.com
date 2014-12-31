@@ -2,8 +2,8 @@
 title: 5 Reasons to be Creative
 date: '2013-09-05'
 tags:
-- conferences
-- design
+  - conferences
+  - design
 ---
 
 This week, for 3 days, Ollie and I visited Brighton for the 
