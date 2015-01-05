@@ -1,6 +1,6 @@
 prose:
-  rooturl: 'source/blog'
   media: 'source/images/blog'
+  rooturl: 'source/blog'
   metadata:
     source/blog:
       - name: "title"
@@ -8,16 +8,23 @@ prose:
           element: "text"
           label: "Title"
           value: ""
+      - name: date
+        field:
+          element: "text"
+          label: "Date"
+          value: ""
       - name: "author"
         field:
           element: "text"
           label: "Author"
           value: ""
-      # - name: "tags"
-      #   field:
-      #     element: "multiselect"
-      #     label: "Tags"
-      #     alterable: true
-      #     options:
-      #       - name: 'Tech'
-      #         value: 'tech'
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Tags"
+          alterable: true
+          options:
+            - name: 'Travelling'
+              value: 'travelling'
+            - name: 'Garden'
+              value: 'garden'

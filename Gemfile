@@ -9,9 +9,5 @@ gem "middleman-blog"
 gem "nokogiri"
 gem "puma"
 gem 'rake'
-
-group :development do
-  # Live-reloading plugin
-  gem "middleman-livereload", "~> 3.1.0"
-  gem 'travis'
-end
+gem "middleman-livereload", "~> 3.1.0"
+  

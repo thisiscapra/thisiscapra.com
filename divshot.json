@@ -1,0 +1,6 @@
+{
+  "name": "thisiscapra",
+  "root": "./build",
+  "clean_urls": true,
+  "error_page": "/404/index.html"
+}

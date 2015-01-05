@@ -1,9 +1,11 @@
 <section class="featured">
 
-  <% data.work_items.clients.each_with_index do |client, index| %>
+  <% 
+    featured = data.work_items.clients.select{|item| item.featured rescue false}
+    featured.each_with_index do |client, index| %>
     <article class="ft-<%= client.url %>">
       <h2><%= client.title %></h2>
-      <%= link_to("View project »", "/work/#{client.url}/") %>
+      <%= link_to("View project", "/work/#{client.url}/", class: "button") %>
     </article>
   <% end %>
 

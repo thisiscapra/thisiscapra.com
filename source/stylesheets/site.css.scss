@@ -24,7 +24,7 @@ section {
   padding: 7em 2em 3em;
   @include box-sizing(border-box);
   @media screen and (max-width: 550px) {
-    padding: 7em 1em 3em;
+    padding: 7em 2em 3em;
   }
 }
 img {
@@ -272,9 +272,11 @@ nav {
 
 .featured {
   background-color: $dark-grey;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: #fff;
   height: 100%;
-  min-height: 800px;
   padding: 0;
   overflow: hidden;
   position: relative;
@@ -282,12 +284,10 @@ nav {
   width: 100%;
   article {
     display: none;
-    height: 100%;
-    padding-top: 150px;
+    padding: 0 2em;
     position: relative;
-    overflow: hidden;
-    width: 100%;
     z-index: 10;
+    @extend %vertical-align;
     @include box-sizing(border-box);
   }
   h2 {
@@ -306,9 +306,6 @@ nav {
   a {
     color: #fff;
   }
-  @media screen and (max-width: 650px) {
-    min-height: 100%;
-  }
 }
 
 .home-intro {
@@ -320,6 +317,7 @@ nav {
   @include box-sizing(border-box);
   > h1 {
     font-size: 2.5em;
+    line-height: 1.2;
     text-align: center;
   }
   > p {
@@ -327,7 +325,7 @@ nav {
     text-align: left;
   }
   @media screen and (max-width: 550px) {
-    padding: 3em 1em;
+    padding: 3em 2em;
     max-width: 100%;
     h1 {
       font-size: 2em;
@@ -343,17 +341,13 @@ body.alfred-app {
   @include colour-scheme($alfred-color, $button: true, $lighten: true);
   .featured {
     background-color: $alfred-color;
-    @extend %header-shadow;
+    background-image: url('/images/work/alfred-app/alfred-app-background.jpg');
     article.ft-alfred-app {
-      background: url('/images/work/alfred-app/alfred-app-background.jpg') no-repeat center bottom;
-      background-size: 100%;
       display: block;
-      margin: 0 auto;
-      max-width: 1200px;
-      @media screen and (max-width: 800px) {
-        max-width: 100%;
-      }
     }
+  }
+  &.page-index {
+    @include colour-scheme($alfred-color, $button: true, $lighten: false);
   }
 }
 
@@ -361,26 +355,21 @@ body.trickits {
   @include colour-scheme($trickits-color, $button: true, $lighten: true);
   .featured {
     background-color: $trickits-color;
-    color: #cec3b7;
+    background-image: url('/images/work/trickits/trickits-featured.jpg');
     article.ft-trickits {
-      background: url('/images/work/trickits/trickits-featured.jpg') no-repeat bottom center;
-      background-size: 100%;
       display: block;
-      margin: 0 auto;
-      max-width: 1200px;
-      @media screen and (max-width: 800px) {
-        max-width: 100%;
-      }
     }
+  }
+  &.page-index {
+    @include colour-scheme($trickits-color, $button: true, $lighten: false);
   }
 }
 
 body.sports-digest-8-50 {
   @include colour-scheme($sports-digest-color, $button: true, $lighten: true);
   .featured {
-    background: url('/images/work/sports-digest-8-50/8-50-background.jpg') no-repeat center;
-    background-size: cover;
-    color: $sports-digest-color;
+    background-color: $sports-digest-color;
+    background-image: url('/images/work/sports-digest-8-50/8-50-background.jpg');
     article.ft-sports-digest-8-50 {
       display: block;
     }
@@ -393,9 +382,8 @@ body.sports-digest-8-50 {
 body.alton-convent-school {
   @include colour-scheme($alton-convent-color, $button: true, $lighten: true);
   .featured {
-    background: url('/images/work/alton-convent-school/alton-convent-background.jpg') no-repeat center;
-    background-size: cover;
-    color: #fff;
+    background-color: $alton-convent-color;
+    background-image: url('/images/work/alton-convent-school/alton-convent-background.jpg');
     article.ft-alton-convent-school {
       display: block;
     }
@@ -538,7 +526,7 @@ body.super-better {
     padding: 7em 0 0;
     position: relative;
     @include box-sizing(border-box);
-    //@extend %header-shadow;
+    @extend %header-shadow;
   }
 }
 .project-link {
@@ -581,10 +569,7 @@ body.super-better {
 .page-blog {
   a {
     color: $link-blue;
-    &:hover {
-      color: darken($link-blue, 10%);
-    }
-    &.active {
+    &:hover, &.active {
       color: #000;
     }
   }
@@ -596,46 +581,78 @@ body.super-better {
       fill: $link-blue;
     }
   }
-  .blog {
-    margin: 0 auto;
-    max-width: 700px;
-    width: 100%;
-    @media screen and (max-width: 675px) {
-      max-width: 100%;
-    }
-    h1,h2 {
-      margin: 0;
-      text-align: center;
-    }
-    small {
-      color: lighten($link-blue, 30%);
+}
+.blog {
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+  @media screen and (max-width: 675px) {
+    max-width: 100%;
+  }
+  h1,h2 {
+    margin: 0 0 0.5em;
+    text-align: center;
+  }
+  small {
+    color: lighten($link-blue, 30%);
+    display: block;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  .meta {
+    color: lighten($link-blue, 30%);
+    display: block;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  .read-more {
+    text-align: center;
+  }
+  article {
+    margin-bottom: 3em;
+    img {
       display: block;
-      margin-bottom: 1em;
-      text-align: center;
+      margin: 0 auto 2em;
     }
-    time {
-      color: lighten($link-blue, 30%);
-      display: block;
-      margin-bottom: 1em;
-      text-align: center;
-    }
-    .read-more {
-      text-align: center;
-    }
-    article {
-      margin-bottom: 3em;
-      img {
-        display: block;
-        margin: 0 auto 2em;
-      }
-      > p {
-        text-indent: 1em;
-      }
-    }
-    .blog-entry div>p:first-of-type:first-letter {
-      @extend %first-letter;
+    > p {
+      text-indent: 1em;
     }
   }
+  .blog-entry div>p:first-of-type:first-letter {
+    @extend %first-letter;
+  }
+}
+.article-nav {
+  border-top: 1px solid #e1e1e1;
+  font-size: 0.8em;
+  letter-spacing: -4px;
+  margin: 2em 0 0 0;
+  padding-top: 2em;
+  word-spacing: -4px;
+  li {
+    display: inline-block;
+    letter-spacing: 0;
+    word-spacing: 0;
+    width: 50%;
+    @include box-sizing(border-box);
+    &:nth-child(1) {
+      padding-right: 1em;
+    }
+    &:nth-child(2) {
+      padding-left: 1em;
+      text-align: right;
+    }
+    @media screen and (max-width: 400px) {
+      display: block;
+      margin-bottom: 0.5em;
+      width: 100%;
+      &.first-child,
+      &.last-child {
+        padding: 0;
+      }
+    }
+  }
+  @extend %clearfix;
 }
 
 // About page

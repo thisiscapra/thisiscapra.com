@@ -2,6 +2,10 @@
 published: true
 date: '2014-12-30'
 title: This is a test post
+author: Ollie Kavanagh
+tags: 
+  - test 1 
+  - test 2
 ---
 
 ## A New Post

@@ -21,7 +21,7 @@ var removeClass = function (elem, className) {
 // Adding random classes to the homepage
 function addBodyClass() {
   if(hasClass(body, 'page-index') ) {
-    var bodyClasses = ['alfred-app','sports-digest-8-50','trickits','alton-convent-school'];
+    var bodyClasses = ['alfred-app','sports-digest-8-50','alton-convent-school'];
     var randomClass = Math.floor(Math.random()*bodyClasses.length);
     addClass(body, bodyClasses[randomClass]);
   }

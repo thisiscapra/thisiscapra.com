@@ -1,0 +1,6 @@
+<article class="summary">
+  <h2><%= link_to article.title, article.url %></h2>
+  <time class="meta" datetime="article.date.strftime('%b %e %G')"><%= article.date.strftime('%b %e, %G') %></time>
+  <p><%= Nokogiri::HTML(article.summary).text %></p>
+  <p class="read-more"><%= link_to("Read more...", article.url) %></p>
+</article>

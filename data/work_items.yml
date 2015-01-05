@@ -1,6 +1,7 @@
 clients: 
   # Alfred
   - name: 'Alfred App'
+    featured: true
     title: 'Designed to be productive.'
     url: 'alfred-app'
     link: 'http://alfredapp.com'
@@ -26,6 +27,7 @@ clients:
     cite: "Vero Peperrel, Alfred App"
   # 8-50
   - name: '8-50 Sports Digest'
+    featured: true
     title: 'Simple sports news.'
     url: 'sports-digest-8-50'
     link: 'http://850sportsapp.com'
@@ -66,10 +68,11 @@ clients:
     testimonial: 'blah blah blah'
   # Alton Convent School
   - name: 'Alton Convent School'
+    featured: true
     title: 'Beautifully educated.'
     url: 'alton-convent-school'
     link: 'http://altonconvent.org.uk'
-    intro: "Alton Convent is a highly rated public school located in beautiful Alton, UK. They had an outdated drupal system that was proving very difficult to update and didn't have the flexibility the school needed to move forward. They came to us with a simple brief: 'Make it beautiful, easy to use and stand out from the crowd'. We built them a beautiful design based around full screen photography and a fully responsive front end build to work across all devices. The new site is on a customised wordpress install with extended scalability."
+    intro: "Alton Convent is a highly rated public school located in beautiful Alton, UK. They had an outdated drupal system that was proving very difficult to update and didn't have the flexibility the school needed to move forward. They came to us with a simple brief: 'Make it beautiful, easy to use and stand out from the crowd'. We built them a beautiful design based around full screen photography and a fully responsive front end build to work across all devices. The new site is built on a customised wordpress install with extended scalability."
     sub_text: "The Convent's design has become a benchmark for other premium schools and has received compliments from both staff and parents. They have made their website a cornerstone to their communication with parents, with up-to-date mobile technology, a fully featued events calendar, social media integration, newsletters as well as integration with existing school systems."
     what_we_did: 
       - 'Web design'
@@ -102,7 +105,7 @@ clients:
       - 'HTML/CSS integration'
       - 'Wordpress Multi-Site'
     image_path: 'work/mind-the-product'
-    image_featured: 'mind-the-product-featured.png'
+    image_featured: 'mtp-featured.png'
     image_thumb: 'mtp-thumb.jpg'
     images:
       - 'mtp-2012.png'

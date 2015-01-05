@@ -1,3 +1,5 @@
+Time.zone = "US/Eastern"
+
 ###
 # Compass
 ###
@@ -16,6 +18,7 @@
 # With no layout
 # page "/path/to/file.html", :layout => false
 
+page "/feed.xml", layout: false
 page "/404.html", :layout => false
 page "/sitemap.xml", :layout => false
 
@@ -49,8 +52,13 @@ end
 activate :blog do |blog|
   blog.layout = "blog"
   blog.prefix = "blog"
-  blog.permalink = "{year}/{month}/{day}/{title}.html"
+  #blog.sources = "blog/{year}-{month}-{day}-{title}.html"
+  blog.permalink = "{title}.html"
   blog.paginate = true
+  blog.per_page = 10
+  blog.tag_template = "tag.html"
+  blog.calendar_template = "calendar.html"
+  blog.taglink = "tags/{tag}.html"
 end
 
 # Reload the browser automatically whenever files change
@@ -83,6 +91,20 @@ helpers do
   # Custom page classes
   def custom_page_classes
     "page-#{page_classes} #{yield_content(:page_class) if content_for?(:page_class)}"
+  end
+  # Tag lists
+  def sentence_tag_list(article)
+    if tags = article.tags
+      content_tag(:div, class: :tags) do
+        "This article was filed under " +
+        article.tags.map{|t| link_to t, "/tags/#{t}"}.to_sentence +
+        "."
+      end
+    end
+  end
+  # Pretty dates
+  def pretty_date(date)
+    date.strftime('%B %d, %Y')
   end
 end
 
