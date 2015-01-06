@@ -12,8 +12,8 @@ html {
   width:100%;
 }
 body {
+  background-color: #fff;
   color: $dark-grey;
-  //font: 400 125%/1.5 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
   font: 300 125%/1.5 $sentinel;
   min-height: 100%;
   height: 100%;
@@ -83,7 +83,7 @@ h1 {
 h2 {
   font-size: 2.5em;
   line-height: 1.2;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.75em;
 }
 h3 {
   font-size: 1.75em;
@@ -300,6 +300,7 @@ nav {
   background-color: $dark-grey;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   background-size: cover;
   color: #fff;
   height: 100%;
@@ -334,7 +335,7 @@ nav {
   }
 }
 
-.home-intro {
+.home {
   margin: 0 auto;
   max-width: 700px;
   padding: 3em 2em;
@@ -592,7 +593,7 @@ body.super-better {
 
 // Blog 
 
-.page-blog {
+.page-blog, .page-tags {
   a {
     color: $link-blue;
     &:hover, &.active {

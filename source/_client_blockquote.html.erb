@@ -1,7 +1,11 @@
 <hr>
 <figure>
   <blockquote>
-    <p><%= client.testimonial %></p>
+    <% if featured == true %>
+      <p><%= client.featured_testimonial %></p>
+    <% else %>
+      <p><%= client.testimonial %></p>
+    <% end %>
   </blockquote>
   <figcaption><%= client.cite %></figcaption>
 </figure>

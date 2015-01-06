@@ -1,37 +1,33 @@
 ---
 pageable: true
-per_page: 12
+per_page: 10
 ---
 
 <% content_for(:title, "Articles tagged #{tagname}") %>
 <% content_for(:description, "Articles tagged #{tagname} on Ollie & Kat") %>
 
-<section id="archive">
+<section class="archive blog">
 
-  <div class="col-left">
-
+  <header>
     <h1>Articles tagged '<%= tagname %>'</h1>
+  </header>
 
-      <% if paginate && num_pages > 1 %>
-        <p>Page <%= page_number %> of <%= num_pages %></p>
+  <% if paginate && num_pages > 1 %>
+    <p>Page <%= page_number %> of <%= num_pages %></p>
 
-        <% if prev_page %>
-          <p><%= link_to 'Previous page', prev_page %></p>
-        <% end %>
-      <% end %>
+    <% if prev_page %>
+      <p><%= link_to 'Previous page', prev_page %></p>
+    <% end %>
+  <% end %>
 
-      <% page_articles.each_with_index do |article, i| %>
-        <%= partial "blog_summary", :locals => { :article => article } %>
-      <% end %>
+  <% page_articles.each_with_index do |article, i| %>
+    <%= partial "blog_summary", :locals => { :article => article } %>
+  <% end %>
 
-      <% if paginate %>
-        <% if next_page %>
-          <p><%= link_to 'Next page', next_page %></p>
-        <% end %>
-      <% end %>
-
-    </div>
-
-    <%= partial "col_right", :locals => { :article => page_articles } %>
+  <% if paginate %>
+    <% if next_page %>
+      <p><%= link_to 'Next page', next_page %></p>
+    <% end %>
+  <% end %>
 
 </section>

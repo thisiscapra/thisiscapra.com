@@ -40,7 +40,7 @@
             <p class="sub-text"><%= client.sub_text  %></p>
           <% end %>
           <% if index == 4 && client.testimonial %>
-            <%= partial "client_blockquote", :locals => {:client => client}  %>
+            <%= partial "client_blockquote", :locals => {:client => client, featured: false}  %>
           <% end %>
           <figure class="image">
             <%= image_tag("#{client.image_path}/#{image}") %>

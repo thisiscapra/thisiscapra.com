@@ -10,3 +10,10 @@ task :build do
   status = system("middleman build --clean")
   puts status ? "OK" : "FAILED"
 end
+
+desc "Deploy to "
+task :deploy do
+  puts "## Building website and deploying to divshot"
+  status = system("middleman build --clean && divshot push")
+  puts status ? "OK" : "FAILED"
+end

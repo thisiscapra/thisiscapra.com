@@ -23,8 +23,8 @@ clients:
       - 'alfred-site.jpg'
       - 'alfred-mobile.jpg'
       - 'alfred-remote.jpg'
-    testimonial: "Kat's turnaround speed, real-time iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. She is the perfect mix of right brain, left brain, and extreme charisma. I would work with her again in a heartbeat and wish I could have her on every project."
-    cite: "Vero Peperrel, Alfred App"
+    #testimonial: "Kat's turnaround speed, real-time iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. She is the perfect mix of right brain, left brain, and extreme charisma. I would work with her again in a heartbeat and wish I could have her on every project."
+    #cite: "Vero Peperrel, Alfred App"
   # 8-50
   - name: '8-50 Sports Digest'
     featured: true
@@ -45,6 +45,7 @@ clients:
     image_thumb: '8-50-thumb.jpg'
     images:
     testimonial: "I've worked with Kat and Ollie on numberous projects over the years for many different companies and they are always the first people I turn to when I need a high quality product to be delivered. 850 Sports Digest was the most intense project we have worked on together yet with me setting tight budgets and pushing on delivery times and asking the world of the quality of the look and feel and features. But as always, they delivered above expectation and even advised me when they thought my thinking was on the wrong track. With their long, flawless track record in design, UI /UX and even front-end development, this kind of two way relationship is very valuable and my app is a much better product because of it."
+    featured_testimonial: "Ollie and Kat are always the first people I turn to when I need a high quality product to be delivered."
     cite: 'Jon Bishop, 850 founder'
   # Trickits
   - name: 'Trickits'
@@ -65,7 +66,7 @@ clients:
     image_featured: 'trickits-featured.jpg'
     image_thumb: 'trickits-thumb.jpg'
     images:
-    testimonial: 'blah blah blah'
+    #testimonial: 'blah blah blah'
   # Alton Convent School
   - name: 'Alton Convent School'
     featured: true
@@ -92,7 +93,7 @@ clients:
       - 'alton-convent-site-3.jpg'
       - 'alton-convent-tablet.jpg'
       - 'alton-convent-site-4.jpg'
-    testimonial: 'blah blah blah'
+    #testimonial: 'blah blah blah'
   # Mind the product
   - name: 'Mind the Product'
     url: 'mind-the-product'
@@ -116,6 +117,7 @@ clients:
       - 'mtp-2015.jpg'
       - 'mtp-sf.jpg'
     testimonial: 'Kat is a superstar designer and a true partner to Mind the Product. She has developed all of our conference websites off minimal briefs and built amazing, engaging sites that truly represent and help elevate our forward thinking brand.'
+    featured_testimonial: "Kat is a superstar designer and a true partner to Mind the Product."
     cite: 'Martin Eriksson, founder of MindTheProduct'
   # Back Page Football
   - name: 'Back Page Football'
@@ -137,7 +139,7 @@ clients:
       - 'backpagefootball-mobile.jpg'
       - 'backpagefootball-site-2.jpg'
       - 'backpagefootball-site-3.jpg'
-    testimonial: 'blah blah blah'
+    #testimonial: 'blah blah blah'
   # Toto
   - name: 'Toto'
     url: 'toto'
@@ -184,6 +186,7 @@ clients:
       - 'cold-claim-web.jpg'
       - 'cold-claim-mobile.jpg'
     testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with. She is one of those people you look forward to getting on a 7 a.m. client call with. One of those people who make a 6-hour brainstorming marathon feel like a treat and not a trial. Her relentless optimism and ability to keep the momentum going in the dark times that come with any long term project makes her a true delight to work with. In short, Kat is the complete package. She has my complete trust, total respect, and my highest recommendation."
+    featured_testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with."
     cite: "Mathias Crawford, game designer for ColdClaim"
   # Super Better
   - name: 'Super Better'
@@ -210,4 +213,5 @@ clients:
       - 'sb-web-badguy.jpg'
       - 'sb-web-complete.jpg'
     testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I've never found that talent wrapped in such an energetic, positive, problem-solving personality."
+    featured_testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I've never found that talent wrapped in such an energetic, positive, problem-solving personality."
     cite: "Chelsea Howe, Game Designer for SuperBetter"
