@@ -19,17 +19,21 @@
 
   <div>
 
-    <p class="intro"><%= client.intro %></p>
+    <div class="row">
+      
+      <p class="intro"><%= client.intro %></p>
 
-    <% if client.what_we_did %>
-      <div class="what-we-did">
-        <ul>
-          <% client.what_we_did.each_with_index do |item, index| %>
-            <li><%= item %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+      <% if client.what_we_did %>
+        <div class="what-we-did">
+          <ul>
+            <% client.what_we_did.each_with_index do |item, index| %>
+              <li><%= item %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+    </div>
 
     <hr>
 

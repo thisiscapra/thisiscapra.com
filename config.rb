@@ -66,6 +66,7 @@ end
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload, :host => "thisiscapra.dev", :apply_js_live => true, :apply_css_live => true
+  config[:file_watcher_ignore] += [ /^build\// ]
 end
 
 # Methods defined in the helpers block are available in templates
