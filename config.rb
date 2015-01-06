@@ -84,7 +84,7 @@ helpers do
     if content_for?(:description)
       "#{yield_content(:description)}"
     else
-      "Hello, I'm Kat. I design websites, games & apps. Like goats, I like playful work, am curious about the world, and enjoy working within the herd to make great things."
+      "Capra is a design agency based in Ottawa, Canada run by husband and wife team Ollie and Kat Kavanagh. Our focus is great design. We love interactive work like websites, games and apps because we get involved in building what we design."
     end
   end
   # Active nav items

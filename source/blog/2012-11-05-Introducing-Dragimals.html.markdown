@@ -1,5 +1,5 @@
 ---
-title: Introducing...Dragimals!
+title: Introducing... Dragimals!
 date: '2012-11-05'
 tags:
 - app-design

@@ -23,8 +23,8 @@ body {
 section {
   padding: 7em 2em 3em;
   @include box-sizing(border-box);
-  @media screen and (max-width: 550px) {
-    padding: 7em 2em 3em;
+  @media screen and (max-width: 400px) {
+    padding: 7em 1em 3em;
   }
 }
 img {
@@ -137,6 +137,9 @@ figure {
     @media screen and (max-width: 550px) {
       font-size: 1.2em;
     }
+    @media screen and (max-width: 400px) {
+      padding: 0;
+    }
   }
 }
 ul {
@@ -212,12 +215,14 @@ fieldset {
   padding:0.6em 2em;
   text-align: center;
   @include box-sizing(border-box);
+  -webkit-appearance: none;
   &:hover {
     background-color: darken($dark-grey, 10%);
     color: #fff;
     @include transition(background-color 0.1s linear);
   }
   @media screen and (max-width: 400px) {
+    font-size: 1em;
     width: 100%;
   }
 }
@@ -239,6 +244,9 @@ nav {
   //font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
   //font-size: 1.2em;
   font-weight: 400;
+  ul {
+    margin: 0;
+  }
   li {
     display: inline;
     margin-right: 2em;
@@ -254,11 +262,17 @@ nav {
         margin-right: 160px;
       }
     }
-    @media screen and (max-width: 550px) {
-      font-size: 0.7em;
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 0.9em;
+    margin-top: 2.5em;
+    li {
       margin-right: 1em;
       &:nth-child(2) {
-        margin-right: 70px;
+        margin-right: 1em;
+      }
+      &:last-child {
+        margin-right: 0;
       }
     }
   }
@@ -290,9 +304,9 @@ nav {
     opacity: 0.5;
   }
   @media screen and (max-width: 550px) {
-    top: 2em;
-    margin-left: -20px;
-    width: 40px;
+    top: 1em;
+    margin-left: -30px;
+    width: 60px;
   }
 }
 
@@ -340,14 +354,21 @@ nav {
     @media screen and (max-width: 700px) {
       font-size: 2.5em;
     }
+    @media screen and (max-width: 400px) {
+      font-size: 2em;
+    }
   }
   a {
     color: #fff;
   }
-  @media screen and (max-width: 500px)  {
+  @media screen and (max-width: 400px)  {
     background-size: 250%;
     background-attachment: scroll;
     min-height: 100%;
+    article {
+      top: 55%;
+      padding: 0 1em;
+    }
   }
 }
 
@@ -367,11 +388,11 @@ nav {
     // text-indent: 1em;
     text-align: left;
   }
-  @media screen and (max-width: 550px) {
-    padding: 3em 2em;
+  @media screen and (max-width: 400px) {
+    padding: 2em 1em;
     max-width: 100%;
     h1 {
-      font-size: 2em;
+      font-size: 1.8em;
     }
   }
 }
@@ -659,9 +680,21 @@ body.super-better {
     > p {
       text-indent: 1em;
     }
+    @media screen and (max-width: 500px) {
+      &.summary {
+        p {
+          //hyphens: auto;
+          white-space: pre-wrap;
+          word-break: break-all;
+        }
+      }
+    }
   }
   .blog-entry div>p:first-of-type:first-letter {
     @extend %first-letter;
+  }
+  .blog-entry {
+    
   }
 }
 .article-nav {
@@ -697,12 +730,16 @@ body.super-better {
   @extend %clearfix;
 }
 
-// About & Cntact pages
+// About & Contact pages
 
 body.page-about {
   @include colour-scheme($about-red, $button: true, $lighten: true);
 }
 body.page-contact {
+  @include colour-scheme($contact-green, $button: false, $lighten: true);
+  text-align: center;
+}
+body.page-thank-you {
   @include colour-scheme($contact-green, $button: false, $lighten: true);
   text-align: center;
 }
@@ -738,6 +775,18 @@ body.page-contact {
       display: block;
       float: none;
       width: 100%;
+      &:first-child {
+        border-bottom: 0;
+      }
+      &.active {
+        border-bottom: 1px solid #e1e1e1;
+        a {
+          background-color: #f2f2f2;
+        }
+        &:first-child {
+          border-bottom: 0;
+        }
+      }
     }
   }
 }
@@ -765,6 +814,9 @@ section.about, section.contact {
   padding: 0;
   header {
     padding: 7em 2em 3em;
+    @media screen and (max-width: 550px) {
+      padding: 7em 1em 3em;
+    }
   }
   .intro:first-of-type:first-letter {
     color: #fff;
