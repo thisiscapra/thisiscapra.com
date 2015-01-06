@@ -14,7 +14,7 @@ html {
 body {
   color: $dark-grey;
   //font: 400 125%/1.5 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
-  font: 400 125%/1.5 'Sentinel SSm A', 'Sentinel SSm B', 'Georgia', sans-serif;
+  font: 300 125%/1.5 $sentinel;
   min-height: 100%;
   height: 100%;
   position: relative;
@@ -37,15 +37,38 @@ hr {
   border: 0;
   clear:both;
   height: 1px;
-  margin: 2em 0 3em;
+  margin: 3em 0 3em;
   width: 100%;
+}
+.row {
+  margin-bottom: 3em;
+  @extend %clearfix;
+}
+.col {
+  float: left;
+  h2, h3, h4 {
+    text-align: left;
+  }
+  &.last {
+    margin-right: 0;
+  }
+}
+.col-3 {
+  margin-right: 5%;
+  width: 30%;
+}
+.col-2 {
+  margin-right: 5%;
+  width: 47.5%;
 }
 
 // Typography
 
-h1, h2, h3, h4, .intro:first-of-type:first-letter, .blog-entry div>p:first-of-type:first-letter {
-  font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
-  font-weight: 700;
+h1, h2, h3, h4, 
+.intro:first-of-type:first-letter, 
+.blog-entry div>p:first-of-type:first-letter {
+  font-family: $quatro;
+  font-weight: 600;
   text-align: center;
 }
 h1 {
@@ -58,17 +81,17 @@ h1 {
   }
 }
 h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   line-height: 1.2;
   margin-bottom: 0.5em;
 }
 h3 {
   font-size: 1.75em;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.5em;
 }
 h4 {
   font-size: 1.5em;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.5em;
 }
 p {
   margin: 0 auto 1.5em;
@@ -90,7 +113,7 @@ strong {
 figure {
   text-align: center;
   blockquote {
-    font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
+    font-family: $quatro;
     font-style: italic;
     font-size: 1.6em;
     font-weight: 400;
@@ -108,7 +131,10 @@ figure {
     }
   }
 }
-
+ul {
+  margin: 0 0 1em 1em;
+  padding: 0;
+}
 
 // Links
 
@@ -126,7 +152,7 @@ a {
 input, textarea {
   border: 0;
   display: block;
-  font-family: 'Sentinel SSm A', 'Sentinel SSm B', 'Georgia', sans-serif;
+  font-family: $sentinel;
   font-size: 1.2em;
   padding: 0.6em;
   @include box-sizing(border-box);
@@ -170,8 +196,8 @@ fieldset {
   border: none;
   color: #fff;
   display: inline-block;
-  font-family: 'Quarto A', 'Quarto B', 'Georgia', sans-serif;
-  font-weight: 700;
+  font-family: $sentinel;
+  font-weight: 300;
   font-size: 1.2em;
   margin: 0 auto;
   padding:0.6em 2em;
@@ -659,8 +685,25 @@ body.super-better {
 
 body.page-about {
   @include colour-scheme($about-red, $button: true, $lighten: true);
+}
+section.about {
+  padding: 0;
+  header {
+    padding: 7em 2em 3em;
+  }
   .intro:first-of-type:first-letter {
     color: #fff;
+  }
+  > div {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 3em 2em;
+    width: 100%;
+    @include box-sizing(border-box);
+    @media screen and (max-width: 550px) {
+      max-width: 100%;
+      padding: 3em 1em;
+    }
   }
 }
 
