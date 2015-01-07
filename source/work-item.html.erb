@@ -54,6 +54,23 @@
       </div>
     <% end %>
 
+    <hr>
+
+    <h2>Other work</h2>
+    <ul class="work-list">
+      <% 
+        featured_clients = data.work_items.clients.sample(3)
+        featured_clients.each do |client| %>
+        <li>
+          <% link_to("/work/#{client.url}/") do %>
+          <% image_url = "#{client.image_path}/#{client.image_thumb}" %>
+          <%= image_tag(image_url, :alt => "") %>
+          <h2><%= client.name %></h2>
+        <% end %>
+        </li>
+      <% end %>
+    </ul>
+
   </div>
 
 </section>
