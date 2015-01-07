@@ -23,24 +23,24 @@
         <input type="hidden" name="utf8" value="✓">
         <fieldset>
           <div>
-            <label>Your Name</label>
-            <input type="text" name="name" placeholder="Your Name">
+            <label>Your name <abbr class="req" title="required">*</abbr></label>
+            <input type="text" name="name" placeholder="So we know who to speak to..." required>
           </div>
           <div>
-            <label>Your Email</label>
-            <input type="email" name="email" placeholder="Your Email">
+            <label>Your email <abbr class="req" title="required">*</abbr></label>
+            <input type="email" name="email" placeholder="So we can email you back..." required>
           </div>
           <div>
-            <label>Your Website</label>
-            <input type="url" name="url" placeholder="Your Website">
+            <label>Your website / app / game</label>
+            <input type="url" name="url" placeholder="So we can check out the current version...">
           </div>
           <div>
-            <label>Your Company</label>
-            <input type="text" name="company" placeholder="Your Company">
+            <label>Your company</label>
+            <input type="text" name="company" placeholder="Just the company name will do...">
           </div>
           <div>
             <label>Telephone number</label>
-            <input type="number" name="telephone" placeholder="Your telephone number">
+            <input type="number" name="telephone" placeholder="So we can call you back if your prefer..." required>
           </div>
           <div class="radios">
             <h3>What is your project budget?</h3>
@@ -57,8 +57,8 @@
             <label for="other"><input type="radio" id="other" name="type" value="IOther"> Other</label>
           </div>
           <div>
-            <h3>Project description</h3>
-            <textarea name="description"></textarea>
+            <h3>Project description <abbr class="req" title="required">*</abbr></h3>
+            <textarea name="description" placeholder="Give us as much information as you can about the project..."></textarea>
           </div>
           <input type="submit" name="" value="Send enquiry" class="button">
         </fieldset>
@@ -71,16 +71,16 @@
         <input type="hidden" name="utf8" value="✓">
         <fieldset>
           <div>
-            <label for="general_name">Your name</label>
-            <input type="text" name="general_name" placeholder="Your Name">
+            <label for="general_name">Your name <abbr class="req" title="required">*</abbr></label>
+            <input type="text" name="general_name" placeholder="So we know who we are speaking to..." required>
           </div>
           <div>
-            <label for="general_email">Email</label>
-            <input type="email" name="general_email" placeholder="Your Email">
+            <label for="general_email">Your email <abbr class="req" title="required">*</abbr></label>
+            <input type="email" name="general_email" placeholder="So we can contact you back..." required>
           </div>
           <div>
-            <label for="general_email">Enquiry</label>
-            <textarea name="general_description" placeholder="Your enquiry"></textarea>
+            <label for="general_email">Your enquiry <abbr class="req" title="required">*</abbr></label>
+            <textarea name="general_description" placeholder="Your enquiry" required></textarea>
           </div>
           <div>
             <input type="submit" name="" value="Send enquiry" class="button">
@@ -88,6 +88,8 @@
         </fieldset>
       </form>
     </div>
+
+    <p class="email-contact">If you don't fancy using the form just drop us an email at <%= link_to("design@thisiscapra.com", "mailto:design@thisiscapra.com") %>.</p>
 
   </div>
 

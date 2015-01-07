@@ -165,8 +165,8 @@ a {
 // Forms 
 
 input, textarea {
-  background-color: #e1e1e1;
-  border: 0;
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
   display: block;
   font-family: $sentinel;
   font-size: 1.2em;
@@ -182,12 +182,13 @@ input, textarea {
   }
 }
 textarea {
-  min-height: 200px;
+  min-height: 300px;
 }
 label {
   display: block;
   margin-bottom: 0.2em;
   > input {
+    border: 0;
     display: inline-block;
     margin-right: 0.5em;
     position: relative;
@@ -197,7 +198,7 @@ label {
 }
 fieldset {
   > div {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     &:last-child {
       margin: 0;
     }
@@ -205,6 +206,10 @@ fieldset {
       text-align: center;
     }
   }
+}
+.req {
+  color: $contact-green;
+  font-weight: 800;
 }
 
 .button {
@@ -591,6 +596,7 @@ body.super-better {
       width: 60%;
       @media screen and (max-width: 700px) {
         float: none;
+        margin-bottom: 2em;
         width: 100%;
       }
     }
@@ -845,11 +851,17 @@ section.about, section.contact {
       padding: 3em 1em;
     }
   }
+  .button:hover {
+    background-color: $contact-green;
+  }
 }
 section.contact {
   > div {
     padding-bottom: 4em;
   }
+}
+.email-contact {
+  margin-top: 3em;
 }
 
 // Some ie8 fixes 
