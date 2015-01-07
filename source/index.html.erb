@@ -6,6 +6,5 @@
   <%= link_to("More about us", "/about", class: "button") %>
   <% featured_quote = data.work_items.clients.select{|client| client.featured_testimonial rescue false } %>
   <%= partial "client_blockquote", :locals => { client: featured_quote.sample(), featured: true } %>
-
 </section>
 

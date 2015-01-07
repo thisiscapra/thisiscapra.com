@@ -3,6 +3,7 @@ clients:
   - name: 'Alfred App'
     featured: true
     title: 'Designed to be productive.'
+    home_intro: "See how we designed your computer's butler for OSX."
     url: 'alfred-app'
     link: 'http://alfredapp.com'
     intro: "Ollie, one of Capra's lead designers, was approached by talented developer and marketing team Andrew and Vero Pepperell to create the original design and branding for a quicklauncher that simplified and sped up your workflow. Its launch went viral (with web designers and other mac users who love all things beautiful) and has been successful ever since. Alfred App is your computer's butler: it is a highly rated and popular quick launcher for OSX that has been used by tens of thousands of Mac users worldwide."
@@ -22,13 +23,14 @@ clients:
       - 'alfred-icons.png'
       - 'alfred-site.jpg'
       - 'alfred-mobile.jpg'
-      - 'alfred-remote.jpg'
+      #- 'alfred-remote.jpg'
     #testimonial: "Kat's turnaround speed, real-time iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. She is the perfect mix of right brain, left brain, and extreme charisma. I would work with her again in a heartbeat and wish I could have her on every project."
     #cite: "Vero Peperrel, Alfred App"
   # 8-50
   - name: '8-50 Sports Digest'
     featured: true
     title: 'Simple sports news.'
+    home_intro: "See how we designed a sports app for iPhone and Android."
     url: 'sports-digest-8-50'
     link: 'http://850sportsapp.com'
     intro: "It's just ten minutes before work starts, and you need to catch up with the sports you missed this weekend. 850 aims to create a simple, beautiful sports digest, curated and written by talented sports writers. With bold colours and a scannable format, it has lofty goals to become the world's best sports app."
@@ -44,6 +46,11 @@ clients:
     image_featured: '8-50-featured.jpg'
     image_thumb: '8-50-thumb.jpg'
     images:
+      - '8-50-mobile-0.jpg'
+      - '8-50-mobile-1.jpg'
+      - '8-50-mobile-2.jpg'
+      - '8-50-site.jpg'
+      - '8-50-mobile-3.jpg'
     testimonial: "I've worked with Kat and Ollie on numberous projects over the years for many different companies and they are always the first people I turn to when I need a high quality product to be delivered. 850 Sports Digest was the most intense project we have worked on together yet with me setting tight budgets and pushing on delivery times and asking the world of the quality of the look and feel and features. But as always, they delivered above expectation and even advised me when they thought my thinking was on the wrong track. With their long, flawless track record in design, UI /UX and even front-end development, this kind of two way relationship is very valuable and my app is a much better product because of it."
     featured_testimonial: "Ollie and Kat are always the first people I turn to when I need a high quality product to be delivered."
     cite: 'Jon Bishop, 850 founder'
@@ -71,6 +78,7 @@ clients:
   - name: 'Alton Convent School'
     featured: true
     title: 'Beautifully educated.'
+    home_intro: "See how we redefined a schools online presence."
     url: 'alton-convent-school'
     link: 'http://altonconvent.org.uk'
     intro: "Alton Convent is a highly rated public school located in beautiful Alton, UK. They had an outdated drupal system that was proving very difficult to update and didn't have the flexibility the school needed to move forward. They came to us with a simple brief: 'Make it beautiful, easy to use and stand out from the crowd'. We built them a beautiful design based around full screen photography and a fully responsive front end build to work across all devices. The new site is built on a customised wordpress install with extended scalability."

@@ -5,6 +5,7 @@
     featured.each_with_index do |client, index| %>
     <article class="ft-<%= client.url %>">
       <h2><%= client.title %></h2>
+      <p><%= client.home_intro %></p>
       <%= link_to("View project", "/work/#{client.url}/", class: "button") %>
     </article>
   <% end %>
