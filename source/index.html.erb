@@ -1,8 +1,8 @@
 <% content_for(:title, "Home") %>
 
 <section class="home">
-  <h1>We love working with clients who share our vision for a better world.</h1>
-  <p>We choose clients who are making a difference and collaborate with them on everything from branding to coding to testing. From educational games to productivity tools, our clients share our passion for sports, the environment, and education. We work hard to reflect our clients’ brand personalities through our designs and are thrilled when they feel as proud of their end product as we do. </p>
+  <h1>We love designing for clients who share our vision for a better world.</h1>
+  <p>We like to collaborate to design and build beautiful websites, apps and casual games.  We choose clients who are making a difference. From educational games to productivity tools, our clients share our passion for sports, the environment, and education. We work hard to reflect our clients’ brand personalities through our designs and are thrilled when they feel as proud of their end product as we do. </p>
   <%= link_to("More about us", "/about", class: "button") %>
   <% featured_quote = data.work_items.clients.select{|client| client.featured_testimonial rescue false } %>
   <%= partial "client_blockquote", :locals => { client: featured_quote.sample(), featured: true } %>
