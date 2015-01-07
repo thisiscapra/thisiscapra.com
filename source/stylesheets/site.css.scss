@@ -41,8 +41,12 @@ hr {
   width: 100%;
 }
 .row {
-  margin-bottom: 3em;
+  margin: 0 auto 3em;
+  //max-width: 700px;
   @extend %clearfix;
+  &.narrow {
+    max-width: 700px;
+  }
 }
 .col {
   float: left;
