@@ -57,10 +57,11 @@
     <hr>
 
     <h2>Other work</h2>
-    <ul class="work-list">
+    <ul class="work-list feature">
       <% 
-        featured_clients = data.work_items.clients.sample(3)
-        featured_clients.each do |client| %>
+        featured_clients = data.work_items.clients
+        featured_clients.delete_if{|item| client.name == item.name }
+        featured_clients.sample(3).each do |client| %>
         <li>
           <% link_to("/work/#{client.url}/") do %>
           <% image_url = "#{client.image_path}/#{client.image_thumb}" %>
@@ -70,6 +71,10 @@
         </li>
       <% end %>
     </ul>
+
+    <hr>
+
+    <p class="hire">Like what you see? <%= link_to("Hire us", "/contact") %></p>
 
   </div>
 

@@ -499,7 +499,7 @@ body.super-better {
 .work-list {
   letter-spacing: -4px;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 700px;
   padding-bottom: 3em;
   text-align: center;
   word-spacing: -4px;
@@ -511,7 +511,8 @@ body.super-better {
     position: relative;
     word-spacing: 0;
     vertical-align: top;
-    width: 33.333333333333333%;
+    width: 50%;
+    //width: 33.333333333333333%;
     @include transition(all 0.01s linear);
     &:hover {
       box-shadow: 0 0 30px rgba(#000, 0.3);
@@ -523,6 +524,12 @@ body.super-better {
     }
     img {
       width: 100%;
+    }
+  }
+  &.feature {
+    max-width: 1000px;
+    li {
+      width: 33.333333333333333%;
     }
   }
   @media screen and (max-width: 550px) {
@@ -615,6 +622,14 @@ body.super-better {
 .project-link {
   text-align: center;
 }
+.hire {
+  font-size: 2.4em;
+  margin: 0;
+  text-align: center;
+  @media screen and (max-width: 700px) {
+    font-size: 1.8em;
+  }
+}
 .what-we-did {
   float: left;
   //font-size: 1.2em;
@@ -689,6 +704,10 @@ body.super-better {
   }
   .read-more {
     text-align: center;
+  }
+  .tags {
+    color: #999;
+    font-size: 0.9em;
   }
   article {
     margin-bottom: 3em;

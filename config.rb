@@ -49,6 +49,8 @@ end
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+activate :syntax, line_numbers: true
+
 activate :blog do |blog|
   blog.layout = "blog"
   blog.sources = "blog/{year}-{month}-{day}-{title}.html"
@@ -62,6 +64,12 @@ activate :blog do |blog|
   blog.month_link = "blog/{year}/{month}.html"
   blog.day_link = "blog/{year}/{month}/{day}.html"
 end
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+# Ignore blog backup folder
+ignore 'blog_backup/*'
 
 # Reload the browser automatically whenever files change
 configure :development do

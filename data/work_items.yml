@@ -55,24 +55,24 @@ clients:
     featured_testimonial: "Ollie and Kat are always the first people I turn to when I need a high quality product to be delivered."
     cite: 'Jon Bishop, 850 founder'
   # Trickits
-  - name: 'Trickits'
-    title: 'Help kids rediscover nature.'
-    url: 'trickits'
-    link: 'http://trickits.com'
-    intro: "We are living in a world where children are glued to TVs, computers and mobile devices.  In an effort to help kids learn the basics of the scientific method, exploration outdoors and a sense of natural wonder, we have been involved in designing and developing the Trickits app, a digital version of the highly successful camps run by award-winning Courtney Watkins. The app is still in testing and development and should be launched sometime in 2015."
-    what_we_did: 
-      - 'Branding'
-      - 'Game design'
-      - 'Interface design'
-      - 'Basic animations'
-      - 'Project management'
-      - 'Web design'
-      - 'Testing'
-      - 'Kickstarter campaign'
-    image_path: 'work/trickits'
-    image_featured: 'trickits-featured.jpg'
-    image_thumb: 'trickits-thumb.jpg'
-    images:
+  # - name: 'Trickits'
+  #   title: 'Help kids rediscover nature.'
+  #   url: 'trickits'
+  #   link: 'http://trickits.com'
+  #   intro: "We are living in a world where children are glued to TVs, computers and mobile devices.  In an effort to help kids learn the basics of the scientific method, exploration outdoors and a sense of natural wonder, we have been involved in designing and developing the Trickits app, a digital version of the highly successful camps run by award-winning Courtney Watkins. The app is still in testing and development and should be launched sometime in 2015."
+  #   what_we_did: 
+  #     - 'Branding'
+  #     - 'Game design'
+  #     - 'Interface design'
+  #     - 'Basic animations'
+  #     - 'Project management'
+  #     - 'Web design'
+  #     - 'Testing'
+  #     - 'Kickstarter campaign'
+  #   image_path: 'work/trickits'
+  #   image_featured: 'trickits-featured.jpg'
+  #   image_thumb: 'trickits-thumb.jpg'
+  #   images:
     #testimonial: 'blah blah blah'
   # Alton Convent School
   - name: 'Alton Convent School'
