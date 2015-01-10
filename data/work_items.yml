@@ -3,11 +3,11 @@ clients:
   - name: 'Alfred App'
     featured: true
     title: 'Designed to be productive.'
-    home_intro: "See how we designed your computer's butler for OSX."
+    home_intro: "See how we designed your computer&#8217;s butler for OSX."
     url: 'alfred-app'
     link: 'http://alfredapp.com'
-    intro: "Ollie, one of Capra's lead designers, was approached by talented developer and marketing team Andrew and Vero Pepperell to create the original design and branding for a quicklauncher that simplified and sped up your workflow. Its launch went viral (with web designers and other mac users who love all things beautiful) and has been successful ever since. Alfred App is your computer's butler: it is a highly rated and popular quick launcher for OSX that has been used by tens of thousands of Mac users worldwide."
-    sub_text: "Ollie remains head designer on this project working on everything from OSX icon design and branding through to marketing materials and web presence. Over the 5 years since its launch, the product has evolved many new features and expanded to users all over the world."
+    intro: "Ollie was approached by talented developer and marketing team Andrew and Vero Pepperell to create the original design and branding for a quicklauncher that simplified and sped up your workflow. Its launch went viral (with web designers and other mac users who love all things beautiful) and has been successful ever since. Alfred App is your computer&#8217;s butler: it is a highly rated and popular quick launcher for OSX that has been used by tens of thousands of Mac users worldwide."
+    sub_text: "Capra continues to design for Alfred, working on everything from OSX icon design and branding through to marketing materials and web presence. Over the 5 years since its launch, the product has evolved many new features and expanded to users all over the world."
     what_we_did: 
       - 'Branding & logo design'
       - 'Web design'
@@ -33,8 +33,8 @@ clients:
     home_intro: "See how we designed a sports app for iPhone and Android."
     url: 'sports-digest-8-50'
     link: 'http://850sportsapp.com'
-    intro: "It's just ten minutes before work starts, and you need to catch up with the sports you missed this weekend. 850 aims to create a simple, beautiful sports digest, curated and written by talented sports writers. With bold colours and a scannable format, it has lofty goals to become the world's best sports app."
-    sub_text: "850's founder came to us looking to create a functioning prototype he could present to investors.  We designed and built (using Phonegap) an iPhone and Android apps that are now available for download. We will be continuing to refine this beta version to more sports and more simple, elegant features."
+    intro: "It's just ten minutes before work starts, and you need to catch up with the sports you missed this weekend. 850 aims to create a simple, beautiful sports digest, curated and written by talented sports writers. With bold colours and a scannable format, it has lofty goals to become the world's best sports app. Capra designed and built this first version."
+    sub_text: "850&#8217;s founder came to us looking to create a functioning prototype he could present to investors.  We designed and built (using Phonegap) an iPhone and Android apps that are now available for download. We will be continuing to refine this beta version to more sports and more simple, elegant features."
     what_we_did: 
       - 'Branding & logo design'
       - 'App design'
@@ -59,7 +59,7 @@ clients:
   #   title: 'Help kids rediscover nature.'
   #   url: 'trickits'
   #   link: 'http://trickits.com'
-  #   intro: "We are living in a world where children are glued to TVs, computers and mobile devices.  In an effort to help kids learn the basics of the scientific method, exploration outdoors and a sense of natural wonder, we have been involved in designing and developing the Trickits app, a digital version of the highly successful camps run by award-winning Courtney Watkins. The app is still in testing and development and should be launched sometime in 2015."
+  #   intro: "We are living in a world where children are glued to TVs, computers and mobile devices.  In an effort to help kids learn the basics of the scientific method, exploration outdoors and a sense of natural wonder, we have been involved in designing and developing the Trickits app, a digital version of the highly successful camps run by award-winning children's educator, Courtney Watkins. The app is still in development and testing and should be launched sometime in 2015."
   #   what_we_did: 
   #     - 'Branding'
   #     - 'Game design'
@@ -73,16 +73,17 @@ clients:
   #   image_featured: 'trickits-featured.jpg'
   #   image_thumb: 'trickits-thumb.jpg'
   #   images:
+  #     - 'trickits-web.jpg'
     #testimonial: 'blah blah blah'
   # Alton Convent School
   - name: 'Alton Convent School'
     featured: true
     title: 'Beautifully educated.'
-    home_intro: "See how we redefined a schools online presence."
+    home_intro: "See how we redefined a school&#8217;s online presence."
     url: 'alton-convent-school'
     link: 'http://altonconvent.org.uk'
-    intro: "Alton Convent is a highly rated public school located in beautiful Alton, UK. They had an outdated drupal system that was proving very difficult to update and didn't have the flexibility the school needed to move forward. They came to us with a simple brief: 'Make it beautiful, easy to use and stand out from the crowd'. We built them a beautiful design based around full screen photography and a fully responsive front end build to work across all devices. The new site is built on a customised wordpress install with extended scalability."
-    sub_text: "The Convent's design has become a benchmark for other premium schools and has received compliments from both staff and parents. They have made their website a cornerstone to their communication with parents, with up-to-date mobile technology, a fully featued events calendar, social media integration, newsletters as well as integration with existing school systems."
+    intro: "Alton Convent is a highly rated public school located in the picturesque village of Alton, UK. Before, they had an outdated drupal system that was  very difficult to update and didn't have the flexibility the school needed to move forward. They came to us with a simple brief: &#8216;Make it beautiful, easy to use and stand out from the crowd&#8217;. We built them a lovely design based around full screen photography and a fully responsive front end build to work across all devices. The new site is built on a customised wordpress install with extended scalability."
+    sub_text: "The Convent&#8217;s design has become a benchmark for other premium schools and has received compliments from both staff and parents. They have made their website a cornerstone to their communication with parents, with up-to-date mobile technology, a fully featued events calendar, social media integration, newsletters as well as integration with existing school systems."
     what_we_did: 
       - 'Web design'
       - 'Branding'
@@ -106,8 +107,8 @@ clients:
   - name: 'Mind the Product'
     url: 'mind-the-product'
     link: 'http://mtpcon.com/'
-    intro: "MindtheProduct is a very popular meetup group for product managers, and in 2012 they launched their very first conference. Kat was approached to come up with a simple, fun and elegant design. The first year's website was a simple one-page design, based on their brand's colours and circle logo, where the circles moved as you scrolled. See <a href='http://mtpcon.com/london/2012'>Mind the Product 2012</a> for the live site."
-    sub_text: "Because we were both so pleased with the first year's efforts, we knew we had to come up with something fun and different for the second year's conference. 2013 website's homepage features a video background from last year's conference. See <a href='http://mtpcon.com/london/2013'>Mind the Product 2013</a> for the live site. The canvas was perfect: with very little content, we could let the design breath and really speak to product managers. After all, this was meant to inspire product managers to make great, innovative products!  Then in 2014, the founders decided to go for simple and practical.  We created a website that could be modified through Wordpress, and could be reused for future years too. See <a href='http://mtpcon.com/london/2014'>Mind the Product 2014</a> for the  2014 site. The build needed to be flexible enough to adapt to multiple locations (San Francisco and London this year!), pre-conference (no speakers, just teasers), full conference (speakers, tickets for sale) and post conference (wrap up, thank you and archiving).  We continue to work with Martin and the rest of the MindTheProduct team to keep their website fresh!"
+    intro: "MindtheProduct is a very popular meetup group for product managers, and in 2012 they launched their very first conference in London, UK. Kat was approached to come up with a simple, elegant design. The <a href='http://mtpcon.com/london/2012' alt='Mind the Product Conference 2012'>first year&#8217;s website</a> was a simple one-page design, based on their brand&#8217;s colours and logo, where the circles moved as you scrolled."
+    sub_text: "Because we were both so pleased with the first year&#8217;s efforts, we knew we had to come up with something fun and different for the second year. So, <a href='http://mtpcon.com/london/2013' alt='Mind The Product Conference 2013'>2013</a> website features a video background from last year&#8217;s conference. This website was designed to inspire product managers to make great, innovative products.  <br /><br />Then in <a href='http://mtpcon.com/london/2014' alt='Mind The Product Conference 2014'>2014</a>, the founders decided to go for simple and practical yet elegant.  We created a website that could be modified through Wordpress, and could be reused for future years. The build needed to be flexible for <a href='http://mtpcon.com'>2015</a> to adapt to multiple locations (San Francisco and London this year!), pre-conference (no speakers, just teasers), full conference (speakers, tickets for sale) and post conference (wrap up, thank you and archiving).  We continue to work with Martin and the rest of the MindTheProduct team to keep their website fresh!"
     what_we_did: 
       - 'Web design'
       - 'Responsive build'
@@ -118,20 +119,20 @@ clients:
     image_thumb: 'mtp-thumb.jpg'
     images:
       - 'mtp-2012.png'
+      - 'mtp-2012-2013-mobile.jpg'
       - 'mtp-2013.png'
       - 'mtp-location-2013.png'
-      - 'mtp-2012-2013-mobile.jpg'
       - 'mtp-2014-mobile.jpg'
       - 'mtp-2015.jpg'
       - 'mtp-sf.jpg'
-    testimonial: 'Kat is a superstar designer and a true partner to Mind the Product. She has developed all of our conference websites off minimal briefs and built amazing, engaging sites that truly represent and help elevate our forward thinking brand.'
-    featured_testimonial: "Kat is a superstar designer and a true partner to Mind the Product."
+    testimonial: 'Kat is a superstar designer and a true partner to Mind the Product. She has developed all of our conference websites off minimal briefs and built amazing, engaging sites that truly represent and help elevate our forward thinking brand. Kat was a joy to work with, and when faced with a design constraint she was equally happy collaborating on a solution as she was tackling it on her own.'
+    featured_testimonial: "Capra are superstar designers and true partners to Mind the Product."
     cite: 'Martin Eriksson, founder of MindTheProduct'
   # Back Page Football
   - name: 'Back Page Football'
     url: 'backpagefootball'
     link: 'http://backpagefootball.com'
-    intro: "Backpagefootball's founder, Kevin&nbsp;Coleman, had created a curated newspaper-style blog for football to satisfy his own need for good football writing. When he approached Ollie to design it in 2009, he found Ollie's passion for football meant he understood exactly how to create a readable, fully-functioning sports blog. He also built this stunning design to sit on top of a multi-site Wordpress build so they could roll out other sports blogs at the touch of a button. Ollie continues to update and refine the site to reflect changing technologies as their sole web designer."
+    intro: "Backpagefootball&#8217;s founder, Kevin&nbsp;Coleman, had created a curated newspaper-style blog for football to satisfy his own need for good football writing. When he approached Ollie to design it in 2009, he found Ollie&#8217;s passion for football meant he understood exactly how to create a readable, fully-functioning sports blog. He also coded this stunning design to sit on top of a multi-site Wordpress build so they could roll out other sports blogs at the touch of a button. Ollie continues to update and refine the site to reflect changing technologies as their sole web designer."
     sub_text: "Backpagefootball now has a user base of over 10,000 readers every month and has been featured on inspirational sites including <a href='http://www.siteinspire.com/websites/2298-back-page-football'>Site Inspire</a>.  The responsive design and CMS has allowed the site to elvove and expand globally to become one of the top sports blogs of its kind while still staying true to its roots."
     what_we_did: 
       - 'Web design'
@@ -148,30 +149,39 @@ clients:
       - 'backpagefootball-site-2.jpg'
       - 'backpagefootball-site-3.jpg'
     #testimonial: 'blah blah blah'
-  # Toto
-  - name: 'Toto'
-    url: 'toto'
-    link: 'http://totomerch.com'
-    intro: "After demoing a well-received prototype, Totomerch wished to expand their app from a restrictive flash application to a robust app that reflected all of their user feedback. Their aim was to make it easy for bands to sell one-off merchandise so they wouldn't have to keep lots of stock."
-    sub_text: "Toto needed a design that was clean but also up to date and modern enough for this hip crowd. The site also needed to be easy to use. we used neutral backgrounds with subtle textures and bold calls-to-action to lead the users through the website."
+  # Super Better
+  - name: 'Super Better'
+    url: 'super-better'
+    link: 'http://superbetter.com'
+    intro: "SuperBetter is Jane McGonigal&#8217;s game that helps you achieve your health goals — or recover from an illness or injury — by increasing your personal resilience. Resilience means staying curious, optimistic and motivated even in the face of the toughest challenges. Kat was involved in designing and building the web and native iOS app."
+    sub_text: "After implementing the front end html/css into a Ruby platform for Superbetter Version 1 (designed by <a href='http://largeprintgiveth.com/'>Ryan Larson</a>), Kat got involved in designing Version 2, where she worked on making history and tracking progress more gameful and delightful. She was also the designer for the original version of the iPhone app, which was built to focus users on quick and easy access to their daily gaming activities. It simplified forms, focused on quick-entry, fun images and celebrations."
     what_we_did: 
-      - 'User interface design'
-      - 'Web design'
-      - 'Basic white-label design'
-    image_path: 'work/toto'
-    image_featured: 'toto-featured.jpg'
-    image_thumb: 'toto-thumb.jpg'
+      - 'Concept design'
+      - 'Game design'
+      - 'Interface design'
+      - 'HTML/CSS integration in Ruby backend'
+      - 'iOS app design'
+    image_path: 'work/super-better'
+    image_featured: 'super-better-featured.jpg'
+    image_thumb: 'super-better-thumb.jpg'
     images:
-    - 'toto-home.jpg'
-    - 'toto-choose.jpg'
-    - 'toto-dashboard.jpg'
-    - 'toto-selling-tools.jpg'
-  # Cold Claim
+      - 'sb-app-quest.jpg'
+      - 'sb-app-completion.jpg'
+      - 'sb-web-hq.jpg'
+      - 'sb-web-quest-list.jpg'
+      - 'sb-quest.jpg'
+      - 'sb-web-powerup.jpg'
+      - 'sb-web-badguy.jpg'
+      - 'sb-web-complete.jpg'
+    testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I&#8217;ve never found that talent wrapped in such an energetic, positive, problem-solving personality. Kat&#8217;s turnaround speed, realtime iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. She is the perfect mix of right brain, left brain, and extreme charisma. I would work with her again in a heartbeat and wish I could have her on every project."
+    featured_testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I&#8217;ve never found that talent wrapped in such an energetic, positive, problem-solving personality."
+    cite: "Chelsea Howe, Game Designer for SuperBetter"
+    # Cold Claim
   - name: 'Cold Claim'
     url: 'cold-claim'
     link: 'http://coldclaim.com'
-    intro: "The place is Antarctica. The year is 2049. Your mission is to locate and extract what is now Earth’s most precious resource: Paleo Water. As expedition leader prepare to navigate harsh terrain, prospect for Paleo, discover artifacts, and claim coldly contested land... while outwitting your rivals and protecting your reputation. In the spirit of Settlers of Catan and Kingdom Builder, Cold Claim is a strategic board game for two to four players via iPad Game Center, pass-and-play or physical boardgame."
-    sub_text: "ColdClaim was designed in collaboration with <a href='http://natronbaxter.com'>Natron Baxter</a>. Kat was lead  designer for this iPad game, board game and supporting website.  She was actively involved in planning, testing and producing this strategic game."
+    intro: "The place is Antarctica. The year is 2049. Your mission is to locate and extract what is now Earth&#8217;s most precious resource: Paleo Water. As expedition leader prepare to navigate harsh terrain, prospect for Paleo, discover artifacts, and claim coldly contested land... while outwitting your rivals and protecting your reputation. In the spirit of Settlers of Catan and Kingdom Builder, Cold Claim is a strategic board game for two to four players via iPad Game Center, pass-and-play or physical boardgame."
+    sub_text: "Kat was lead  designer for this iPad game, board game and supporting website.  She was actively involved in planning, testing and producing this strategic game. ColdClaim was designed in collaboration with <a href='http://natronbaxter.com'>Natron Baxter</a>. "
     what_we_did: 
       - 'Game design'
       - 'Interface design'
@@ -191,35 +201,28 @@ clients:
       - 'cold-claim-zoomed-out.jpg'
       - 'cold-claim-zoomed-in.jpg'
       - 'cold-claim-detail.jpg'
+      - 'cold-claim-board-game.jpg'
       - 'cold-claim-web.jpg'
       - 'cold-claim-mobile.jpg'
     testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with. She is one of those people you look forward to getting on a 7 a.m. client call with. One of those people who make a 6-hour brainstorming marathon feel like a treat and not a trial. Her relentless optimism and ability to keep the momentum going in the dark times that come with any long term project makes her a true delight to work with. In short, Kat is the complete package. She has my complete trust, total respect, and my highest recommendation."
     featured_testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with."
     cite: "Mathias Crawford, game designer for ColdClaim"
-  # Super Better
-  - name: 'Super Better'
-    url: 'super-better'
-    link: 'http://superbetter.com'
-    intro: "SuperBetter is Jane McGonigal's game that helps you achieve your health goals — or recover from an illness or injury — by increasing your personal resilience. Resilience means staying curious, optimistic and motivated even in the face of the toughest challenges. Kat was involved in designing and building the web and native iOS app."
-    sub_text: "After implementing the front end html/css into a Ruby platform for Superbetter Version 1 (designed by <a href='http://largeprintgiveth.com/'>Ryan Larson</a>), Kat got involved in designing Version 2, where she worked on making history and tracking  progress in a gameful way more delightful. She was also the designer for the original version of the iPhone app, based on the web version, which was built to focus users on quick and easy access to their daily gaming activities. It simplified forms, focused on fun images and celebrations."
+    # Toto
+  - name: 'Toto'
+    url: 'toto'
+    link: 'http://totomerch.com'
+    intro: "After demoing a well-received prototype, Totomerch wished to expand their app from a restrictive flash application to a robust app that reflected all of their user feedback. Their aim was to make it easy for bands to sell one-off merchandise so they wouldn&#8217;t have to keep lots of stock."
+    sub_text: "Toto needed a design that was clean but also up-to-date and modern enough for this hip crowd. The site also needed to be easy to use. we used neutral backgrounds with subtle textures and bold calls-to-action to lead the users through the website."
     what_we_did: 
-      - 'Concept design'
-      - 'Game design'
-      - 'Interface design'
-      - 'HTML/CSS integration in Ruby backend'
-      - 'iOS app design'
-    image_path: 'work/super-better'
-    image_featured: 'super-better-featured.jpg'
-    image_thumb: 'super-better-thumb.jpg'
+      - 'User interface design'
+      - 'Web design'
+      - 'Shop design'
+      - 'Basic white-label design'
+    image_path: 'work/toto'
+    image_featured: 'toto-featured.jpg'
+    image_thumb: 'toto-thumb.jpg'
     images:
-      - 'sb-app-quest.jpg'
-      - 'sb-app-completion.jpg'
-      - 'sb-web-hq.jpg'
-      - 'sb-web-quest-list.jpg'
-      - 'sb-quest.jpg'
-      - 'sb-web-powerup.jpg'
-      - 'sb-web-badguy.jpg'
-      - 'sb-web-complete.jpg'
-    testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I've never found that talent wrapped in such an energetic, positive, problem-solving personality."
-    featured_testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I've never found that talent wrapped in such an energetic, positive, problem-solving personality."
-    cite: "Chelsea Howe, Game Designer for SuperBetter"
+    - 'toto-home.jpg'
+    - 'toto-choose.jpg'
+    - 'toto-dashboard.jpg'
+    - 'toto-selling-tools.jpg'
