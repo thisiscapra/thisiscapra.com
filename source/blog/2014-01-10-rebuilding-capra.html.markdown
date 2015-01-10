@@ -101,7 +101,7 @@ The image uploading is still rather wonky and although I added the 'media:' line
 
 So we can now write our Middleman blog posts in Prose and they are automically saved to our Github repo, that solves one problem, but how can I make this update on our live static site? CLI comes to the rescue.
 
-##Hosting & Continuous Delivery
+###Hosting & Continuous Delivery
 
 I'd whittled down my hosting to a choice between [Heroku](https://www.heroku.com/) and [Divshot](http://divshot.com). The free hosting is great on Heroku but the dyno's spin down when not in use and you have to use a service such as pingdom to keep it alive wich seemed somewhat wrong to me. Divshot is built for static site hosting and comes with built push deploys and automatic setups with CLI tools.
 
@@ -128,7 +128,7 @@ rake build && divshot push staging --token "${DIVSHOT_TOKEN}"
 ```
 Perfect, now we can write a blog post in Prose, it saves to our Github repo and is automically pushed to our live staging environment.
 
-##Contact page
+###Contact page
 
 There are a couple of ways we could approach this, we just need a way to post data to a url and receive it in our email. Middleman does have the option of parsing non HTML files in it so we use some PHP and write a script to deliver our email, it kind of defeats the point of a static site though. After some searching around I stumbled upon [Formkeep](https://formkeep.com/) which is perfect. It stores all the replies within a nice little UI and I have the option of sending them to both [Trello](https://trello.com/) and [Gmail](https://mail.google.com/). Job done!
 
