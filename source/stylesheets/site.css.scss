@@ -732,7 +732,10 @@ body.super-better {
     @extend %first-letter;
   }
   .blog-entry {
-    
+    ul {
+      margin-left: 2.5em;
+      padding-right: 2em;
+    }
   }
 }
 .article-nav {
