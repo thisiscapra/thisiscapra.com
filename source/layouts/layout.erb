@@ -8,7 +8,11 @@
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="/images/favicon.ico" rel="shortcut icon"></link>
-  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/642046/css/fonts.css" />
+  <% if development? %>
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/613266/css/fonts.css" />
+  <% elsif build? %>
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/642046/css/fonts.css" />
+  <% else %>
   <%= stylesheet_link_tag "site.css" %>
   <%= stylesheet_link_tag "highlighting.css" %>
   <!--[if lt IE 9]>
