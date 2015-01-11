@@ -386,6 +386,10 @@ nav {
       padding: 0 1em;
     }
   }
+  @media only screen and (device-width: 768px) {
+    background-size: 210%;
+    background-position: top;
+  }
 }
 
 .home {
