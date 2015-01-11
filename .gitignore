@@ -19,3 +19,4 @@
 
 .powenv
 npm-debug.log
+.divshot-cache
