@@ -1,4 +1,7 @@
-before_deploy: "middleman build --verbose"
+language: ruby
+rvm:
+  - 2.1.5
+script: bundle exec middleman build
 deploy:
   provider: divshot
   api_key:
