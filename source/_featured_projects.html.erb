@@ -1,7 +1,7 @@
 <section class="featured">
 
   <% 
-    featured = data.work_items.clients.select{|item| item.featured rescue false}
+    featured = data.work_items.clients.select{|item| item.featured rescue false }
     featured.each_with_index do |client, index| %>
     <article class="ft-<%= client.url %>">
       <h2><%= client.title %></h2>
