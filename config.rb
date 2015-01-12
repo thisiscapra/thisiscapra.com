@@ -36,9 +36,7 @@ page "/sitemap.xml", :layout => false
 
 data.work_items.clients.each_with_index do |client, index|
   proxy "/work/#{client.url}.html", "/work-item.html", locals: { 
-    client: client,
-    title: client.name,
-    description: client.intro
+    client: client
   }, :ignore => true
 end
 

@@ -8,6 +8,6 @@ end
 desc "Deploy to "
 task :deploy do
   puts "## Building website and deploying to divshot"
-  status = system("middleman build && divshot push")
+  status = system("middleman build --verbose && divshot push")
   puts status ? "OK" : "FAILED"
 end
