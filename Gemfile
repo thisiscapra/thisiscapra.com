@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 #source "http://olliekav:ZqHznjii7GD8V1x5XtzS@gems.tdreyno.com/"
 
-gem "middleman", "~>3.3.7"
+gem "middleman"
 gem "middleman-blog"
 #gem "middleman-blog-editor"
 gem "nokogiri"
