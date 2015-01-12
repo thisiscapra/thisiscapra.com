@@ -1,11 +1,16 @@
-<% pages = sitemap.resources.select{|p| p.data.type == "work-item" } %>
+<%# Stupid hack as middleman build is reversing my array for some reason %>
+<% if development? %>
+  <% work_pages = sitemap.resources.select{|p| p.data.type == "work-item" } %>
+<% elsif build? %>
+  <% work_pages = sitemap.resources.select{|p| p.data.type == "work-item" }.reverse %>
+<% end %>
 <ul class="work-nav">
-  <% pages.each_with_index do |p, index| %>
+  <% work_pages.each_with_index do |p, index| %>
     <% if p.url == current_page.url %>
-      <% next_page = pages[index+1]  %>
-      <% prev_page = pages[index-1] %>
+      <% next_page = work_pages[index+1]  %>
+      <% prev_page = work_pages[index-1] %>
       <li class="prev"><%= link_to("<span>Prev</span> «", prev_page.url) unless index == 0 %></li>
-      <li class="next"><%= link_to("<span>Next</span> »", next_page.url) unless index == pages.size - 1 %></li>
+      <li class="next"><%= link_to("<span>Next</span> »", next_page.url) unless index == work_pages.size - 1 %></li>
     <% end %>
   <% end %>
 </ul>
