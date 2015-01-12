@@ -132,4 +132,4 @@ Perfect, now we can write a blog post in Prose, it saves to our Github repo and 
 
 There are a couple of ways we could approach this, we just need a way to post data to a url and receive it in our email. Middleman does have the option of parsing non HTML files in it so we use some PHP and write a script to deliver our email, it kind of defeats the point of a static site though. After some searching around I stumbled upon [Formkeep](https://formkeep.com/) which is perfect. It stores all the replies within a nice little UI and I have the option of sending them to both [Trello](https://trello.com/) and [Gmail](https://mail.google.com/). Job done!
 
-Our source code is open source so feel free to have a look around and steal anything you need.
+Our source code is [open source](https://github.com/thisiscapra/thisiscapra.com) so feel free to have a look around and steal anything you need.

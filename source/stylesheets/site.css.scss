@@ -167,6 +167,24 @@ a {
   }
 }
 
+// Social
+
+.social-icons {
+  span {
+    display: none;
+  }
+  margin: 0 0 1.5em;
+  padding: 0;
+  li {
+    display: inline;
+    margin-right: 1em;
+    font-size: 1.4em;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
 // Forms 
 
 input, textarea {
@@ -330,7 +348,7 @@ nav {
   border-top: 1px solid #e1e1e1;
   padding: 3em 2em;
   text-align: center;
-  ul {
+  ul:last-child {
     margin: 0;
     list-style: none;
   }
@@ -338,8 +356,11 @@ nav {
 
 // Homepage 
 
+.page-index.js {
+  background: url("/images/loading-spin.svg") no-repeat 50%;
+}
 .featured {
-  background-color: $dark-grey;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -427,7 +448,7 @@ nav {
 body.alfred-app {
   @include colour-scheme($alfred-color, $button: true, $lighten: true);
   .featured {
-    background-color: $alfred-color;
+    //background-color: $alfred-color;
     background-image: url('/images/work/alfred-app/alfred-app-background.jpg');
     article.ft-alfred-app {
       display: block;
@@ -441,7 +462,7 @@ body.alfred-app {
 body.trickits {
   @include colour-scheme($trickits-color, $button: true, $lighten: true);
   .featured {
-    background-color: $trickits-color;
+    //background-color: $trickits-color;
     background-image: url('/images/work/trickits/trickits-featured.jpg');
     article.ft-trickits {
       display: block;
@@ -455,7 +476,7 @@ body.trickits {
 body.sports-digest-8-50 {
   @include colour-scheme($sports-digest-color, $button: true, $lighten: true);
   .featured {
-    background-color: $sports-digest-color;
+    //background-color: $sports-digest-color;
     background-image: url('/images/work/sports-digest-8-50/8-50-background.jpg');
     article.ft-sports-digest-8-50 {
       display: block;
@@ -469,7 +490,7 @@ body.sports-digest-8-50 {
 body.alton-convent-school {
   @include colour-scheme($alton-convent-color, $button: true, $lighten: true);
   .featured {
-    background-color: $alton-convent-color;
+    //background-color: $alton-convent-color;
     background-image: url('/images/work/alton-convent-school/alton-convent-background.jpg');
     article.ft-alton-convent-school {
       display: block;

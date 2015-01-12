@@ -1,4 +1,5 @@
 <footer id="footer">
+  <%= partial "social_links", :locals => { :twitter_link => "thisiscapra", :facebook_link => "thisiscapra", :github_link => "thisiscapra" }  %>
   <p>© <%= Time.now.year %> Capra Limited</p>
   <p>Located in Ottawa, Canada</p>
   <p>Built using <%= link_to("Middleman", "http://middlemanapp.com") %>, fonts supplied by <%= link_to("typography.com", "http://typography.com") %>, continuous deployment via <%= link_to("Codeship", "http://codeship.com") %> and hosting from <%= link_to("Divshot", "http://divshot.com") %>.</p>

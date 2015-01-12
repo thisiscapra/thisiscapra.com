@@ -23,9 +23,6 @@ clients:
       - 'alfred-icons.png'
       - 'alfred-site.jpg'
       - 'alfred-mobile.jpg'
-      #- 'alfred-remote.jpg'
-    #testimonial: "Kat's turnaround speed, real-time iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. She is the perfect mix of right brain, left brain, and extreme charisma. I would work with her again in a heartbeat and wish I could have her on every project."
-    #cite: "Vero Peperrel, Alfred App"
   # 8-50
   - name: '8-50 Sports Digest'
     featured: true
@@ -102,7 +99,6 @@ clients:
       - 'alton-convent-site-3.jpg'
       - 'alton-convent-tablet.jpg'
       - 'alton-convent-site-4.jpg'
-    #testimonial: 'blah blah blah'
   # Mind the product
   - name: 'Mind the Product'
     url: 'mind-the-product'
@@ -128,27 +124,6 @@ clients:
     testimonial: 'Kat is a superstar designer and a true partner to Mind the Product. She has developed all of our conference websites off minimal briefs and built amazing, engaging sites that truly represent and help elevate our forward thinking brand. Kat was a joy to work with, and when faced with a design constraint she was equally happy collaborating on a solution as she was tackling it on her own.'
     featured_testimonial: "Capra are superstar designers and true partners to Mind the Product."
     cite: 'Martin Eriksson, founder of MindTheProduct'
-  # Back Page Football
-  - name: 'Back Page Football'
-    url: 'backpagefootball'
-    link: 'http://backpagefootball.com'
-    intro: "Backpagefootball&#8217;s founder, Kevin&nbsp;Coleman, had created a curated newspaper-style blog for football to satisfy his own need for good football writing. When he approached Ollie to design it in 2009, he found Ollie&#8217;s passion for football meant he understood exactly how to create a readable, fully-functioning sports blog. He also coded this stunning design to sit on top of a multi-site Wordpress build so they could roll out other sports blogs at the touch of a button. Ollie continues to update and refine the site to reflect changing technologies as their sole web designer."
-    sub_text: "Backpagefootball now has a user base of over 10,000 readers every month and has been featured on inspirational sites including <a href='http://www.siteinspire.com/websites/2298-back-page-football'>Site Inspire</a>.  The responsive design and CMS has allowed the site to elvove and expand globally to become one of the top sports blogs of its kind while still staying true to its roots."
-    what_we_did: 
-      - 'Web design'
-      - 'Branding & logo design'
-      - 'Wordpress Multi-Site'
-      - 'Responsive build'
-      - 'Marketing materials'
-    image_path: 'work/backpagefootball'
-    image_featured: 'backpagefootball-featured.jpg'
-    image_thumb: 'backpagefootball-thumb.jpg'
-    images:
-      - 'backpagefootball-site-1.jpg'
-      - 'backpagefootball-mobile.jpg'
-      - 'backpagefootball-site-2.jpg'
-      - 'backpagefootball-site-3.jpg'
-    #testimonial: 'blah blah blah'
   # Super Better
   - name: 'Super Better'
     url: 'super-better'
@@ -176,7 +151,27 @@ clients:
     testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I&#8217;ve never found that talent wrapped in such an energetic, positive, problem-solving personality. Kat&#8217;s turnaround speed, realtime iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. She is the perfect mix of right brain, left brain, and extreme charisma. I would work with her again in a heartbeat and wish I could have her on every project."
     featured_testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I&#8217;ve never found that talent wrapped in such an energetic, positive, problem-solving personality."
     cite: "Chelsea Howe, Game Designer for SuperBetter"
-    # Cold Claim
+  # Back Page Football
+  - name: 'Back Page Football'
+    url: 'backpagefootball'
+    link: 'http://backpagefootball.com'
+    intro: "Backpagefootball&#8217;s founder, Kevin&nbsp;Coleman, had created a curated newspaper-style blog for football to satisfy his own need for good football writing. When he approached Ollie to design it in 2009, he found Ollie&#8217;s passion for football meant he understood exactly how to create a readable, fully-functioning sports blog. He also coded this stunning design to sit on top of a multi-site Wordpress build so they could roll out other sports blogs at the touch of a button. Ollie continues to update and refine the site to reflect changing technologies as their sole web designer."
+    sub_text: "Backpagefootball now has a user base of over 10,000 readers every month and has been featured on inspirational sites including <a href='http://www.siteinspire.com/websites/2298-back-page-football'>Site Inspire</a>.  The responsive design and CMS has allowed the site to elvove and expand globally to become one of the top sports blogs of its kind while still staying true to its roots."
+    what_we_did: 
+      - 'Web design'
+      - 'Branding & logo design'
+      - 'Wordpress Multi-Site'
+      - 'Responsive build'
+      - 'Marketing materials'
+    image_path: 'work/backpagefootball'
+    image_featured: 'backpagefootball-featured.jpg'
+    image_thumb: 'backpagefootball-thumb.jpg'
+    images:
+      - 'backpagefootball-site-1.jpg'
+      - 'backpagefootball-mobile.jpg'
+      - 'backpagefootball-site-2.jpg'
+      - 'backpagefootball-site-3.jpg'
+  # Cold Claim
   - name: 'Cold Claim'
     url: 'cold-claim'
     link: 'http://coldclaim.com'
@@ -207,7 +202,7 @@ clients:
     testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with. She is one of those people you look forward to getting on a 7 a.m. client call with. One of those people who make a 6-hour brainstorming marathon feel like a treat and not a trial. Her relentless optimism and ability to keep the momentum going in the dark times that come with any long term project makes her a true delight to work with. In short, Kat is the complete package. She has my complete trust, total respect, and my highest recommendation."
     featured_testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with."
     cite: "Mathias Crawford, game designer for ColdClaim"
-    # Toto
+  # Toto
   - name: 'Toto'
     url: 'toto'
     link: 'http://totomerch.com'

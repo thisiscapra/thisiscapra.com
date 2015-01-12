@@ -1,0 +1,5 @@
+<ul class="social-icons">
+  <%= content_tag(:li, link_to("<span>Twitter</span>", "https://twitter.com/#{twitter_link}", class: "icon-twitter-bird")) if twitter_link %>
+  <%= content_tag(:li, link_to("<span>Facebook</span>", "https://facebook.com/#{facebook_link}", class: "icon-facebook")) if facebook_link %>
+  <%= content_tag(:li, link_to("<span>Github</span>", "https://github.com/#{github_link}", class: "icon-github")) if github_link %>
+</ul>
