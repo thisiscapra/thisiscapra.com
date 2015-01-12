@@ -1,16 +1,8 @@
-language: ruby
-
-rvm:
-  - 2.1.5
-
-branches:
-  only:
-    - master
-
-before_script:
-  # Anything required by your build process...
-  - npm install -g divshot-cli
-
-script:
-  # Place your regular build/deploy chain here...
-  - "rake build && divshot push production --token '${DIVSHOT_TOKEN}'"
+before_deploy:: bundle exec middleman build --verbose
+deploy:
+  provider: divshot
+  api_key:
+    secure: I2BU0oHYBMqBtvuzsRM7I5u6WhfLDDdWXTDTfx2nJ0mBW2BPLJtLWmuffriM1XPjhtkIJGz2VPH2b3rYhKFyNqnNpVhQXAC9b6n2M/pHS/VKQUelhfqFi1nlsJmGl9vH9Y32g1W1HH+V1+E+/z0Hsk+t3m5NJyOrF7MiYj0y1JM=
+  environment: production
+  on:
+    repo: thisiscapra/thisiscapra.com
