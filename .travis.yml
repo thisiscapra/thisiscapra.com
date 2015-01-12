@@ -1,0 +1,16 @@
+language: ruby
+
+rvm:
+  - 2.1.5
+
+branches:
+  only:
+    - master
+
+before_script:
+  # Anything required by your build process...
+  - npm install -g divshot-cli
+
+script:
+  # Place your regular build/deploy chain here...
+  - "rake build && divshot push production --token '${DIVSHOT_TOKEN}'"
