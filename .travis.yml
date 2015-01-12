@@ -1,4 +1,4 @@
-before_deploy: middleman build --verbose
+before_deploy: "middleman build --verbose"
 deploy:
   provider: divshot
   api_key:
