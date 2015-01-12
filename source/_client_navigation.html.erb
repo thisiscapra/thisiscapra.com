@@ -1,10 +1,10 @@
-<% pages = sitemap.resources.find_all{|p| p.source_file.match(/work/) and not p.source_file.match(/images/) } %>
+<% pages = sitemap.resources.select{|p| p.data.type == "work-item" } %>
 <ul class="work-nav">
   <% pages.each_with_index do |p, index| %>
     <% if p.url == current_page.url %>
       <% next_page = pages[index+1]  %>
       <% prev_page = pages[index-1] %>
-      <li class="prev"><%= link_to("<span>Prev</span> «", prev_page.url) unless prev_page.url == "/work/" %></li>
+      <li class="prev"><%= link_to("<span>Prev</span> «", prev_page.url) unless index == 0 %></li>
       <li class="next"><%= link_to("<span>Next</span> »", next_page.url) unless index == pages.size - 1 %></li>
     <% end %>
   <% end %>
