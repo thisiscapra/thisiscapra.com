@@ -1,7 +1,7 @@
 language: ruby
 rvm:
   - 2.1.5
-script: bundle exec middleman build
+script: bundle exec middleman build --verbose
 deploy:
   provider: divshot
   api_key:

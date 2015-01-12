@@ -1,3 +1,6 @@
+require './custom_extensions/clear_build_cache'
+activate :clear_build_cache
+
 Time.zone = "US/Eastern"
 
 ###
