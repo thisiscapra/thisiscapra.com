@@ -1,8 +1,8 @@
 <%# Stupid hack as middleman build is reversing my array for some reason %>
 <% if development? %>
-  <% work_pages = sitemap.resources.select{|p| p.data.type == "work-item" } %>
+  <% work_pages = sitemap.where(:work_item => true).all %>
 <% elsif build? %>
-  <% work_pages = sitemap.resources.select{|p| p.data.type == "work-item" }.reverse %>
+  <% work_pages = sitemap.where(:work_item => true).all.reverse %>
 <% end %>
 <ul class="work-nav">
   <% work_pages.each_with_index do |p, index| %>

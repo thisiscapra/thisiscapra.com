@@ -1,5 +1,5 @@
 ---
-type: work-item
+work_item: true
 ---
 
 <% content_for(:title, client.name) %>
@@ -18,7 +18,7 @@ type: work-item
 
     <%= image_tag("#{client.image_path}/#{client.image_featured}", :alt => "") if client.image_featured %>
 
-    <%= partial "client_navigation" %>
+    <%= partial "client_navigation", :locals => {:client => client} %>
 
   </header>
 

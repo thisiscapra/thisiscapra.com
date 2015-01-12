@@ -1,6 +1,7 @@
 clients: 
   # Alfred
   - name: 'Alfred App'
+    weight: 1
     featured: true
     title: 'Designed to be productive.'
     home_intro: "See how we designed your computer&#8217;s butler for OSX."
@@ -25,6 +26,7 @@ clients:
       - 'alfred-mobile.jpg'
   # 8-50
   - name: '8-50 Sports Digest'
+    weight: 2
     featured: true
     title: 'Simple sports news.'
     home_intro: "See how we designed a sports app for iPhone and Android."
@@ -71,9 +73,10 @@ clients:
   #   image_thumb: 'trickits-thumb.jpg'
   #   images:
   #     - 'trickits-web.jpg'
-    #testimonial: 'blah blah blah'
+  #   testimonial: 'blah blah blah'
   # Alton Convent School
   - name: 'Alton Convent School'
+    weight: 3
     featured: true
     title: 'Beautifully educated.'
     home_intro: "See how we redefined a school&#8217;s online presence."
@@ -101,6 +104,7 @@ clients:
       - 'alton-convent-site-4.jpg'
   # Mind the product
   - name: 'Mind the Product'
+    weight: 4
     url: 'mind-the-product'
     link: 'http://mtpcon.com/'
     intro: "MindtheProduct is a very popular meetup group for product managers, and in 2012 they launched their very first conference in London, UK. Kat was approached to come up with a simple, elegant design. The <a href='http://mtpcon.com/london/2012' alt='Mind the Product Conference 2012'>first year&#8217;s website</a> was a simple one-page design, based on their brand&#8217;s colours and logo, where the circles moved as you scrolled."
@@ -126,6 +130,7 @@ clients:
     cite: 'Martin Eriksson, founder of MindTheProduct'
   # Super Better
   - name: 'Super Better'
+    weight: 5
     url: 'super-better'
     link: 'http://superbetter.com'
     intro: "SuperBetter is Jane McGonigal&#8217;s game that helps you achieve your health goals — or recover from an illness or injury — by increasing your personal resilience. Resilience means staying curious, optimistic and motivated even in the face of the toughest challenges. Kat was involved in designing and building the web and native iOS app."
@@ -153,6 +158,7 @@ clients:
     cite: "Chelsea Howe, Game Designer for SuperBetter"
   # Back Page Football
   - name: 'Back Page Football'
+    weight: 6
     url: 'backpagefootball'
     link: 'http://backpagefootball.com'
     intro: "Backpagefootball&#8217;s founder, Kevin&nbsp;Coleman, had created a curated newspaper-style blog for football to satisfy his own need for good football writing. When he approached Ollie to design it in 2009, he found Ollie&#8217;s passion for football meant he understood exactly how to create a readable, fully-functioning sports blog. He also coded this stunning design to sit on top of a multi-site Wordpress build so they could roll out other sports blogs at the touch of a button. Ollie continues to update and refine the site to reflect changing technologies as their sole web designer."
@@ -173,6 +179,7 @@ clients:
       - 'backpagefootball-site-3.jpg'
   # Cold Claim
   - name: 'Cold Claim'
+    weight: 7
     url: 'cold-claim'
     link: 'http://coldclaim.com'
     intro: "The place is Antarctica. The year is 2049. Your mission is to locate and extract what is now Earth&#8217;s most precious resource: Paleo Water. As expedition leader prepare to navigate harsh terrain, prospect for Paleo, discover artifacts, and claim coldly contested land... while outwitting your rivals and protecting your reputation. In the spirit of Settlers of Catan and Kingdom Builder, Cold Claim is a strategic board game for two to four players via iPad Game Center, pass-and-play or physical boardgame."
@@ -204,6 +211,7 @@ clients:
     cite: "Mathias Crawford, game designer for ColdClaim"
   # Toto
   - name: 'Toto'
+    weight: 8
     url: 'toto'
     link: 'http://totomerch.com'
     intro: "After demoing a well-received prototype, Totomerch wished to expand their app from a restrictive flash application to a robust app that reflected all of their user feedback. Their aim was to make it easy for bands to sell one-off merchandise so they wouldn&#8217;t have to keep lots of stock."
@@ -217,7 +225,7 @@ clients:
     image_featured: 'toto-featured.jpg'
     image_thumb: 'toto-thumb.jpg'
     images:
-    - 'toto-home.jpg'
-    - 'toto-choose.jpg'
-    - 'toto-dashboard.jpg'
-    - 'toto-selling-tools.jpg'
+      - 'toto-home.jpg'
+      - 'toto-choose.jpg'
+      - 'toto-dashboard.jpg'
+      - 'toto-selling-tools.jpg'

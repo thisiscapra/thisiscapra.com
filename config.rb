@@ -34,10 +34,12 @@ page "/sitemap.xml", :layout => false
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
-data.work_items.clients.each_with_index do |client, index|
-  proxy "/work/#{client.url}.html", "/work-item.html", locals: { 
-    client: client
-  }, :ignore => true
+ready do
+  data.work_items.clients.each_with_index do |client, index|
+    proxy "/work/#{client.url}.html", "/work-item.html", locals: { 
+      client: client
+    }, :ignore => true
+  end
 end
 
 ###
