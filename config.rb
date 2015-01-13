@@ -38,9 +38,9 @@ page "/sitemap.xml", :layout => false
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
 ready do
-  data.work_items.clients.each_with_index do |client, index|
-    proxy "/work/#{client.url}.html", "/work-item.html", locals: { 
-      client: client
+  data.work_items.clients.each_with_index do |c, index|
+    proxy "/work/#{c.url}.html", "/work-item.html", locals: { 
+      client: c
     }, :ignore => true
   end
 end

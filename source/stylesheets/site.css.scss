@@ -657,6 +657,12 @@ body.super-better {
     position: relative;
     @include box-sizing(border-box);
     @extend %header-shadow;
+    @media only screen and (device-width: 768px) {
+      img {
+        max-width: auto;
+        width: 100%;
+      }
+    }
   }
 }
 .project-link {

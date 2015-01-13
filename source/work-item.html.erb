@@ -64,7 +64,7 @@ work_item: true
     <ul class="work-list feature">
       <% 
         featured_clients = data.work_items.clients
-        featured_clients.delete_if{|item| client.name == item.name }
+        #featured_clients.delete_if{|item| item == client}
         $stderr.puts featured_clients
         featured_clients.sample(3).each do |client| %>
         <li>
