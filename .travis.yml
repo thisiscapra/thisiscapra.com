@@ -8,6 +8,7 @@ deploy:
     secure: I2BU0oHYBMqBtvuzsRM7I5u6WhfLDDdWXTDTfx2nJ0mBW2BPLJtLWmuffriM1XPjhtkIJGz2VPH2b3rYhKFyNqnNpVhQXAC9b6n2M/pHS/VKQUelhfqFi1nlsJmGl9vH9Y32g1W1HH+V1+E+/z0Hsk+t3m5NJyOrF7MiYj0y1JM=
   environment: 
     master: production
+    staging: staging
   on:
     repo: thisiscapra/thisiscapra.com
   skip_cleanup: true
