@@ -6,7 +6,7 @@
   <ul class="work-list">
     <% $stderr.puts data.work_items %>
     <% $stderr.puts data.work_items.clients %>
-    <% data.work_items.clients[0...9].each do |client| %>
+    <% data.work_items.clients.each do |client| %>
       <li id="<%= client.url %>" class="client">
         <% link_to("/work/#{client.url}/") do %>
           <% image_url = "#{client.image_path}/#{client.image_thumb}" %>
