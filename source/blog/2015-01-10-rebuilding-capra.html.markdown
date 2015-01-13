@@ -1,6 +1,6 @@
 ---
 title: Rebuilding Capra
-date: "2014-01-10"
+date: "2015-01-10"
 author: Ollie Kavanagh
 tags: 
   - middleman
