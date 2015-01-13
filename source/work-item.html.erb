@@ -63,7 +63,7 @@ work_item: true
     <h2>Other work</h2>
     <ul class="work-list feature">
       <% 
-        featured_clients = data.work_items.clients
+        featured_clients = data.work_items.clients[0...9]
         featured_clients.delete_if{|item| client.name == item.name }
         featured_clients.sample(3).each do |client| %>
         <li>
