@@ -357,8 +357,8 @@ nav {
 // Homepage 
 
 .page-index.js {
-  background: url("/images/loading-spin.svg") no-repeat 50%;
-  background-size: 100px 100px;
+  background: #fff url("/images/loading-spin.svg") no-repeat center;
+  background-size: 100px;
 }
 .featured {
   background-color: transparent;
@@ -447,6 +447,7 @@ nav {
 // Alfred
 
 body.alfred-app {
+  background-image: none;
   @include colour-scheme($alfred-color, $button: true, $lighten: true);
   .featured {
     //background-color: $alfred-color;
@@ -461,6 +462,7 @@ body.alfred-app {
 }
 
 body.trickits {
+  background-image: none;
   @include colour-scheme($trickits-color, $button: true, $lighten: true);
   .featured {
     //background-color: $trickits-color;
@@ -475,6 +477,7 @@ body.trickits {
 }
 
 body.sports-digest-8-50 {
+  background-image: none;
   @include colour-scheme($sports-digest-color, $button: true, $lighten: true);
   .featured {
     //background-color: $sports-digest-color;
@@ -489,6 +492,7 @@ body.sports-digest-8-50 {
 }
 
 body.alton-convent-school {
+  background-image: none;
   @include colour-scheme($alton-convent-color, $button: true, $lighten: true);
   .featured {
     //background-color: $alton-convent-color;

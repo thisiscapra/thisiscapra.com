@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "New year, new, new, new"
 date: "2015-01-13"
 author: kat kavanagh

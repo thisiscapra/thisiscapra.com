@@ -5,12 +5,12 @@
   <h1>Our work</h1>
   <ul class="work-list">
     <%# $stderr.puts data.work_items.clients %>
-    <% data.work_items.clients.each do |client| %>
-      <li id="<%= client.url %>" class="client">
-        <% link_to("/work/#{client.url}/") do %>
-          <% image_url = "#{client.image_path}/#{client.image_thumb}" %>
+    <% data.work_items.clients.each do |c| %>
+      <li id="<%= c.url %>" class="client">
+        <% link_to("/work/#{c.url}/") do %>
+          <% image_url = "#{c.image_path}/#{c.image_thumb}" %>
           <%= image_tag(image_url, :alt => "") %>
-          <h2><%= client.name %></h2>
+          <h2><%= c.name %></h2>
         <% end %>
       </li>
     <% end %>

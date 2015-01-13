@@ -64,14 +64,13 @@ work_item: true
     <ul class="work-list feature">
       <% 
         featured_clients = data.work_items.clients
-        #featured_clients.delete_if{|item| item == client}
-        $stderr.puts featured_clients
-        featured_clients.sample(3).each do |client| %>
+        featured_clients.delete_if{|item| item.name == client.name }
+        featured_clients.sample(3).each do |f| %>
         <li>
-          <% link_to("/work/#{client.url}/") do %>
-          <% image_url = "#{client.image_path}/#{client.image_thumb}" %>
+          <% link_to("/work/#{f.url}/") do %>
+          <% image_url = "#{f.image_path}/#{f.image_thumb}" %>
           <%= image_tag(image_url, :alt => "") %>
-          <h2><%= client.name %></h2>
+          <h2><%= f.name %></h2>
         <% end %>
         </li>
       <% end %>

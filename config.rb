@@ -38,9 +38,9 @@ page "/sitemap.xml", :layout => false
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
 ready do
-  data.work_items.clients.each_with_index do |c, index|
-    proxy "/work/#{c.url}.html", "/work-item.html", locals: { 
-      client: c
+  data.work_items.clients.each do |client|
+    proxy "/work/#{client.url}.html", "/work-item.html", locals: { 
+      client: client
     }, :ignore => true
   end
 end
@@ -71,14 +71,11 @@ end
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
 
-# Ignore blog backup folder
-ignore 'blog_backup/*'
-
 # Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload, :host => "thisiscapra.dev", :apply_js_live => true, :apply_css_live => true
-  config[:file_watcher_ignore] += [ /^build\// ]
-end
+# configure :development do
+#   activate :livereload, :host => "thisiscapra.dev", :apply_js_live => true, :apply_css_live => true
+#   config[:file_watcher_ignore] += [ /^build\// ]
+# end
 
 # Methods defined in the helpers block are available in templates
 helpers do
