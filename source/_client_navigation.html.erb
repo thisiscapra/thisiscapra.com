@@ -9,8 +9,8 @@
     <% if p.url == current_page.url %>
       <% next_page = work_pages[index+1]  %>
       <% prev_page = work_pages[index-1] %>
-      <li class="prev"><%= link_to("<span>Prev</span> «", prev_page.url) unless index == 0 %></li>
-      <li class="next"><%= link_to("<span>Next</span> »", next_page.url) unless index == work_pages.size - 1 %></li>
+      <%= content_tag(:li, link_to("<span>Prev</span> «", prev_page.url), class: "prev#{' last' if index == work_pages.size - 1}") unless index == 0 %>
+      <%= content_tag(:li, link_to("<span>Next</span> »", next_page.url), class: "next#{' first' if index == 0}") unless index == work_pages.size - 1 %>
     <% end %>
   <% end %>
 </ul>

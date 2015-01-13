@@ -569,6 +569,12 @@ body.super-better {
       display: block;
       width: 100%;
     }
+    &.feature {
+      li {
+        display: block;
+        width: 100%;
+      }
+    }
   }
 }
 .work-nav {
@@ -604,6 +610,9 @@ body.super-better {
       > a {
         line-height: 0.5;
         padding: 0.3em 0.3em 0.5em;
+      }
+      &.first, &.last {
+        width: 100%;
       }
     }
   }
