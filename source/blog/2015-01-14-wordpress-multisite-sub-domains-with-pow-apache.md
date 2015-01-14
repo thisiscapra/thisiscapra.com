@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Wordpress Multisite sub-domains with Pow & Apache"
 date: "2015-01-14"
 author: Ollie Kavanagh
