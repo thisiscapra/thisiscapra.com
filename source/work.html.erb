@@ -4,7 +4,7 @@
 <section class="work content">
   <h1>Our work</h1>
   <ul class="work-list">
-    <% work_list = data.work_items.clients.select %>
+    <% work_list = data.work_items.clients %>
     <% $stderr.puts work_list %>
     <% work_list.each do |c| %>
       <li id="<%= c.url %>" class="client">

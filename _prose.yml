@@ -3,6 +3,11 @@ prose:
   rooturl: 'source/blog'
   metadata:
     source/blog:
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Published"
+          value: "false"
       - name: "title"
         field:
           element: "text"

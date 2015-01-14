@@ -65,6 +65,7 @@ work_item: true
       <% 
         featured_clients = data.work_items.clients[0...9]
         featured_clients.delete_if{|item| item.name == client.name }
+        #$stderr.puts featured_clients
         featured_clients.sample(3).each do |f| %>
         <li>
           <% link_to("/work/#{f.url}/") do %>
