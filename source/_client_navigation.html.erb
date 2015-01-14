@@ -1,16 +1,13 @@
-<%# Stupid hack as middleman build is reversing my array for some reason %>
-<% if development? %>
-  <% work_pages = sitemap.where(:work_item => true).all %>
-<% elsif build? %>
-  <% work_pages = sitemap.where(:work_item => true).all.reverse %>
-<% end %>
+<%# work_pages = sitemap.where(:work_item => true).order_by(current_page.data.weight).all %>
+<% work_pages = data.work_items.clients %>
 <ul class="work-nav">
   <% work_pages.each_with_index do |p, index| %>
-    <% if p.url == current_page.url %>
+    <% current_url = "/work/#{p.url}/" %>
+    <% if current_url == current_page.url %>
       <% next_page = work_pages[index+1]  %>
       <% prev_page = work_pages[index-1] %>
-      <%= content_tag(:li, link_to("<span>Prev</span> «", prev_page.url), class: "prev#{' last' if index == work_pages.size - 1}") unless index == 0 %>
-      <%= content_tag(:li, link_to("<span>Next</span> »", next_page.url), class: "next#{' first' if index == 0}") unless index == work_pages.size - 1 %>
+      <%= content_tag(:li, link_to("<span>Prev</span> «", "/work/#{prev_page.url}/"), class: "prev#{' last' if index == work_pages.size - 1}") unless index == 0 %>
+      <%= content_tag(:li, link_to("<span>Next</span> »", "/work/#{next_page.url}/"), class: "next#{' first' if index == 0}") unless index == work_pages.size - 1 %>
     <% end %>
   <% end %>
 </ul>

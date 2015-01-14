@@ -4,8 +4,9 @@
 <section class="work content">
   <h1>Our work</h1>
   <ul class="work-list">
-    <%# $stderr.puts data.work_items.clients %>
-    <% data.work_items.clients.each do |c| %>
+    <% work_list = data.work_items.clients.select %>
+    <% $stderr.puts work_list %>
+    <% work_list.each do |c| %>
       <li id="<%= c.url %>" class="client">
         <% link_to("/work/#{c.url}/") do %>
           <% image_url = "#{c.image_path}/#{c.image_thumb}" %>
