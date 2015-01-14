@@ -788,6 +788,10 @@ body.super-better {
     ul {
       margin-left: 2.5em;
       padding-right: 2em;
+      &.article-nav {
+        margin: 2em 0 0 0;
+        padding: 2em 0 0 0;
+      }
     }
     blockquote {
       border-top: 1px solid #e1e1e1;
