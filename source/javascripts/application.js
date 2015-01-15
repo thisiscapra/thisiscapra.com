@@ -1,4 +1,5 @@
 //= require "smooth-scroll.min.js"
+//= require "skrollr.min.js"
 
 var hasClass = function (elem, className) {
   return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
@@ -92,6 +93,8 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
   //   });
   // }
 }
+
+var s = skrollr.init({forceHeight: false});
 
 // IE8 only
 
