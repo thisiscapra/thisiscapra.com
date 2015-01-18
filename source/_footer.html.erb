@@ -3,5 +3,5 @@
   <p>© <%= Time.now.year %> Capra Limited</p>
   <p>Located in Ottawa, Canada</p>
   <p>Built using <%= link_to("Middleman", "http://middlemanapp.com") %>, fonts supplied by <%= link_to("typography.com", "http://typography.com") %>, continuous deployment via <%= link_to("Travis", "https://travis-ci.org") %> and hosting from <%= link_to("Divshot", "http://divshot.com") %>.</p>
-  <%= partial "page_navigation" %>
+  <%= partial "page_navigation", :locals => { :blog => true } %>
 </footer>

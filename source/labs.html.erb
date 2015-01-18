@@ -1,0 +1,19 @@
+<% content_for(:title, "Capra Labs") %>
+<% content_for(:description, "Our playground to experiment with design and technology that interests us.") %>
+
+<section class="labs content">
+  <h1>Capra Labs</h1>
+  <ul class="lab-list">
+    <% lab_list = data.lab_items.labs %>
+    <% $stderr.puts lab_list %>
+    <% lab_list.each do |l| %>
+      <li id="<%= l.url %>" class="client">
+        <% link_to("/labs/#{l.url}/") do %>
+          <% image_url = "#{l.image_path}/#{l.image_thumb}" %>
+          <%= image_tag(image_url, :alt => "") %>
+          <h2><%= l.name %></h2>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</section>

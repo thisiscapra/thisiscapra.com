@@ -43,6 +43,12 @@ data.work_items.clients.each do |client|
   }, :ignore => true
 end
 
+data.lab_items.labs.each do |item|
+  proxy "/labs/#{item.url}.html", "/lab-item.html", locals: { 
+    item: item
+  }, :ignore => true
+end
+
 ###
 # Helpers
 ###

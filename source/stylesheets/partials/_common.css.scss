@@ -171,10 +171,10 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
 // @extend %clearfix;
 %clearfix {
   &:after {
-    display: table;
-    content: "";
-    zoom: 1;
     clear: both;
+    content: "";
+    display: table;
+    zoom: 1;
   }
 }
 
@@ -207,7 +207,7 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
 // @extend %vertical-align
 %vertical-align {
   position: relative;
-  top: 46%;
+  top: 48%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
