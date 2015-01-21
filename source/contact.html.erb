@@ -14,7 +14,7 @@
 
     <ul class="contact-menu">
       <li><%= link_to('I have a project...', '#project', class: 'tab') %></li>
-      <li><%= link_to('I want to say hi!...', '#general', class: 'tab') %></li>
+      <li><%= link_to('I want to say &#8220;Hi!&#8221;...', '#general', class: 'tab') %></li>
     </ul>
 
     <div id="project" class="contact-form">
@@ -44,11 +44,14 @@
           </div>
           <div class="radios">
             <h3>What is your project budget?</h3>
+            <p>We now work in Canada, but work with clients worldwide. We are happy to quote in your own currency.</p>
+
             <label for="budget_under_3000"><input type="radio" id="budget_under_3000" name="budget" value="under $3,000"> Under $3000</label>
             <label for="budget_3000_7000"><input type="radio" id="budget_3000_7000" name="budget" value="$3,000-$7,000"> $3,000-$7,000</label>
             <label for="budget_7000_10000"><input type="radio" id="budget_7000_10000" name="budget" value="$7,000-$10,000"> $7,000-$10,000</label>
             <label for="budget_10000_20000"><input type="radio" id="budget_10000_20000" name="budget" value="$10,000-$20,000"> $10,000-$20,000</label>
             <label for="budget_20000_plus"><input type="radio" id="budget_20000_plus" name="budget" value="Over $20,000"> Over $20,000</label>
+            <label for="budget_hourly"><input type="radio" id="budget_hourly" name="budget" value="budget hourly"> Hourly on-going work</label>
           </div>
           <div class="radios">
             <h3>What type of project is it?</h3>
@@ -59,7 +62,7 @@
           </div>
           <div>
             <h3>Project description <abbr class="req" title="required">*</abbr></h3>
-            <textarea name="description" placeholder="Give us as much information as you can about the project..."></textarea>
+            <textarea name="description" placeholder="Describe to us the purpose of your project and anything else you think we need to know..."></textarea>
           </div>
           <input type="submit" name="" value="Send enquiry" class="button">
         </fieldset>
@@ -67,7 +70,7 @@
     </div>
 
     <div id="general" class="contact-form">
-      <h3>General enquiry</h3>
+      <h3>Hello!</h3>
       <form accept-charset="UTF-8" action="https://formkeep.com/f/45a9c78e89dc" method="POST">
         <input type="hidden" name="utf8" value="✓">
         <fieldset>
@@ -80,8 +83,8 @@
             <input type="email" name="general_email" placeholder="So we can contact you back..." required>
           </div>
           <div>
-            <label for="general_email">Your enquiry <abbr class="req" title="required">*</abbr></label>
-            <textarea name="general_description" placeholder="Your enquiry" required></textarea>
+            <label for="general_email">Your message <abbr class="req" title="required">*</abbr></label>
+            <textarea name="general_description" placeholder="Hello!" required></textarea>
           </div>
           <div>
             <input type="submit" name="" value="Send enquiry" class="button">

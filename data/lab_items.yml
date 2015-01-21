@@ -1,8 +1,8 @@
 labs:
   - name: Hip-Hop Quoted
     weight: 1
-    intro: "Hip-Hop Quoted started out as a labour of love in 2008 to combine two of my loves in life, Hip-Hop and Typography/Design and explore some of the web's capabilities to do some interesting layouts. It was originally built in Wordpress but over time became quite difficult to manage and scale to my needs."
-    sub_text: "Fast forward to 2014 and I've slowly been rebuilding the site over the past year to take advantage of new web technologies, HTML5, CSS3, webfonts and advanced layout tools. SVG's are used for images and it is now full responsive to work across a multitude of devices and screen sizes."
+    intro: "Hip-Hop Quoted started out as a labour of love in 2008 to combine two of Ollie&#8217;s loves in life: Hip-Hop and Typography. He also used it as a medium to explore some of the web&#8217;s capabilities to design and build interesting layouts. "
+    sub_text: "It was originally built in Wordpress but over time became quite difficult to manage and scale. So, in 2014 he rebuilt the site to take advantage of new web technologies such as HTML5, CSS3, webfonts and advanced layout tools. He uses SVGs for images and it is now fully responsive to work across a multitude of devices and screen sizes."
     what_we_did:
       - 'Logo & Branding'
       - Web design
@@ -21,8 +21,8 @@ labs:
       - hip-hop-quoted-tablet.png
   - name: Dragimals
     weight: 2
-    intro: "Dragimals is a fun 'sticky' game, where small children can create scenes with delightful animating animals!. Dragimals is a true labour of love, built by developer Elliott Draper of KickCode with designer Kat Neville."
-    sub_text: "Elliott loved teaching his young children to use the iPad but found that there was a lack of simple, fun and easy to play apps for babies and toddlers that focused less on game progression, and more on teaching gestures and interactions. Luckily, he loved to build things."
+    intro: "Dragimals is a fun &#8216;sticky&#8217; game, where small children can create scenes with delightful animating animals! After finding that there was a lack of simple, fun and easy to play apps for babies and toddlers, Kat designed this mini-game to focused less on game progression, and more on teaching gestures and interactions. Dragimals is designed by Kat, and built by developer <a href='http://kickcode.com' alt='KickCode'>Elliott Draper</a>. "
+    sub_text: "Smaller babies just drag the animals onto the scene and delight in pressing each animal to see them animate and make noises.  Older kids can play a more difficult version where they have to drag the animals to specific spots to see their rewards (which includes confetti for each correct placement and a celebration when they complete the scene). Learning about usability for babies was very interesting because they lacked to mobile dexterity and symbol recognition that older kids have developped."
     what_we_did:
       - 'Logo & Branding'
       - Game design
@@ -35,6 +35,7 @@ labs:
     image_path: labs/dragimals
     images:
       - dragimals-site-1.jpg
-      - dragimals-tablet-1.png
-      - dragimals-tablet-2.png
-      - dragimals-tablet-3.png
+      - dragimals-tablet-1.jpg
+      - dragimals-iphone-1.jpg
+      - dragimals-tablet-2.jpg
+      - dragimals-tablet-3.jpg
