@@ -13,7 +13,7 @@ work_item: true
     <h1><%= item.name %></h1>
 
     <% if item.link %>
-      <p class="project-link"><%= link_to("Live project »", item.link) %></p>
+      <p class="project-link"><%= link_to("Live project »", item.link, class: "button") %></p>
     <% end %>
 
   </header>

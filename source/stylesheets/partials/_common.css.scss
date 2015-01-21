@@ -117,6 +117,13 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
         color: $feat_color;
       }
     }
+    .button {
+      background-color: rgba(darken($color, 5%), 0.5);
+      &:hover {
+        background-color: rgba(darken($color, 5%), 1);
+        color: #fff;
+      }
+    }
   }
   .work-nav {
     a {

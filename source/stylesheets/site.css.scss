@@ -432,12 +432,12 @@ nav {
 }
 
 .home {
-  color: #fff;
   text-align: center;
-  padding: 0;
+  padding: 0 0 3em;
   width: 100%;
   div {
     background-color: $dark-grey;
+    color: #fff;
     padding: 3em 2em 6em;
     margin: 0 auto;
     @include box-sizing(border-box);
@@ -562,6 +562,9 @@ body.super-better {
 
 .page-work {
   @include colour-scheme($dark-grey, $button: true, $lighten: true);
+  #footer {
+    border-top: 0;
+  }
 }
 .work-list {
   letter-spacing: -4px;
@@ -683,6 +686,7 @@ body.super-better {
       width: 60%;
       &:first-letter {
         line-height: 0.4;
+        font-size: 3.3em;
       }
       @media screen and (max-width: 700px) {
         float: none;
@@ -691,8 +695,12 @@ body.super-better {
       }
     }
     &.sub-text {
-      margin: 0 auto 2em;
+      margin: 2em auto 0;
+      padding-top: 1em;
       max-width: 700px;
+      + hr {
+        margin-bottom: 0;
+      }
     }
   }
   .client-header {
@@ -711,11 +719,13 @@ body.super-better {
   }
 }
 .project-link {
+  margin: 1em 0 2em;
   text-align: center;
 }
 .hire {
   font-size: 2.4em;
   margin: 0;
+  padding: 1em 0;
   text-align: center;
   @media screen and (max-width: 700px) {
     font-size: 1.8em;
@@ -739,33 +749,42 @@ body.super-better {
   }
 }
 .gallery {
+  margin-bottom: 2em;
   .image {
-    background-color: #f2f2f2;
-    margin-bottom: 2em;
-    padding: 3em;
+    border-bottom: 1px solid #e1e1e1;
+    //background-color: #f2f2f2;
+    padding: 3em 0;
+    @include box-sizing(border-box);
     @media screen and (max-width: 800px) {
       padding: 1em;
     }
   }
-  &.lab-gallery {
-    .image {
-      background-color: transparent;
-      padding: 0;
-      img {
-        opacity: 0.8;
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
-        -webkit-backface-visibility: hidden;
-        transform: translate3d(0,0,0);
-        -webkit-transform: translate3d(0,0,0);
-        @include transition(all 0.05s linear);
-        &:hover {
-          opacity: 1;
-          filter: grayscale(0);
-          -webkit-filter: grayscale(0);
-        }
-      }
-    }
+  // &.lab-gallery {
+  //   .image {
+  //     background-color: transparent;
+  //     padding: 0;
+  //     img {
+  //       opacity: 0.8;
+  //       filter: grayscale(100%);
+  //       -webkit-filter: grayscale(100%);
+  //       -webkit-backface-visibility: hidden;
+  //       transform: translate3d(0,0,0);
+  //       -webkit-transform: translate3d(0,0,0);
+  //       @include transition(all 0.05s linear);
+  //       &:hover {
+  //         opacity: 1;
+  //         filter: grayscale(0);
+  //         -webkit-filter: grayscale(0);
+  //       }
+  //     }
+  //   }
+  // }
+}
+.other-work {
+  background-color: $dark-grey;
+  padding: 6em 0;
+  > h2 {
+    color: lighten($dark-grey, 20%);
   }
 }
 
@@ -790,6 +809,12 @@ body.page-labs {
   }
   #footer {
     border: 0;
+  }
+  .button {
+    background-color: transparent;
+    &:hover {
+      background-color: #f2f2f2;
+    }
   }
 }
 .lab-list {

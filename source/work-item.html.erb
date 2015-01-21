@@ -13,7 +13,7 @@ work_item: true
     <h1><%= client.name %></h1>
 
     <% if client.link %>
-      <p class="project-link"><%= link_to("Live project »", client.link) %></p>
+      <p class="project-link"><%= link_to("Live project »", client.link, class: "button" ) %></p>
     <% end %>
 
     <%= image_tag("#{client.image_path}/#{client.image_featured}", :alt => "") if client.image_featured %>
@@ -45,10 +45,11 @@ work_item: true
     <% if client.images %>
       <div class="gallery">
         <% client.images.each_with_index do |image, index| %>
-          <% if index == 2 && client.sub_text %>
+          <% if index == 1 && client.sub_text %>
             <p class="sub-text"><%= client.sub_text  %></p>
+            <hr>
           <% end %>
-          <% if index == 4 && client.testimonial %>
+          <% if index == 2 && client.testimonial %>
             <%= partial "client_blockquote", :locals => {:client => client, featured: false}  %>
           <% end %>
           <figure class="image">
@@ -58,29 +59,29 @@ work_item: true
       </div>
     <% end %>
 
-    <hr>
-
-    <h2>Other work</h2>
-    <ul class="work-list feature">
-      <% 
-        featured_clients = data.work_items.clients[0...9]
-        featured_clients.delete_if{|item| item.name == client.name }
-        #$stderr.puts featured_clients
-        featured_clients.sample(3).each do |f| %>
-        <li>
-          <% link_to("/work/#{f.url}/") do %>
-          <% image_url = "#{f.image_path}/#{f.image_thumb}" %>
-          <%= image_tag(image_url, :alt => "") %>
-          <h2><%= f.name %></h2>
-        <% end %>
-        </li>
-      <% end %>
-    </ul>
-
-    <hr>
-
     <p class="hire">Like what you see? <%= link_to("Hire us", "/contact") %></p>
 
   </div>
+
+</section>
+
+<section class="other-work">
+  
+  <h2>Other work</h2>
+  <ul class="work-list feature">
+    <% 
+      featured_clients = data.work_items.clients[0...9]
+      featured_clients.delete_if{|item| item.name == client.name }
+      #$stderr.puts featured_clients
+      featured_clients.sample(3).each do |f| %>
+      <li>
+        <% link_to("/work/#{f.url}/") do %>
+        <% image_url = "#{f.image_path}/#{f.image_thumb}" %>
+        <%= image_tag(image_url, :alt => "") %>
+        <h2><%= f.name %></h2>
+      <% end %>
+      </li>
+    <% end %>
+  </ul>
 
 </section>
