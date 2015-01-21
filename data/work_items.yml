@@ -20,8 +20,8 @@ clients:
     image_featured: alfred-app-featured.jpg
     image_thumb: alfred-app-thumb.jpg
     images:
-      - alfred-logo.png
-      - alfred-icons.png
+      - alfred-logo.jpg
+      - alfred-icons.jpg
       - alfred-site.jpg
       - alfred-mobile.jpg
   # 8-50

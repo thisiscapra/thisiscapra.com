@@ -35,7 +35,7 @@ labs:
     image_path: labs/dragimals
     images:
       - dragimals-site-1.jpg
-      - dragimals-tablet-1.jpg
-      - dragimals-iphone-1.jpg
-      - dragimals-tablet-2.jpg
-      - dragimals-tablet-3.jpg
+      - dragimals-tablet-1.png
+      - dragimals-iphone-1.png
+      - dragimals-tablet-2.png
+      - dragimals-tablet-3.png

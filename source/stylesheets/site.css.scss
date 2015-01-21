@@ -664,9 +664,8 @@ body.super-better {
   padding: 0;
   > div {
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1080px;
     padding: 3em 2em;
-    width: 100%;
     @include box-sizing(border-box);
     @media screen and (max-width: 550px) {
       max-width: 100%;
@@ -703,10 +702,16 @@ body.super-better {
       }
     }
   }
+  hr:first-of-type {
+    margin-bottom: 0;
+  }
   .client-header {
     padding: 7em 0 0;
     position: relative;
     @include box-sizing(border-box);
+    @media screen and (max-width: 1000px) {
+      padding: 7em 2em 0;
+    }
     @media only screen and (device-width: 768px) {
       img {
         max-width: auto;
@@ -715,6 +720,12 @@ body.super-better {
     }
     &.shadow {
       @extend %header-shadow;
+    }
+  }
+  figure {
+    padding: 5em 0 3em;
+    + hr {
+      margin-bottom: 0;
     }
   }
 }
@@ -815,6 +826,12 @@ body.page-labs {
     &:hover {
       background-color: #f2f2f2;
     }
+  }
+}
+.lab-gallery {
+  .image {
+    border: 0;
+    padding-bottom: 0;
   }
 }
 .lab-list {
