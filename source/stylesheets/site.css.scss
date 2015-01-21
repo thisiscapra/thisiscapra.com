@@ -73,6 +73,10 @@ hr {
     width: 100%;
   }
 }
+#skrollr-body {
+  height: 100%;
+  width: 100%;
+}
 
 // Typography
 
@@ -461,7 +465,9 @@ nav {
   figure {
     margin: 6em auto 3em;
     max-width: 700px;
+    padding: 0 2em;
     width: 100%;
+    @include box-sizing(border-box);
   }
   @media screen and (max-width: 400px) {
     div {

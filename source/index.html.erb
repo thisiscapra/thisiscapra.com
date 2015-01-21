@@ -1,4 +1,9 @@
 <% content_for(:title, "Home") %>
+<% content_for :javascript do %>
+  <script>
+    var s = skrollr.init({forceHeight: false});
+  </script>
+<% end %>
 
 <section class="home">
 

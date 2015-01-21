@@ -94,8 +94,6 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
   // }
 }
 
-var s = skrollr.init({forceHeight: false});
-
 // IE8 only
 
 if (document.all && document.querySelector && !document.addEventListener) {
