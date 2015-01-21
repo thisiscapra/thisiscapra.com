@@ -21,8 +21,8 @@ labs:
       - hip-hop-quoted-tablet.png
   - name: Dragimals
     weight: 2
-    intro: "Dragimals is a fun &#8216;sticky&#8217; game, where small children can create scenes with delightful animating animals! Dragimals is designed by Kat, and built by developer <a href='http://kickcode.com' alt='KickCode'>Elliott Draper</a>."
-    sub_text: "After finding that there was a lack of simple, fun and easy to play apps for babies and toddlers, the design was designed to focused less on game progression, and more on teaching gestures and interactions. Learning about usability for babies was very interesting because they lacked to mobile dexterity and symbol recognition that older kids have."
+    intro: "Dragimals is a fun &#8216;sticky&#8217; game, where small children can create scenes with delightful animating animals! After finding that there was a lack of simple, fun and easy to play apps for babies and toddlers, Kat designed this mini-game to focused less on game progression, and more on teaching gestures and interactions. Dragimals is designed by Kat, and built by developer <a href='http://kickcode.com' alt='KickCode'>Elliott Draper</a>. "
+    sub_text: "Smaller babies just drag the animals onto the scene and delight in pressing each animal to see them animate and make noises.  Older kids can play a more difficult version where they have to drag the animals to specific spots to see their rewards (which includes confetti for each correct placement and a celebration when they complete the scene). Learning about usability for babies was very interesting because they lacked to mobile dexterity and symbol recognition that older kids have developped."
     what_we_did:
       - 'Logo & Branding'
       - Game design
