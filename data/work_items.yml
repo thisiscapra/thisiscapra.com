@@ -7,8 +7,8 @@ clients:
     home_intro: "See how we designed your computer&#8217;s butler for OSX."
     url: alfred-app
     link: http://alfredapp.com
-    intro: "For this project, Ollie was approached by Andrew and Vero Pepperell, a talented developer and marketing team, to create the original design and branding for a quicklauncher that simplifies and speeds up your workflow. Its launch went viral (thanks to web designers and other mac users who love all things beautiful) and has been successful ever since. Alfred App is your computer&#8217;s butler: it is a highly rated and popular quick launcher for OSX that is being used by tens of thousands of Mac users worldwide."
-    sub_text: "Capra continues to design for Alfred, working on everything from OSX icon design and branding through to marketing materials and web presence. Over the five years since its launch, the product has evolved many new features and expanded to users all over the world."
+    intro: "For this project, Ollie was approached by Andrew and Vero Pepperell, a talented developer and marketing team, to create the original design and branding for a quicklauncher that simplifies and speeds up your workflow. Its launch went viral (thanks to web designers and other mac users who love all things beautiful) and has been successful ever since. Alfred App is your computer&#8217;s butler: it is a highly rated and popular quick launcher for OSX that is being used by tens of thousands of Apple users worldwide."
+    sub_text: "Capra continues to design for Alfred, working on everything from OSX icon design and branding to marketing materials and web presence. Over the five years since its launch, the product has evolved many new features and expanded to users all over the world."
     what_we_did: 
       - 'Branding & logo design'
       - Web design
@@ -33,7 +33,7 @@ clients:
     url: sports-digest-8-50
     link: http://850sportsapp.com
     intro: "You have just 10 minutes before work starts, and you need to catch up with the sports you missed this weekend. 850 offers a simple, beautiful sports digest, curated and written by talented sports writers. With bold colours and a scannable format, it has lofty goals to become the world&#8217;s best sports app. Capra designed and built this first version."
-    sub_text: "850&#8217;s founder came to us looking to create a functioning prototype he could present to investors.  Using Phonegap, we designed and builtan iPhone and Android apps that are now available for download. We will continue to refine this beta version to provide more sports as well as simple, elegant features."
+    sub_text: "850&#8217;s founder came to us looking to create a functioning prototype he could present to investors.  Using Phonegap, we designed and built iPhone and Android apps that are now available for download. We will continue to refine this beta version to provide more sports as well as simple, elegant features."
     what_we_did: 
       - 'Branding & logo design'
       - App design
@@ -50,7 +50,7 @@ clients:
       - 8-50-mobile-2.jpg
       - 8-50-site.jpg
       - 8-50-mobile-3.jpg
-    testimonial: "850 Sports Digest was the most intense project we have worked on together yet with me setting tight budgets and pushing on delivery times and asking the world of the quality of the look and feel and features. But as always, they delivered above expectations."
+    testimonial: "850 Sports Digest was the most intense project we have worked on together yet with me setting tight budgets and pushing on delivery times and asking the world of the quality of the look-and-feel and features. But as always, they delivered above expectations."
     featured_testimonial: "Ollie and Kat are always the first people I turn to when I need a high quality product to be delivered."
     cite: 'Jon Bishop, 850 founder'
   # Alton Convent School
@@ -86,8 +86,8 @@ clients:
     weight: 4
     url: mind-the-product
     link: http://mtpcon.com/
-    intro: "MindtheProduct is a very popular meetup group for product managers. In 2012 they launched their very first conference in London, UK and Kat was approached to come up with a simple, elegant design. The <a href=http://mtpcon.com/london/2012 alt=Mind the Product Conference 2012>first year&#8217;s website</a> was a straightforward one-page design, based on their brand&#8217;s colours and logo, where the circles moved as you scrolled."
-    sub_text: "Since we were both so pleased with the first year&#8217;s efforts, we knew we had to come up with something fun and different for the second year. So the <a href=http://mtpcon.com/london/2013 alt=Mind The Product Conference 2013>2013</a> website features a video background from the previous year&#8217;s conference. This website was designed to inspire product managers to make great, innovative products.  <br /><br />Then in <a href=http://mtpcon.com/london/2014 alt=Mind The Product Conference 2014>2014</a>, the founders decided to go for simple, practical yet elegant.  We created a website that could be modified through Wordpress and could be reused in future years. The build needed to be flexible for <a href=http://mtpcon.com>the 2015 version</a> to adapt to multiple locations (San Francisco and London this year!), pre-conference (no speakers, just teasers), full conference (speakers, tickets for sale) and post conference (wrap up, thank you and archiving).  We continue to work with Martin, founder, and the rest of the MindTheProduct team to keep their website fresh!"
+    intro: "Mind the Product is a very popular meetup group for product managers. In 2012 they launched their very first conference in London, UK, and founder Martin Erikkson approached Kat to come up with a simple, elegant design. The <a href=http://mtpcon.com/london/2012 alt=Mind the Product Conference 2012>first year&#8217;s website</a> was a straightforward one-page design, based on their brand&#8217;s colours and logo, where the circles moved as you scrolled."
+    sub_text: "Since we were both so pleased with the first year&#8217;s website, we knew we had to come up with something fun and different for the second year. So the <a href=http://mtpcon.com/london/2013 alt=Mind The Product Conference 2013>2013</a> website features a video background from the previous year&#8217;s conference. This website was designed to inspire product managers to make great, innovative products.  <br /><br />Then in <a href=http://mtpcon.com/london/2014 alt=Mind The Product Conference 2014>2014</a>, the founders decided to go for simple, practical yet elegant.  We created a website that could be modified through Wordpress and could be reused in future years. The build needed to be flexible for <a href=http://mtpcon.com>the 2015 version</a> to adapt to multiple locations (San Francisco and London this year!), pre-conference (no speakers, just teasers), full conference (speakers, tickets for sale) and post conference (wrap up, thank you and archiving).  We continue to work with Martin and the rest of the Mind The Product team to keep their website fresh!"
     what_we_did: 
       - Web design
       - Responsive build
@@ -106,13 +106,13 @@ clients:
       - mtp-sf.jpg
     testimonial: Kat is a superstar designer and a true partner to Mind the Product. She has developed all of our conference websites off minimal briefs and built amazing, engaging sites that truly represent and help elevate our forward thinking brand. Kat was a joy to work with, and when faced with a design constraint she was equally happy collaborating on a solution as she was tackling it on her own.
     featured_testimonial: "Capra are superstar designers and true partners to Mind the Product."
-    cite: 'Martin Eriksson, founder of MindTheProduct'
+    cite: 'Martin Eriksson, founder of Mind The Product'
   # Super Better
   - name: Super Better
     weight: 5
     url: super-better
     link: http://superbetter.com
-    intro: "SuperBetter is a game by Jane McGonigal that helps you achieve your health goals — or recover from an illness or injury — by increasing your personal resilience. Resilience means staying curious, optimistic and motivated even in the face of the toughest challenges. Kat was involved in designing and building the web and native iOS app."
+    intro: "SuperBetter is a game by Jane McGonigal that helps you achieve your health goals &#8212; or recover from an illness or injury &#8212; by increasing your personal resilience. Resilience means staying curious, optimistic and motivated even in the face of the toughest challenges. Kat was involved in designing and building the web and native iOS app."
     sub_text: "After implementing the front end html/css into a Ruby platform for Superbetter Version 1 (designed by <a href=http://largeprintgiveth.com/>Ryan Larson</a>), Kat got involved in designing Version 2. She worked on making history and tracking progress more gameful and delightful. She was also the designer for the original version of the iPhone app, which was built to focus users on quick and easy access to their daily gaming activities. Her design simplified forms, focused on quick-entry, and integrated fun images and celebrations."
     what_we_did: 
       - Concept design
@@ -132,7 +132,7 @@ clients:
       - sb-web-powerup.jpg
       - sb-web-badguy.jpg
       - sb-web-complete.jpg
-    testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I&#8217;ve never found that talent wrapped in such an energetic, positive, problem-solving personality. Kat&#8217;s turnaround speed, realtime iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. She is the perfect mix of right brain, left brain, and extreme charisma. I would work with her again in a heartbeat and wish I could have her on every project."
+    testimonial: "People with both deep technical skill and formidable artistic chops are rare &#8212; and I&#8217;ve never found that talent wrapped in such an energetic, positive, problem-solving personality. Kat&#8217;s turnaround speed, realtime iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. She is the perfect mix of right brain, left brain, and extreme charisma. I would work with her again in a heartbeat and wish I could have her on every project."
     featured_testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I&#8217;ve never found that talent wrapped in such an energetic, positive, problem-solving personality."
     cite: "Chelsea Howe, Game Designer for SuperBetter"
   # Back Page Football
@@ -161,7 +161,7 @@ clients:
     weight: 7
     url: cold-claim
     link: http://coldclaim.com
-    intro: "The place is Antarctica. The year is 2049. Your mission is to locate and extract what is now Earth&#8217;s most precious resource: Paleo Water. As expedition leader, you must prepare to navigate harsh terrain, prospect for Paleo, discover artifacts, and claim coldly contested land... while outwitting your rivals and protecting your reputation! In the spirit of <em>Settlers of Catan</em> and <em>Kingdom Builder</em>, <em>Cold Claim</em> is a strategic board game for two to four players available via iPad Game Center, pass-and-play or the physical boardgame."
+    intro: "The place is Antarctica. The year is 2049. Your mission is to locate and extract what is now Earth&#8217;s most precious resource: Paleo Water. As expedition leader, you must prepare to navigate harsh terrain, prospect for Paleo, discover artifacts, and claim coldly contested land... while outwitting your rivals and protecting your reputation! In the spirit of <em>Settlers of Catan</em> and <em>Kingdom Builder</em>, <em>Cold Claim</em> is a strategic board game for two to four players available via iPad Game Center, pass-and-play or the physical board game."
     sub_text: "Kat was lead  designer for this iPad game, board game and supporting website.  She was actively involved in planning, testing and producing this strategic game. ColdClaim was designed in collaboration with <a href=http://natronbaxter.com>Natron Baxter</a>. "
     what_we_did: 
       - Game design
@@ -185,7 +185,7 @@ clients:
       - cold-claim-board-game.jpg
       - cold-claim-web.jpg
       - cold-claim-mobile.jpg
-    testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with. She is one of those people with whom you look forward to getting on a 7 a.m. client call with. One of those people who makes a 6-hour brainstorming marathon feel like a treat and not a trial. Her relentless optimism and ability to keep the momentum going in the dark times that come with any long-term project makes her a true delight to work with. In short, Kat is the complete package. She has my complete trust, total respect, and my highest recommendation."
+    testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with. She is one of those people with whom you look forward to getting on a 7 a.m. client call with. One of those people who makes a 6-hour brainstorming marathon feel like a treat and not a trial. Her relentless optimism and ability to keep the momentum going in the dark times that come with any long-term project make her a true delight to work with. In short, Kat is the complete package. She has my complete trust, total respect, and my highest recommendation."
     featured_testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with."
     cite: "Mathias Crawford, game designer for ColdClaim"
   # Toto

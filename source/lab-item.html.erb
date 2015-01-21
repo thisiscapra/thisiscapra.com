@@ -39,7 +39,7 @@ work_item: true
     <% if item.images %>
       <div class="gallery lab-gallery">
         <% item.images.each_with_index do |image, index| %>
-          <% if index == 2 && item.sub_text %>
+          <% if index == 1 && item.sub_text %>
             <p class="sub-text"><%= item.sub_text  %></p>
           <% end %>
           <figure class="image">
