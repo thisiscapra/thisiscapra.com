@@ -417,7 +417,6 @@ nav {
   }
   @media screen and (max-width: 400px)  {
     min-height: 100%;
-    max-height: 100%;
     .featured-item {
       background-size: 250%;
       background-attachment: scroll;
@@ -431,6 +430,17 @@ nav {
     .featured-item {
       background-size: 210%;
       background-position: top;
+    }
+  }
+  @media screen and (device-aspect-ratio: 2/3) {
+    height: 500px;
+    min-height: 500px;
+  }
+  @media screen and (device-aspect-ratio: 40/71) {
+    .featured-item {
+      article {
+        top: 65%;
+      }
     }
   }
 }
@@ -772,9 +782,6 @@ body.super-better {
     //background-color: #f2f2f2;
     padding: 3em 0;
     @include box-sizing(border-box);
-    @media screen and (max-width: 800px) {
-      padding: 1em;
-    }
   }
   // &.lab-gallery {
   //   .image {
