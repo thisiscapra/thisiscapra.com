@@ -13,7 +13,7 @@ work_item: true
     <h1><%= client.name %></h1>
 
     <% if client.link %>
-      <p class="project-link"><%= link_to("Live project »", client.link, class: "button" ) %></p>
+      <p class="project-link"><%= link_to("Live project", client.link, class: "button" ) %></p>
     <% end %>
 
     <%= image_tag("#{client.image_path}/#{client.image_featured}", :alt => "") if client.image_featured %>
