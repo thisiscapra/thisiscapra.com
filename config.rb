@@ -121,6 +121,10 @@ helpers do
   def pretty_date(date)
     date.strftime('%B %d, %Y')
   end
+  # Check if page
+  def page(path)
+    current_page.path == path
+  end
 end
 
 # Fix bug with build errors and typography fonts

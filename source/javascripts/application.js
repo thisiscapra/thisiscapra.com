@@ -77,27 +77,12 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     }, false);
   });
 
-  // Nice scrolling effects on the homepage
-  // if (hasClass(body, "page-index")) {
-  //   var top = body.offsetTop;
-  //   window.addEventListener('scroll', function() {
-  //     var yOffset = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-  //     //console.log(top);
-  //     if (yOffset >= 1) {
-  //       removeClass(body, 'scroll-up');
-  //       addClass(body, 'scroll-down');
-  //     } else {
-  //       removeClass(body, 'scroll-down');
-  //       addClass(body, 'scroll-up');
-  //     }
-  //   });
-  // }
 }
 
 // IE8 only
 
-if (document.all && document.querySelector && !document.addEventListener) {
-  var body = document.querySelector('body');
-  addBodyClass();
-  addClass(body, 'ie8');
-}
+// if (document.all && document.querySelector && !document.addEventListener) {
+//   var body = document.querySelector('body');
+//   addBodyClass();
+//   addClass(body, 'ie8');
+// }

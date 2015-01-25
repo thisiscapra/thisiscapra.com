@@ -809,6 +809,7 @@ body.super-better {
   padding: 6em 0;
   > h2 {
     color: lighten($dark-grey, 20%);
+    text-align: center;
   }
 }
 
@@ -1116,6 +1117,13 @@ section.contact {
 
 // Some ie8 fixes 
 .ie8 {
+  overflow-x: hidden; 
+  h1, h2, h3, h4, 
+  .intro:first-of-type:first-letter, 
+  .blog-entry div>p:first-of-type:first-letter,
+  blockquote {
+    font-weight: normal !important;
+  }
   #logo {
     background: url('../images/logo.png') no-repeat center;
     height: 80px;
@@ -1130,10 +1138,38 @@ section.contact {
       margin-right: 0;
     }
   }
+  &.alfred-app {
+    background-image: none;
+    @include colour-scheme($alfred-color, $button: true, $lighten: true);
+    .featured-item {
+      //background-color: $alfred-color;
+      background-image: url('/images/work/alfred-app/alfred-app-background.jpg');
+      article.ft-alfred-app {
+        display: block;
+      }
+    }
+    &.page-index {
+      @include colour-scheme($alfred-color, $button: true, $lighten: false);
+    }
+  }
   .work-item {
     > div:first-child {
       margin: 0 auto;
       width: 1000px;
+    }
+  }
+  .row {
+    margin: 0 auto;
+    width: 1000px;
+  }
+  #footer {
+    ul {
+      list-style: none;
+    }
+  }
+  .page-about {
+    h2,h3 {
+      text-align: center;
     }
   }
 }

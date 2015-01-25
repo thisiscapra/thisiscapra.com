@@ -127,6 +127,7 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
   }
   .work-nav {
     a {
+      background-color: darken($color, 5%);
       background-color: rgba(darken($color, 5%), 0.5);
       &:hover {
         background-color: rgba(darken($color, 5%), 1);

@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<!--[if IE 8 ]><html lang="en" class="ie8<% if page("index.html") %> alfred-app<% end %>"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <title><%= page_title %></title>
@@ -20,14 +21,14 @@
   <![endif]-->
 </head>
 <body id="capra" class="<%= custom_page_classes %>">
-  <% if current_page.path == "index.html" %><div id="skrollr-body"><% end %>
+  <% if page("index.html") %><div id="skrollr-body"><% end %>
     <%= partial "header" %>
-    <%= partial "featured_projects" if current_page.path == "index.html" %>
+    <%= partial "featured_projects" if page("index.html") %>
     <main role="main">
       <%= yield %>
     </main>
     <%= partial "footer" %>
-  <% if current_page.path == "index.html" %></div><% end %>
+  <% if page("index.html") %></div><% end %>
   <%= javascript_include_tag "application" %>
   <%= yield_content :javascript %>
   <script>
