@@ -685,7 +685,7 @@ body.super-better {
     @include box-sizing(border-box);
     @media screen and (max-width: 550px) {
       max-width: 100%;
-      padding: 3em 1em;
+      padding: 0.2em 1em 1em;
     }
   }
   h1 {
@@ -727,6 +727,9 @@ body.super-better {
     @include box-sizing(border-box);
     @media screen and (max-width: 1000px) {
       padding: 7em 2em 0;
+    }
+    @media screen and (max-width: 400px) {
+      padding: 7em 1em 0;
     }
     @media only screen and (device-width: 768px) {
       img {
@@ -806,10 +809,13 @@ body.super-better {
 }
 .other-work {
   background-color: $dark-grey;
-  padding: 6em 0;
+  padding: 6em 2em;
   > h2 {
     color: lighten($dark-grey, 20%);
     text-align: center;
+  }
+  @media screen and (max-width: 400px) {
+    padding: 1em;
   }
 }
 
