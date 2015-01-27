@@ -24,6 +24,7 @@ clients:
       - alfred-icons.jpg
       - alfred-site.jpg
       - alfred-mobile.jpg
+      - alfred-remote.jpg
   # 8-50
   - name: 8-50 Sports Digest
     weight: 2
