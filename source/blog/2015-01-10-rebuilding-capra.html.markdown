@@ -20,7 +20,7 @@ I've been using [Middleman App](http://middlemanapp.com) for while now both on p
 * Ability to use helpers & YAML data for generating views.
 * Built in pre-processors for CSS & Javascript.
 * Ability to use the asset pipeline.
-* Automically builds with pretty URLs.
+* Automatically builds with pretty URLs.
 * A large community behind it and easily extendable.
 
 Of course using a static site generator comes with some drawbacks which is the ability to run server side code to perform some specfic tasks. I'm going to run through some of the solutions we came up with to solve specific functions we wanted on the site.
@@ -44,7 +44,7 @@ We wanted to avoid to avoid duplicating lots of code within the site, so we need
     link: 'http://850sportsapp.com'
 ................
 ```
-Then in our `config.rb` file we can call this YAML file and automatically generate pages based on these fields.
+Then in our `config.rb` file we can call this YAML file and magically generate pages based on these fields.
 
 ```ruby
 data.work_items.clients.each_with_index do |client, index|
