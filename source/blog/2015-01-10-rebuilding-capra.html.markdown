@@ -27,7 +27,7 @@ Of course using a static site generator comes with some drawbacks which is the a
 
 ###Dynamically generated pages
 
-We wanted to avoid to avoid duplicating lots of code within the site, so we needed a way to dynamically generate the project pages. Luckliy [Middleman](http://middlemanapp.com) has the ability to read YAML data files and build HTML pages from these. First we create a `work_items.yml` date file...
+We wanted to avoid duplicating lots of code within the site, so we needed a way to dynamically generate the project pages. Luckliy [Middleman](http://middlemanapp.com) has the ability to read YAML data files and build HTML pages from there. First we create a `work_items.yml` date file...
 
 ```ruby
 - name: 'Alfred App'
@@ -99,7 +99,7 @@ There are a couple of problems we needed to solve with Prose. Currently it doesn
 
 The image uploading is still rather wonky and although I added the 'media:' line above this doesn't seem to work properly so we are currently hosting our images on dropbox.
 
-So we can now write our Middleman blog posts in Prose and they are automically saved to our Github repo, that solves one problem, but how can I make this update on our live static site? CLI comes to the rescue.
+So we can now write our Middleman blog posts in Prose and they are automatically saved to our Github repo, that solves one problem, but how can I make this update on our live static site? CLI comes to the rescue.
 
 ###Hosting & Continuous Delivery
 
@@ -130,7 +130,7 @@ Perfect, now we can write a blog post in Prose, it saves to our Github repo and 
 
 ###Contact page
 
-There are a couple of ways we could approach this, we just need a way to post data to a url and receive it in our email. Middleman does have the option of parsing non HTML files in it so we use some PHP and write a script to deliver our email, it kind of defeats the point of a static site though. After some searching around I stumbled upon [Formkeep](https://formkeep.com/) which is perfect. It stores all the replies within a nice little UI and I have the option of sending them to both [Trello](https://trello.com/) and [Gmail](https://mail.google.com/). Job done!
+There are a couple of ways we could approach this, we just need a way to post data to a url and receive it in our email. Middleman does have the option of parsing non HTML files in it so we could use some PHP and write a script to deliver our email, it kinda defeats the point of a static site though. After some searching around I stumbled upon [Formkeep](https://formkeep.com/) which is perfect. It stores all the replies within a nice little UI and I have the option of sending them to both [Trello](https://trello.com/) and [Gmail](https://mail.google.com/). Job done!
 
 Our source code is [open source](https://github.com/thisiscapra/thisiscapra.com) so feel free to have a look around and steal anything you need.
 
