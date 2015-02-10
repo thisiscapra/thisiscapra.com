@@ -103,7 +103,7 @@ So we can now write our Middleman blog posts in Prose and they are automatically
 
 ###Hosting & Continuous Delivery
 
-I'd whittled down my hosting to a choice between [Heroku](https://www.heroku.com/) and [Divshot](http://divshot.com). The free hosting is great on Heroku but the dyno's spin down when not in use and you have to use a service such as pingdom to keep it alive wich seemed somewhat wrong to me. Divshot is built for static site hosting and comes with built push deploys and automatic setups with CLI tools.
+I'd whittled down my hosting to a choice between [Heroku](https://www.heroku.com/) and [Divshot](http://divshot.com). The free hosting is great on Heroku but the dyno's spin down when not in use and you have to use a service such as pingdom to keep it alive wich seemed somewhat wrong to me. Divshot is built for static site hosting and comes with built in push deploys and automatic setup with CLI tools.
 
 I had some visibilty on CLI tools from working at [Kyan](http://kyan.com) but never set it up for myself. I started playing with [Travis](https://travis-ci.org/) but I was having problems getting it playing ball with Middleman and Divshot so I was pointed towards [Codeship](https://codeship.com) which has been great. After linking up Github --> Codeship --> Divshot I just needed to let Codeship know I was deploying a Ruby app so I added a setup command to install all the gems needed.
 
