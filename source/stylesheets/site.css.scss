@@ -403,7 +403,15 @@ nav {
     width: 100%;
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0, 0, 0);
-    //-webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    &:before {
+      content: "";
+      bottom: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
     div {
       height: 100%;
       width: 100%;
@@ -517,10 +525,13 @@ body.alfred-app {
   background-image: none;
   @include colour-scheme($alfred-color, $button: true, $lighten: true);
   .featured-item {
-    //background-color: $alfred-color;
+    // background-color: $alfred-color;
     background-image: url('/images/work/alfred-app/alfred-app-background.jpg');
     article.ft-alfred-app {
       display: block;
+    }
+    &:before {
+      background-color: rgba($alfred-color, 0.4);
     }
   }
   &.page-index {
@@ -537,6 +548,9 @@ body.trickits {
     article.ft-trickits {
       display: block;
     }
+    &:before {
+      background-color: rgba($trickits-color, 0.2);
+    }
   }
   &.page-index {
     @include colour-scheme($trickits-color, $button: true, $lighten: false);
@@ -552,6 +566,9 @@ body.sports-digest-8-50 {
     article.ft-sports-digest-8-50 {
       display: block;
     }
+    &:before {
+      background-color: rgba($sports-digest-color, 0.2);
+    }
   }
   &.page-index {
     @include colour-scheme($sports-digest-color, $button: true, $lighten: false);
@@ -566,6 +583,9 @@ body.alton-convent-school {
     background-image: url('/images/work/alton-convent-school/alton-convent-background.jpg');
     article.ft-alton-convent-school {
       display: block;
+    }
+    &:before {
+      background-color: rgba($alton-convent-color, 0.3);
     }
   }
   &.page-index {
