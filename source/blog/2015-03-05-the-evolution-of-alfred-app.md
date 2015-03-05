@@ -10,13 +10,13 @@ tags:
   - Iteration
 ---
 
-As [Alfred App](http://www.alfredapp.com) turned 5 years old last week and I've been lucky to work on the design, branding & UI throughtout that I thought I would document how it has evolved.
+As [Alfred App](http://www.alfredapp.com) turned 5 years old last week and I've been lucky to work on the design, branding & UI during that period I thought I would document how it has evolved.
 
 ###Alfred beta
 
 When [Vero](https://twitter.com/vero) & [Andrew](https://twitter.com/preppeller) came to me in 2010 with an idea for a new quick launcher for OSX I jumped at the chance to create the original branding and website. They had a name, Alfred, but nothing else so we trashed around some ideas and using Batman/Alfred as a theme we settled on a butler hat with an old style magnifying glass for the app icon. I then procedded to sketch out some initial ideas and throw some shapes in illustrator. Having never worked on an app icon for OSX before I had to research best practices for formats and tools to create the icon, it also involed learning how to use the mesh tool in illustrator which can be rather daunting when you've never used it before. We worked through some iterations shown below before we settled on the Alfred beta icon.
 
-![Alfred Beta Icon Ideas](https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/alfred-icon-ideas.jpg)
+[![Alfred Beta Icon Ideas](https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/alfred-icon-ideas.jpg)](https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/alfred-icon-ideas.jpg)
 
 ![Alfred Beta Icon](https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/alfred-icon-beta.jpg)
 
