@@ -1,5 +1,6 @@
 //= require "smooth-scroll.min.js"
 //= require "skrollr.min.js"
+//= require "simplbox.js"
 
 var hasClass = function (elem, className) {
   return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
@@ -76,6 +77,12 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
       });
     }, false);
   });
+
+  // Zoom images on blog posts
+  var links = document.querySelectorAll("[data-simplbox]");
+  var simplbox = new SimplBox(links);
+  console.log(simplbox)
+  simplbox.init();
 
 }
 

@@ -10,6 +10,8 @@
 html {
   height:100%;
   width:100%;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 body {
   background-color: #fff;
@@ -1224,4 +1226,29 @@ section.contact {
 .twitter-tweet{
   margin: 0 auto 2em !important;
   width: 100% !important;
+}
+
+// Modal windows
+
+#simplbox {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  padding: 0.5em;
+  position: relative;
+  z-index: 9999;
+  ms-touch-action: none;
+  touch-action: none;
+  &:after {
+    background-color: $link-blue;
+    color: #fff;
+    content: "x";
+    font-family: $quatro;
+    font-weight: 600;
+    padding: 0.2em 0.5em;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    right: 0;
+    @include transition(background-color 0.05s linear);
+  }
 }
