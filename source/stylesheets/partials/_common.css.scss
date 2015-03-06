@@ -101,6 +101,16 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
       }
     }
   }
+  #work-bar {
+    background-color: darken($color, 5%);
+    color: #fff;
+    a {
+      color: lighten($color, 20%);
+      &:hover {
+        color: lighten($color, 30%);
+      }
+    }
+  }
   .content,
   //.featured,
   .client-header {
@@ -161,6 +171,15 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
   -ms-transition: $transition;
   -o-transition: $transition;
   transition: $transition;
+}
+
+// Transforms
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transition: $transform;
 }
 
 // Gradients

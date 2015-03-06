@@ -125,6 +125,10 @@ helpers do
   def page(path)
     current_page.path == path
   end
+  # If we available for work
+  def available?
+    return true
+  end
 end
 
 # Fix bug with build errors and typography fonts

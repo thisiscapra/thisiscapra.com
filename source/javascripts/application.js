@@ -1,6 +1,6 @@
 //= require "smooth-scroll.min.js"
 //= require "skrollr.min.js"
-//= require "simplbox.js"
+//= require "simplbox.min.js"
 
 var hasClass = function (elem, className) {
   return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');

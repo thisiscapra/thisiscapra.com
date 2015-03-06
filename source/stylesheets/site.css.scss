@@ -79,6 +79,12 @@ hr {
   height: 100%;
   width: 100%;
 }
+#work-bar {
+  color: #fff;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 0.3em 1em;
+}
 
 // Typography
 
@@ -879,6 +885,9 @@ body.page-labs {
       fill: #000;
     }
   }
+  #work-bar {
+    color: #000;
+  }
   #footer {
     border: 0;
   }
@@ -936,6 +945,9 @@ body.page-labs {
     .logo-right {
       fill: $link-blue;
     }
+  }
+  #work-bar {
+    color: #000;
   }
 }
 .blog {
@@ -1230,6 +1242,24 @@ section.contact {
 
 // Modal windows
 
+a[data-simplbox] {
+  display: block;
+  position: relative;
+  &:after {
+    background-color: $link-blue;
+    border-radius: 2em;
+    color: #fff;
+    content: "\26B2";
+    height: 1.5em;
+    line-height: 1.5em;
+    position: absolute;
+    right: 1em;
+    text-align: center;
+    top: 1em;
+    width: 1.5em;
+    @include transform(rotate(45deg));
+  }
+}
 #simplbox {
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
