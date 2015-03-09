@@ -14,7 +14,7 @@ As [Alfred App](http://www.alfredapp.com) turned 5 years old last week and I've 
 
 ###Alfred beta
 
-When [Vero](https://twitter.com/vero) & [Andrew](https://twitter.com/preppeller) came to me in 2009 with an idea for a new quick launcher for OSX, I jumped at the chance to create the original branding and website. They had a name –Alfred– but nothing else, so we thrashed out some ideas, such as using Batman/Alfred as a theme. We settled on a butler hat with an old-style magnifying glass for the app icon. I then proceeded to sketch out some initial ideas and throw some shapes in illustrator. Having never worked on an app icon for OSX before, I had to research best practices for formats and tools to create the icon. It also involved learning how to use the mesh tool in illustrator, which can be rather daunting when you've never used it before. We worked through some iterations shown below before we settled on the Alfred beta icon.
+When [Vero](https://twitter.com/vero) & [Andrew](https://twitter.com/preppeller) came to me in 2009 with an idea for a new quick launcher for OSX, I jumped at the chance to create the original branding and website. They had a name –Alfred– but nothing else, so we thrashed out some ideas, Alfred is a quintessentially British name, so it inspired us to go with a classic bowler hat with an old-style magnifying glass for the app icon. I then proceeded to sketch out some initial ideas and throw some shapes in illustrator. Having never worked on an app icon for OSX before, I had to research best practices for formats and tools to create the icon. It also involved learning how to use the mesh tool in illustrator, which can be rather daunting when you've never used it before. We worked through some iterations shown below before we settled on the Alfred beta icon.
 
 <a href="https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/alfred-icon-ideas.jpg" data-simplbox><img src="https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/alfred-icon-ideas.jpg" alt="Alfred Beta Icon Ideas"></a>
 
@@ -37,8 +37,6 @@ The beta period was very well received by the Apple community and Andrew & Vero 
 <a href="https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/app-improvements-search.jpg" data-simplbox><img src="https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/app-improvements-search.jpg" alt="Alfred V1 Search"></a>
 
 <a href="https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/app-improvements-itunes.jpg" data-simplbox><img src="https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/app-improvements-itunes.jpg" alt="Alfred V1 iTunes"></a>
-
-<a href="https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/app-improvements-tweets.jpg" data-simplbox><img src="https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/app-improvements-tweets.jpg" alt="Alfred V1 Tweets"></a>
 
 <a href="https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/alfred-v1-icons.jpg" data-simplbox><img src="https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/alfred-v1-icons.jpg" alt="Alfred V1 Icons"></a>
 
@@ -67,11 +65,5 @@ The iconography needed updating for the new retina screens that were just being 
 For the website, Andrew & Vero didn't want to completely overhaul the look and feel we had defined with V1, so it was more a case of giving it a fresh look and bringing it up to date. We stripped it back to be  more minimal and refined with small hints of the Alfred wallpaper and other decorative elements. It was also built responsively to work across all devices.  Alfred V2 launched in 2013.
 
 <img src="https://dl.dropboxusercontent.com/u/728469/capra-blog-posts/alfred-v2-site.jpg" alt="Alfred V2 site">
-
-###Alfred Remote and beyond
-
-This has been a big year for Alfred: it has turned 5 and also celebrated the release of [Remote](https://www.alfredapp.com/remote). They are currently offering 15% discount off the Powerpack so make sure you grab a deal.
-
-<blockquote class="twitter-tweet" lang="en"><p>Wowsers, Alfred is 5 years old... how about a cheeky 15% Powerpack discount? <a href="http://t.co/t0MqMnJ6nq">http://t.co/t0MqMnJ6nq</a> :)</p>&mdash; Alfred App (@alfredapp) <a href="https://twitter.com/alfredapp/status/571354850065289216">February 27, 2015</a></blockquote>
 
 So there you have it, an overview of how the Alfred brand and design has evolved over the last 5 years. Who knows what will happen with v3?
