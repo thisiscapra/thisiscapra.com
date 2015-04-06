@@ -20,16 +20,21 @@ The client wanted to take this a step further and have an index page for each pa
 My approach to this was to create a 'page.index.liquid' layout that would be used for these index pages. I would then create a linklist loop that would capture the page name which matches the link list name and output the objects(link) below it. 
 
 The first thing to do was capture the page title within a variable and downcase it so it matches the link list name. I was lucky in that the pages have singular names but you could easily use join to do the same thing.
+
 ```
 {% assign page_name = page.title | downcase %}
 ```
+
 Now I can create my linklist for loop using square brackets to capture the `page_name` variable.
+
 ```
 {% for link in linklists[page_name].links %}
 
 {% endfor %}
 ```
+
 Each of the child links now has it's own linklist object I can use to output the various bits of content I needed. Firstly I needed to see if an image exists on the page. If so grab it and show it, if not show a place holder image.
+
 ```
 {% assign page_has_image = false %}
 {% assign img_tag = '<' | append: 'img' %}
@@ -52,7 +57,9 @@ Each of the child links now has it's own linklist object I can use to output the
   </a>
 {% endif %}
 ```
+
 Next I need to output the page content. In this case I need a title, an excerpt and a read more link.
+
 ```
 <h2><a href="{{ link.object.url }}">{{ link.object.title }}</a></h2>
 <p class="sub-head">{{ link.object.page_description }}</p>
@@ -61,7 +68,9 @@ Next I need to output the page content. In this case I need a title, an excerpt 
 </div>
 <a href="{{ link.object.url }}" class="read-more">Continue reading</a>
 ```
+
 So the loop in full would look like the following.
+
 ```
 {% assign page_name = page.title | downcase %}
 {% for link in linklists[page_name].links %}
@@ -92,4 +101,5 @@ So the loop in full would look like the following.
   <a href="{{ link.object.url }}" class="read-more">Continue reading</a>
 {% endfor %}
 ```
+
 Hopefully this helps anyone out looking for a similar solution. 
