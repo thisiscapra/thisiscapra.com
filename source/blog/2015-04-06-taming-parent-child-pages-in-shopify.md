@@ -33,7 +33,7 @@ Now I can create my linklist for loop using square brackets to capture the `page
 {% endfor %}
 ```
 
-Each of the child links now has it's own linklist object I can use to output the various bits of content I needed. Firstly I needed to see if an image exists on the page. If so grab it and show it, if not show a place holder image.
+Each of the child links now has it's own object I can use to output the various bits of content. Firstly I needed to see if an image exists on the page. If so grab it and show it, if not show a place holder image.
 
 ```liquid
 {% assign page_has_image = false %}
@@ -58,7 +58,7 @@ Each of the child links now has it's own linklist object I can use to output the
 {% endif %}
 ```
 
-Next I need to output the page content. In this case I need a title, an excerpt and a read more link.
+Next I need to output the page content. In this case a title, an excerpt and a read more link.
 
 ```liquid
 <h2><a href="{{ link.object.url }}">{{ link.object.title }}</a></h2>
