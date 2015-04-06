@@ -73,7 +73,7 @@ activate :blog do |blog|
 end
 
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+set :markdown, :smartypants => true, :gh_blockcode => true, :fenced_code_blocks => true
 
 # Reload the browser automatically whenever files change
 configure :development do

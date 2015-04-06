@@ -21,13 +21,13 @@ My approach to this was to create a 'page.index.liquid' layout that would be use
 
 The first thing to do was capture the page title within a variable and downcase it so it matches the link list name. I was lucky in that the pages have singular names but you could easily use join to do the same thing.
 
-```
+```liquid
 {% assign page_name = page.title | downcase %}
 ```
 
 Now I can create my linklist for loop using square brackets to capture the `page_name` variable.
 
-```
+```liquid
 {% for link in linklists[page_name].links %}
 
 {% endfor %}
@@ -35,7 +35,7 @@ Now I can create my linklist for loop using square brackets to capture the `page
 
 Each of the child links now has it's own linklist object I can use to output the various bits of content I needed. Firstly I needed to see if an image exists on the page. If so grab it and show it, if not show a place holder image.
 
-```
+```liquid
 {% assign page_has_image = false %}
 {% assign img_tag = '<' | append: 'img' %}
 {% if link.object.content contains img_tag %}
@@ -60,7 +60,7 @@ Each of the child links now has it's own linklist object I can use to output the
 
 Next I need to output the page content. In this case I need a title, an excerpt and a read more link.
 
-```
+```liquid
 <h2><a href="{{ link.object.url }}">{{ link.object.title }}</a></h2>
 <p class="sub-head">{{ link.object.page_description }}</p>
 <div>
@@ -71,7 +71,7 @@ Next I need to output the page content. In this case I need a title, an excerpt 
 
 So the loop in full would look like the following.
 
-```
+```liquid
 {% assign page_name = page.title | downcase %}
 {% for link in linklists[page_name].links %}
   {% assign page_has_image = false %}
