@@ -1,6 +1,6 @@
 ---
 published: true
-title: "Presenting... f-crowd"
+title: "Proud to present... f-crowd"
 date: "2015-04-08"
 author: Kat Kavanagh
 tags: 
