@@ -989,6 +989,19 @@ body.page-labs {
     > p {
       text-indent: 1em;
     }
+    &.summary {
+      &:after, &:first-child:before {
+        background-color: #e1e1e1;
+        content: "";
+        display: block;
+        height: 1px;
+        margin: 3em auto 0;
+        width: 40%;
+      }
+      &:first-child:before {
+        margin: 0 auto 3em;
+      }
+    }
     @media screen and (max-width: 500px) {
       &.summary {
         p {
