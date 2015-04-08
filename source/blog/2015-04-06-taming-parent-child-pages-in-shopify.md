@@ -35,7 +35,7 @@ Now I can create my linklist for loop using square brackets to capture the `page
 
 Each of the child links now has it's own object I can use to output the various bits of content. Firstly I needed to see if an image exists on the page. If so grab it and show it, if not show a place holder image.
 
-```liquid
+```text
 {% assign page_has_image = false %}  
 {% assign img_tag = '<' | append: 'img' %}  
 {% if link.object.content contains img_tag %}
