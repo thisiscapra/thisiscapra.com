@@ -1,7 +1,7 @@
 ---
 published: true
 title: Prototyping with Refresh Ottawa
-date: "04-17-2015"
+date: "2015-04-17"
 author: Kat Kavanagh
 tags: 
   - Meetups
