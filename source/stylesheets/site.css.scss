@@ -316,7 +316,7 @@ fieldset {
   margin: 0 auto;
   max-width: 1600px;
   padding: 4em 2em;
-  position: absolute;
+  position: fixed;
   top: 0;
   text-align: center;
   width: 100%;
@@ -327,9 +327,8 @@ fieldset {
     padding: 2em 0;
   }
   .scrolling & {
-    background-color: rgba(darken($dark-grey, 10%),0.95);
+    background-color: rgba(darken($dark-grey, 5%),0.95);
     padding: 2em 2em;
-    position: fixed;
   }
 }
 nav {
@@ -589,6 +588,30 @@ body.pantera {
   }
 }
 
+body.river-ranger {
+  @include colour-scheme($river-ranger-color, $button: true, $lighten: true);
+  .client-header {
+    background: url("../images/labs/river-ranger/river-ranger-featured.jpg") center no-repeat;
+    background-size: cover;
+  }
+}
+
+body.hip-hop-quoted {
+  @include colour-scheme($hip-hop-quoted-color, $button: true, $lighten: true);
+  .client-header {
+    background: url("../images/labs/hip-hop-quoted/hip-hop-quoted-featured.jpg") center no-repeat;
+    background-size: cover;
+  }
+}
+
+body.dragimals {
+  @include colour-scheme($dragimals-color, $button: true, $lighten: true);
+  .client-header {
+    background: url("../images/labs/dragimals/dragimals-featured.jpg") center no-repeat;
+    background-size: cover;
+  }
+}
+
 // Work page 
 
 .page-work {
@@ -607,7 +630,7 @@ body.pantera {
   }
 }
 .work-list {
-  margin: -13.5em auto 0;
+  margin: -13.5em auto;
   padding: 0;
   text-align: center;
   width: 100%;
@@ -666,6 +689,15 @@ body.pantera {
     }
     &.toto {
       @include work-list-hover($toto-color);
+    }
+    &.hip-hop-quoted {
+      @include work-list-hover($hip-hop-quoted-color);
+    }
+    &.river-ranger {
+      @include work-list-hover($river-ranger-color);
+    }
+    &.dragimals {
+      @include work-list-hover($dragimals-color);
     }
   }
 }
@@ -803,37 +835,9 @@ body.pantera {
 
 // Labs
 
-body.page-labs {
+body.labs_index {
   background-color: $dark-grey;
   @include colour-scheme($pantone-green, $button: true, $lighten: true);
-}
-.lab-gallery {
-  .image {
-    border: 0;
-    padding-bottom: 0;
-  }
-}
-.lab-list {
-  margin: -29px auto 0;
-  max-width: 700px;
-  padding-bottom: 6em;
-  text-align: center;
-  width: 100%;
-  li {
-    list-style: none;
-    margin: 0;
-    padding: 0.72em 0;
-    img {
-      opacity: 1;
-      @include transition(opacity 0.05s linear);
-      &:hover {
-        opacity: 0.5;
-      }
-    }
-  }
-  h2 {
-    display: none;
-  }
 }
 
 // Blog 

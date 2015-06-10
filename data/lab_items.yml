@@ -14,7 +14,8 @@ labs:
       - Public speaking
     url: river-ranger
     link: http://riverranger.ca
-    image_thumb: river-ranger-thumb.png
+    image_featured: river-ranger-featured.jpg
+    image_thumb: river-ranger-thumb.jpg
     logo: hip-hop-quoted-logo.svg
     image_path: labs/river-ranger
     images:
@@ -35,7 +36,8 @@ labs:
       - Art direction
     url: hip-hop-quoted
     link: http://hiphopquoted.com
-    image_thumb: hip-hop-quoted-thumb.png
+    image_featured: hip-hop-quoted-featured.jpg
+    image_thumb: hip-hop-quoted-thumb.jpg
     logo: hip-hop-quoted-logo.svg
     image_path: labs/hip-hop-quoted
     images:
@@ -55,7 +57,8 @@ labs:
       - Game UI
     url: dragimals
     link: http://dragimals.com
-    image_thumb: dragimals-thumb.png
+    image_featured: dragimals-featured.jpg
+    image_thumb: dragimals-thumb.jpg
     logo: dragimals-logo.svg
     image_path: labs/dragimals
     images:

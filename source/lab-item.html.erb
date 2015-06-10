@@ -12,9 +12,13 @@ work_item: true
     
     <h1><%= item.name %></h1>
 
+    <p class="intro"><%= item.home_intro %></p>
+
     <% if item.link %>
       <p class="project-link"><%= link_to("Live project", item.link, class: "button") %></p>
     <% end %>
+
+    <%= partial "client_navigation", :locals => {:client => item} %>
 
   </header>
 

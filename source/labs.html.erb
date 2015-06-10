@@ -2,7 +2,7 @@
 <% content_for(:description, "Our playground to experiment with design and technology that interests us.") %>
 
 <section class="labs">
-  <header>
+  <header class="client-header">
     <h1>Capra Labs</h1>
     <p class="intro">In our spare time we like to work on fun little side projects or get involved in hack days that promote building social good.</p>
   </header>
@@ -10,7 +10,7 @@
     <% lab_list = data.lab_items.labs %>
     <% $stderr.puts lab_list %>
     <% lab_list.each do |l| %>
-      <li id="<%= l.url %>" class="client">
+      <li class="<%= l.url %> client">
         <% link_to("/labs/#{l.url}/") do %>
           <% image_url = "#{l.image_path}/#{l.image_thumb}" %>
           <%= image_tag(image_url, :alt => "") %>
