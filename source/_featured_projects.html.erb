@@ -1,14 +1,13 @@
-<section class="featured-project">
-  <div class="featured-item" data-0="opacity: 1; transform: scale(1);" data-600="opacity: 0; transform: scale(1.5);">
-    <% 
-      featured = data.work_items.clients.select{|item| item.featured rescue false }
-      featured.each_with_index do |client, index| %>
-      <article class="ft-<%= client.url %>">
-        <h2><%= client.title %></h2>
-        <p><%= client.home_intro %></p>
-        <%= link_to("View project", "/work/#{client.url}/", class: "button") %>
-      </article>
-    <% end %>
-  </div>
-</section>
+<div class="featured-projects content">
+  <% 
+    featured = data.work_items.clients.select{|item| item.featured rescue false }
+    featured.each_with_index do |client, index|
+    image_url = "work/#{client.url}/#{client.image_featured}" %>
+    <article class="ft-<%= client.url %> content background">
+      <h2><%= client.title %></h2>
+      <p><%= client.home_intro %></p>
+      <%= link_to("<span>View project</span>".html_safe, "/work/#{client.url}/", class: "button") %>
+    </article>
+  <% end %>
+</div>
 

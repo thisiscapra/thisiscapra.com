@@ -23,33 +23,29 @@ var removeClass = function (elem, className) {
 }
 
 // Adding random classes to the homepage
-function addBodyClass() {
-  addClass(body, 'js');
+function addFeaturedClass() {
   if(hasClass(body, 'page-index') ) {
-    var bodyClasses = ['alfred-app','sports-digest-8-50','alton-convent-school'];
-    var randomClass = Math.floor(Math.random()*bodyClasses.length);
-    addClass(body, bodyClasses[randomClass]);
+    var featuredClasses = ['alfred-app','sports-digest-8-50','alton-convent-school','pantera'];
+    var randomClass = Math.floor(Math.random()*featuredClasses.length);
+    addClass(featuredProjects, featuredClasses[randomClass]);
   }
 }
 
 if ( 'querySelector' in document && 'addEventListener' in window ) {
 
   var body = document.querySelector('body');
+  var featuredProjects = document.querySelector(".featured-projects");
 
-  addBodyClass();
+  addFeaturedClass();
 
-  function clientHover(evt) {
-    addClass(body, this.getAttribute("id"));
-  }
-  function clientHoverOut(evt) {
-    removeClass(body, this.getAttribute("id"));
-  }
-
-  // Fading background colours on the work page
-  var clients = document.getElementsByClassName("client");
-  [].forEach.call(clients, function(client){
-    client.addEventListener("mouseover", clientHover, false);
-    client.addEventListener("mouseout", clientHoverOut, false);
+  window.addEventListener('scroll', function() {
+    var scrollTop = body.scrollTop,
+        headerHeight = document.querySelector('#header').offsetHeight;
+    if(scrollTop >= 10) {
+      addClass(body,'scrolling')
+    } else {
+      removeClass(body,'scrolling')
+    }
   });
 
   // Tabs on the contact page

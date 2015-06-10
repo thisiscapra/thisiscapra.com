@@ -1,4 +1,29 @@
 labs:
+  - name: River Ranger
+    weight: 1
+    intro: "In May 2015, Ollie and Kat participated in Aquahacking, an event to create apps for the Ottawa River. Our team created River Ranger, a platform to educate and engage the public to learn about what's happening on the river. It was presented during Ottawa's Water Summit, where decision-makers got together to try and create solutions for the river. We received joint first place for our project."
+    sub_text: "Because Kat grew up next to a lake, water issues are close to her heart. She headed up the branding and marketing as well as the UX and HTML/CSS. It was designed with the old-fashioned camp days ethos, as she wanted to re-engage people's minds to their lost childhood exploring the waterways. Ollie worked on creating graphs to show data trends and a map that found you or could be searched."
+    what_we_did:
+      - 'Logo & Branding'
+      - Web design
+      - Responsive build
+      - Art direction
+      - Front-end build
+      - Map integration
+      - Test kit design
+      - Public speaking
+    url: river-ranger
+    link: http://riverranger.ca
+    image_thumb: river-ranger-thumb.png
+    logo: hip-hop-quoted-logo.svg
+    image_path: labs/river-ranger
+    images:
+      - river-ranger-screen-1.jpg
+      - river-ranger-mobile.png
+      - river-ranger-screen-2.jpg
+      - river-ranger-mobile-2.png
+      - river-ranger-tablet.png
+      - river-ranger-screen-3.jpg
   - name: Hip-Hop Quoted
     weight: 1
     intro: "Hip-Hop Quoted started out as a labour of love in 2008 to combine two of Ollie&#8217;s loves in life: Hip-Hop and Typography. He also used it as a medium to explore some of the web&#8217;s capabilities to design and build interesting layouts. "

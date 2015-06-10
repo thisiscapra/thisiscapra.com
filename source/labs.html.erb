@@ -1,9 +1,12 @@
 <% content_for(:title, "Capra Labs") %>
 <% content_for(:description, "Our playground to experiment with design and technology that interests us.") %>
 
-<section class="labs content">
-  <h1>Capra Labs</h1>
-  <ul class="lab-list">
+<section class="labs">
+  <header>
+    <h1>Capra Labs</h1>
+    <p class="intro">In our spare time we like to work on fun little side projects or get involved in hack days that promote building social good.</p>
+  </header>
+  <ul class="work-list">
     <% lab_list = data.lab_items.labs %>
     <% $stderr.puts lab_list %>
     <% lab_list.each do |l| %>

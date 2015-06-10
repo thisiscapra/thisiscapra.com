@@ -2,9 +2,9 @@
 
 // Colors
 
+$pantone-green: #009B77;
 $dark-grey: #222222;
 $link-blue: #0645AD;
-$pantone-green: #009B77;
 $about-red: #D60054;
 $contact-green: #00C36A;
 
@@ -14,9 +14,16 @@ $sports-digest-color: #00ae5a;
 $alton-convent-color: #003f77;
 $mtp-color: #00afef;
 $backpagefootball-color: #9bcb5d;
-$toto-color: #a4a4a4;
+$toto-color: #c44249;
 $cold-claim-color: #1e2f39;
-$super-better-color: #86c8d6;
+$super-better-color: #e91c7f;
+$pantera-color: #8b1d1d;
+
+$white: #ffffff;
+
+// Measurements
+
+$max-width: 958px;
 
 // Fonts
 
@@ -76,20 +83,16 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
       color: #fff;
       &.active,
       &:hover {
-        color: $feat_color;
+        color: $color;
       }
     }
   }
-  .intro:first-of-type:first-letter, blockquote {
-    color: $color;
-  }
+  // .intro:first-of-type:first-letter, blockquote {
+  //   color: $color;
+  // }
   #logo {
-    .logo-left {
-      fill: #fff;
-      @include transition(fill 0.1s linear);
-    }
-    .logo-right {
-      fill: $feat_color;
+    path {
+      fill: $color;
       @include transition(fill 0.1s linear);
     }
   }
@@ -111,36 +114,32 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
       }
     }
   }
-  .content,
-  //.featured,
   .client-header {
-    background-color: $color;
-    @include transition(background 0.1s linear);
-    h1, h2 , h3 {
-      color: $feat_color;
-      @include transition(fill 0.1s linear);
-    }
     color: #fff;
     a {
       color: #fff;
       &:hover {
-        color: $feat_color;
+        color: $color;
       }
     }
     .button {
-      background-color: rgba(darken($color, 5%), 0.5);
+      background-color: $white;
+      color: $color;
       &:hover {
-        background-color: rgba(darken($color, 5%), 1);
-        color: #fff;
+        background-color: rgba($white, 0.6);
       }
+    }
+  }
+  .client-intro {
+    p:first-of-type:first-letter {
+      color: $color;
     }
   }
   .work-nav {
     a {
-      background-color: darken($color, 5%);
-      background-color: rgba(darken($color, 5%), 0.5);
+      background-color: $color;
       &:hover {
-        background-color: rgba(darken($color, 5%), 1);
+        background-color: rgba($color, 0.8);
         color: #fff;
       }
     }
@@ -154,6 +153,15 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
         color: #fff;
       }
     }
+  }
+}
+
+@mixin work-list-hover($color) {
+  a:after {
+    background-color: rgba($color, 0);
+  } 
+  a:hover:after {
+    background-color: rgba($color, 0.4);
   }
 }
 
@@ -223,18 +231,20 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
 // @extend %first-letter
 %first-letter {
   &:first-letter {
+    color: $pantone-green;
+    font: 800 3.6em/0.55 $quatro;
+    left: -0.5em;
     float: left;
-    line-height: 0.55;
-    font-size: 3em;
-    font-weight: 700;
-    margin: 14px 0.2em 0 0;
+    margin: 0.1em 0.1em 0.2em 0;
+    position: relative;
+    top: -0.5em;
   }
 }
 
 // @extend %vertical-align
 %vertical-align {
   position: relative;
-  top: 48%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);

@@ -8,15 +8,15 @@ work_item: true
 
 <section class="work work-item">
 
-  <header class="client-header shadow">
+  <header class="client-header">
     
     <h1><%= client.name %></h1>
+
+    <p class="intro"><%= client.home_intro %></p>
 
     <% if client.link %>
       <p class="project-link"><%= link_to("Live project", client.link, class: "button" ) %></p>
     <% end %>
-
-    <%= image_tag("#{client.image_path}/#{client.image_featured}", :alt => "") if client.image_featured %>
 
     <%= partial "client_navigation", :locals => {:client => client} %>
 
@@ -24,21 +24,23 @@ work_item: true
 
   <div>
 
-    <div class="row">
-      
-      <p class="intro"><%= client.intro %></p>
+    <% if client.intro %>
+      <div class="client-intro">
+        <h2>The project</h2>    
+        <%= client.intro.html_safe %>
+      </div>
+    <% end %>
 
-      <% if client.what_we_did %>
-        <div class="what-we-did">
-          <ul>
-            <% client.what_we_did.each_with_index do |item, index| %>
-              <li><%= item %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-
-    </div>
+    <% if client.what_we_did %>
+      <div class="what-we-did">
+        <h3>What we did</h3>  
+        <ul>
+          <% client.what_we_did.each_with_index do |item, index| %>
+            <li><%= item %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
     <hr>
 
@@ -65,7 +67,7 @@ work_item: true
 
 </section>
 
-<section class="other-work">
+<section class="featured-projects other-work">
   
   <h2>Other work</h2>
   <ul class="work-list feature">
@@ -74,12 +76,12 @@ work_item: true
       featured_clients.delete_if{|item| item.name == client.name }
       #$stderr.puts featured_clients
       featured_clients.sample(3).each do |f| %>
-      <li>
+      <li class="<%= f.url %> client">
         <% link_to("/work/#{f.url}/") do %>
-        <% image_url = "#{f.image_path}/#{f.image_thumb}" %>
-        <%= image_tag(image_url, :alt => "") %>
-        <h2><%= f.name %></h2>
-      <% end %>
+          <% image_url = "#{f.image_path}/#{f.image_thumb}" %>
+          <%= image_tag(image_url, :alt => "") %>
+          <h2><%= f.name %></h2>
+        <% end %>
       </li>
     <% end %>
   </ul>

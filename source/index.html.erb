@@ -1,22 +1,30 @@
 <% content_for(:title, "Capra is a design agency based in Ottawa, Canada run by husband and wife team Ollie and Kat Kavanagh.") %>
 <% content_for(:description, "We like to collaborate to design and build beautiful websites, apps and casual games. We choose clients who are making a difference. From educational games to productivity tools, our clients share our passion for sports, the environment, and education.") %>
-<% content_for :javascript do %>
-  <script>
-    var s = skrollr.init({forceHeight: false});
-  </script>
-<% end %>
 
 <section class="home">
 
-  <div>
+  <header>
+    
     <h1>We love designing for clients who share our vision for a better world.</h1>
-    <p>We like to collaborate to design and build beautiful websites, apps and casual games. We choose clients who are making a difference. From educational games to productivity tools, our clients share our passion for sports, the environment, and education. We work hard to reflect our clients’ brand personalities through our designs and are thrilled when they feel as proud of their end product as we do.</p>
+    <p class="intro">Capra is a design agency based in Ottawa, Canada. We like to collaborate to design and build beautiful websites, apps and casual games.</p>
+
     <%= link_to("More about us", "/about", class: "button") %>
+
+  </header>
+
+  <%= partial "featured_projects" if page("index.html") %>
+
+  <div class="home-about-us content narrow light">
+    
+    <h2>We choose clients who are making a difference.</h2>
+
+    <p>We like to collaborate to design and build beautiful websites, apps and casual games. From educational games to productivity tools, our clients share our passion for sports, the environment, and education.</p>
+
+    <p>We work hard to reflect our clients’ brand personalities through our designs and are thrilled when they feel as proud of their end product as we do.</p>
+
   </div>
 
-  <% featured_quote = data.work_items.clients.select{|client| client.featured_testimonial rescue false } %>
-  <% if featured_quote %>
-    <%= partial "client_blockquote", :locals => { client: featured_quote.sample(), featured: true } %>
-  <% end %>
-  
 </section>
+
+<% featured_quote = data.work_items.clients.select{|client| client.featured_testimonial rescue false } %>
+<%= partial "client_blockquote", :locals => { client: featured_quote.sample(), featured: true } %>
