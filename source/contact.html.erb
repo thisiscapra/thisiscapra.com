@@ -6,41 +6,40 @@
   <header class="content">
     <h1>Contact us</h1>
     <p class="intro">Thinking of a new website, game or application? Or just want to shoot the breeze with us? Use one of the options below and we&#8217;ll get back to you in a jiffy.</p>
+    <%= partial "social_links", :locals => { :twitter_link => "thisiscapra", :facebook_link => "thisiscapra", :github_link => "thisiscapra" }  %>
   </header>
 
-  <div>
-    
-    <h2>What would you like to do?</h2>
+  <ul id="contact-scroll" class="contact-menu">
+    <li><%= link_to('I have a project', '#project', class: 'tab') %></li>
+    <li><%= link_to('I want to say &#8220;Hi!&#8221;', '#general', class: 'tab') %></li>
+  </ul>
 
-    <ul class="contact-menu">
-      <li><%= link_to('I have a project...', '#project', class: 'tab') %></li>
-      <li><%= link_to('I want to say &#8220;Hi!&#8221;...', '#general', class: 'tab') %></li>
-    </ul>
+  <div class="content narrow">
 
     <div id="project" class="contact-form">
-      <h3>Project enquiry</h3>
+      <h2>Project enquiry</h2>
       <form accept-charset="UTF-8" action="https://formkeep.com/f/1a6c6b44dad8" method="POST">
         <input type="hidden" name="utf8" value="✓">
         <fieldset>
           <div>
             <label>Your name <abbr class="req" title="required">*</abbr></label>
-            <input type="text" name="name" placeholder="So we know who to speak to..." required>
+            <input type="text" name="name" required>
           </div>
           <div>
             <label>Your email <abbr class="req" title="required">*</abbr></label>
-            <input type="email" name="email" placeholder="So we can email you back..." required>
+            <input type="email" name="email" required>
           </div>
           <div>
             <label>Your website / app / game</label>
-            <input type="url" name="url" placeholder="If you have something already...">
+            <input type="url" name="url">
           </div>
           <div>
             <label>Your company</label>
-            <input type="text" name="company" placeholder="Just the company name will do...">
+            <input type="text" name="company">
           </div>
           <div>
             <label>Telephone number</label>
-            <input type="text" name="telephone" placeholder="So we can call you back if your prefer...">
+            <input type="text" name="telephone">
           </div>
           <div class="radios">
             <h3>What is your project budget?</h3>
@@ -70,21 +69,21 @@
     </div>
 
     <div id="general" class="contact-form">
-      <h3>Hello!</h3>
+      <h2>Hello!</h2>
       <form accept-charset="UTF-8" action="https://formkeep.com/f/45a9c78e89dc" method="POST">
         <input type="hidden" name="utf8" value="✓">
         <fieldset>
           <div>
             <label for="general_name">Your name <abbr class="req" title="required">*</abbr></label>
-            <input type="text" name="general_name" placeholder="So we know who we are speaking to..." required>
+            <input type="text" name="general_name" required>
           </div>
           <div>
             <label for="general_email">Your email <abbr class="req" title="required">*</abbr></label>
-            <input type="email" name="general_email" placeholder="So we can contact you back..." required>
+            <input type="email" name="general_email" required>
           </div>
           <div>
             <label for="general_email">Your message <abbr class="req" title="required">*</abbr></label>
-            <textarea name="general_description" placeholder="Hello!" required></textarea>
+            <textarea name="general_description" required></textarea>
           </div>
           <div>
             <input type="submit" name="" value="Send enquiry" class="button">

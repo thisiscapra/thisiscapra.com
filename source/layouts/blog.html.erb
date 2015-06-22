@@ -4,14 +4,16 @@
 <% wrap_layout :layout do %>
   <section class="blog">
     <article itemscope itemtype="http://schema.org/Article" class="blog-entry">
-      <h1 itemprop="name"><%= current_page.title %></h1>
-      <div class="meta">
-        <time itemprop="datePublished" datetime="current_page.date.strftime('%b %e %G')"><%= current_page.date.strftime('%b %e, %G') %></time>
-        <% if current_page.metadata[:page]['author'] %>
-          <span itemprop="author"> : <%= current_page.metadata[:page]['author'] %></span>
-        <% end %>
-      </div>
-      <div itemprop="articleBody">
+      <header>
+        <h1 itemprop="name"><%= current_page.title %></h1>
+        <div class="meta">
+          <time itemprop="datePublished" datetime="current_page.date.strftime('%b %e %G')"><%= current_page.date.strftime('%b %e, %G') %></time>
+          <% if current_page.metadata[:page]['author'] %>
+            <span itemprop="author"> : <%= current_page.metadata[:page]['author'] %></span>
+          <% end %>
+        </div>
+      </header>
+      <div itemprop="articleBody" class="content narrow">
         <%= yield %>
       </div>
       <% if current_page.tags %>

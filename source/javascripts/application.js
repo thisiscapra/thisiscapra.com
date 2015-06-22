@@ -41,7 +41,7 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
   window.addEventListener('scroll', function() {
     var scrollTop = body.scrollTop,
         headerHeight = document.querySelector('#header').offsetHeight;
-    if(scrollTop >= 5) {
+    if(scrollTop >= headerHeight) {
       addClass(body,'scrolling')
     } else {
       removeClass(body,'scrolling')
@@ -64,11 +64,13 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
       }
       event.target.parentElement.className += 'active';
       document.getElementById(event.target.href.split('#')[1]).className += ' active';
-      var anchor = event.target.href.split('#')[1];
-      //console.log(anchor);
+      var anchor = event.target.href.split('#')[1],
+        offset = 100;
+          //offset = document.querySelector('#header').offsetHeight;
+        console.log(offset)
       event.preventDefault();
-      smoothScroll.animateScroll( null, '#'+anchor, {
-        "offset": 120,
+      smoothScroll.animateScroll( null, '#contact-scroll', {
+        "offset": offset,
         "updateURL": false
       });
     }, false);

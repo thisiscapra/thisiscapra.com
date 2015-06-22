@@ -20,15 +20,27 @@ body {
   max-width: 1600px;
   position: relative;
   width:100%;
+  @media screen and (max-width: 1350px) {
+    font-size: 112.5%;
+  }
+  @media screen and (max-width: 1150px) {
+    font-size: 100%;
+  }
 }
-section {
+section, article {
   position: relative;
   @extend %clearfix;
   > header {
     background-color: $dark-grey;
     color: $white;
-    padding: 16.2em 17%;
+    padding: 16em 17%;
     text-align: center;
+    @media screen and (max-width: 1000px) {
+      padding: 16em 4%;
+    }
+    @media screen and (max-width: 750px) {
+      padding: 8em 4%;
+    }
   }
 }
 // Content blocks
@@ -36,9 +48,21 @@ section {
   padding: 16em 4%;
   @include box-sizing(border-box);
   @extend %clearfix;
+  @media screen and (max-width: 750px) {
+    padding: 8em 4%;
+  }
+  @media screen and (max-width: 750px) {
+    &:not(header) {
+      padding: 3em 4%;
+    }
+  }
   &.narrow {
     padding-left: 17%;
     padding-right: 17%;
+    @media screen and (max-width: 1000px) {
+      padding-left: 4%;
+      padding-right: 4%;
+    }
   }
   &.light {
     background-color: $white;
@@ -65,6 +89,11 @@ section {
     background-size: cover;
     color: $white;
     padding: 22em 4%;
+  }
+  @media screen and (max-width: 1200px) {
+    .narrow {
+      padding: 16.2em 4%;
+    }
   }
 }
 img {
@@ -97,7 +126,7 @@ hr {
 
 h1, h2, h3, h4, 
 // .intro:first-of-type:first-letter, 
-.blog-entry div>p:first-of-type:first-letter,
+.blog-entry .content>p:first-of-type:first-letter,
 blockquote {
   font-family: $quatro;
   font-weight: 800;
@@ -121,16 +150,25 @@ h2, blockquote {
     margin: -1em 0 1em;
     text-align: center;
   }
+  @media screen and (max-width: 550px) {
+    font-size: 2.8em;
+  }
 }
 h3 {
   font-size: 2.8em;
-  line-height: 1.3;
-  margin-bottom: 0.5em;
+  line-height: 1.2;
+  margin-bottom: 0.9em;
+  @media screen and (max-width: 550px) {
+    font-size: 2.4em;
+  }
 }
 h4 {
   font-size: 2em;
-  line-height: 1.3;
-  margin-bottom: 0.5em;
+  line-height: 1.2;
+  margin-bottom: 0.9em;
+  @media screen and (max-width: 550px) {
+    font-size: 2.2em;
+  }
 }
 p {
   margin: 0 auto 2.5em;
@@ -144,6 +182,18 @@ p {
     // }
   }
 }
+
+// Links
+
+a {
+  color: $pantone-green;
+  text-decoration: none;
+  @include transition(color 0.1s ease);
+  &:hover {
+    color: $pantone-green;
+  }
+}
+
 strong {
   color: #000;
   font-weight: 700;
@@ -157,6 +207,7 @@ figure {
   padding: 25% 4%;
 }
 figcaption {
+  color: $dark-grey;
   clear: both;
 }
 blockquote {
@@ -175,27 +226,13 @@ blockquote {
     font-weight: 700;
     line-height: 0;
   }
-  @media screen and (max-width: 550px) {
-    font-size: 1.2em;
-  }
-  @media screen and (max-width: 400px) {
-    padding: 0;
-  }
 }
 ul {
   margin: 0 0 1em 1em;
   padding: 0;
 }
-
-// Links
-
-a {
-  color: $pantone-green;
-  text-decoration: none;
-  @include transition(color 0.1s linear);
-  &:hover {
-    color: $pantone-green
-  }
+li {
+  margin-bottom: 0.3em;
 }
 
 // Social
@@ -209,9 +246,29 @@ a {
   li {
     display: inline;
     margin-right: 1em;
-    font-size: 1.4em;
+    font-size: 1.8em;
+    @media screen and (max-width: 550px) {
+      font-size: 1.6em;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 1.2em;
+    }
     &:last-child {
       margin: 0;
+    }
+    a {
+      border-color: $pantone-green;
+      border-style: solid;
+      border-width: 5px;
+      border-radius: 4em;
+      color: $pantone-green;
+      padding: 0.8em 0.4em;
+      text-align: center;
+      @include transition(all 0.1s ease);
+      &:hover {
+        border-color: $white;
+        color: $white;
+      }
     }
   }
 }
@@ -221,9 +278,11 @@ a {
 input, textarea {
   background-color: #fff;
   border: 1px solid #e1e1e1;
+  border-radius: 0;
+  box-shadow: none;
   display: block;
   font-family: $sentinel;
-  font-size: 1.2em;
+  font-size: 1.6em;
   padding: 0.6em;
   @include box-sizing(border-box);
   width: 100%;
@@ -288,13 +347,14 @@ fieldset {
 .button {
   background-color: $pantone-green;
   border: none;
+  border-radius: 0;
   color: #fff;
   display: inline-block;
   font-family: $sentinel;
   font-weight: 300;
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin: 0 auto;
-  padding:0.6em 2em;
+  padding:0.8em 2em;
   text-align: center;
   @include box-sizing(border-box);
   -webkit-appearance: none;
@@ -312,7 +372,8 @@ fieldset {
 // Header 
 
 #header {
-  background-color: rgba(darken($dark-grey, 10%),0);
+  background-color: rgba($dark-grey,0);
+  height: 190px;
   margin: 0 auto;
   max-width: 1600px;
   padding: 4em 2em;
@@ -322,13 +383,18 @@ fieldset {
   width: 100%;
   z-index: 100;
   @include box-sizing(border-box);
-  @include transition(all 0.3s linear);
+  @include transition(all 0.3s ease);
   @media screen and (max-width: 550px) {
     padding: 2em 0;
   }
   .scrolling & {
-    background-color: rgba(darken($dark-grey, 5%),0.95);
-    padding: 2em 2em;
+    background-color: rgba($dark-grey,0.96);
+    height: 100px;
+    padding: 1.5em 2em;
+    @media screen and (max-width: 550px) {
+      height: 60px;
+      padding: 0.8em 2em;
+    }
   }
 }
 nav {
@@ -345,10 +411,16 @@ nav {
     &:last-child {
       margin-right: 0;
     }
-    @media screen and (max-width: 650px) {
-      margin-right: 1.5em;
+    @media screen and (max-width: 950px) {
+      margin-right: 4em;
       &:nth-child(2) {
-        margin-right: 160px;
+        margin-right: 12em;
+      }
+    }
+    @media screen and (max-width: 750px) {
+      margin-right: 2em;
+      &:nth-child(2) {
+        margin-right: 8em;
       }
     }
   }
@@ -358,13 +430,15 @@ nav {
       color: $pantone-green;
     }
   }
+  @media screen and (max-width: 950px) {
+    margin-top: 0.5em;
+  }
   @media screen and (max-width: 550px) {
     font-size: 0.9em;
-    margin-top: 2.5em;
     li {
-      margin-right: 1em;
+      margin-right: 1.5em;
       &:nth-child(2) {
-        margin-right: 1em;
+        margin-right: 6em;
       }
       &:last-child {
         margin-right: 0;
@@ -373,6 +447,7 @@ nav {
   }
 }
 #logo {
+  cursor: pointer;
   left: 50%;
   height: 73px;
   margin-left: -40px;
@@ -381,7 +456,7 @@ nav {
   overflow: hidden;
   top: 3em;
   width: 80px;
-  @include transition(opacity 0.1s linear, top 0.1s linear);
+  @include transition(all 0.3s ease);
   > svg {
     display: inline-block;
     position: absolute;
@@ -395,15 +470,20 @@ nav {
   &:hover {
     opacity: 0.5;
   }
-  @media screen and (max-width: 550px) {
-    top: 1em;
-    margin-left: -30px;
-    width: 60px;
-  }
   .scrolling & {
     margin-left: -30px;
-    top: 1.6em;
+    top: 0.6em;
     width: 60px;
+  }
+  @media screen and (max-width: 550px) {
+    top: 1em;
+    margin-left: -28px;
+    width: 50px;
+    .scrolling & {
+      margin-left: -23px;
+      top: -0.4em;
+      width: 40px;
+    }
   }
 }
 
@@ -412,8 +492,8 @@ nav {
 #footer {
   background-color: $dark-grey;
   color: $white;
-  padding: 8em 17%;
   text-align: center;
+  @extend %clearfix;
   ul:last-child {
     margin: 0;
     list-style: none;
@@ -422,6 +502,12 @@ nav {
     color: $pantone-green;
     &:hover {
       color: $white;
+    }
+  }
+  .social-icons {
+    margin-bottom: 4em;
+    a:hover {
+      border-color: $white;
     }
   }
 }
@@ -444,13 +530,34 @@ nav {
 .home-about-us {
   h2 {
     @include gs-span(c,1,4);
+    @media screen and (max-width: 750px) {
+      float: none;
+      text-align: center;
+      width: 100%;
+    }
   }
   p:first-of-type {
     @extend %first-letter;
     @include gs-span(c,5,6);
+    @media screen and (max-width: 750px) {
+      @include gs-span(c,1,4);
+    }
+    @media screen and (max-width: 550px) {
+      float: none;
+      margin: 0 0 2em;
+      width: 100%;
+    }
   }
   p:last-child {
     @include gs-span(c,7,8);
+    @media screen and (max-width: 750px) {
+      @include gs-span(c,5,8);
+    }
+    @media screen and (max-width: 550px) {
+      float: none;
+      margin: 0;
+      width: 100%;
+    }
   }
 }
 
@@ -458,7 +565,7 @@ nav {
 
 .featured-projects {
   color: $white;
-  padding: 0;
+  padding: 0 !important;
   img {
     width: 100%;
   }
@@ -618,19 +725,8 @@ body.dragimals {
   background-color: $dark-grey;
   @include colour-scheme($pantone-green, $button: true, $lighten: true);
 }
-.work_index {
-  .content {
-    padding-right: 0;
-    padding-left: 0; 
-  }
-  h1 {
-    color: #fff;
-    font-size: 12em;
-    font-style: italic;
-  }
-}
 .work-list {
-  margin: -13.5em auto;
+  margin: 0 auto;
   padding: 0;
   text-align: center;
   width: 100%;
@@ -658,10 +754,14 @@ body.dragimals {
     top: 43%;
     z-index: 10;
     width: 100%;
+    @media screen and (max-width: 550px) {
+      font-size: 1.6em;
+    }
   }
   li {
     display: block;
     list-style: none;
+    margin: 0;
     position: relative;
     &.pantera {
       @include work-list-hover($pantera-color);
@@ -701,18 +801,33 @@ body.dragimals {
     }
   }
 }
+.work_index {
+  .content {
+    padding-right: 0;
+    padding-left: 0; 
+  }
+  @extend %large-header;
+}
+.work {
+  padding: 0;
+}
 .work-nav {
+  margin: -60px auto 0;
+  top: 50%;
+  max-width: 1600px;
+  padding: 0;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
   li {
     list-style: none;
-    margin-top: -60px;
-    bottom: 50%;
-    position: fixed;
-    z-index: 100;
+    margin: 0;
+    @include box-sizing(border-box);
     &.next {
-      right: 0;
+      float: right;
     }
     &.prev {
-      left: 0;
+      float: left;
     }
   }
   a {
@@ -727,9 +842,9 @@ body.dragimals {
     }
   }
   @media screen and (max-width: 550px) {
+    bottom: 0;
+    top: auto;
     li {
-      bottom: 0;
-      position: absolute;
       width: 50%;
       > a {
         line-height: 0.5;
@@ -737,6 +852,13 @@ body.dragimals {
       }
       &.first, &.last {
         width: 100%;
+      }
+      a {
+        font-size: 1em;
+        padding: 1em;
+        > span {
+          display: inline-block;
+        }
       }
     }
   }
@@ -748,16 +870,15 @@ body.dragimals {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 16.2em 4%;
+    padding: 16em 4%;
+    @media screen and (max-width: 700px) {
+      padding: 10em 4%;
+    }
   }
-  > div {
-    margin: 0 auto;
-    max-width: gs-width(c,2,7,false, true);
-    padding: 8em 4%;
-    @include box-sizing(border-box);
-    @media screen and (max-width: 550px) {
-      max-width: 100%;
-      padding: 0.2em 1em 1em;
+  div:first-of-type {
+    padding-bottom: 0;
+    @media screen and (max-width: 700px) {
+      padding-top: 2em;
     }
   }
   h1 {
@@ -767,21 +888,28 @@ body.dragimals {
     max-width: 100%;
     width: 100%;
     &.sub-text {
-      margin: 2em auto 0;
-      padding-top: 1em;
+      margin: 6em auto 0;
       max-width: 700px;
+      @extend %first-letter;
+      @include box-sizing(border-box);
       + hr {
         margin-bottom: 0;
+      }
+      @media screen and (max-width: 700px) {
+        padding: 0 4%;
       }
     }
   }
   hr:first-of-type {
     margin-bottom: 0;
   }
-  figure {
-    padding: 5em 0 3em;
+  figure:not(.client-blockquote) {
+    padding: 6em 4%;
     + hr {
       margin-bottom: 0;
+    }
+    &:first-of-type {
+      margin-top: 0;
     }
   }
 }
@@ -790,9 +918,9 @@ body.dragimals {
   text-align: center;
 }
 .hire {
-  font-size: 2.4em;
+  font: 800 3.2em/1.5 $quatro;
   margin: 0;
-  padding: 1em 0;
+  padding: 1em 0 2em;
   text-align: center;
   @media screen and (max-width: 700px) {
     font-size: 1.8em;
@@ -802,6 +930,11 @@ body.dragimals {
   @include gs-span(c,1,4);
   p:first-of-type:first-letter {
     @extend %first-letter;
+  }
+  @media screen and (max-width: 700px) {
+    float: none;
+    margin: 0 0 2em;
+    width: 100%;
   }
 }
 .what-we-did {
@@ -815,7 +948,7 @@ body.dragimals {
   }
   @media screen and (max-width: 700px) {
     float: none;
-    margin-left: 1em;
+    margin: 0;
     width: 100%;
   }
 }
@@ -823,8 +956,6 @@ body.dragimals {
   margin-bottom: 2em;
   .image {
     border-bottom: 1px solid #e1e1e1;
-    //background-color: #f2f2f2;
-    padding: 3em 0;
     @include box-sizing(border-box);
   }
 }
@@ -845,15 +976,16 @@ body.labs_index {
 .page-blog, .page-tags {
   @include colour-scheme($pantone-green, $button: true, $lighten: true);
 }
+.blog_index {
+  header {
+    padding-top: 0;
+    @extend %large-header;
+  }
+}
 .blog {
   margin: 0 auto;
-  max-width: 700px;
   width: 100%;
-  @media screen and (max-width: 675px) {
-    max-width: 100%;
-  }
-  h1,h2 {
-    margin: 0 0 0.5em;
+  h1,h2,h3 {
     text-align: center;
   }
   small {
@@ -876,16 +1008,24 @@ body.labs_index {
     font-size: 0.9em;
   }
   article {
-    margin-bottom: 3em;
+    h1,h2,h3,h4 {
+      text-align: center;
+    }
+    margin-bottom: 2em;
     img {
       display: block;
       margin: 0 auto 2em;
+      width: 100%;
     }
     > p {
       text-indent: 1em;
     }
+    > .content {
+      padding-top: 3em;
+      padding-bottom: 2em;
+    }
     &.summary {
-      &:after, &:first-child:before {
+      &:after {
         background-color: #e1e1e1;
         content: "";
         display: block;
@@ -895,6 +1035,9 @@ body.labs_index {
       }
       &:first-child:before {
         margin: 0 auto 3em;
+      }
+      &:last-child:after {
+        display: none;
       }
     }
     @media screen and (max-width: 500px) {
@@ -911,10 +1054,7 @@ body.labs_index {
     @extend %first-letter;
   }
   .blog-entry {
-    h2,h3,h4 {
-      text-align: left;
-    }
-    ul {
+    > ul {
       margin-left: 2.5em;
       padding-right: 2em;
       &.article-nav {
@@ -932,26 +1072,34 @@ body.labs_index {
         height: 30px;
       }
     }
+    iframe {
+      height: auto !important;
+      min-height: 400px;
+      width: 100%;
+    }
   }
+}
+.tags {
+  border-top: 1px solid #e1e1e1;
+  padding: 2em 4% 0;
 }
 .article-nav {
   border-top: 1px solid #e1e1e1;
   font-size: 0.8em;
   letter-spacing: -4px;
-  margin: 2em 0 0 0;
-  padding-top: 2em;
+  margin: 3em 0 0 0;
+  padding: 5em 0 1em;
   word-spacing: -4px;
   li {
     display: inline-block;
     letter-spacing: 0;
+    margin: 0;
+    padding: 0 4%;
     word-spacing: 0;
     width: 50%;
+    vertical-align: top;
     @include box-sizing(border-box);
-    &:nth-child(1) {
-      padding-right: 1em;
-    }
     &:nth-child(2) {
-      padding-left: 1em;
       text-align: right;
     }
     @media screen and (max-width: 400px) {
@@ -974,70 +1122,83 @@ body.page-about {
 }
 body.page-contact {
   @include colour-scheme($pantone-green, $button: false, $lighten: true);
-  text-align: center;
 }
 body.page-thank-you {
   @include colour-scheme($pantone-green, $button: false, $lighten: true);
-  text-align: center;
 }
 .contact-menu {
-  border-top: 1px solid #e1e1e1;
-  border-right: 1px solid #e1e1e1;
+  background-color: $pantone-green;
   margin: 0 auto;
-  max-width: 700px;
   overflow: hidden;
+  text-align: center;
   width: 100%;
   @include box-sizing(border-box);
   li {
-    border-left: 1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1;
     display: inline;
     float: left;
-    font-size: 1.4em;
+    font-size: 1.6em;
+    margin: 0;
     width: 50%;
     @include box-sizing(border-box);
+    &:first-child {
+      border-right: 1px solid darken($pantone-green, 3%);
+    }
     > a {
+      color: $white;
       display: block;
-      padding: 0.8em;
+      padding: 1.6em 1.2em;
+      @include transition(background-color 0.2s ease);
+      &:hover {
+        background-color: darken($pantone-green, 3%);
+        color: $white;
+      }
+      &:focus {
+        outline: 0;
+      }
     }
     &.active {
       border-bottom: 0;
+      a {
+        background-color: darken($pantone-green, 3%);
+        color: $white;
+      }
     }
   }
-  @media screen and (max-width: 500px) {
-    border:0;
+  @media screen and (max-width: 600px) {
     li {
-      border: 0;
-      border: 1px solid #e1e1e1;
       display: block;
       float: none;
       width: 100%;
       &:first-child {
-        border-bottom: 0;
-      }
-      &.active {
-        border-bottom: 1px solid #e1e1e1;
-        a {
-          background-color: #f2f2f2;
-        }
-        &:first-child {
-          border-bottom: 0;
-        }
+        border: 0;
+        border-bottom: 1px solid darken($pantone-green, 3%);
       }
     }
   }
 }
+section.contact {
+  .narrow {
+    padding: 6em 17%;
+    @media screen and (max-width: 750px) {
+      padding: 6em 4%;
+    }
+  }
+  > p {
+    text-align: center;
+  }
+}
 .contact-form {
-  border-left: 1px solid #e1e1e1;
-  border-right: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
   margin: 0 auto;
-  max-width: 700px;
-  padding: 1em;
   text-align: left;
   width: 100%;
   @include box-sizing(border-box);
   @include transition(opacity 0.01s linear);
+  h2, h3 {
+    text-align: center;
+  }
+  h3 {
+    margin: 2em 0 1em;
+  }
   &.hidden {
     display: none;
     opacity: 0;
@@ -1046,24 +1207,52 @@ body.page-thank-you {
     display: block;
     opacity: 1;
   }
+  .button:hover {
+    background-color: darken($pantone-green, 5%);
+    color: $white;
+  }
 }
-section.about, section.contact {
+section.about {
   header {
     p:first-of-type {
       @include gs-span(c,2,4);
       &:first-letter {
         @extend %first-letter;
       }
+      @media screen and (max-width: 600px) {
+        float: none;
+        margin: 0 0 2em;
+        width: 100%;
+      }
     }
     p:last-of-type {
       @include gs-span(c,5,7);
+      @media screen and (max-width: 600px) {
+        float: none;
+        margin: 0 0 2em;
+        width: 100%;
+      }
     }
     h4 {
       color: $pantone-green;
       font-style: italic;
       text-align: center;
       margin: 0 auto;
-      width: gs-width(c,3,6,false, true);
+      width: gs-width(c,2,7,false, true);
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+  }
+}
+section.contact {
+  header {
+    p {
+      margin: 0 auto;
+      width: gs-width(c,2,7,false, true);
+    }
+    .social-icons {
+      margin: 6em 0 0;
     }
   }
 }
@@ -1082,17 +1271,46 @@ section.about, section.contact {
     font-size: 0.9em;
   }
 }
+.why-capra {
+  div {
+    color: darken($pantone-green, 10%);
+    @include gs-span(c,1,4);
+  }
+  img {
+    @include gs-span(c,5,8);
+  }
+}
 .the-tribe {
   background-image: url("../images/about.jpg");
   text-align: center;
 }
-section.contact {
-  > div {
-    padding-bottom: 4em;
+.email-contact {
+  text-align: center;
+  margin-top: 3em;
+}
+.member {
+  .social-icons {
+    font-size: 0.8em;
   }
 }
-.email-contact {
-  margin-top: 3em;
+.member.ollie {
+  @include gs-span(c,1,4);
+}
+.member.kat {
+  @include gs-span(c,5,8);
+}
+
+.what-we-do-intro,
+.what-we-do-design,
+.what-we-do-build,
+.member.ollie,
+.member.kat,
+.why-capra div, .why-capra img {
+  @media screen and (max-width: 750px) {
+    float: none;
+    margin: 0 0 2em;
+    width: 100%;
+  }
 }
 
 // Some ie8 fixes 

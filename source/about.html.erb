@@ -22,9 +22,10 @@
 
     <div class="what-we-do-intro">
       
-      <h2>What We Do</h2>
+      <h2>Our process</h2>
         
       <p>We also work with developers to implement our designs right into languages such as ruby-on-rails, python, php, unity, .net, xCode and java. We are always experimenting with the latest tools to use the right solution for a problem.</p>
+
       <p><strong>We also like to review and improve our designs based on real-world testing.</strong> When real people are using our designs, we can further improve on the best practices we always implement upfront.  We have long-term clients with whom we love to work with to achieve their goals and through testing, we have improved conversion rates and reduced confusion.</p>
 
     </div>
@@ -61,10 +62,16 @@
   </div>
 
   <div class="why-capra content narrow color">
-      
-    <h2>Why Capra?</h2>
 
-    <p>Capra is the Greek word for a category of mammals that comprises both wild and domestic goats. Goats are known to be intelligent, adaptive and playful, and just like them, we love to explore new technologies, explore new places and play games.  While we don&#8217;t own any goats yet, we hope to someday!</p>
+    <div>
+      
+      <h2>Why Capra?</h2>
+
+      <p>Capra is the Greek word for a category of mammals that comprises both wild and domestic goats. Goats are known to be intelligent, adaptive and playful, and just like them, we love to explore new technologies, explore new places and play games.  While we don&#8217;t own any goats yet, we hope to someday!</p>
+      
+    </div>
+
+    <%= image_tag("goat.svg", alt: "") %>
 
   </div>
 
@@ -75,23 +82,25 @@
 
   </div>
 
-  <div class="team-members">
+  <div class="team-members content narrow">
     
     <div class="row">
     
-      <div class="col col-2">
+      <div class="member ollie">
         <h3>Ollie Kavanagh</h3>
-        <h4>Designer, coder, problem solver</h4>
+        <!-- <h4>Designer, coder, problem solver</h4> -->
         <p>Ollie is a rare designer: he is equally comfortable designing beautiful, elegant interfaces (with superb typography) as he is delving into the front-end code. He is responsible for setting up processes for Capra&#8217;s technology.</p>
         <p>Ollie is originally from England and has just immigrated to Canada! He is an avid Liverpool football supporter, has an unhealthy obsession with Nike trainers, loves DJing drum &amp; bass, hip-Hop and house music, and hopes to someday become an expert snowboarder.</p>
+        <p><%= link_to("olliekav.com", "http://olliekav.com") %></p>
         <%= partial "social_links", :locals => { :twitter_link => "olliekav", :facebook_link => false, :github_link => "olliekav" }  %>
       </div>
 
-      <div class="col col-2 last">
+      <div class="member kat">
         <h3>Kat Kavanagh</h3>
-        <h4>Designer, coder, ideas generator</h4>
+        <!-- <h4>Designer, coder, ideas generator</h4> -->
         <p>Kat loves coming up with new ideas. Her focus is on designing and building interfaces and games that are beautiful as well as engaging. She is also responsible for more of the business operations at Capra.</p>
         <p>Kat has just returned to Canada, where she was born and raised. She loves Canada&#8217;s great outdoors especially hiking with the family dogs, Kenny and Phoebe. She is currently training the dogs with hopes of becoming an agility champion. She also loves gardening, sewing and snowboarding.</p>
+        <p><%= link_to("safetygoat.com", "http://safetygoat.com") %></p>
         <%= partial "social_links", :locals => { :twitter_link => "kassy4", :facebook_link => false, :github_link => "kassy4" }  %>
       </div>
 

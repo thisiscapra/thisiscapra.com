@@ -39,13 +39,17 @@ page "/sitemap.xml", :layout => false
 
 data.work_items.clients.each do |client|
   proxy "/work/#{client.url}.html", "/work-item.html", locals: { 
-    client: client
+    client: client,
+    work_pages: data.work_items.clients,
+    url: "work"
   }, :ignore => true
 end
 
-data.lab_items.labs.each do |item|
-  proxy "/labs/#{item.url}.html", "/lab-item.html", locals: { 
-    item: item
+data.lab_items.labs.each do |client|
+  proxy "/labs/#{client.url}.html", "/work-item.html", locals: { 
+    client: client,
+    work_pages: data.lab_items.labs,
+    url: "labs"
   }, :ignore => true
 end
 

@@ -3,7 +3,7 @@
 // Colors
 
 $pantone-green: #009B77;
-$dark-grey: #222222;
+$dark-grey: #1A1A1A;
 $link-blue: #0645AD;
 $about-red: #D60054;
 $contact-green: #00C36A;
@@ -47,13 +47,11 @@ $max-width: 958px;
   speak: none;
   display: inline-block;
   text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
   text-align: center;
   font-variant: normal;
   text-transform: none;
   line-height: 1em;
-  margin-left: .2em;
+  width: 2em;
 }
 .icon-facebook:before { content: '\e800'; } /* '' */
 .icon-twitter-bird:before { content: '\e801'; } /* '' */
@@ -81,7 +79,7 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
       color: darken($color, 5%);
     }
   }
-  nav, header {
+  nav {
     a {
       color: #fff;
       &.active,
@@ -90,20 +88,30 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
       }
     }
   }
-  // .intro:first-of-type:first-letter, blockquote {
-  //   color: $color;
-  // }
+  .client-blockquote {
+    background-color: $color;
+    a {
+      color: $white;
+      &:hover {
+        color: $dark-grey;
+      }
+    }
+  }
   #logo {
     path {
       fill: $color;
-      @include transition(fill 0.1s linear);
     }
   }
   #footer {
     a {
       color: $color;
       &:hover {
-        color: $dark-grey;
+        color: $white;
+      }
+    }
+    .social-icons {
+      li>a:hover {
+        color: $white;
       }
     }
   }
@@ -129,7 +137,8 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
       background-color: $white;
       color: $color;
       &:hover {
-        background-color: rgba($white, 0.6);
+        background-color: $color;
+        color: $white;
       }
     }
   }
@@ -138,12 +147,37 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
       color: $color;
     }
   }
+  .sub-text:first-letter {
+    color: $color;
+  }
   .work-nav {
     a {
-      background-color: $color;
+      background-color: rgba($color, 0.6);
+      color: $white;
       &:hover {
-        background-color: rgba($color, 0.8);
-        color: #fff;
+        background-color: rgba($color, 1);
+        color: $white;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      li.prev {
+        border-right: 1px solid darken($color, 5%);
+        &.last {
+          border: 0;
+        }
+      }
+      a {
+        background-color: rgba($color, 0.95);
+      }
+    }
+  }
+  .social-icons {
+    a {
+      border-color: $color;
+      color: $color;
+      &:hover {
+        border-color: darken($color, 5%);
+        color: darken($color, 5%);
       }
     }
   }
@@ -235,7 +269,7 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
 %first-letter {
   &:first-letter {
     color: $pantone-green;
-    font: 800 3.6em/0.55 $quatro;
+    font: 800 3.6em/0.5 $quatro;
     left: -0.5em;
     float: left;
     margin: 0.1em 0.1em 0.2em 0;
@@ -251,4 +285,29 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+// @extend %large-header 
+%large-header {
+  h1 {
+    color: #fff;
+    font-size: 12em;
+    font-style: italic;
+    position: relative;
+    top: 1.1em;
+    @media screen and (max-width: 1000px) {
+      font-size: 10em;
+    }
+    @media screen and (max-width: 850px) {
+      font-size: 8em;
+    }
+    @media screen and (max-width: 750px) {
+      font-size: 6em;
+      padding-top: 1em;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 4em;
+      padding-top: 1em;
+    }
+  }
 }
