@@ -1125,6 +1125,10 @@ body.page-contact {
 }
 body.page-thank-you {
   @include colour-scheme($pantone-green, $button: false, $lighten: true);
+  header.content {
+    background: url("../images/thank-you-background.jpg") center no-repeat;
+    background-size: cover;
+  }
 }
 .contact-menu {
   background-color: $pantone-green;

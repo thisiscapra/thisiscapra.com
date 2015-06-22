@@ -33,13 +33,15 @@ function addFeaturedClass() {
 
 if ( 'querySelector' in document && 'addEventListener' in window ) {
 
-  var body = document.querySelector('body');
-  var featuredProjects = document.querySelector(".featured-projects");
+  var body = document.querySelector('body'),
+      html = document.querySelector('html'),
+      featuredProjects = document.querySelector(".featured-projects");
 
   addFeaturedClass();
 
   window.addEventListener('scroll', function() {
-    var scrollTop = body.scrollTop,
+    console.log('scrolling')
+    var scrollTop = html.scrollTop,
         headerHeight = document.querySelector('#header').offsetHeight;
     if(scrollTop >= headerHeight) {
       addClass(body,'scrolling')
