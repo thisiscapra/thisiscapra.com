@@ -276,6 +276,11 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
     position: relative;
     top: -0.5em;
   }
+  @-moz-document url-prefix() {
+    &:first-letter {
+      margin-bottom: 0;
+    }
+  }
 }
 
 // @extend %vertical-align

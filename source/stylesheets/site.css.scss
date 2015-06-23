@@ -1262,6 +1262,9 @@ section.contact {
 }
 .what-we-do-intro {
   @include gs-span(c,1,4);
+  p:first-of-type {
+    @extend %first-letter;
+  }
 }
 .what-we-do-design {
   @include gs-span(c,5,6);
@@ -1277,8 +1280,13 @@ section.contact {
 }
 .why-capra {
   div {
-    color: darken($pantone-green, 10%);
     @include gs-span(c,1,4);
+    p:first-of-type {
+      @extend %first-letter;
+      &:first-letter {
+        color: $white;
+      }
+    }
   }
   img {
     @include gs-span(c,5,8);
@@ -1295,6 +1303,9 @@ section.contact {
 .member {
   .social-icons {
     font-size: 0.8em;
+  }
+  p:first-of-type {
+    @extend %first-letter;
   }
 }
 .member.ollie {

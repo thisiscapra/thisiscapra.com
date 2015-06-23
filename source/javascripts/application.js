@@ -39,9 +39,9 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
 
   addFeaturedClass();
 
-  window.addEventListener('scroll', function() {
+  document.addEventListener('scroll', function() {
     console.log('scrolling')
-    var scrollTop = html.scrollTop,
+    var scrollTop = (document.documentElement.scrollTop||document.body.scrollTop),
         headerHeight = document.querySelector('#header').offsetHeight;
     if(scrollTop >= headerHeight) {
       addClass(body,'scrolling')
@@ -81,7 +81,7 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
   // Zoom images on blog posts
   var links = document.querySelectorAll("[data-simplbox]");
   var simplbox = new SimplBox(links);
-  console.log(simplbox)
+  //console.log(simplbox)
   simplbox.init();
 
 }
