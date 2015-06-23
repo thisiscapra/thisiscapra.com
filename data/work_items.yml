@@ -8,8 +8,8 @@ clients:
     home_intro: "See how we constructed a beautiful website for Pantera Carpentry"
     url: pantera
     link: http://panteracarpentry.com
-    intro: "<p>Pantera needed an online presence that matched their impeccable reputation for high-quality carpentry and stellar health and safety ratings.</p> <p>They needed a space to recruit new talent, display their beautiful work and show off their amazing achievements (they have just won the UK's Homebuilder's Award two years in a row). This website was designed to let their attention to detail and quality craftmanship shine.</p>"
-    sub_text: "We have worked with the Pantera Group over the past 2 years to develop this website and will soon launch their custom wardrobe site. The whole system is built on WordPress so that they can easily add new projects, create news posts, update the map or change text."
+    intro: "<p>Pantera needed an online presence that matched their impeccable reputation for high-quality carpentry and stellar health and safety ratings in an easy-to-update website.</p> <p>They needed a space to recruit new talent, display their beautiful work and show off their amazing achievements (they have just won the UK's Homebuilder's Award two years in a row). This website was designed to let their attention to detail and quality craftmanship shine.</p>"
+    sub_text: "We have worked with the Pantera Group over the past 2 years to develop this website and will soon launch their custom wardrobe site. The system is built on WordPress so that they can easily add new projects, create news posts, update the map or change text."
     what_we_did: 
       - Web design
       - Responsive build
@@ -110,11 +110,11 @@ clients:
   # Mind the product
   - name: Mind the Product
     weight: 5
-    home_intro: "See how we designed this popular Conference."
+    home_intro: "See how we designed this popular conference website."
     url: mind-the-product
     link: http://mtpcon.com/
     intro: "<p>Mind the Product is a very popular meetup group for product managers. In 2012 they launched their very first conference in London, UK, and founder Martin Erikkson approached Kat to come up with a simple, elegant design.</p> <p>The <a href=http://mtpcon.com/london/2012 alt=Mind the Product Conference 2012>first year&#8217;s website</a> was a straightforward one-page design, based on their brand&#8217;s colours and logo, where the circles moved as you scrolled.</p>"
-    sub_text: "Since we were both so pleased with the first year&#8217;s website, we knew we had to come up with something fun and different for the second year. So the <a href=http://mtpcon.com/london/2013 alt=Mind The Product Conference 2013>2013</a> website features a video background from the previous year&#8217;s conference. This website was designed to inspire product managers to make great, innovative products.  <br /><br />Then in <a href=http://mtpcon.com/london/2014 alt=Mind The Product Conference 2014>2014</a>, the founders decided to go for simple, practical yet elegant.  We created a website that could be modified through Wordpress and could be reused in future years. The build needed to be flexible for <a href=http://mtpcon.com>the 2015 version</a> to adapt to multiple locations (San Francisco and London this year!), pre-conference (no speakers, just teasers), full conference (speakers, tickets for sale) and post conference (wrap up, thank you and archiving).  We continue to work with Martin and the rest of the Mind The Product team to keep their website fresh!"
+    sub_text: "Since we were both so pleased with the first year&#8217;s website, we knew we had to come up with something fun and different for the second year. So the <a href=http://mtpcon.com/london/2013 alt=Mind The Product Conference 2013>2013</a> website features a video background from the previous year&#8217;s conference. This website was designed to inspire product managers to make great, innovative products.  <br /><br />Then in <a href=http://mtpcon.com/london/2014 alt=Mind The Product Conference 2014>2014</a>, the founders decided to go for simple, practical and elegant.  We created a website that could be modified through Wordpress and could be reused in future years. The build needed to be flexible for <a href=http://mtpcon.com>the 2015 version</a> to adapt to multiple locations (San Francisco and London this year!), pre-conference (no speakers, just teasers), full conference (speakers, tickets for sale) and post conference (wrap up, thank you and archiving).  We continue to work with Martin and the rest of the Mind The Product team to keep their website fresh!"
     what_we_did: 
       - Web design
       - Responsive build
