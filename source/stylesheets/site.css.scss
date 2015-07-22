@@ -824,9 +824,11 @@ body.dragimals {
     z-index: 100;
     @include box-sizing(border-box);
     &.next {
+      float: right;
       right: 0;
     }
     &.prev {
+      float: left;
       left: 0;
     }
   }

@@ -102,6 +102,21 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
       fill: $color;
     }
   }
+  &.page-work:not(.work_index) {
+    #logo {
+      path {
+        fill: lighten($color, 10%);
+      }
+    }
+    nav {
+      a {
+        &.active,
+        &:hover {
+          color: lighten($color, 10%);
+        }
+      }
+    }
+  }
   #footer {
     a {
       color: $color;
