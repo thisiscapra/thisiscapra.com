@@ -812,22 +812,22 @@ body.dragimals {
   padding: 0;
 }
 .work-nav {
-  margin: -60px auto 0;
-  top: 50%;
+  margin: 0 auto;
   max-width: 1600px;
   padding: 0;
-  position: fixed;
-  z-index: 100;
   width: 100%;
   li {
     list-style: none;
-    margin: 0;
+    margin: -60px auto 0;
+    position: fixed;
+    top: 50%;
+    z-index: 100;
     @include box-sizing(border-box);
     &.next {
-      float: right;
+      right: 0;
     }
     &.prev {
-      float: left;
+      left: 0;
     }
   }
   a {
@@ -841,10 +841,14 @@ body.dragimals {
       display: none;
     }
   }
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 975px) {
     bottom: 0;
+    position: fixed;
     top: auto;
+    z-index: 100;
     li {
+      margin: 0;
+      position: static;
       width: 50%;
       > a {
         line-height: 0.5;
