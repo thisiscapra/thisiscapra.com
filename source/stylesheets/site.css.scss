@@ -536,26 +536,19 @@ nav {
       width: 100%;
     }
   }
+  p {
+    @include gs-span(c,5,8);
+  }
   p:first-of-type {
     @extend %first-letter;
-    @include gs-span(c,5,6);
     @media screen and (max-width: 750px) {
-      @include gs-span(c,1,4);
+      float: none;
+      margin: 0 auto;
+      width: 80%;
     }
     @media screen and (max-width: 550px) {
       float: none;
       margin: 0 0 2em;
-      width: 100%;
-    }
-  }
-  p:last-child {
-    @include gs-span(c,7,8);
-    @media screen and (max-width: 750px) {
-      @include gs-span(c,5,8);
-    }
-    @media screen and (max-width: 550px) {
-      float: none;
-      margin: 0;
       width: 100%;
     }
   }
