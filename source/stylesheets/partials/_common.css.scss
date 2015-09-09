@@ -82,14 +82,25 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
   nav {
     a {
       color: #fff;
+      @include transition(color 0.5s);
       &.active,
       &:hover {
+        @include transition(color 0.5s);
         color: $color;
       }
     }
   }
   .client-blockquote {
     background-color: $color;
+    blockquote{
+      font-size: 1.8em;
+      line-height: 1.4;
+      font-weight: normal;
+    }
+    figcaption{
+      color: $white;
+      opacity: 0.6;
+    }
     a {
       color: $white;
       &:hover {
@@ -143,6 +154,7 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
   .client-header {
     color: #fff;
     a {
+      @include transition(background-color .7s, color 0.5s);
       color: #fff;
       &:hover {
         color: $color;
@@ -170,6 +182,7 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
       background-color: rgba($color, 0.6);
       color: $white;
       &:hover {
+        @include transition(background-color .7s, color 0.5s);
         background-color: rgba($color, 1);
         color: $white;
       }
