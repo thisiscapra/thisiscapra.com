@@ -157,6 +157,10 @@ h2, blockquote {
     font-size: 2.4em;
   }
 }
+.page-work blockquote {
+  font-size: 2.4em;
+  font-weight: 400;
+}
 h3 {
   font-size: 2.8em;
   line-height: 1.2;
@@ -212,6 +216,10 @@ figure {
 figcaption {
   color: $dark-grey;
   clear: both;
+  .page-work & {
+    color: $white;
+    color: rgba($white, 0.7);
+  }
 }
 blockquote {
   font-family: $quatro;
@@ -355,7 +363,7 @@ fieldset {
   display: inline-block;
   font-family: $sentinel;
   font-weight: 300;
-  font-size: 1.4em;
+  font-size: 1.2em;
   margin: 0 auto;
   padding:0.8em 2em;
   text-align: center;
