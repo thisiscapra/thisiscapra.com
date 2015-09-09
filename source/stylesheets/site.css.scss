@@ -15,9 +15,7 @@ html {
 body {
   background-color: #fff;
   color: $dark-grey;
-  background-image: url("../images/carbon-fibre.png");
-  background-repeat: repeat;
-  font: 300 110%/1.5 $sentinel;
+  font: 300 125%/1.5 $sentinel;
   margin: 0 auto;
   max-width: 1600px;
   position: relative;
@@ -35,8 +33,6 @@ section, article {
   > header {
     background-color: $dark-grey;
     color: $white;
-    background-image: url("../images/carbon-fibre.png");
-    background-repeat: repeat;
     padding: 16em 17%;
     text-align: center;
     @media screen and (max-width: 1000px) {
@@ -133,7 +129,7 @@ h1, h2, h3, h4,
 .blog-entry .content>p:first-of-type:first-letter,
 blockquote {
   font-family: $quatro;
-  font-weight: 500;
+  font-weight: 800;
   margin: 0;
 }
 h1 {
@@ -303,11 +299,11 @@ textarea {
 }
 label {
   display: block;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.2em;
   > input {
     border: 0;
     display: inline-block;
-    margin-right: 0.3em !important;
+    margin-right: 0.5em;
     position: relative;
     top: -2px;
     vertical-align: middle;
@@ -319,13 +315,8 @@ fieldset {
     &:last-child {
       margin: 0;
     }
-    &.radios> label {
-      text-align: left;
-      padding: 0.4em;
-      border: 1px solid #e1e1e1;
-      width: 45%;
-      display: inline-table;
-      margin-bottom: -1px;
+    &.radios > label {
+      text-align: center;
     }
   }
 }
@@ -370,7 +361,7 @@ fieldset {
   &:hover {
     background-color: $white;
     color: $pantone-green;
-    @include transition(all 0.5s ease);
+    @include transition(all 0.1s ease);
   }
   @media screen and (max-width: 400px) {
     font-size: 1em;
@@ -500,8 +491,6 @@ nav {
 
 #footer {
   background-color: $dark-grey;
-  background-image: url("../images/carbon-fibre.png");
-  background-repeat: repeat;
   color: $white;
   text-align: center;
   @extend %clearfix;
@@ -726,7 +715,6 @@ body.dragimals {
 // Work page 
 
 .page-work {
-
   background-color: $dark-grey;
   @include colour-scheme($pantone-green, $button: true, $lighten: true);
 }
@@ -979,8 +967,6 @@ body.dragimals {
 
 body.labs_index {
   background-color: $dark-grey;
-  background-image: url("../images/project-paper.png");
-  background-repeat: repeat;
   @include colour-scheme($pantone-green, $button: true, $lighten: true);
 }
 
@@ -991,8 +977,6 @@ body.labs_index {
 }
 .blog_index {
   header {
-    background-image: url("../images/carbon-fibre.png");
-    background-repeat: repeat;
     padding-top: 0;
     @extend %large-header;
   }
@@ -1196,7 +1180,6 @@ body.page-thank-you {
   }
 }
 section.contact {
-  background-color: $white;
   .narrow {
     padding: 6em 17%;
     @media screen and (max-width: 750px) {
@@ -1234,9 +1217,7 @@ section.contact {
 }
 section.about {
   header {
-    background: url("../images/carbon-fibre.png") repeat;
     p:first-of-type {
-      font-size: 95%;
       @include gs-span(c,2,4);
       &:first-letter {
         @extend %first-letter;
@@ -1248,7 +1229,6 @@ section.about {
       }
     }
     p:last-of-type {
-      font-size: 95%;
       @include gs-span(c,5,7);
       @media screen and (max-width: 600px) {
         float: none;
@@ -1279,9 +1259,6 @@ section.contact {
     }
   }
 }
-.what-we-do, .team-members{
-  background: $white;
-}
 .what-we-do-intro {
   @include gs-span(c,1,4);
   p:first-of-type {
@@ -1297,7 +1274,7 @@ section.contact {
 .what-we-do-design,
 .what-we-do-build {
   ul {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 }
 .why-capra {
@@ -1325,9 +1302,6 @@ section.contact {
 .member {
   .social-icons {
     font-size: 0.8em;
-  }
-  p{
-    font-size: 90%;
   }
   p:first-of-type {
     @extend %first-letter;
