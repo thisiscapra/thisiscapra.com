@@ -89,6 +89,9 @@ section, article {
     background-size: cover;
     color: $white;
     padding: 22em 4%;
+    @media screen and (max-width: 550px) {
+      padding: 16em 4%;
+    }
   }
   @media screen and (max-width: 1200px) {
     .narrow {
@@ -138,7 +141,7 @@ h1 {
   margin-bottom: 0.8em;
   text-align: center;
   @media screen and (max-width: 550px) {
-    font-size: 3em;
+    font-size: 2.6em;
   }
 }
 h2, blockquote {
@@ -151,7 +154,7 @@ h2, blockquote {
     text-align: center;
   }
   @media screen and (max-width: 550px) {
-    font-size: 2.8em;
+    font-size: 2.4em;
   }
 }
 h3 {
@@ -159,7 +162,7 @@ h3 {
   line-height: 1.2;
   margin-bottom: 0.9em;
   @media screen and (max-width: 550px) {
-    font-size: 2.4em;
+    font-size: 2.2em;
   }
 }
 h4 {
@@ -393,7 +396,7 @@ fieldset {
     padding: 1.5em 2em;
     @media screen and (max-width: 550px) {
       height: 60px;
-      padding: 0.8em 2em;
+      padding: 0.8em 1em;
     }
   }
 }
@@ -434,7 +437,7 @@ nav {
     margin-top: 0.5em;
   }
   @media screen and (max-width: 550px) {
-    font-size: 0.9em;
+    font-size: 0.8em;
     li {
       margin-right: 1.5em;
       &:nth-child(2) {
