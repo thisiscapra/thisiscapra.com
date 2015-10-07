@@ -1,6 +1,6 @@
 //= require "smooth-scroll.min.js"
 //= require "TweenMax.min.js"
-//= require "ScrollMagic.js"
+//= require "ScrollMagic.min.js"
 //= require "debug.addIndicators.min.js"
 //= require "animation.gsap.min.js"
 //= require "simplbox.min.js"
