@@ -34,6 +34,7 @@ section, article {
     background-color: $dark-grey;
     color: $white;
     padding: 16em 17%;
+    overflow-y: hidden; 
     text-align: center;
     @media screen and (max-width: 1000px) {
       padding: 16em 4%;
@@ -42,18 +43,28 @@ section, article {
       padding: 8em 4%;
     }
   }
+  .work_index & {
+    > header {
+      padding: 0;
+    }
+  }
 }
 // Content blocks
 .content {
-  padding: 16em 4%;
+  padding: 12em 4%;
   @include box-sizing(border-box);
   @extend %clearfix;
   @media screen and (max-width: 750px) {
-    padding: 8em 4%;
+    padding: 6em 4%;
   }
   @media screen and (max-width: 750px) {
     &:not(header) {
       padding: 3em 4%;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    &:not(header) {
+      padding: 3em 2em;
     }
   }
   &.narrow {
@@ -62,6 +73,10 @@ section, article {
     @media screen and (max-width: 1000px) {
       padding-left: 4%;
       padding-right: 4%;
+    }
+    @media screen and (max-width: 450px) {
+      padding-left: 2em;
+      padding-right: 2em;
     }
   }
   &.light {
@@ -88,16 +103,16 @@ section, article {
     background-repeat: no-repeat;
     background-size: cover;
     color: $white;
-    padding: 22em 4%;
+    padding: 16em 4%;
     @media screen and (max-width: 550px) {
-      padding: 16em 4%;
+      padding: 10em 4%;
     }
   }
-  @media screen and (max-width: 1200px) {
-    .narrow {
-      padding: 16.2em 4%;
-    }
-  }
+  // @media screen and (max-width: 1200px) {
+  //   .narrow {
+  //     padding: 16.2em 4%;
+  //   }
+  // }
 }
 img {
   display: block;
@@ -143,6 +158,9 @@ h1 {
   @media screen and (max-width: 550px) {
     font-size: 2.6em;
   }
+  @media screen and (max-width: 450px) {
+    font-size: 2.4em;
+  }
 }
 h2, blockquote {
   font-size: 3.6em;
@@ -168,6 +186,9 @@ h3 {
   @media screen and (max-width: 550px) {
     font-size: 2.2em;
   }
+  @media screen and (max-width: 450px) {
+    font-size: 1.6em;
+  }
 }
 h4 {
   font-size: 2em;
@@ -175,6 +196,9 @@ h4 {
   margin-bottom: 0.9em;
   @media screen and (max-width: 550px) {
     font-size: 2.2em;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 1.6em;
   }
 }
 p {
@@ -211,7 +235,7 @@ figure {
 .client-blockquote {
   background-color: $pantone-green;
   color: $white;
-  padding: 25% 4%;
+  padding: 10em 4%;
 }
 figcaption {
   color: $dark-grey;
@@ -225,6 +249,7 @@ blockquote {
   font-family: $quatro;
   margin: 0 auto;
   max-width: $max-width;
+  position: relative;
   text-align: center;
   width: gs-width(c,2,7);
   p {
@@ -376,7 +401,6 @@ fieldset {
   }
   @media screen and (max-width: 400px) {
     font-size: 1em;
-    width: 100%;
   }
 }
 
@@ -392,16 +416,16 @@ fieldset {
   top: 0;
   text-align: center;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   @include box-sizing(border-box);
-  @include transition(all 0.3s ease);
+  @include transition(all 0.5s ease-in-out);
   @media screen and (max-width: 550px) {
     padding: 2em 0;
   }
   .scrolling & {
-    background-color: rgba($dark-grey,0.96);
-    height: 100px;
-    padding: 1.5em 2em;
+    background-color: rgba($dark-grey,0.95);
+    height: 80px;
+    padding: 1.25em 2em;
     @media screen and (max-width: 550px) {
       height: 60px;
       padding: 0.8em 1em;
@@ -467,7 +491,7 @@ nav {
   overflow: hidden;
   top: 3em;
   width: 80px;
-  @include transition(all 0.3s ease);
+  @include transition(all 0.5s ease);
   > svg {
     display: inline-block;
     position: absolute;
@@ -482,16 +506,16 @@ nav {
     opacity: 0.5;
   }
   .scrolling & {
-    margin-left: -30px;
-    top: 0.6em;
-    width: 60px;
+    margin-left: -25px;
+    top: 0.2em;
+    width: 50px;
   }
   @media screen and (max-width: 550px) {
     top: 1em;
-    margin-left: -28px;
-    width: 50px;
+    margin-left: -25px;
+    width: 40px;
     .scrolling & {
-      margin-left: -23px;
+      margin-left: -25px;
       top: -0.4em;
       width: 40px;
     }
@@ -528,6 +552,18 @@ nav {
 .page-index {
   height: 100%;
 }
+// .home>header {
+//   .anim-content {
+//     opacity: 1;
+//     @include transform(scale(1));
+//     //@include transition(all ease-in-out 2s);
+//     // .scrolling & {
+//     //   opacity: 0;
+//     //   top: -200px;
+//     //   @include transform(scale(4));
+//     // } 
+//   }
+// }
 .home-intro {
   background-color: $dark-grey;
   color: $white;
@@ -579,14 +615,24 @@ nav {
       background-color: rgba($white, 0.7);
     }
   }
+  .ft-anim-content {
+    position: relative;
+  }
   article {
     display: none;
     text-align: center;
     position: relative;
+    opacity: 1;
+    h2,p,.button {
+      position: relative;
+    }
     &.ft-alfred-app {
       background-image: url("../images/work/alfred-app/alfred-app-featured.jpg");
       .button {
         color: $alfred-color;
+      }
+      .alfred-app & {
+        background-color: $alfred-color;
       }
     }
     &.ft-pantera {
@@ -594,11 +640,17 @@ nav {
       .button {
         color: $pantera-color;
       }
+      .pantera & {
+        background-color: $pantera-color;
+      }
     }
     &.ft-alton-convent-school {
       background-image: url("../images/work/alton-convent-school/alton-convent-featured.jpg");
       .button {
         color: $alton-convent-color;
+      }
+      .alton-convent-school & {
+        background-color: $alton-convent-color;
       }
     }
     &.ft-sports-digest-8-50 {
@@ -606,13 +658,34 @@ nav {
       .button {
         color: $sports-digest-color;
       }
+      .sports-digest-8-50 & {
+        background-color: $sports-digest-color;
+      }
     }
   }
-  &.pantera .ft-pantera,
-  &.alfred-app .ft-alfred-app,
-  &.alton-convent-school .ft-alton-convent-school,
-  &.sports-digest-8-50 .ft-sports-digest-8-50 {
-    display: block;
+  &.pantera {
+    background-color: $pantera-color;
+    .ft-pantera {
+      display: block;
+    }
+  } 
+  &.alfred-app {
+    background-color: $alfred-color;
+    .ft-alfred-app {
+      display: block;
+    }
+  }
+  &.alton-convent-school {
+    background-color: $alton-convent-color;
+    .ft-alton-convent-school {
+      display: block;
+    }
+  }
+  &.sports-digest-8-50 {
+    background-color: $sports-digest-color;
+    .ft-sports-digest-8-50 {
+      display: block;
+    }
   }
   .overlay {
     left: 0;
@@ -840,9 +913,9 @@ body.dragimals {
     display: block;
     font-size: 2em;
     line-height: 0.5;
-    padding: 0.8em 0.8em 1em;
+    padding: 0.8em 0.6em;
     text-align: center;
-    @include transition(background-color 0.1s linear);
+    @include transition(all 0.1s linear);
     > span {
       display: none;
     }
@@ -881,6 +954,7 @@ body.dragimals {
     background-position: center;
     background-size: cover;
     padding: 16em 4%;
+    overflow-x: hidden; 
     @media screen and (max-width: 700px) {
       padding: 10em 4%;
     }
@@ -907,6 +981,9 @@ body.dragimals {
       }
       @media screen and (max-width: 700px) {
         padding: 0 4%;
+      }
+      @media screen and (max-width: 450px) {
+        padding: 0 2em;
       }
     }
   }
@@ -1016,6 +1093,7 @@ body.labs_index {
   .tags {
     color: #999;
     font-size: 0.9em;
+    text-align: center;
   }
   article {
     h1,h2,h3,h4 {
@@ -1445,4 +1523,10 @@ a[data-simplbox] {
     right: 0;
     @include transition(background-color 0.05s linear);
   }
+}
+
+// Some extra animation styling
+
+.anim-block {
+  position: relative;
 }

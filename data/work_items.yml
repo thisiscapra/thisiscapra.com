@@ -24,6 +24,9 @@ clients:
       - pantera-projects.jpg
       - pantera-project.jpg
       - pantera-what-we-do.jpg
+    testimonial: "We started working on our first web site with Capra Design few years ago, they did such a fantastic job they are now on our 3rd and will continue to do so. The service we received was excellent. We get advice, guidance, training and an amazing looking website. The team at Capra are always responsive and we always felt we were so important and they were as passionate (if not more passionate) about making a great site. They made it easy to explain our ideas and make them into a reality. Finally they offered great value. Thank you so much!"
+    featured_testimonial: "The service we received was excellent. We get advice, guidance, training and an amazing looking website."
+    cite: "Pete Mills, Managing Director, Pantera Group"
  # Alfred
   - name: Alfred App
     weight: 2

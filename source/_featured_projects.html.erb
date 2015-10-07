@@ -3,10 +3,12 @@
     featured = data.work_items.clients.select{|item| item.featured rescue false }
     featured.each_with_index do |client, index|
     image_url = "work/#{client.url}/#{client.image_featured}" %>
-    <article class="ft-<%= client.url %> content background">
-      <h2><%= client.title %></h2>
-      <p><%= client.home_intro %></p>
-      <%= link_to("<span>View project</span>".html_safe, "/work/#{client.url}/", class: "button") %>
+    <article class="ft-<%= client.url %> content background ft-anim">
+      <div class="ft-anim-content">
+        <h2><%= client.title %></h2>
+        <p><%= client.home_intro %></p>
+        <%= link_to("<span>View project</span>".html_safe, "/work/#{client.url}/", class: "button") %>
+      </div>
     </article>
   <% end %>
 </div>

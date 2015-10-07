@@ -10,13 +10,15 @@ work_item: true
 
   <header class="client-header">
     
-    <h1><%= client.name %></h1>
+    <div class="anim-content">
+      <h1><%= client.name %></h1>
 
-    <p class="intro"><%= client.home_intro %></p>
+      <p class="intro"><%= client.home_intro %></p>
 
-    <% if client.link %>
-      <p class="project-link"><%= link_to("Live project", client.link, class: "button" ) %></p>
-    <% end %>
+      <% if client.link %>
+        <p class="project-link"><%= link_to("Live project", client.link, class: "button" ) %></p>
+      <% end %>
+    </div>
 
   </header>
 
@@ -25,14 +27,14 @@ work_item: true
   <div class="content narrow">
 
     <% if client.intro %>
-      <div class="client-intro">
+      <div class="client-intro anim-block">
         <h2>The project</h2>    
         <%= client.intro.html_safe %>
       </div>
     <% end %>
 
     <% if client.what_we_did %>
-      <div class="what-we-did">
+      <div class="what-we-did anim-block">
         <h3>What we did</h3>  
         <ul>
           <% client.what_we_did.each_with_index do |item, index| %>
