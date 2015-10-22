@@ -127,7 +127,7 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     var homeScene = new ScrollMagic.Scene({
       triggerElement: sectionHeader,
       offset: -50, 
-      duration: 1000
+      duration: 1500
     })
     .setTween(it)
     //.addIndicators({name: "tween css class"})
