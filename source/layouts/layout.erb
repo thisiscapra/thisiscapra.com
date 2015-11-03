@@ -1,5 +1,5 @@
 <!doctype html>
-<!--[if IE 8 ]><html lang="en" class="ie8<% if page("index.html") %> alfred-app<% end %>"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="/images/favicon.ico" rel="shortcut icon"></link>
-  <% if development? %>
+  <% if app.development? %>
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/613266/css/fonts.css" />
   <% elsif build? %>
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/642046/css/fonts.css" />
@@ -19,7 +19,7 @@
   <!--[if lt IE 9]>
     <%= javascript_include_tag("html5shiv.min.js") %>
   <![endif]-->
-  <% if development? %>
+  <% if app.development? %>
     <!-- <link rel="stylesheet" href="http://basehold.it/24/255/42/85/0.5"> -->
     <%= javascript_include_tag "gridset-overlay" %>
     <style>

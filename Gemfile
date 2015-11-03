@@ -1,14 +1,12 @@
-# If you do not have OpenSSL installed, update
-# the following line to use "http://" instead
+# If you do not have OpenSSL installed, change
+# the following line to use 'http://'
 source 'https://rubygems.org'
-#source "http://olliekav:ZqHznjii7GD8V1x5XtzS@gems.tdreyno.com/"
 
-gem "middleman"
-gem "middleman-blog"
-#gem "middleman-blog-editor"
+gem "middleman", github: 'middleman/middleman', branch: 'master'
+#gem 'middleman-sprockets', github: 'middleman/middleman-sprockets', branch: 'master'
+gem "turbolinks", github: 'rails/turbolinks', branch: 'master', :require => false
+gem 'middleman-livereload'
+gem "middleman-blog", github: 'middleman/middleman-blog', branch: 'master'
+#gem "middleman-syntax", github: 'middleman/middleman-syntax', branch: 'master'
 gem "nokogiri"
-gem "puma"
-gem 'rake'
-gem "middleman-livereload", "~> 3.1.0"
-gem "middleman-syntax"
 gem "redcarpet"

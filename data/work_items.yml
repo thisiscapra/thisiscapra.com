@@ -1,5 +1,4 @@
-clients: 
-
+clients:
   # Pantera
   - name: Pantera Carpentry
     weight: 1

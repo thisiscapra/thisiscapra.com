@@ -1,52 +1,34 @@
-require './custom_extensions/clear_build_cache'
-activate :clear_build_cache
-
-Time.zone = "US/Eastern"
-
-###
-# Compass
-###
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
 ###
 # Page options, layouts, aliases and proxies
 ###
 
+Time.zone = "US/Eastern"
+
 # Per-page layout changes:
 #
 # With no layout
-# page "/path/to/file.html", :layout => false
-
-page "/feed.xml", layout: false
+page '/*.xml', layout: false
+page '/*.json', layout: false
+page '/*.txt', layout: false
 page "/404.html", :layout => false
-page "/sitemap.xml", :layout => false
 
 # With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+# page "/path/to/file.html", layout: :otherlayout
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
+# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
+#  which_fake_page: "Rendering a fake page with a local variable" }
 
-data.work_items.clients.each do |client|
-  proxy "/work/#{client.url}.html", "/work-item.html", locals: { 
+app.data.work_items.clients.each do |client|
+  proxy "/work/#{client.url}/index.html", "/work-item.html", locals: { 
     client: client,
     work_pages: data.work_items.clients,
     url: "work"
   }, :ignore => true
 end
 
-data.lab_items.labs.each do |client|
-  proxy "/labs/#{client.url}.html", "/work-item.html", locals: { 
+app.data.lab_items.labs.each do |client|
+  proxy "/labs/#{client.url}/index.html", "/work-item.html", locals: { 
     client: client,
     work_pages: data.lab_items.labs,
     url: "labs"
@@ -54,13 +36,8 @@ data.lab_items.labs.each do |client|
 end
 
 ###
-# Helpers
+# Blog
 ###
-
-# Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
-
-activate :syntax, line_numbers: true
 
 activate :blog do |blog|
   blog.layout = "blog"
@@ -79,12 +56,16 @@ end
 set :markdown_engine, :redcarpet
 set :markdown, :smartypants => true, :fenced_code_blocks => true
 
+###
+# Helpers
+###
+
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload, :host => "thisiscapra.dev", :apply_js_live => true, :apply_css_live => true
-  config[:file_watcher_ignore] += [ /^build\// ]
+  activate :livereload
 end
 
+# Methods defined in the helpers block are available in templates
 # Methods defined in the helpers block are available in templates
 helpers do
   # Set the page title
@@ -146,15 +127,9 @@ end
 
 activate :directory_indexes
 
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
-
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
+  # Minify CSS on build
   activate :minify_css
 
   # Minify Javascript on build
@@ -167,7 +142,4 @@ configure :build do
   activate :relative_assets
 
   activate :gzip
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
 end
