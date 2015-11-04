@@ -58,8 +58,21 @@ $max-width: 958px;
 .icon-github:before { content: '\e802'; } /* '' */
 .icon-googleplus-rect:before { content: '\e803'; } /* '' */
 
+@font-face {
+  font-family: 'minkregular';
+  src: url('../fonts/mink-webfont.eot');
+  src: url('../fonts/mink-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/mink-webfont.woff2') format('woff2'),
+       url('../fonts/mink-webfont.woff') format('woff'),
+       url('../fonts/mink-webfont.ttf') format('truetype'),
+       url('../fonts/mink-webfont.svg#minkregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 $sentinel: 'Sentinel SSm A', 'Sentinel SSm B', 'Georgia', serif;
 $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
+$mink: 'minkregular';
 
 // Mixins
 
@@ -285,13 +298,13 @@ $quatro: 'Quarto A', 'Quarto B', 'Georgia', serif;
 // @extend %first-letter
 %first-letter {
   &:first-letter {
-    color: $pantone-green;
-    font: 800 3.6em/0.5 $quatro;
+    color: $dark-grey;
+    font: 800 3.2em/0.5 $quatro;
     left: -0.5em;
     float: left;
-    margin: 0.1em 0.1em 0.2em 0;
+    margin: 0.2em 0.1em 0.2em 0;
     position: relative;
-    top: -0.5em;
+    top: -0.2em;
     @media screen and (max-width: 550px) {
       font-size: 2.8em;
       margin: 0.2em 0.2em 0.2em 0;

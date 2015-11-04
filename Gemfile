@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 gem "middleman", github: 'middleman/middleman', branch: 'master'
-#gem 'middleman-sprockets', github: 'middleman/middleman-sprockets', branch: 'master'
+gem 'middleman-sprockets', github: 'middleman/middleman-sprockets', branch: 'master'
 gem "turbolinks", github: 'rails/turbolinks', branch: 'master', :require => false
 gem 'middleman-livereload'
 gem "middleman-blog", github: 'middleman/middleman-blog', branch: 'master'

@@ -66,7 +66,6 @@ configure :development do
 end
 
 # Methods defined in the helpers block are available in templates
-# Methods defined in the helpers block are available in templates
 helpers do
   # Set the page title
   def page_title
@@ -116,16 +115,12 @@ helpers do
   end
 end
 
-# Fix bug with build errors and typography fonts
-ignore 'fonts/*'
-
-after_build do |builder|
-  print "After_build fixes... "
-  FileUtils.cp_r(Dir['source/fonts/'],'build/')
-  puts "done."
-end
-
 activate :directory_indexes
+
+# Use relative URLs
+activate :relative_assets
+
+#set :fonts_dir, 'fonts'
 
 # Build-specific configuration
 configure :build do
@@ -138,8 +133,14 @@ configure :build do
   # Enable cache buster
   activate :asset_hash
 
-  # Use relative URLs
-  activate :relative_assets
-
   activate :gzip
+  
+  # Fix bug with build errors and typography fonts
+  ignore 'fonts/*'
+
+  after_build do |builder|
+    print "After_build fixes... "
+    FileUtils.cp_r(Dir['source/fonts/'],'build/')
+    puts "done."
+  end
 end

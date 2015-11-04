@@ -1,9 +1,7 @@
 <ul>
   <li><%= link_to("Work", "/work/", nav_active("/work/")) %></li>
   <li><%= link_to("About", "/about/", nav_active("/about/")) %></li>
-  <% if blog == true %>
-    <li><%= link_to("Blog", "/blog/", nav_active("/blog/")) %></li>
-  <% end %>
+  <li><%= link_to("Blog", "/blog/", nav_active("/blog/")) %></li>
   <li><%= link_to("Labs", "/labs/", nav_active("/labs/")) %></li>
   <li><%= link_to("Contact", "/contact/", nav_active("/contact/")) %></li>
 </ul>

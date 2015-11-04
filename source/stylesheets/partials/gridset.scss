@@ -23,9 +23,9 @@
 // * Use min, max and min-max define the type of query: min-width, max-width, or both, respectively. Here is an example:
 //   
 //   @include gs-media(prefix, max) {
-//   	
-//   	-- CSS goes here --
-//   	
+//    
+//    -- CSS goes here --
+//    
 //   }
 //     
 //   Functions ----------------------------------------------------
@@ -54,13 +54,13 @@
 
 @function gs-grid($prefix){
 
-  @if $prefix == c	{ @return (9,9,9,9,9,9,9,9); }
+  @if $prefix == cap  { @return (10.857142858034692,10.857142858034692,10.857142858034692,10.85714285694898,10.857142857763266,10.857142857763266,10.857142853420408); }
 
 }
 
 @function gs-contraints($prefix){
   
-  @if $prefix == c	{ @return (false,false,false,false,false,false,false,false); }
+  @if $prefix == cap  { @return (false,false,false,false,false,false,false); }
 
 }
 
@@ -68,11 +68,11 @@
   
   $gutter: 0;
 
-  @if $prefix == c	{ $gutter: 4; }
+  @if $prefix == cap  { $gutter: 4; }
 
   @if $unit == true { @return #{gs-adjust($prefix, $gutter, $container) + '%'}; }
   @else { @return gs-adjust($prefix, $gutter, $container); }
-	
+  
 }
 
 @function gs-width($grid, $start, $end: false, $container: false, $unit: false){
@@ -88,7 +88,7 @@
     @if ($end - $start) > 0 { $gutters: ($gutter * ($end - $start)); }
 
     @while $i <= $end {
-						
+            
       $measure: $measure + nth($cols,$i);
       $i: $i + 1;
 
@@ -96,16 +96,16 @@
 
   }
   @else {
-		
+    
     $conscols: gs-contraints($grid);
     $conscol: nth($conscols,$start);
-		
+    
     @if ($conscol != false) and ($unit == true) { @return #{$conscol}; }
-		
+    
     $measure: nth($cols,$start);
 
   }
-	
+  
   @if $unit == true { @return #{gs-adjust($grid, $measure + $gutters, $container) + '%'}; }
   @else { @return gs-adjust($grid, $measure + $gutters, $container); }
 
@@ -123,7 +123,7 @@
     
     $margin: gs-width($grid, $start, $end);
     $gutter: gs-gutter($grid);
-		
+    
     @if $unit == true { @return #{gs-adjust($grid, $margin + $gutter, $container) + '%'}; }
     @else { @return gs-adjust($grid, $margin + $gutter, $container); }
 
@@ -137,10 +137,10 @@
 }
 
 @function gs-adjust($grid, $measure, $container: false, $unit: false){
-	
+  
   $containerend: false;
   @if length($container) == 2 { $containerend: nth($container,2); }
-	
+  
   @if $container != false {
 
     $adjusted: $measure / gs-width($grid, nth($container,1), $containerend);
@@ -150,7 +150,7 @@
 
   }
   @else {
-	
+  
     @if $unit == true { @return #{$measure + '%'}; }
     @else { @return $measure; }
 
@@ -190,27 +190,27 @@
 }
 
 @mixin gs-span($grid, $start, $end: false, $container: false, $ie: false){
-	
+  
   @if $start == all {
-	
+  
     clear: both;
     display: block;
     float: left;
     margin-left: 0;
     width: 100%;
-		
+    
   }
   @else {
   
     $marginright: -100%;
     @if ($ie == ie) or ($ie == true) { $marginright: -99.9%; }
-	
+  
     display: block;
     float: left;
     margin-left: gs-marginleft($grid, $start, $container, true);  
     margin-right: $marginright;
     width: gs-width($grid, $start, $end, $container, true);
-	  
+    
   }
 
 }
@@ -252,10 +252,10 @@
 }
 
 @mixin gs-float($grid, $direction, $container: false){
-	
+  
   $margin: gs-gutter($grid);
   @if $container != false { $margin: gs-adjust($grid, $margin, $container); }
-	
+  
   clear: none;
   float: $direction;
   
@@ -263,13 +263,13 @@
   
     margin-left: 0;
     margin-right: #{$margin + '%'};
-  	
+    
   }
   @else if $direction == right {
   
     margin-right: 0;
     margin-left: #{$margin + '%'};
-  	
+    
   }
   
 }
@@ -280,4 +280,4 @@
 //   
 //   -------------------------------------------------------------- 
 
-$gs-prefixes: c;
+$gs-prefixes: cap;

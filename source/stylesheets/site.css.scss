@@ -1,7 +1,6 @@
-@import "partials/common";
-@import "partials/normalize";
-//@import "partials/gridset";
-@import "partials/o_gridset";
+@import "partials/common.scss";
+@import "partials/normalize.css";
+@import "partials/gridset.scss";
 
 // Basic layout setup
 
@@ -14,9 +13,329 @@ html {
 body {
   background-color: #fff;
   color: $dark-grey;
-  font: 300 125%/1.5 $sentinel;
+  font: 300 150.0%/1.5 $sentinel;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 2000px;
   position: relative;
   width:100%;
+  @media screen and (max-width: 1350px) {
+    font-size: 112.5%;
+  }
+  @media screen and (max-width: 1150px) {
+    font-size: 100%;
+  }
+}
+section {
+  padding: gs-gutter(cap, false, true);
+}
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+hr {
+  background-color: #e1e1e1;
+  border: 0;
+  clear:both;
+  height: 1px;
+  margin: 6em 0 6em;
+  width: 100%;
+}
+.row {
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+  @extend %clearfix;
+}
+
+// Typography
+
+h1, h2, h3, h4, 
+// .intro:first-of-type:first-letter, 
+.blog-entry .content>p:first-of-type:first-letter,
+blockquote {
+  font-family: $quatro;
+  font-weight: 800;
+  margin: 0;
+}
+h1 {
+  font-size: 10vw;
+  line-height: 1.166;
+  margin-bottom: 0.8em;
+  text-align: center;
+  @media screen and (max-width: 550px) {
+    font-size: 2.6em;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 2.4em;
+  }
+}
+h2 {
+  font-size: 8vw;
+  line-height: 1.1;
+  margin: 0 0 0.75em;
+}
+h3 {
+  font-size: 2.8em;
+  line-height: 1.2;
+  margin-bottom: 0.9em;
+}
+h4 {
+  font-size: 2em;
+  line-height: 1.2;
+  margin-bottom: 0.9em;
+}
+p {
+  margin: 0 auto 2.5em;
+  position: relative;
+  width: 100%;
+}
+strong {
+  color: #000;
+  font-weight: 700;
+}
+figure {
+  text-align: center;
+}
+.client-blockquote {
+  color: $pantone-green;
+  padding: 4%;
+}
+figcaption {
+  color: $dark-grey;
+  clear: both;
+}
+blockquote {
+  font-family: $mink;
+  font-size: 2.4em;
+  letter-spacing: -3px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  width: gs-width(cap,2,6,false,true);
+  p {
+    margin-bottom: 1em;
+    &:before {
+      content: '“';
+    }
+    &:after {
+      content: '”';
+    }
+  }
+}
+ul {
+  margin: 0 0 1em 1em;
+  padding: 0;
+}
+li {
+  margin-bottom: 0.3em;
+}
+
+// Links
+
+a {
+  color: $dark-grey;
+  @include transition(color 0.2s ease);
+  &:hover {
+    color: $pantone-green;
+    text-decoration: none;
+  }
+}
+
+// Forms 
+
+input, textarea {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+  font-family: $sentinel;
+  font-size: 1.6em;
+  padding: 0.6em;
+  @include box-sizing(border-box);
+  width: 100%;
+  &[type="radio"],
+  &[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    width: auto;
+  }
+}
+textarea {
+  min-height: 300px;
+}
+label {
+  display: block;
+  margin-bottom: 0.2em;
+  > input {
+    border: 0;
+    display: inline-block;
+    margin-right: 0.5em;
+    position: relative;
+    top: -2px;
+    vertical-align: middle;
+  }
+}
+fieldset {
+  > div {
+    margin-bottom: 1.5em;
+    &:last-child {
+      margin: 0;
+    }
+    &.radios > label {
+      text-align: center;
+    }
+  }
+}
+.req {
+  color: $contact-green;
+  font-weight: 800;
+}
+::-webkit-input-placeholder {
+   color: #999;
+   font-size: 0.6em;
+   line-height: 2;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #999;
+   font-size: 0.6em;
+   line-height: 2;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #999;
+   font-size: 0.6em;
+   line-height: 2;
+}
+:-ms-input-placeholder {  
+   color: #999;
+   font-size: 0.6em;
+   line-height: 2;
+}
+.button {
+  background-color: $pantone-green;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  display: inline-block;
+  font-family: $sentinel;
+  font-weight: 300;
+  font-size: 1.2em;
+  margin: 0 auto;
+  padding:0.8em 2em;
+  text-align: center;
+  @include box-sizing(border-box);
+  -webkit-appearance: none;
+  &:hover {
+    background-color: $white;
+    color: $pantone-green;
+    @include transition(all 0.1s ease);
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 1em;
+  }
+}
+
+// Header 
+
+.site-header {
+  padding: gs-gutter(cap, false, true);
+  @extend %clearfix;
+}
+
+// Logo 
+
+.logo {
+  float: left;
+  margin-right: gs-gutter(cap, false, true);
+  width: gs-width(cap, 1, false, false, true);
+  svg {
+    width: 60%;
+  }
+  path {
+    fill: $pantone-green;
+  }
+}
+
+// Navigation 
+
+.navigation {
+  float: left;
+  width: gs-width(cap, 2, 7, false, true);
+  ul {
+    margin: 0.8em 0 0;
+  }
+  li {
+    display: inline-block;
+    margin-right: gs-gutter(cap, false, true);
+    width: gs-width(cap, 1, false, (2,7), true);
+    &:last-child {
+      margin: 0;
+    }
+    a {
+      font-family: $quatro;
+      font-weight: 800;
+    }
+  }
+}
+
+// Homepage
+
+.home-header {
+  padding-top: 4%;
+  position: relative;
+  @extend %clearfix;
+  h1 {
+    line-height: 0.9;
+    position: relative;
+    text-align: left;
+    @include gs-span(cap,3,5);
+    span {
+      display: block;
+      &:nth-child(2) {
+        position: relative;
+        z-index: 2;
+        &:after {
+          content: "Goats";
+          display: block;
+          text-decoration: line-through;
+          position: relative;
+          z-index: -1;
+        }
+      }
+      &:last-child {
+        color: $pantone-green;
+        font-family: $mink;
+        font-size: 9vw;
+        left: -0.6em;
+        letter-spacing: -10px;
+        margin-top: -0.6em;
+        position: absolute;
+        @include transform(rotate(-17deg));
+        z-index: 2;
+        .char5 {
+          margin-left: -0.25em;
+        }
+      }
+    }
+  }
+  svg {
+    left: 43%;
+    position: absolute;
+    top: -15%;
+    width: 35%;
+    z-index: 1;
+  }
+  p {
+    clear: both;
+    @extend %first-letter;
+    @include gs-span(cap,4,6);
+  }
+}
+.featured-projects {
+  @extend %clearfix;
+  h2 {
+    @include gs-span(cap,2,4);
+  }
 }
