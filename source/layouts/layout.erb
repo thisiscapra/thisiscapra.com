@@ -21,9 +21,11 @@
   <![endif]-->
   <% if app.development? %>
     <!-- <link rel="stylesheet" href="http://basehold.it/24/255/42/85/0.5"> -->
-    <%= javascript_include_tag "gridset-overlay" %>
+    <script src="https://get.gridsetapp.com/34301/overlay/"></script>
     <style>
       .gridsetoverlaywrap {
+        left: 4%;
+        right: 4%;
         opacity: 0.5;
       }
     </style>
@@ -39,16 +41,18 @@
   </script>
 </head>
 <body id="capra" class="<%= custom_page_classes %>">
-  <% if available? %>
-    <div id="work-bar">
-      We're available for new projects! <%= link_to("Contact us", "/contact/") %>
-    </div>
-  <% end %>
-  <%= partial "header" %>
-  <main role="main">
-    <%= yield %>
-  </main>
-  <%= partial "footer" %>
+  <div class="wrapper">
+    <% if available? %>
+      <div id="work-bar">
+        We're available for new projects! <%= link_to("Contact us", "/contact/") %>
+      </div>
+    <% end %>
+    <%= partial "header" %>
+    <main role="main">
+      <%= yield %>
+    </main>
+    <%= partial "footer" %>
+  </div>
   <%= javascript_include_tag "application" %>
   <%= yield_content :javascript %>
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -1,4 +1,7 @@
-<figure class="client-blockquote narrow">
+<figure class="client-blockquote">
+  <% if page("index.html") %>
+    <h3>Our clients love us!</h3>
+  <% end %>
   <blockquote class="anim-block">
     <% if featured == true %>
       <p><%= client.featured_testimonial %></p>

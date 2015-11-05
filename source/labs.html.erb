@@ -2,23 +2,9 @@
 <% content_for(:description, "Our playground to experiment with design and technology that interests us.") %>
 
 <section class="labs">
-  <header class="client-header">
-    <div class="anim-content">
-      <h1>Capra Labs</h1>
-      <p class="intro">In our spare time we like to work on fun little side projects or get involved in hack days that promote social good.</p>
-    </div>
+  <header class="section-header">
+    <h1>Capra Labs</h1>
+    <p>In our spare time we like to work on fun little side projects or get involved in hack days that promote social good.</p>
   </header>
-  <ul class="work-list">
-    <% lab_list = data.lab_items.labs %>
-    <% $stderr.puts lab_list %>
-    <% lab_list.each do |l| %>
-      <li class="<%= l.url %> client">
-        <% link_to("/labs/#{l.url}/") do %>
-          <% image_url = "#{l.image_path}/#{l.image_thumb}" %>
-          <%= image_tag(image_url, :alt => "") %>
-          <h2><%= l.name %></h2>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
+  <%= partial "work_list", locals: { items: data.lab_items.labs, path: "labs" } %>
 </section>

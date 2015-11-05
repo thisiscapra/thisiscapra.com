@@ -1,6 +1,6 @@
 <header class="site-header">
   <%= partial "logo" %>
   <nav class="navigation" role="navigation">
-    <%= partial "page_navigation" %>
+    <%= partial "page_navigation", :locals => { :social => true } %>
   </nav>
 </header>

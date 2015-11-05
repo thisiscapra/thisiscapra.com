@@ -51,7 +51,6 @@ $max-width: 958px;
   font-variant: normal;
   text-transform: none;
   line-height: 1em;
-  width: 2em;
 }
 .icon-facebook:before { content: '\e800'; } /* '' */
 .icon-twitter-bird:before { content: '\e801'; } /* '' */
@@ -78,31 +77,33 @@ $mink: 'minkregular';
 
 // Color schemes
 
-@mixin colour-scheme($color, $button, $lighten) {
+@mixin colour-scheme($color, $image) {
 
-  $feat_color: $color !default;
+  $url: "../images/work/#{$image}.jpg";
 
-  @if $lighten {
-    $feat_color: lighten($color, 20%);
-  }
+  background-image: url($url);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 
-  a {
+  a:hover {
     color: $color;
-    &:hover {
-      color: darken($color, 5%);
+  }
+  .navigation {
+    a.active,
+    a.hover {
+      color: $color;
     }
   }
-  nav {
+  .social-links {
     a {
-      color: #fff;
-      &.active,
+      color: $color;
       &:hover {
-        color: $color;
+        color: $dark-grey;
       }
     }
   }
-  .client-blockquote {
-    background-color: $color;
+  blockquote {
+    color: $color;
     a {
       color: $white;
       &:hover {
@@ -110,37 +111,9 @@ $mink: 'minkregular';
       }
     }
   }
-  #logo {
+  .logo {
     path {
       fill: $color;
-    }
-  }
-  &.page-work:not(.work_index) {
-    #logo {
-      path {
-        fill: lighten($color, 10%);
-      }
-    }
-    nav {
-      a {
-        &.active,
-        &:hover {
-          color: lighten($color, 10%);
-        }
-      }
-    }
-  }
-  #footer {
-    a {
-      color: $color;
-      &:hover {
-        color: $white;
-      }
-    }
-    .social-icons {
-      li>a:hover {
-        color: $white;
-      }
     }
   }
   #work-bar {
@@ -201,24 +174,12 @@ $mink: 'minkregular';
       }
     }
   }
-  .social-icons {
-    a {
-      border-color: $color;
-      color: $color;
-      &:hover {
-        border-color: darken($color, 5%);
-        color: darken($color, 5%);
-      }
-    }
-  }
-  @if $button {
-    .button {
-      background-color: $color;
-      color: #fff;
-      &:hover {
-        background-color: darken($color, 5%);
-        color: #fff;
-      }
+  .button {
+    background-color: $color;
+    color: $white;
+    &:hover {
+      background-color: $dark-grey;
+      color: $white;
     }
   }
 }

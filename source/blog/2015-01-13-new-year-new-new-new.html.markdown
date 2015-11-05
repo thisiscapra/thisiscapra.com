@@ -1,0 +1,24 @@
+---
+published: true
+title: "New year, new, new, new"
+date: "2015-01-13"
+author: kat kavanagh
+tags: 
+  - Company
+---
+
+When New Years come around, they're full of plans, changes, goals and hope for a better future.  For Capra, it's time to let the adventure begin!
+
+### New country
+Last year around this time, Ollie and I made the decision to go on a new adventure: we sold our house, packed up our things and moved to Canada. Last year was a hard year for my family, and it is nice for us to be able to be here near Ottawa to support them.  Our two dogs, Kenny and Phoebe, made the journey too, and since we're in the countryside on a lake, they are in doggy heaven.  We have designed a new office space for Capra too, complete with a mini indoor garden in the skylights!
+
+### New team member, new website
+As of December 15, Ollie is officially a Canadian immigrant, and he joins me to work full time at Capra!  This has meant that it was time for a website redesign, where we could meld our projects and showcase some of the great new development tools Ollie has been exploring.  We hope you like the result!  (And if you find any bugs, please let us know.)
+
+### New hobbies, new lifestyle
+As part of our new Canadian adventure, we have totally embraced the winter.  We are snowboarding 3x a week for a couple hours, cross country skiing with the dogs on the frozen lake and snowshoeing in the forest. We're working it into our workday, hoping to finally achieve the work/life balance everyone is looking for!
+
+![Racing along the winter wonderland](https://dl.dropboxusercontent.com/u/4461726/thisiscapra/winter-wonderland.jpg)
+
+### New clients, new projects
+Capra started up with the two of us after our holidays on January 5. We have been really lucky that work has come in ALREADY and we're busy with some fantastic new clients.  We have some spare capacity coming up, so if you are looking to work with us, [let us know](http://thisiscapra.com/contact/ "Contact us")!

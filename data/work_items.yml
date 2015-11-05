@@ -55,7 +55,7 @@ clients:
   # Alton Convent School
   - name: Alton Convent School
     weight: 3
-    featured: true
+    #featured: false
     title: Beautifully educated.
     home_intro: "See how we redefined a school&#8217;s online presence."
     url: alton-convent-school
@@ -123,7 +123,7 @@ clients:
       - HTML/CSS integration
       - Wordpress Multi-Site
     image_path: work/mind-the-product
-    image_featured: mtp-featured.png
+    image_featured: mind-the-product-featured.jpg
     image_thumb: mtp-thumb.jpg
     images:
       - mtp-2012.png

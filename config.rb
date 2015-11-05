@@ -41,16 +41,17 @@ end
 
 activate :blog do |blog|
   blog.layout = "blog"
-  blog.sources = "blog/{year}-{month}-{day}-{title}.html"
-  blog.permalink = "blog/{title}.html"
+  blog.prefix = "blog"
+  blog.sources = "{year}-{month}-{day}-{title}.html"
+  blog.permalink = "{title}.html"
   blog.paginate = true
   blog.per_page = 10
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
   blog.taglink = "tags/{tag}.html"
-  blog.year_link = "blog/{year}.html"
-  blog.month_link = "blog/{year}/{month}.html"
-  blog.day_link = "blog/{year}/{month}/{day}.html"
+  blog.year_link = "{year}.html"
+  blog.month_link = "{year}/{month}.html"
+  blog.day_link = "{year}/{month}/{day}.html"
 end
 
 set :markdown_engine, :redcarpet
