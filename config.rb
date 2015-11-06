@@ -118,9 +118,6 @@ end
 
 activate :directory_indexes
 
-# Use relative URLs
-activate :relative_assets
-
 #set :fonts_dir, 'fonts'
 
 # Build-specific configuration
@@ -135,6 +132,9 @@ configure :build do
   activate :asset_hash
 
   activate :gzip
+
+  # Use relative URLs
+  activate :relative_assets
   
   # Fix bug with build errors and typography fonts
   ignore 'fonts/*'
@@ -144,4 +144,5 @@ configure :build do
     FileUtils.cp_r(Dir['source/fonts/'],'build/')
     puts "done."
   end
+  
 end

@@ -15,7 +15,7 @@ work_item: true
     <p><%= client.home_intro %></p>
 
     <% if client.link %>
-      <p class="project-link"><%= link_to("Live project", client.link, class: "button" ) %></p>
+      <p class="project-link"><%= link_to("Live project", client.link, class: "button", target: "_blank") %></p>
     <% end %>
 
   </header>

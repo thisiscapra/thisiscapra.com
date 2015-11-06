@@ -16,6 +16,12 @@
   <% end %>
   <%= stylesheet_link_tag "site.css" %>
   <%#= stylesheet_link_tag "highlighting.css" %>
+  <%= javascript_include_tag "application" %>
+  <%= yield_content :javascript %>
+  <script>
+    // Turbolinks.ProgressBar.enable();
+    // Turbolinks.enableTransitionCache();
+  </script>
   <!--[if lt IE 9]>
     <%= javascript_include_tag("html5shiv.min.js") %>
   <![endif]-->
@@ -53,8 +59,6 @@
     </main>
     <%= partial "footer" %>
   </div>
-  <%= javascript_include_tag "application" %>
-  <%= yield_content :javascript %>
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>

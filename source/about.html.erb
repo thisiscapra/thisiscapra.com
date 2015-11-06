@@ -3,58 +3,55 @@
 
 <section class="about">
 
-  <header class="content narrow dark">
+  <header class="about-header">
 
-    <div class="anim-content">
+    <h1>Our focus is great design for great projects.</h1>
+
+    <div class="content">
       
-      <h1>Our focus is great design for great projects.</h1>
-
-      <div class="row">
-        
-        <p>We love doing interactive work like websites, games and apps because we get to be involved in building what we design. For simple projects, we take care of all the development.</p>
-        <p>For bigger projects, we like to team up with talented developers, product managers and marketers as they plan and code up the project to make sure we keep our design vision intact.</p>
-
-      </div>
-
+      <p>We love doing interactive work like websites, games and apps because we get to be involved in building what we design. For simple projects, we take care of all the development.</p>
+      
+      <p>For bigger projects, we like to team up with talented developers, product managers and marketers as they plan and code up the project to make sure we keep our design vision intact.</p>
+      
       <h4>We believe the best work comes from collaboration with other talented people!</h4>
 
     </div>
 
+    <%= partial "images/alfalfa-about.svg" %>
+
   </header>
 
-  <div class="what-we-do content narrow light">
+  <div class="what-we-do">
 
-    <div class="what-we-do-intro anim-block">
+    <h2>Our process</h2>
+
+    <div class="what-we-do-intro">
+
+      <p>Our process begins with creating simple paper prototypes and interactive wireframes that help both us and our clients plan and create content. We often build apps as we’re designing them, and we make sure they look great on mobile and desktop.</p>
       
-      <h2>Our process</h2>
-        
       <p>We work directly with developers to implement our designs right into languages such as ruby-on-rails, python, php, unity, .net, xCode and java. We are always experimenting with the latest tools to use the right solution for a problem.</p>
 
       <p><strong>We also like to review and improve our designs based on real-world testing.</strong> When real people are using our designs, we can further improve on the best practices we always implement upfront.  We have long-term clients with whom we love to work with to achieve their goals and through testing, we have improved conversion rates and reduced confusion.</p>
 
     </div>
 
-    <div class="what-we-do-design anim-block">
+    <div class="what-we-do-process">
 
-      <h3>Design</h3>
+      <!-- <h4>Design & Build</h4> -->
+      <strong>Design</strong>
       <ul>
         <li>Web design</li>
-        <li>iOS and Android app design</li>
-        <li>User experience design</li>
-        <li>Branding &amp; print work</li>
+        <li>App design</li>
+        <li>UX design</li>
+        <li>Branding &amp; print</li>
         <li>Content management</li>
-        <li>Responsive web development</li>
+        <li>Responsive design</li>
         <li>Casual game design</li>
       </ul>
-
-    </div>
-
-    <div class="what-we-do-build anim-block">
-
-      <h3>Build</h3>
+      <strong>Build</strong>
       <ul>
         <li>HTML5</li>
-        <li>CSS3 including SASS/LESS</li>
+        <li>CSS3 with SASS/LESS</li>
         <li>Jquery &amp; Javascript</li>
         <li>Ruby-on-rails</li>
         <li>PHP <small>(Wordpress)</small></li>
@@ -65,59 +62,61 @@
 
   </div>
 
-  <div class="why-capra content narrow color">
+  <div class="why-capra">
 
-    <div class="anim-block">
+    <div class="why-capra-intro">
       
       <h2>Why Capra?</h2>
 
-      <p>Capra is the Greek word for a category of mammals that comprises both wild and domestic goats. Goats are known to be intelligent, adaptive and playful, and just like them, we love to explore new technologies, explore new places and play games.  While we don&#8217;t own any goats yet, we hope to someday!</p>
+      <p>Capra is the Greek word for a category of mammals that comprises both wild and domestic goats. Goats are known to be intelligent, adaptive and playful, and just like them, we love to explore new technologies, explore new places and play games. While we don&#8217;t own any goats yet, we hope to someday!</p>
       
     </div>
 
-    <%= image_tag("goat.svg", alt: "") %>
+    <%= partial "images/goat-about.svg" %>
 
   </div>
 
-  <div class="the-tribe content background">
+  <div class="the-tribe">
 
-    <div class="anim-block">
+    <div class="content">
+
       <h2>The Capra Tribe</h2>
-      <small>(Yes, &ldquo;tribe&rdquo; really is the plural form for goats!)</small>
+
+      <p>(Yes, &ldquo;tribe&rdquo; really is the plural form for goats!)</p>
+      
     </div>
+    
+    <%= image_tag("about.jpg", alt: "") %>
 
   </div>
 
-  <div class="team-members content narrow">
-    
-    <div class="row anim-block">
-    
-      <div class="member ollie">
-        <h3>Ollie Kavanagh</h3>
-        <!-- <h4>Designer, coder, problem solver</h4> -->
-        <p>Ollie is a rare designer: he is equally comfortable designing beautiful, elegant interfaces (with superb typography) as he is delving into the front-end code. A natural problem solver with over 10 years experience in both web and print, he eagerly takes on any challenge and works hard until he solves it. He is responsible for setting up processes for Capra&#8217;s technology. Ollie is constantly trying out new technologies to make his designs more beautiful and exciting.</p>
-        <p>Ollie is originally from England and has just immigrated to Canada! He is an avid Liverpool football supporter, has an unhealthy obsession with Nike trainers, loves DJing drum &amp; bass, hip-Hop and house music, and hopes to someday become an expert snowboarder.</p>
-        <p><%= link_to("olliekav.com", "http://olliekav.com") %></p>
-        <%= partial "social_links", :locals => { :twitter_link => "olliekav", :facebook_link => false, :github_link => "olliekav" }  %>
-      </div>
+  <div class="team-members">
 
-      <div class="member kat">
-        <h3>Kat Kavanagh</h3>
-        <!-- <h4>Designer, coder, ideas generator</h4> -->
-        <p>Kat loves coming up with new ideas. Her focus is on designing and building interfaces and games that are beautiful as well as engaging. With over 10 years experience in print and web design, she is obsessed with creating fun as well as clarity in her designs, and so user experience is always part of her process. She is also responsible for more of the business operations at Capra.</p>
-        <p>Kat is known for being incredibly enthusiastic and passionate about everything she does, and she pours this passion into creating great experiences for people. She has just returned to Canada after 8 years in England. She loves Canada&#8217;s great outdoors especially hiking with the family dogs, Kenny and Phoebe (and is currently training the dogs to become agility champions). She also loves gardening, sewing and snowboarding.</p>
-        <p><%= link_to("safetygoat.com", "http://safetygoat.com") %></p>
-        <%= partial "social_links", :locals => { :twitter_link => "kassy4", :facebook_link => false, :github_link => "kassy4" }  %>
-      </div>
-
+    <div class="member ollie">
+      <h3>Ollie Kavanagh</h3>
+      <!-- <h4>Designer, coder, problem solver</h4> -->
+      <p>Ollie is a rare designer: he is equally comfortable designing beautiful, elegant interfaces (with superb typography) as he is delving into the front-end code. A natural problem solver with over 10 years experience in both web and print, he eagerly takes on any challenge and works hard until he solves it. He is responsible for setting up processes for Capra&#8217;s technology. Ollie is constantly trying out new technologies to make his designs more beautiful and exciting.</p>
+      <p>Ollie is originally from England and has just immigrated to Canada! He is an avid Liverpool football supporter, has an unhealthy obsession with Nike trainers, loves DJing drum &amp; bass, hip-Hop and house music, and hopes to someday become an expert snowboarder.</p>
+      <p><%= link_to("olliekav.com", "http://olliekav.com") %></p>
+      <%= partial "social_links", :locals => { :twitter_link => "olliekav", :facebook_link => false, :github_link => "olliekav" }  %>
+    </div>
+    
+    <div class="member kat">
+      <h3>Kat Kavanagh</h3>
+      <!-- <h4>Designer, coder, ideas generator</h4> -->
+      <p>Kat loves coming up with new ideas. Her focus is on designing and building interfaces and games that are beautiful as well as engaging. With over 10 years experience in print and web design, she is obsessed with creating fun as well as clarity in her designs, and so user experience is always part of her process. She is also responsible for more of the business operations at Capra.</p>
+      <p>Kat is known for being incredibly enthusiastic and passionate about everything she does, and she pours this passion into creating great experiences for people. She has just returned to Canada after 8 years in England. She loves Canada&#8217;s great outdoors especially hiking with the family dogs, Kenny and Phoebe (and is currently training the dogs to become agility champions). She also loves gardening, sewing and snowboarding.</p>
+      <p><%= link_to("safetygoat.com", "http://safetygoat.com") %></p>
+      <%= partial "social_links", :locals => { :twitter_link => "kassy4", :facebook_link => false, :github_link => "kassy4" }  %>
     </div>
 
   </div>
   
-  <figure class="client-blockquote narrow">
-    <blockquote class="anim-block">
-      <p>Kat has a unstoppable drive, a wonderful eye for detail, and is a great pleasure to work and collaborate with.</p></blockquote>
-    <figcaption class="anim-block">
+  <figure class="client-blockquote">
+    <blockquote>
+      <p>Kat has a unstoppable drive, a wonderful eye for detail, and is a great pleasure to work and collaborate with.</p>
+    </blockquote>
+    <figcaption>
       Jaison Green, iOS developer and partner-in-crime for <a href="http://thisiscapra.com/work/super-better/"> Superbetter app</a>
     </figcaption>
   </figure>

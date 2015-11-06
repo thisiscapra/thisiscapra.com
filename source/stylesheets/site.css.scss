@@ -13,24 +13,36 @@ html {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
+.turbolinks-progress-bar::before {
+  background-color: $pantone-green !important;
+  height: 5px !important;
+}
 body {
   background-color: #fff;
   color: $dark-grey;
   font: 300 150.0%/1.5 $sentinel;
-  margin: 0 auto;
   position: relative;
   width:100%;
   @media screen and (max-width: 1350px) {
-    font-size: 112.5%;
+    font-size: 125%;
   }
   @media screen and (max-width: 1150px) {
+    font-size: 112.5%;
+  }
+  @media screen and (max-width: 1000px) {
     font-size: 100%;
   }
 }
 .wrapper {
   margin: 0 auto;
+  max-width: 1600px;
   position: relative;
   width: 92%;
+  @media screen and (max-width: 600px) {
+    max-width: 100%;
+    padding: 0 8%;
+    width: 100%;
+  }
 }
 section {
   padding: gs-gutter(cap, false, true) 0;
@@ -48,12 +60,6 @@ hr {
   margin: 6em 0 6em;
   width: 100%;
 }
-.row {
-  margin: 0 auto;
-  text-align: left;
-  width: 100%;
-  @extend %clearfix;
-}
 .section-header {
   margin-bottom: 12%;
   > p {
@@ -61,6 +67,10 @@ hr {
     padding: 0 gs-gutter(cap, false, true);
     text-align: center;
     width: gs-width(cap, 2, 6, false, true);
+    @media screen and (max-width: 600px) {
+      padding: 0;
+      width: 100%;
+    }
   }
 }
 
@@ -75,25 +85,29 @@ h1, h2, h3, h4,
 }
 h1 {
   font-size: 10vw;
-  line-height: 1.166;
+  line-height: 0.9;
   margin-bottom: 0.25em;
   text-align: center;
-  @media screen and (max-width: 550px) {
-    font-size: 2.6em;
-  }
-  @media screen and (max-width: 450px) {
-    font-size: 2.4em;
+  @media screen and (max-width: 600px) {
+    font-size: 18vw;
   }
 }
 h2 {
   font-size: 7vw;
   line-height: 0.9;
   margin: 0 0 0.25em;
+  @media screen and (max-width: 600px) {
+    font-size: 14vw;
+  }
 }
 h3 {
   font-size: 3.2em;
   line-height: 1.2;
   margin: -0.3em 0 0.9em;
+  @media screen and (max-width: 600px) {
+    line-height: 1;
+    margin: 0 0 0.6em;
+  }
 }
 h4 {
   font-size: 2em;
@@ -127,6 +141,13 @@ blockquote {
   position: relative;
   text-align: center;
   width: gs-width(cap,2,6,false,true);
+  @media screen and (max-width: 1000px) {
+    width: gs-width(cap,1,7,false,true);
+  }
+  @media screen and (max-width: 600px) {
+    letter-spacing: -1px;
+    font-size: 1.2em;
+  }
   p {
     margin-bottom: 1em;
     &:before {
@@ -151,7 +172,7 @@ a {
   color: $dark-grey;
   @include transition(color 0.2s ease);
   &:hover {
-    color: $pantone-green;
+    color: $dark-grey;
     text-decoration: none;
   }
 }
@@ -181,7 +202,7 @@ a {
 
 input, textarea {
   background-color: #fff;
-  border: 1px solid #e1e1e1;
+  border: 1px solid $dark-grey;
   border-radius: 0;
   box-shadow: none;
   display: block;
@@ -251,7 +272,7 @@ fieldset {
 .button {
   background-color: $pantone-green;
   border: none;
-  border-radius: 0.5em;
+  border-radius: 0;
   color: #fff;
   display: inline-block;
   font-family: $quatro;
@@ -278,6 +299,9 @@ fieldset {
 .site-header {
   padding: gs-gutter(cap, false, true) 0;
   @extend %clearfix;
+  @media screen and (max-width: 600px) {
+    padding: 8% 0;
+  }
 }
 
 // Footer 
@@ -287,6 +311,9 @@ fieldset {
   text-align: center;
   padding: gs-gutter(cap, false, true) 0;
   width: gs-width(cap,2,6,false,true);
+  @media screen and (max-width: 600px) {
+    padding: 8% 0;
+  }
   .page-nav {
     margin: 0;
     list-style: none;
@@ -308,6 +335,11 @@ fieldset {
 .logo {
   @include gs-span(cap,1,false);
   @include transition(fill 0.3s ease-in-out);
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0;
+    width: 100px;
+  }
   svg {
     width: 60%;
   }
@@ -339,11 +371,69 @@ fieldset {
         font-family: $quatro;
         font-weight: 800;
         text-decoration: none;
+        &:hover,
         &.active {
           color: $pantone-green;
         }
       }
     }
+  }
+  @media screen and (max-width: 600px) {
+    .page-nav {
+      background-color: rgba($pantone-green, 0.9);
+      bottom: 0;
+      float: none;
+      left: 0;
+      height: 0;
+      margin: 0;
+      //opacity: 0;
+      padding-top: 12%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      visibility: hidden;
+      @include transform(translate3d(0,0,0));
+      @include transition(all .3s ease-in-out);
+      li {
+        display: block;
+        text-align: center;
+        margin: 0 0 0.2em;
+        opacity: 0;
+        width: 100%;
+        @include transition(all .3s ease-in-out);
+        a {
+          color: $white;
+          &.active,
+          &:hover {
+            color: $dark-grey;
+          }
+        }
+        &:not(.social) {
+          font-size: 2em;
+        }
+      }
+      .resp & {
+        height: 100%;
+        opacity: 1;
+        visibility: visible;
+        li {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+// Resp link
+.resp-nav {
+  display: none;
+  position: absolute;
+  right: 8%;
+  top: 2em;
+  z-index: 1000;
+  @media screen and (max-width: 600px) {
+    display: block;
   }
 }
 
@@ -359,11 +449,16 @@ fieldset {
     position: relative;
     text-align: left;
     @include gs-span(cap,3,5);
+    @media screen and (max-width: 600px) {
+      float: none;
+      margin: 0 0 1em;
+      width: 100%;
+    }
     span {
       display: block;
       &:nth-child(2) {
         position: relative;
-        z-index: 2;
+        z-index: 3;
         &:after {
           content: "Goats";
           display: block;
@@ -381,24 +476,39 @@ fieldset {
         margin-top: -0.6em;
         position: absolute;
         @include transform(rotate(-17deg));
-        z-index: 2;
+        z-index: 4;
         .char5 {
           margin-left: -0.25em;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 16vw;
+          left: -0.2em;
         }
       }
     }
   }
   svg {
-    left: 43%;
+    left: gs-marginleft(cap, 4, false, true);
     position: absolute;
     top: -15%;
-    width: 35%;
+    width: gs-width(cap, 3, 5, false, true);
     z-index: 1;
+    @media screen and (max-width: 600px) {
+      left: gs-marginleft(cap, 3, false, true);
+      top: -12%;
+      width: gs-width(cap, 3, 7, false, true);
+    }
   }
   p {
     clear: both;
+    margin-top: gs-gutter(cap, false, true);
     @extend %first-letter;
     @include gs-span(cap,4,6);
+    @media screen and (max-width: 600px) {
+      float: none;
+      margin: gs-gutter(cap, false, true) 0;
+      width: 100%;
+    }
   }
 }
 .featured-projects {
@@ -409,7 +519,11 @@ fieldset {
     position: relative;
     z-index: 4;
     @include gs-span(cap,2,4);
-    //width: gs-width(cap, 1, 3, false, true);
+    @media screen and (max-width: 600px) {
+      float: none;
+      margin: 0 0 8%;
+      width: 100%;
+    }
   }
   article {
     float: none !important;
@@ -418,6 +532,16 @@ fieldset {
       content: "";
       clear: both;
       width: 100%;
+    }
+    img {
+      opacity: 1;
+      position: relative;
+      @include transition(opacity 0.3s ease-in-out);
+    }
+    &:hover {
+      img {
+        opacity: 0.8;
+      }
     }
   }
   h3 {
@@ -429,20 +553,35 @@ fieldset {
     position: absolute;
     width: gs-width(cap, 1, 4, false, true);
     @include transform(rotate(-10deg));
+    @media screen and (max-width: 600px) {
+      bottom: 0.2em;
+      font-size: 2em;
+      letter-spacing: -4px;
+    }
   }
 }
 .ft-pantera {
-  margin-bottom: 8%;
+  margin-bottom: 12%;
   @include gs-span(cap,3,7);
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0 0 8%;
+    width: 100%;
+  }
   z-index: 3;
   h3 {
     color: $pantera-color;
   }
 }
 .ft-alfred-app {
-  margin-bottom: 8%;
+  margin-bottom: 12%;
   @include gs-span(cap,1,5);
   z-index: 2;
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0 0 8%;
+    width: 100%;
+  }
   h3 {
     color: $alfred-color;
   }
@@ -450,6 +589,11 @@ fieldset {
 .ft-sports-digest-8-50 {
   @include gs-span(cap,2,6);
   z-index: 1;
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0 0 8%;
+    width: 100%;
+  }
   h3 {
     color: $sports-digest-color;
   }
@@ -459,9 +603,19 @@ fieldset {
   h3 {
     @include gs-span(cap,5,7);
     @include gs-float(cap, right);
+    @media screen and (max-width: 600px) {
+      float: none;
+      margin: 0 0 4%;
+      width: 100%;
+    }
   }
   .content {
     @include gs-span(cap,2,4);
+    @media screen and (max-width: 600px) {
+      float: none;
+      margin: 0 0 4%;
+      width: 100%;
+    }
     > p:first-child {
       @extend %first-letter;
     }
@@ -476,7 +630,7 @@ fieldset {
   margin: 0;
   padding: 0;
   h2 {
-    word-wrap: break-word;
+    white-space: pre-wrap;
   }
   p {
     font-family: $quatro;
@@ -485,19 +639,36 @@ fieldset {
   }
   .content {
     padding-top: gs-gutter(cap, false, true);
+    position: relative;
     width: gs-width(cap, 1, 3, false, true);
+    @media screen and (max-width: 600px) {
+      text-align: center;
+      position: absolute;
+      bottom: -3em;
+      width: 100%;
+      z-index: 10;
+    }
   }
   > li {
     margin-bottom: 4em;
+    position: relative;
     @extend %clearfix;
     &:nth-child(1),
     &:nth-child(4),
     &:nth-child(7) {
       img {
         @include gs-span(cap,3,7);
+        @media screen and (max-width: 600px) {
+          float: none;
+          margin: 0;
+          width: 100%;
+        }
       }
       .content {
         margin-left: gs-marginleft(cap, 2, false, true);
+        @media screen and (max-width: 600px) {
+          margin: 0;
+        }
       }
     } 
     &:nth-child(2),
@@ -505,9 +676,17 @@ fieldset {
     &:nth-child(8) {
       img {
         @include gs-span(cap,1,5);
+        @media screen and (max-width: 600px) {
+          float: none;
+          margin: 0;
+          width: 100%;
+        }
       }
       .content {
         margin-left: gs-marginleft(cap, 4, false, true);
+        @media screen and (max-width: 600px) {
+          margin: 0;
+        }
       }
     }
     &:nth-child(3),
@@ -515,9 +694,27 @@ fieldset {
     &:nth-child(9) {
       img {
         @include gs-span(cap,2,6);
+        @media screen and (max-width: 600px) {
+          float: none;
+          margin: 0 0 8%;
+          width: 100%;
+        }
       }
       .content {
         margin-left: gs-marginleft(cap, 5, false, true);
+        @media screen and (max-width: 600px) {
+          margin: 0;
+        }
+      }
+    }
+    img {
+      opacity: 1;
+      position: relative;
+      @include transition(opacity 0.3s ease-in-out);
+    }
+    &:hover {
+      img {
+        opacity: 0.8;
       }
     }
   }
@@ -526,56 +723,56 @@ fieldset {
 // Work / Labs detail page
 
 body.alfred-app {
-  @include colour-scheme($alfred-color, alfred-app/alfred-app-featured);
+  @include colour-scheme($alfred-color, work, alfred-app/alfred-app-featured);
 }
 
 body.sports-digest-8-50 {
-  @include colour-scheme($sports-digest-color, sports-digest-8-50/50-featured);
+  @include colour-scheme($sports-digest-color, work, sports-digest-8-50/50-featured);
 }
 
 body.alton-convent-school {
-  @include colour-scheme($alton-convent-color, alton-convent-school/alton-convent-featured);
+  @include colour-scheme($alton-convent-color, work, alton-convent-school/alton-convent-featured);
 }
 
 body.mind-the-product {
-  @include colour-scheme($mtp-color, mind-the-product/mind-the-product-featured);
+  @include colour-scheme($mtp-color, work, mind-the-product/mind-the-product-featured);
 }
 
 body.backpagefootball {
-  @include colour-scheme($backpagefootball-color, backpagefootball/backpagefootball-featured);
+  @include colour-scheme($backpagefootball-color, work, backpagefootball/backpagefootball-featured);
 }
 
 body.toto {
-  @include colour-scheme($toto-color, toto/toto-featured);
+  @include colour-scheme($toto-color, work, toto/toto-featured);
 }
 
 body.cold-claim {
-  @include colour-scheme($cold-claim-color, cold-claim/cold-claim-featured);
+  @include colour-scheme($cold-claim-color, work, cold-claim/cold-claim-featured);
 }
 
 body.super-better {
-  @include colour-scheme($super-better-color, super-better/super-better-featured);
+  @include colour-scheme($super-better-color, work, super-better/super-better-featured);
 }
 
 body.pantera {
-  @include colour-scheme($pantera-color, pantera/pantera-featured);
+  @include colour-scheme($pantera-color, work, pantera/pantera-featured);
 }
 
 body.river-ranger {
-  @include colour-scheme($river-ranger-color, river-ranger-featured);
+  @include colour-scheme($river-ranger-color, labs, river-ranger/river-ranger-featured);
 }
 
 body.hip-hop-quoted {
-  @include colour-scheme($hip-hop-quoted-color, hip-hop-quoted/hip-hop-quoted-featured);
+  @include colour-scheme($hip-hop-quoted-color, labs, hip-hop-quoted/hip-hop-quoted-featured);
 }
 
 body.dragimals {
-  @include colour-scheme($dragimals-color, dragimals/dragimals-featured);
+  @include colour-scheme($dragimals-color, labs, dragimals/dragimals-featured);
 }
 
 .work-header {
   margin-bottom: 8%;
-  padding: 8% 0 12%;
+  padding: 4% 0 12%;
   text-align: center;
   @extend %clearfix;
   h1 {
@@ -587,27 +784,198 @@ body.dragimals {
   }
 }
 .work-content {
-  @include gs-span(cap,2,6);
+  background-color: $white;
   margin-bottom: 8%;
+  padding: 8% gs-marginleft(cap, 2, false, true) 0;
   @extend %clearfix;
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0 0 8%;
+    width: 100%;
+  }
+  + hr {
+    margin: 6em auto;
+    width: gs-width(cap, 2, 6, false, true);
+  }
 }
 .work-intro {
   @include gs-span(cap,1,3,(2,6));
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0 0 8%;
+    width: 100%;
+  }
 }
 .what-we-did {
   @include gs-span(cap,5,7,(2,6));
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0 0 8%;
+    width: 100%;
+  }
 }
 .gallery {
   text-align: center;
   hr {
     margin: 6em auto;
   }
-  hr, p {
+  >hr, >p {
     text-align: center;
     width: gs-width(cap, 2, 6, false, true);
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
   figure {
     margin-bottom: 8%;
+  }
+}
+.hire {
+  font-family: $quatro;
+  font-size: 3em;
+  font-weight: 800;
+  text-align: center;
+  @media screen and (max-width: 600px) {
+    font-size: 1.6em;
+  }
+}
+
+// About
+
+.about {
+  @media screen and (min-width: 600px) {
+    h1, h2 {
+      margin-bottom: 8%;
+      font-size: 4.167em;
+    }
+  }
+}
+.about-header {
+  margin-bottom: 8%;
+  @extend %clearfix;
+  h1 {
+    font-size: 4.167em;
+    margin: 0 0 8% gs-marginleft(cap, 2, false, true);
+    width: gs-width(cap, 2, 5, false, true);
+    text-align: left;
+    @media screen and (max-width: 600px) {
+      margin: 0 0 8% 0;
+      font-size: 3.2em;
+      width: 100%;
+    }
+  }
+  .content {
+    @include gs-span(cap,4,6);
+    @media screen and (max-width: 600px) {
+      float: none;
+      margin: 0 0 8%;
+      width: 100%;
+    }
+  }
+  svg {
+    margin-top: -4em;
+    @include gs-span(cap,1,3);
+    @media screen and (max-width: 600px) {
+      float: none;
+      margin: 0 0 8%;
+      width: 100%;
+    }
+  }
+}
+.what-we-do {
+  margin: 0 0 8% gs-marginleft(cap, 2, false, true);
+  @extend %clearfix;
+  @media screen and (max-width: 600px) {
+    margin: 0 0 8%;
+  }
+}
+.what-we-do-intro {
+  @include gs-span(cap,1,3, (2,7));
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0 0 8%;
+    width: 100%;
+  }
+}
+.what-we-do-process {
+  font-size: 0.8em;
+  @include gs-span(cap,5,6, (2,7));
+  @media screen and (max-width: 600px) {
+    float: none;
+    font-size: 1em;
+    margin: 0 0 8%;
+    width: 100%;
+  }
+}
+.why-capra {
+  margin: 0 0 8% gs-marginleft(cap, 2, false, true);
+  @media screen and (max-width: 600px) {
+    margin: 0 0 8%;
+  }
+  @extend %clearfix;
+  svg {
+    @include gs-span(cap,5,7,(2,7));
+    margin-top: -6em;
+    @media screen and (max-width: 600px) {
+      float: none;
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+.why-capra-intro {
+  @include gs-span(cap,2,4,(2,7));
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+}
+.the-tribe {
+  margin: 0 0 8% 0;
+  position: relative;
+  @extend %clearfix;
+  img {
+    @include gs-span(cap,1,5);
+    @media screen and (max-width: 600px) {
+      float: none;
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .content {
+    left: gs-marginleft(cap, 5, false, true);
+    position: absolute;
+    top: 16%;
+    width: gs-width(cap, 5, 7, false, true);
+    @media screen and (max-width: 600px) {
+      left: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+.team-members {
+  margin: 0 0 8% gs-marginleft(cap, 2, false, true);
+  @extend %clearfix;
+  @media screen and (max-width: 600px) {
+    margin: 0 0 8%;
+  }
+}
+.ollie {
+  @include gs-span(cap,2,4,(2,7));
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0 0 8%;
+    width: 100%;
+  }
+}
+.kat {
+  @include gs-span(cap,5,7,(2,7));
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0 0 8%;
+    width: 100%;
   }
 }
 
@@ -638,4 +1006,55 @@ body.dragimals {
     margin: 0 auto 1.5em;
     width: gs-width(cap, 2, 6, (2,6), true);
   }
+}
+
+// Contact page
+
+.contact {
+  .section-header {
+    margin-bottom: 4%;
+  }
+}
+.contact-menu {
+  list-style: none;
+  margin: 0 auto;
+  width: gs-width(cap, 2, 6, false, true);
+  @extend %clearfix;
+  li {
+    display: inline;
+    font: 800 2em/1 $quatro;
+    float: left;
+    text-align: center;
+    width: 50%;
+    &:hover,
+    &.active {
+      a {
+        color: $pantone-green;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.contact-form {
+  display: none;
+  margin: 4% auto;
+  width: gs-width(cap, 2, 6, false, true);
+  p {
+    text-align: center;
+  }
+  h2 {
+    font-size: 4.167em;
+    text-align: center;
+  }
+  h3 {
+    margin-top: 4%;
+    text-align: center;
+  }
+  &.active {
+    display: block;
+  }
+}
+.email-contact {
+  margin-top: 4%;
+  text-align: center;
 }
