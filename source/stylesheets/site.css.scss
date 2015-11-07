@@ -1,6 +1,7 @@
+@import "partials/gridset.scss";
 @import "partials/common.scss";
 @import "partials/normalize.css";
-@import "partials/gridset.scss";
+
 
 // Basic layout setup
 
@@ -79,7 +80,7 @@ hr {
 h1, h2, h3, h4, 
 // .intro:first-of-type:first-letter, 
 .blog-entry .content>p:first-of-type:first-letter {
-  font-family: $quatro;
+  font-family: $quarto;
   font-weight: 800;
   margin: 0;
 }
@@ -103,7 +104,7 @@ h2 {
 h3 {
   font-size: 3.2em;
   line-height: 1.2;
-  margin: -0.3em 0 0.9em;
+  margin: 0 0 0.6em;
   @media screen and (max-width: 600px) {
     line-height: 1;
     margin: 0 0 0.6em;
@@ -275,7 +276,7 @@ fieldset {
   border-radius: 0;
   color: #fff;
   display: inline-block;
-  font-family: $quatro;
+  font-family: $quarto;
   font-weight: 800;
   font-size: 1.2em;
   margin: 0 auto;
@@ -368,7 +369,7 @@ fieldset {
         margin: 0;
       }
       a {
-        font-family: $quatro;
+        font-family: $quarto;
         font-weight: 800;
         text-decoration: none;
         &:hover,
@@ -387,7 +388,7 @@ fieldset {
       height: 0;
       margin: 0;
       //opacity: 0;
-      padding-top: 12%;
+      padding-top: 16%;
       position: absolute;
       right: 0;
       top: 0;
@@ -411,7 +412,10 @@ fieldset {
           }
         }
         &:not(.social) {
-          font-size: 2em;
+          font-size: 1.6em;
+          @media screen and (max-width: 320px) {
+            display: block;
+          }
         }
       }
       .resp & {
@@ -429,12 +433,96 @@ fieldset {
 .resp-nav {
   display: none;
   position: absolute;
-  right: 8%;
-  top: 2em;
+  right: 6%;
+  top: 3em;
   z-index: 1000;
   @media screen and (max-width: 600px) {
     display: block;
   }
+}
+.c-hamburger {
+  background: none;
+  overflow: hidden;
+  margin: 4% 0 0;
+  padding: 0;
+  width: $button-width;
+  height: $button-height;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  transition: all $button-transistion-duration;
+  @include transform(translate3d(0, 0, 0));
+}
+.c-hamburger:focus {
+  outline: none;
+}
+.c-hamburger span {
+  border-radius: 20px;
+  display: block;
+  position: absolute;
+  top: ($button-height / 2) - ($bar-thickness / 2);
+  left: $button-pad;
+  right: $button-pad;
+  height: $bar-thickness;
+  background: $dark-grey;
+}
+.c-hamburger span::before,
+.c-hamburger span::after {
+  border-radius: 20px;
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: $bar-thickness;
+  background-color: $dark-grey;
+  content: "";
+}
+.c-hamburger span::before {
+  top: -$bar-thickness - $button-bar-space;
+}
+.c-hamburger span::after {
+  bottom: -$bar-thickness - $button-bar-space;
+}
+.c-hamburger--htx {
+  //background-color: rgb(255,50,100);
+}
+.c-hamburger--htx span {
+  @include transition(background 0s $button-transistion-duration);
+  @include transform(translate3d(0, 0, 0));
+}
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  transition-duration: $button-transistion-duration, $button-transistion-duration;
+  transition-delay: $button-transistion-duration, 0s;
+  @include transform(translate3d(0, 0, 0));
+}
+.c-hamburger--htx span::before {
+  transition-property: top, transform;
+}
+.c-hamburger--htx span::after {
+  transition-property: bottom, transform;
+}
+.c-hamburger--htx.is-active span {
+  background: none;
+}
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  @include transform(rotate(45deg));
+}
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  @include transform(rotate(-45deg));
+}
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+  transition-delay: 0s, $button-transistion-duration;
+  background-color: $white;
 }
 
 // Homepage
@@ -482,6 +570,7 @@ fieldset {
         }
         @media screen and (max-width: 600px) {
           font-size: 16vw;
+          letter-spacing: -5px;
           left: -0.2em;
         }
       }
@@ -493,6 +582,9 @@ fieldset {
     top: -15%;
     width: gs-width(cap, 3, 5, false, true);
     z-index: 1;
+    path {
+      visibility: hidden;
+    }
     @media screen and (max-width: 600px) {
       left: gs-marginleft(cap, 3, false, true);
       top: -12%;
@@ -557,6 +649,9 @@ fieldset {
       bottom: 0.2em;
       font-size: 2em;
       letter-spacing: -4px;
+    }
+    @media screen and (max-width: 400px) {
+      right: 0.5em;
     }
   }
 }
@@ -633,7 +728,7 @@ fieldset {
     white-space: pre-wrap;
   }
   p {
-    font-family: $quatro;
+    font-family: $quarto;
     font-size: 1.4em;
     font-weight: 800;
   }
@@ -642,11 +737,12 @@ fieldset {
     position: relative;
     width: gs-width(cap, 1, 3, false, true);
     @media screen and (max-width: 600px) {
+      padding-top: 0;
       text-align: center;
-      position: absolute;
-      bottom: -3em;
       width: 100%;
-      z-index: 10;
+      h2 {
+        font-size: 3em;
+      }
     }
   }
   > li {
@@ -660,7 +756,7 @@ fieldset {
         @include gs-span(cap,3,7);
         @media screen and (max-width: 600px) {
           float: none;
-          margin: 0;
+          margin: 0 0 8%;
           width: 100%;
         }
       }
@@ -678,7 +774,7 @@ fieldset {
         @include gs-span(cap,1,5);
         @media screen and (max-width: 600px) {
           float: none;
-          margin: 0;
+          margin: 0 0 8%;
           width: 100%;
         }
       }
@@ -727,7 +823,7 @@ body.alfred-app {
 }
 
 body.sports-digest-8-50 {
-  @include colour-scheme($sports-digest-color, work, sports-digest-8-50/50-featured);
+  @include colour-scheme($sports-digest-color, work, sports-digest-8-50/8-50-featured);
 }
 
 body.alton-convent-school {
@@ -784,13 +880,16 @@ body.dragimals {
   }
 }
 .work-content {
-  background-color: $white;
   margin-bottom: 8%;
   padding: 8% gs-marginleft(cap, 2, false, true) 0;
   @extend %clearfix;
+  @media screen and (min-width: 1600px) {
+    background-color: $white;
+  }
   @media screen and (max-width: 600px) {
     float: none;
     margin: 0 0 8%;
+    padding: 0;
     width: 100%;
   }
   + hr {
@@ -831,12 +930,55 @@ body.dragimals {
   }
 }
 .hire {
-  font-family: $quatro;
+  font-family: $quarto;
   font-size: 3em;
   font-weight: 800;
   text-align: center;
   @media screen and (max-width: 600px) {
     font-size: 1.6em;
+  }
+}
+.work-nav {
+  list-style: none;
+  left: 0;
+  margin: 0;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  @extend %clearfix;
+  li {
+    font-size: 0.9em;
+    a {
+      border-radius: 100%;
+      cursor: pointer;
+      display: inline-block;
+      font-family: $quarto;
+      font-weight: 800;
+      font-size: 1.6em;
+      height: 50px;
+      margin-top: -25px;
+      line-height: 42px;
+      text-decoration: none;
+      text-align: center;
+      width: 50px;
+      @media screen and (max-width: 600px) {
+        height: 30px;
+        margin-top: -15px;
+        line-height: 25px;
+        width: 30px;
+      }
+    }
+    span {
+      display: none;
+    }
+    &.next {
+      float: right;
+      margin-right: 4%;
+    }
+    &.prev {
+      float: left;
+      margin-left: 4%;
+    }
   }
 }
 
@@ -855,6 +997,7 @@ body.dragimals {
   @extend %clearfix;
   h1 {
     font-size: 4.167em;
+    line-height: 1;
     margin: 0 0 8% gs-marginleft(cap, 2, false, true);
     width: gs-width(cap, 2, 5, false, true);
     text-align: left;
@@ -950,6 +1093,8 @@ body.dragimals {
     width: gs-width(cap, 5, 7, false, true);
     @media screen and (max-width: 600px) {
       left: 0;
+      margin-top: 4%;
+      position: relative;
       text-align: center;
       width: 100%;
     }
@@ -989,13 +1134,25 @@ body.dragimals {
     font-size: 2.8em;
     line-height: 1.2;
   }
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    h2 {
+      font-size: 2em;
+    }
+  }
 }
 .blog {
   margin: 0 auto;
   width: gs-width(cap, 2, 6, false, true);
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 }
 .blog-entry h1 {
   font-size: 4.2em;
+  @media screen and (max-width: 600px) {
+    font-size: 3em;
+  }
 }
 .meta {
   margin-bottom: gs-gutter(cap, false, true);
@@ -1005,6 +1162,9 @@ body.dragimals {
   p {
     margin: 0 auto 1.5em;
     width: gs-width(cap, 2, 6, (2,6), true);
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
 }
 
@@ -1020,9 +1180,12 @@ body.dragimals {
   margin: 0 auto;
   width: gs-width(cap, 2, 6, false, true);
   @extend %clearfix;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
   li {
     display: inline;
-    font: 800 2em/1 $quatro;
+    font: 800 2em/1 $quarto;
     float: left;
     text-align: center;
     width: 50%;
@@ -1039,6 +1202,9 @@ body.dragimals {
   display: none;
   margin: 4% auto;
   width: gs-width(cap, 2, 6, false, true);
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
   p {
     text-align: center;
   }

@@ -12,7 +12,7 @@ published: true
 
 So when we decided to rebuild the Capra website we had a big decision to make on technology. The old site was built in Wordpress and while we still love that and will use it on client projects ongoing it felt like overkill for our needs. We needed speed, ease of updating, ability to use pre-processors and a backend we were both familiar with. Static HTML generators seemed the way to go but we needed to overcome some hurdles first, the first decision was which one?
 
-##Enter the Middleman
+###Enter the Middleman
 
 I've been using [Middleman App](http://middlemanapp.com) for while now both on personal projects and client sites and I love it. It ticks all the boxes for me: 
 

@@ -1,6 +1,8 @@
-//= require "smooth-scroll.min.js"
-//= require "simplbox.min.js"
-//= require "turbolinks"
+//= require smooth-scroll.min
+//= require TweenMax.min
+//= require DrawSVGPlugin
+//= require simplbox
+//= require turbolinks
 
 if ( 'querySelector' in document && 'addEventListener' in window ) {
 
@@ -35,15 +37,32 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
       removeClass(html, 'resp');
     }
 
+    animations();
     scrollClass();
     contentTabs();
-    zoomImages();
+    respNav();
 
   };
 
+  animations = function() {
+    var tl = new TimelineMax({ paused: true }),
+        subLayerPaths = document.querySelectorAll("#sub-lines path"),
+        subLayerArray = Array.prototype.slice.call(subLayerPaths),
+        topLayerPaths = document.querySelectorAll("#top-lines path"),
+        topLayerArray = Array.prototype.slice.call(topLayerPaths);
+    if(subLayerPaths.length > 0 || topLayerPaths.length > 0) {
+      tl.set([subLayerPaths,topLayerPaths], { drawSVG: 0, visibility:"visible", force3D: true })
+    }
+    if(subLayerPaths.length > 0 || topLayerPaths.length > 0) {
+      tl
+        .to(subLayerPaths,2,{ drawSVG: "100%" })
+        .to(topLayerPaths,3,{ drawSVG: "100%" })
+    }
+    tl.restart();
+  }
+
   scrollClass = function(e) {
     document.addEventListener('scroll', function() {
-      //console.log('scrolling')
       var scrollTop = (document.documentElement.scrollTop||document.body.scrollTop),
           body = document.querySelector('body'),
           headerHeight = document.querySelector('.site-header').offsetHeight;
@@ -85,39 +104,36 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     });
   }
 
-  // Zoom images on blog posts
-  zoomImages = function(e) {
-    var links = document.querySelectorAll("[data-simplbox]");
-    var simplbox = new SimplBox(links);
-    //console.log(simplbox)
-    simplbox.init();
-  }
-
   // Responsive navigation class
-  respNav = function(e) {
-    if(e.target && e.target.className === "resp-nav") {
+  respNav = function() {
+    var respMenu = document.querySelector('.resp-nav');
+    respMenu.addEventListener("click", function(e) {
       e.preventDefault();
       if(hasClass(html, 'resp')) {
+        this.classList.remove("is-active")
         removeClass(html, 'resp')
       } else {
+        this.classList.add("is-active")
         addClass(html, 'resp')
       }
-    }
-    if(e.target && e.target.className === "resp-nav") {
-
-    }
+    });
   }
 
   document.addEventListener("DOMContentLoaded", function() {
     ready();
-    window.addEventListener("click", respNav);
   }, false);
 
   document.addEventListener("page:before-change", function() {
     if(hasClass(html, 'resp')) {
       removeClass(html, 'resp');
+      document.querySelector('.resp-nav').classList.remove("is-active")
     }
+    ready();
   });
+
+  document.addEventListener("page:load", function() {
+    ready();
+  }, false);
 
   // var triggerValue = function() {
   //   if(hasClass(body,'work_index')) {

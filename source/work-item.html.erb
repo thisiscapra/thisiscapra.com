@@ -66,23 +66,3 @@ work_item: true
   <p class="hire">Like what you see? <%= link_to("Hire us", "/contact") %></p>
 
 </section>
-
-<section class="featured-projects other-work">
-
-  <ul class="work-list feature">
-    <% 
-      featured_clients = work_pages[0...9]
-      featured_clients.delete_if{|item| item.name == client.name }
-      #$stderr.puts featured_clients
-      featured_clients.sample(3).each do |f| %>
-      <li class="<%= f.url %> client">
-        <% link_to("/work/#{f.url}/") do %>
-          <% image_url = "#{f.image_path}/#{f.image_thumb}" %>
-          <%= image_tag(image_url, :alt => "") %>
-          <h2><%= f.name %></h2>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
-
-</section>

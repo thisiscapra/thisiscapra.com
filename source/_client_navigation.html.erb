@@ -1,13 +1,13 @@
 <%# work_pages = sitemap.where(:work_item => true).order_by(current_page.data.weight).all %>
-<%# work_pages = data.work_items.clients %>
+<% work_pages = data.work_items.clients %>
 <ul class="work-nav">
   <% work_pages.each_with_index do |p, index| %>
     <% current_url = "/#{url}/#{p.url}/" %>
-    <% if current_url == current_page.url %>
+    <% if current_url == current_resource.url %>
       <% next_page = work_pages[index+1]  %>
       <% prev_page = work_pages[index-1] %>
-      <%= content_tag(:li, link_to("← <span>Prev</span>", "/#{url}/#{prev_page.url}/"), class: "prev#{' last' if index == work_pages.size - 1}") unless index == 0 %>
-      <%= content_tag(:li, link_to("<span>Next</span> →", "/#{url}/#{next_page.url}/"), class: "next#{' first' if index == 0}") unless index == work_pages.size - 1 %>
+      <%= content_tag(:li, link_to("‹ <span>Prev</span>", "/#{url}/#{prev_page.url}/"), class: "prev#{' last' if index == work_pages.size - 1}") unless index == 0 %>
+      <%= content_tag(:li, link_to("<span>Next</span> ›", "/#{url}/#{next_page.url}/"), class: "next#{' first' if index == 0}") unless index == work_pages.size - 1 %>
     <% end %>
   <% end %>
 </ul>

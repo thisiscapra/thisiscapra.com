@@ -2,12 +2,12 @@
   <% if page("index.html") %>
     <h3>Our clients love us!</h3>
   <% end %>
-  <blockquote class="anim-block">
+  <blockquote>
     <% if featured == true %>
       <p><%= client.featured_testimonial %></p>
     <% else %>
       <p><%= client.testimonial %></p>
     <% end %>
   </blockquote>
-  <figcaption class="anim-block"><%= client.cite %></figcaption>
+  <figcaption><%= client.cite %></figcaption>
 </figure>

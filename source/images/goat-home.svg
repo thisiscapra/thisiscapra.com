@@ -578,8 +578,7 @@
 		M275.5,345.1c-0.6,23.7,5.9,41.7,12.7,63.8c6.6,21.2,1.8,48.2,17.3,65.7"/>
 	<path fill="none" stroke="#009B77" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 		M89.2,446.6c34.1-27.4,69-58.7,66.2-105.6c-2-33.7,17.8-76.8,48.5-99.1c-29.7,21.3-56.8,60.2-70.3,92.2"/>
-	
-		<line fill="none" stroke="#009B77" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="187.5" y1="67.1" x2="207" y2="113.1"/>
+	<line fill="none" stroke="#009B77" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="187.5" y1="67.1" x2="207" y2="113.1"/>
 	<path fill="none" stroke="#009B77" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 		M166,98.1c12.9,12.5,19.7,27.9,27,44"/>
 	<path fill="none" stroke="#009B77" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="

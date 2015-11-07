@@ -15,7 +15,7 @@ I've been working on a new [Shopify](http://shopify.com) build for a client that
 
 The client wanted to take this a step further and have an index page for each parent page that would output a list of the child pages beneath it with an image, a title, an excerpt and a link through to the child page. This needed to be dynamic so it didn't require manual updating. Thankfully a workaround exists for this in the form of linklist objects.
 
-## Linklist objects
+### Linklist objects
 
 My approach to this was to create a 'page.index.liquid' layout that would be used for these index pages. I would then create a linklist loop that would capture the page name which matches the linklist name and output the objects(link) below it. 
 

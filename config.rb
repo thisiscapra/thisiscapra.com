@@ -122,6 +122,7 @@ activate :directory_indexes
 
 # Build-specific configuration
 configure :build do
+  
   # Minify CSS on build
   activate :minify_css
 
@@ -134,7 +135,7 @@ configure :build do
   activate :gzip
 
   # Use relative URLs
-  activate :relative_assets
+  # activate :relative_assets
   
   # Fix bug with build errors and typography fonts
   ignore 'fonts/*'

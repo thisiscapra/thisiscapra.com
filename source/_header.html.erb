@@ -2,6 +2,8 @@
   <%= partial "logo" %>
   <nav class="navigation" role="navigation">
     <%= partial "page_navigation", :locals => { :social => true } %>
-    <%= link_to("Menu", "#", class: "resp-nav") %>
+    <button class="resp-nav c-hamburger c-hamburger--htx">
+      <span>Menu</span>
+    </button>
   </nav>
 </header>

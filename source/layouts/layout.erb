@@ -18,15 +18,10 @@
   <%#= stylesheet_link_tag "highlighting.css" %>
   <%= javascript_include_tag "application" %>
   <%= yield_content :javascript %>
-  <script>
-    // Turbolinks.ProgressBar.enable();
-    // Turbolinks.enableTransitionCache();
-  </script>
   <!--[if lt IE 9]>
     <%= javascript_include_tag("html5shiv.min.js") %>
   <![endif]-->
   <% if app.development? %>
-    <!-- <link rel="stylesheet" href="http://basehold.it/24/255/42/85/0.5"> -->
     <script src="https://get.gridsetapp.com/34301/overlay/"></script>
     <style>
       .gridsetoverlaywrap {
@@ -59,6 +54,5 @@
     </main>
     <%= partial "footer" %>
   </div>
-  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>

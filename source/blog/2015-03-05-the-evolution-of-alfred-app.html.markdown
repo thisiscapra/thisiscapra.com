@@ -26,7 +26,12 @@ The next thing we needed to work on was the website. It had to be simple (reflec
 
 It went down quite well within the design community, even drawing the attention of a few 'web celebrities'!
 
-<blockquote class="twitter-tweet" lang="en"><p>Beautiful, simple, focused site: http://www.alfredapp.com</p>&mdash; Jason Fried (@jasonfried) <a href="https://twitter.com/jasonfried/status/10207292828">March 9, 2010</a></blockquote>
+<figure class="client-blockquote">
+  <blockquote>
+    <p>Beautiful, simple, focused site: alfredapp.com</p>
+  </blockquote>
+  <figcaption><a href="https://twitter.com/jasonfried/status/10207292828">Jason Fried (@jasonfried) March 9, 2010</a></figcaption>
+</figure>
 
 ###Alfred grows up - v1
 
