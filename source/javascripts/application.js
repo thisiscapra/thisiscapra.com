@@ -47,16 +47,14 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
   animations = function() {
     var tl = new TimelineMax({ paused: true }),
         subLayerPaths = document.querySelectorAll("#sub-lines path"),
-        subLayerArray = Array.prototype.slice.call(subLayerPaths),
-        topLayerPaths = document.querySelectorAll("#top-lines path"),
-        topLayerArray = Array.prototype.slice.call(topLayerPaths);
+        topLayerPaths = document.querySelectorAll("#top-lines path")
     if(subLayerPaths.length > 0 || topLayerPaths.length > 0) {
       tl.set([subLayerPaths,topLayerPaths], { drawSVG: 0, visibility:"visible", force3D: true })
     }
     if(subLayerPaths.length > 0 || topLayerPaths.length > 0) {
       tl
-        .to(subLayerPaths,2,{ drawSVG: "100%" })
-        .to(topLayerPaths,3,{ drawSVG: "100%" })
+        .to(subLayerPaths,2,{ drawSVG: "100%", delay:.5 })
+        .to(topLayerPaths,3,{ drawSVG: "100%", delay:.5 })
     }
     tl.restart();
   }
