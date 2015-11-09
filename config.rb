@@ -39,6 +39,8 @@ end
 # Blog
 ###
 
+activate :syntax, line_numbers: true
+
 activate :blog do |blog|
   blog.layout = "blog"
   blog.prefix = "blog"

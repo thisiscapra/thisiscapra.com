@@ -11,11 +11,11 @@
   <link href="/images/favicon.ico" rel="shortcut icon"></link>
   <% if app.development? %>
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/613266/css/fonts.css" />
-  <% elsif build? %>
+  <% elsif app.build? %>
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/642046/css/fonts.css" />
   <% end %>
   <%= stylesheet_link_tag "site.css" %>
-  <%#= stylesheet_link_tag "highlighting.css" %>
+  <%= stylesheet_link_tag "highlighting.css" %>
   <%= javascript_include_tag "application" %>
   <%= yield_content :javascript %>
   <!--[if lt IE 9]>
