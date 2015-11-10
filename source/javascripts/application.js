@@ -1,5 +1,4 @@
 //= require smooth-scroll.min
-//= require ScrollMagic.min
 //= require TweenMax.min
 //= require animation.gsap.min
 //= require DrawSVGPlugin
@@ -174,103 +173,5 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
   document.addEventListener("page:load", function() {
     ready();
   }, false);
-
-  // var triggerValue = function() {
-  //   if(hasClass(body,'work_index')) {
-  //     if(windowWidth < 450) {
-  //       triggerAmount = 0.3;
-  //       contentBlockOffset = -50;
-  //     }
-  //   }
-  // }
-
-  // triggerValue();
-
-  // window.addEventListener('resize', function(){
-  //   triggerValue();
-  // }, true);
-
-  // Set up Scroll Magic
-  // var controller = new ScrollMagic.Controller({
-  //   globalSceneOptions: {
-  //     triggerHook: triggerAmount
-  //   }
-  // });
-  
-  // Animate the intros to each page
-  // if(sectionHeader) {
-  //   var it = new TimelineMax(),
-  //       animContent = '.anim-content';
-  //   it
-  //   .set(animContent, { force3D: true, transformOrigin: "center center" })
-  //   .from(animContent, 1, { opacity: 1, scale: 1 }).to(animContent, 1, { opacity: 0, scale: 1.2 });
-  //   //var animBlock = document.querySelectorAll(".anim-content");
-  //   //var tween = TweenMax.to(animBlock, 1, { opacity: 0, transform: 'scale(1.5)' });
-  //   var homeScene = new ScrollMagic.Scene({
-  //     triggerElement: sectionHeader,
-  //     offset: -50, 
-  //     duration: 1500
-  //   })
-  //   .setTween(it)
-  //   //.addIndicators({name: "tween css class"})
-  //   .addTo(controller);
-  // }
-
-  // Animate featured projects
-  // if(featuredProjects) {
-  //   var ft = new TimelineMax();
-  //   ft
-  //   .set('.ft-anim', {opacity: 0, force3D: true})
-  //   .set('.ft-anim-content', {opacity: 0, top: 200, force3D: true})
-  //   .to('.ft-anim', 1, { opacity: 1 })
-  //   .to('.ft-anim-content', 1, { opacity: 1, top: 0 });
-  //   var featuredScene = new ScrollMagic.Scene({
-  //     triggerElement: featuredProjects, 
-  //     duration: 500, 
-  //     offset: -200
-  //   })
-  //   .setTween(ft)
-  //   //.addIndicators({name: "tween css class"}) // add indicators (requires plugin)
-  //   .addTo(controller);
-  // }
-
-  // Animate text content blocks
-  // if(contentBlock) {
-  //   var i;
-  //   for (i = 0; i < contentBlock.length; i++) {
-  //     var parentHolder = contentBlock[i].parentNode, 
-  //         cb = new TimelineMax();
-  //     cb
-  //     .set(contentBlock[i], { opacity: 0, top: 400, force3D: true })
-  //     .to(contentBlock[i], 1, { opacity: 1, top: 0 });
-  //     var contentBlockScene = new ScrollMagic.Scene({
-  //       triggerElement: parentHolder,
-  //       duration: 500,
-  //       offset: contentBlockOffset
-  //     })
-  //     .setTween(cb)
-  //     .addTo(controller);
-  //   }
-  // }
-
-  // Animate work list
-  // if(workItem) {
-  //   var i;
-  //   for (i = 0; i < workItem.length; i++) {
-  //     var parentHolder = workItem[i].parentNode, 
-  //         wi = new TimelineMax();
-  //     wi
-  //     .set(workItem, { opacity: 0, top: '60%', force3D: true })
-  //     .to(workItem[i], 1, { opacity: 1, top: '43%' });
-  //     var workItemScene = new ScrollMagic.Scene({
-  //       triggerElement: parentHolder,
-  //       duration: 300, 
-  //       offset: 0
-  //     })
-  //     .setTween(wi)
-  //     //.addIndicators({name: "tween css class"}) // add indicators (requires plugin)
-  //     .addTo(controller);
-  //   }
-  // }
 
 }

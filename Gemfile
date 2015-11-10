@@ -10,3 +10,4 @@ gem "middleman-blog", github: 'middleman/middleman-blog', branch: 'master'
 gem "middleman-syntax", github: 'thisiscapra/middleman-syntax', branch: 'master'
 gem "nokogiri"
 gem "redcarpet"
+gem "therubyracer"
