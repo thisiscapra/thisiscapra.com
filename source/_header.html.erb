@@ -1,9 +1,11 @@
 <header class="site-header">
-  <%= partial "logo" %>
-  <nav class="navigation" role="navigation">
-    <%= partial "page_navigation", :locals => { :social => true } %>
-    <button class="resp-nav c-hamburger c-hamburger--htx">
-      <span>Menu</span>
-    </button>
-  </nav>
+  <div class="wrapper">
+    <%= partial "logo" %>
+    <nav class="navigation" role="navigation">
+      <%= partial "page_navigation", :locals => { :social => true } %>
+      <button class="resp-nav c-hamburger c-hamburger--htx">
+        <span>Menu</span>
+      </button>
+    </nav>
+  </div>
 </header>

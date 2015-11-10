@@ -1,7 +1,8 @@
 //= require smooth-scroll.min
+//= require ScrollMagic.min
 //= require TweenMax.min
+//= require animation.gsap.min
 //= require DrawSVGPlugin
-//= require simplbox
 //= require turbolinks
 
 if ( 'querySelector' in document && 'addEventListener' in window ) {
@@ -26,108 +27,149 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     }
   }
 
-  var ready,
-      body = document.querySelector('body'),
-      html = document.querySelector('html'),
-      windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-  
+  var ready;
   ready = function() {
+
+    var body = document.querySelector('body'),
+        html = document.querySelector('html'),
+        respMenu = document.querySelector('.resp-nav'),
+        windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
+        triggerAmount = 0.5;
 
     if(hasClass(html, 'resp')) {
       removeClass(html, 'resp');
     }
 
+    animations = function() {
+      // Set up Scroll Magic
+      var controller = new ScrollMagic.Controller({
+        globalSceneOptions: {
+          triggerHook: triggerAmount
+        }
+      });
+      // Homepage goat animation
+      var homeGoat = document.getElementById('home-goat');
+      if(homeGoat) {
+        var hg = new TimelineMax({ paused: true }),
+            hgSubLayerPaths = document.querySelectorAll("#home-goat-sub-lines path"),
+            hgTopLayerPaths = document.querySelectorAll("#home-goat-top-lines path")
+        if(hgSubLayerPaths.length > 0 || hgTopLayerPaths.length > 0) {
+          hg
+            .set([hgSubLayerPaths,hgTopLayerPaths], { drawSVG: 0, visibility:"visible", force3D: true })
+            .to(hgSubLayerPaths,1,{ drawSVG: "100%", delay:.1 })
+            .to(hgTopLayerPaths,1.5,{ drawSVG: "100%", delay:.2 })
+        }
+        hg.restart();
+      }
+      // About page alfalfa animation
+      var alfalfa = document.getElementById('alfalfa');
+      if(alfalfa) {
+        var al = new TimelineMax(),
+            alSubLayerPaths = document.querySelectorAll("#alfalfa-sub-lines path"),
+            alTopLayerPaths = document.querySelectorAll("#alfalfa-top-lines path");
+        if(alSubLayerPaths.length > 0 || alTopLayerPaths.length > 0) {
+          al
+            .set([alSubLayerPaths,alTopLayerPaths], { drawSVG: 0, visibility:"visible", force3D: true })
+            .to(alSubLayerPaths,2,{ drawSVG: "100%", delay:.5 })
+            .to(alTopLayerPaths,3,{ drawSVG: "100%", delay:.3 })
+            var alfalfaScene = new ScrollMagic.Scene({
+              triggerElement: alfalfa, 
+              duration: 500, 
+              offset: 0
+            })
+            .setTween(al)
+            .addTo(controller);
+        }
+      }
+      // About page goat animation
+      var aboutGoat = document.getElementById('about-goat');
+      if(aboutGoat) {
+        var ag = new TimelineMax(),
+            agSubLayerPaths = document.querySelectorAll("#about-goat-sub-lines path"),
+            agTopLayerPaths = document.querySelectorAll("#about-goat-top-lines path");
+        if(agSubLayerPaths.length > 0 || agTopLayerPaths.length > 0) {
+          ag
+            .set([agSubLayerPaths,agTopLayerPaths], { drawSVG: 0, visibility:"visible", force3D: true })
+            .to(agSubLayerPaths,2,{ drawSVG: "100%", delay:.5 })
+            .to(agTopLayerPaths,3,{ drawSVG: "100%", delay:.3 })
+            var goatScene = new ScrollMagic.Scene({
+              triggerElement: document.getElementsByClassName("why-capra"),
+              duration: 500, 
+              offset: -200
+            })
+            .setTween(ag)
+            .addTo(controller);
+        }
+      }
+    }
+
+    stickyHeader = function(e) {
+      document.addEventListener('scroll', function() {
+        var scrollTop = (document.documentElement.scrollTop||document.body.scrollTop),
+            header = document.querySelector('.site-header');
+            headerHeight = header.offsetHeight;
+        if(scrollTop >= 5) {
+          addClass(body,'scrolling')
+        } else {
+          removeClass(body,'scrolling')
+        }
+      });
+    }
+
+    // Tabs on the contact page
+    contentTabs = function(e) {
+      var tab_contents = document.getElementsByClassName("contact-form");
+      [].forEach.call(tab_contents, function(tab_content){
+        addClass(tab_content, 'hidden');
+      });
+
+      var tabs = document.getElementsByClassName("tab");
+      [].forEach.call(tabs, function(tab){
+        tab.addEventListener("click", function(event){
+          var actives = document.querySelectorAll('.active');
+          // deactivate existing active tab and panel
+          for (var i=0; i < actives.length; i++){
+            actives[i].className = actives[i].className.replace('active', '');
+          }
+          event.target.parentElement.className += 'active';
+          document.getElementById(event.target.href.split('#')[1]).className += ' active';
+          var anchor = event.target.href.split('#')[1],
+            offset = 100;
+              //offset = document.querySelector('#header').offsetHeight;
+            console.log(offset)
+          event.preventDefault();
+          smoothScroll.animateScroll( null, '#contact-scroll', {
+            "offset": offset,
+            "updateURL": false
+          });
+        }, false);
+      });
+    }
+
+    // Responsive navigation class
+    respNav = function() {
+      respMenu.addEventListener("click", function(e) {
+        e.preventDefault();
+        if(hasClass(html, 'resp')) {
+          this.classList.remove("is-active")
+          removeClass(html, 'resp')
+        } else {
+          this.classList.add("is-active")
+          addClass(html, 'resp')
+        }
+      });
+    }
+
     animations();
-    scrollClass();
+    stickyHeader();
     contentTabs();
     respNav();
 
   };
 
-  animations = function() {
-    var tl = new TimelineMax({ paused: true }),
-        subLayerPaths = document.querySelectorAll("#sub-lines path"),
-        topLayerPaths = document.querySelectorAll("#top-lines path")
-    if(subLayerPaths.length > 0 || topLayerPaths.length > 0) {
-      tl.set([subLayerPaths,topLayerPaths], { drawSVG: 0, visibility:"visible", force3D: true })
-    }
-    if(subLayerPaths.length > 0 || topLayerPaths.length > 0) {
-      tl
-        .to(subLayerPaths,2,{ drawSVG: "100%", delay:.5 })
-        .to(topLayerPaths,3,{ drawSVG: "100%", delay:.5 })
-    }
-    tl.restart();
-  }
-
-  scrollClass = function(e) {
-    document.addEventListener('scroll', function() {
-      var scrollTop = (document.documentElement.scrollTop||document.body.scrollTop),
-          body = document.querySelector('body'),
-          headerHeight = document.querySelector('.site-header').offsetHeight;
-      if(scrollTop >= 5) {
-        addClass(body,'scrolling')
-      } else {
-        removeClass(body,'scrolling')
-      }
-    });
-  }
-
-  // Tabs on the contact page
-  contentTabs = function(e) {
-    var tab_contents = document.getElementsByClassName("contact-form");
-    [].forEach.call(tab_contents, function(tab_content){
-      addClass(tab_content, 'hidden');
-    });
-
-    var tabs = document.getElementsByClassName("tab");
-    [].forEach.call(tabs, function(tab){
-      tab.addEventListener("click", function(event){
-        var actives = document.querySelectorAll('.active');
-        // deactivate existing active tab and panel
-        for (var i=0; i < actives.length; i++){
-          actives[i].className = actives[i].className.replace('active', '');
-        }
-        event.target.parentElement.className += 'active';
-        document.getElementById(event.target.href.split('#')[1]).className += ' active';
-        var anchor = event.target.href.split('#')[1],
-          offset = 100;
-            //offset = document.querySelector('#header').offsetHeight;
-          console.log(offset)
-        event.preventDefault();
-        smoothScroll.animateScroll( null, '#contact-scroll', {
-          "offset": offset,
-          "updateURL": false
-        });
-      }, false);
-    });
-  }
-
-  // Responsive navigation class
-  respNav = function() {
-    var respMenu = document.querySelector('.resp-nav');
-    respMenu.addEventListener("click", function(e) {
-      e.preventDefault();
-      if(hasClass(html, 'resp')) {
-        this.classList.remove("is-active")
-        removeClass(html, 'resp')
-      } else {
-        this.classList.add("is-active")
-        addClass(html, 'resp')
-      }
-    });
-  }
-
   document.addEventListener("DOMContentLoaded", function() {
     ready();
   }, false);
-
-  document.addEventListener("page:before-change", function() {
-    if(hasClass(html, 'resp')) {
-      removeClass(html, 'resp');
-      document.querySelector('.resp-nav').classList.remove("is-active")
-    }
-    ready();
-  });
 
   document.addEventListener("page:load", function() {
     ready();

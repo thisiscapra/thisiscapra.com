@@ -1,6 +1,5 @@
 <!doctype html>
-<!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <title><%= page_title %></title>
@@ -8,14 +7,14 @@
   <meta name="keywords" content="design, web design, HTML5, CSS3, typography, layout, grids, goats, javascript, ruby, ruby on rails, wordpress, php, middleman app, games, web applications, ottawa, ottawa web design, ottawa web development, canada web design"/>
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script>(function(h){h.className = h.className.replace('no-js', 'js')})(document.documentElement)</script>
   <link href="/images/favicon.ico" rel="shortcut icon"></link>
   <% if app.development? %>
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/613266/css/fonts.css" />
   <% elsif app.build? %>
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/642046/css/fonts.css" />
   <% end %>
-  <%= stylesheet_link_tag "site.css" %>
-  <%= stylesheet_link_tag "highlighting.css" %>
+  <%= stylesheet_link_tag "site.css", "highlighting.css" %>
   <%= javascript_include_tag "application" %>
   <%= yield_content :javascript %>
   <!--[if lt IE 9]>
