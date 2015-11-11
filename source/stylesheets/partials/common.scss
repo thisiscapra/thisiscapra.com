@@ -143,6 +143,9 @@ $mink: 'minkregular';
     path {
       fill: $color;
     }
+    &:hover path {
+      fill: $dark-grey;
+    }
   }
   #work-bar {
     background-color: darken($color, 5%);

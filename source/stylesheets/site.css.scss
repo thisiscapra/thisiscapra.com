@@ -78,6 +78,9 @@ hr {
     }
   }
 }
+iframe {
+  width: 100%;
+}
 
 // Typography
 
@@ -333,7 +336,7 @@ fieldset {
   }
   path {
     fill: $pantone-green;
-    @include transition(fill 0.2s ease-in-out);
+    @include transition(fill 0.3s ease-in-out);
   }
   &:hover {
     path {
@@ -1242,6 +1245,15 @@ body.dragimals {
     @media screen and (max-width: 600px) {
       width: 100%;
     }
+  }
+}
+.article-nav {
+  margin: 0 auto gs-gutter(cap, false, true);
+  text-align: center;
+  width: gs-width(cap, 2, 6, false, true);
+  li {
+    float: left;
+    width: 50%;
   }
 }
 
