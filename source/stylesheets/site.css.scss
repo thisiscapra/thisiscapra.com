@@ -15,7 +15,7 @@ html {
   touch-action: manipulation;
 }
 .turbolinks-progress-bar::before {
-  background-color: $pantone-green !important;
+  background-color: $dark-grey !important;
   height: 5px !important;
 }
 body {
@@ -33,9 +33,6 @@ body {
   }
   @media screen and (max-width: 1000px) {
     font-size: 100%;
-  }
-  @media screen and (max-width: 600px) {
-    padding-top: 24%;
   }
 }
 .wrapper {
@@ -316,11 +313,23 @@ fieldset {
     width: 100px;
   }
   svg {
-    height: 90px;
-    width: 100px;
-    @media screen and (max-width: 600px) {
+    height: 81px;
+    width: 90px;
+    @media screen and (max-width: 1200px) {
+      height: 72px;
+      width: 80px;
+    }
+    @media screen and (max-width: 1000px) {
+      height: 63px;
+      width: 70px;
+    }
+    @media screen and (max-width: 800px) {
       height: 54px;
       width: 60px;
+    }
+    @media screen and (max-width: 600px) {
+      height: 45px;
+      width: 50px;
     }
     @include transition(all 0.3s ease-in-out);
     .scrolling & {
@@ -380,6 +389,9 @@ fieldset {
     @include transition(all 0.3s ease-in-out);
     .scrolling & {
       margin-top: 0.2em;
+      @media screen and (max-width: 1345px) {
+        margin-top: 0.5em;
+      }
     }
     > li {
       display: inline;
@@ -931,8 +943,8 @@ body.dragimals {
 }
 
 .work-header {
-  margin-bottom: 8%;
-  padding: 4% 0 12%;
+  margin-bottom: 16%;
+  padding: 4% 0 4%;
   text-align: center;
   @extend %clearfix;
   h1 {
@@ -957,7 +969,7 @@ body.dragimals {
     width: 100%;
   }
   + hr {
-    margin: 6em auto;
+    margin: 3em auto;
     width: gs-width(cap, 2, 6, false, true);
   }
 }

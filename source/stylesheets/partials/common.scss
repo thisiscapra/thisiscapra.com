@@ -90,14 +90,15 @@ $mink: 'minkregular';
   $url: "../images/#{$path}/#{$image}.jpg";
 
   background-image: url($url);
-  background-size: 100% auto;
+  background-size: 105% auto;
   background-repeat: no-repeat;
   background-position: top center;
-
   @media screen and (max-width: 600px) {
-    background-size: 190% auto;
+    background-size: 150% auto;
   }
-
+  @media screen and (max-width: 450px) {
+    background-size: 160% auto;
+  }
   a:hover {
     color: $color;
   }
@@ -157,23 +158,13 @@ $mink: 'minkregular';
       }
     }
   }
-  .client-header {
-    color: #fff;
-    a {
-      color: #fff;
-      &:hover {
-        color: $color;
-      }
-    }
-    .button {
-      background-color: $white;
-      color: $color;
-      &:hover {
-        background-color: $color;
-        color: $white;
-      }
-    }
-  }
+  // .work-header {
+  //   h1+p {
+  //     background-color: rgba($dark-grey,0.4);
+  //     display: inline-block;
+  //     padding: 0.2em;
+  //   }
+  // }
   .client-intro {
     p:first-of-type:first-letter {
       color: $color;

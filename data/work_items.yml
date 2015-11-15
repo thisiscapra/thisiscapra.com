@@ -53,7 +53,7 @@ clients:
       - alfred-mobile.jpg
       - alfred-remote.jpg
   # Alton Convent School
-  - name: Alton Convent School
+  - name: Alton Convent
     weight: 3
     #featured: false
     title: Beautifully educated.
