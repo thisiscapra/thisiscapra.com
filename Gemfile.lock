@@ -69,6 +69,14 @@ GIT
       middleman-core (~> 4.0.0.rc.2)
       rouge (~> 1.0)
 
+GIT
+  remote: git://github.com/thisiscapra/middleman-twitter-oembed.git
+  revision: 6c341dbf93dc44fcd6240e65abf95136b194d20b
+  branch: master
+  specs:
+    middleman-twitter-oembed (0.1.1)
+      middleman-core (~> 4.0.0.rc.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -207,6 +215,7 @@ DEPENDENCIES
   middleman-livereload
   middleman-sprockets!
   middleman-syntax!
+  middleman-twitter-oembed!
   nokogiri
   redcarpet
   therubyracer

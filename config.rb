@@ -118,6 +118,8 @@ helpers do
   end
 end
 
+#activate :twitter_oembed
+
 activate :directory_indexes
 
 #set :fonts_dir, 'fonts'
