@@ -24,7 +24,8 @@
       <% prev_article = current_page.previous_article
          next_article = current_page.next_article
          if prev_article || next_article %>
-          <ul class="article-nav">
+         <div class="article-nav">
+           <ul>
             <% if prev_article %>
               <li class="prev">Prev: <%= link_to(prev_article.title, prev_article.url) %></li>
             <% end %>
@@ -32,6 +33,7 @@
               <li class="next">Next: <%= link_to(next_article.title, next_article.url) %></li>
             <% end %>
           </ul>
+         </div>
       <% end %>
     </article>
   </section>

@@ -98,7 +98,7 @@ helpers do
   def sentence_tag_list(article)
     if tags = article.tags
       content_tag(:div, class: :tags) do
-        "This article was filed under " +
+        "This article was filed under: <br>" +
         article.tags.map{|t| link_to t, "/tags/#{t}"}.to_sentence +
         "."
       end

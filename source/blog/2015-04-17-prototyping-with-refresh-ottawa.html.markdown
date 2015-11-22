@@ -9,7 +9,7 @@ tags:
   - Prototyping
 ---
 
-![Proof in the prototype titlepage](https://dl.dropboxusercontent.com/u/4461726/thisiscapra/prototyping/title-page.jpg)
+<figure><img src="https://dl.dropboxusercontent.com/u/4461726/thisiscapra/prototyping/title-page.jpg" alt="Proof in the prototype titlepage"></figure>
 
 Last night I was lucky enough to present at [Refresh Ottawa](http://www.meetup.com/Refresh-Ottawa/) and was blown away by how people engaged with the concepts I was presenting. 
 
@@ -19,11 +19,11 @@ Since the world is inherently distorted by mental prototypes, we battled against
 
 By prototyping, we can get people to 'see' what we mean, and discover the real problems with what we're doing before it's too late to make changes. 
 
-![The real problem](https://dl.dropboxusercontent.com/u/4461726/thisiscapra/prototyping/the-real-problem.jpg)
+<figure><img src="https://dl.dropboxusercontent.com/u/4461726/thisiscapra/prototyping/the-real-problem.jpg" alt="The real problem"></figure>
 
 And by searching out the real problem, I hope I've shown them that finding out, through rapid prototyping that something just doesn't work, is actually a really big win, not a fail.
 
-![Prototyping and craft supplies](https://dl.dropboxusercontent.com/u/4461726/thisiscapra/prototyping/arts-crafts.jpg)
+<figure><img src="https://dl.dropboxusercontent.com/u/4461726/thisiscapra/prototyping/arts-crafts.jpg" alt="Prototyping and craft supplies"></figure>
 
 We did arts and crafts and designed a new game. Thank you so much to everyone at Refresh Ottawa for letting me share my ideas, and for Shopify for hosting!
 

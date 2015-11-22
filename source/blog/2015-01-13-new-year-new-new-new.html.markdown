@@ -18,7 +18,7 @@ As of December 15, Ollie is officially a Canadian immigrant, and he joins me to 
 ### New hobbies, new lifestyle
 As part of our new Canadian adventure, we have totally embraced the winter.  We are snowboarding 3x a week for a couple hours, cross country skiing with the dogs on the frozen lake and snowshoeing in the forest. We're working it into our workday, hoping to finally achieve the work/life balance everyone is looking for!
 
-![Racing along the winter wonderland](https://dl.dropboxusercontent.com/u/4461726/thisiscapra/winter-wonderland.jpg)
+<figure><img src="https://dl.dropboxusercontent.com/u/4461726/thisiscapra/winter-wonderland.jpg" alt="Racing along the winter wonderland" /></figure>
 
 ### New clients, new projects
 Capra started up with the two of us after our holidays on January 5. We have been really lucky that work has come in ALREADY and we're busy with some fantastic new clients.  We have some spare capacity coming up, so if you are looking to work with us, [let us know](http://thisiscapra.com/contact/ "Contact us")!

@@ -5,6 +5,12 @@
   <li><%= link_to("Labs", "/labs/", nav_active("/labs/")) %></li>
   <li><%= link_to("Contact", "/contact/", nav_active("/contact/")) %></li>
   <% if social %>
-    <li class="social"><%= partial "social_links", :locals => { :twitter_link => "thisiscapra", :facebook_link => "thisiscapra", :github_link => "thisiscapra" }  %></li>
+    <li class="social">
+      <%= partial "social_links", :locals => { 
+        twitter_link: "thisiscapra", 
+        facebook_link: "thisiscapra", 
+        github_link: "thisiscapra"
+      }  %>
+    </li>
   <% end %>
 </ul>

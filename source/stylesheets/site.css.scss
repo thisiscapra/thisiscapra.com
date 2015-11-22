@@ -1198,6 +1198,9 @@ body.dragimals {
   @media screen and (max-width: 600px) {
     margin: 0 0 8%;
   }
+  .social-links li {
+    margin-right: 3%;
+  }
 }
 .ollie {
   @include gs-span(cap,2,4,(2,7));
@@ -1242,6 +1245,7 @@ body.dragimals {
 }
 .blog-entry h1 {
   font-size: 4.2em;
+  line-height: 1.1;
   @media screen and (max-width: 600px) {
     font-size: 3em;
   }
@@ -1251,22 +1255,66 @@ body.dragimals {
   text-align: center;
 }
 .blog-body {
+  h2,h3,h4 {
+    text-align: center;
+  }
   p {
+    margin: 0 auto 1.5em;
+    width: 80%;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+    &:first-of-type {
+      @extend %first-letter;
+    }
+  }
+  figure {
     margin: 0 auto 1.5em;
     width: gs-width(cap, 2, 6, (2,6), true);
     @media screen and (max-width: 600px) {
       width: 100%;
     }
+    img {
+      display: block;
+    }
   }
 }
-.article-nav {
-  margin: 0 auto gs-gutter(cap, false, true);
+.article-nav, .tags {
+  margin: 8% auto;
   text-align: center;
-  width: gs-width(cap, 2, 6, false, true);
-  li {
-    float: left;
-    width: 50%;
+  width: 80%;
+  @media screen and (max-width: 600px) {
+    width: 100%;
   }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+.tags {
+  border-top: 1px solid #e1e1e1;
+  padding-top: 8%;
+}
+.article-nav {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 8%;
+}
+.video-container { 
+  height: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed { 
+  left: 0;
+  height: 100%; 
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 // Contact page
