@@ -1264,9 +1264,17 @@ body.dragimals {
     @media screen and (max-width: 600px) {
       width: 100%;
     }
-    &:first-of-type {
-      @extend %first-letter;
-    }
+  }
+  ul {
+    margin: 0 auto 1.5em;
+    max-width: 60%;
+  }
+  blockquote > p {
+    margin-top: 1.5em;
+    width: 100%;
+  }
+  > p:first-of-type {
+    @extend %first-letter;
   }
   figure {
     margin: 0 auto 1.5em;

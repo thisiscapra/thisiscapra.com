@@ -60,9 +60,9 @@ Now we only have to use one `.erb` file to output all our projects.
 
 ###Blogging
 
-Middleman has a [blogging extension](https://github.com/middleman/middleman-blog) available which is great, but coming from Wordpress we wanted something with a WYSIWYG editor and the ability to automatically add/edit blogposts without rebuilding the site manually every time and re-deploying it. Some research led me onto [Prose.io](http://prose.io/) which describes itself as 
+Middleman has a [blogging extension](https://github.com/middleman/middleman-blog) available which is great, but coming from Wordpress we wanted something with a WYSIWYG editor and the ability to automatically add/edit blogposts without rebuilding the site manually every time and re-deploying it. Some research led me onto [Prose.io](http://prose.io/) which describes itself as...
 
-> 'Prose is a content editor for GitHub designed for managing websites.'
+> Prose is a content editor for GitHub designed for managing websites.
 
 Perfect, **BUT** it was designed for Github pages so how do I use this with Middleman? Luckily Prose has a seperate config file that can be used for just this case.
 
