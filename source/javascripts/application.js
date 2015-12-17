@@ -1,10 +1,10 @@
-//= require smooth-scroll.min.js
-//= require ScrollMagic.min.js
-//= require TweenMax.min.js
-//= require animation.gsap.min.js
-//= require DrawSVGPlugin.js
-//= require twitterFetcher_min.js
-//= require instafeed.min.js
+//= require smooth-scroll.min
+//= require ScrollMagic.min
+//= require TweenMax.min
+//= require animation.gsap.min
+//= require DrawSVGPlugin
+//= require twitterFetcher_min
+//= require instafeed.min
 //= require turbolinks
 
 if ( 'querySelector' in document && 'addEventListener' in window ) {
