@@ -2,12 +2,14 @@
 # the following line to use 'http://'
 source 'https://rubygems.org'
 
-gem "middleman", github: 'middleman/middleman', branch: 'master'
+gem "middleman"
 gem 'middleman-sprockets', github: 'middleman/middleman-sprockets', branch: 'master'
 gem "turbolinks", github: 'rails/turbolinks', branch: 'master', :require => false
 gem 'middleman-livereload'
-gem "middleman-blog", github: 'middleman/middleman-blog', branch: 'master'
 gem "middleman-syntax", github: 'thisiscapra/middleman-syntax', branch: 'master'
+gem "contentful_middleman", github: 'tdreyno/contentful_middleman', branch: 'master'
+#gem 'middleman-pagination', github: 'thisiscapra/middleman-pagination', branch: 'master'
 gem "nokogiri"
 gem "redcarpet"
-gem "therubyracer"
+gem 'therubyracer'
+gem 'oj'

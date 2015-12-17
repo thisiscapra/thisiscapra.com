@@ -18,5 +18,7 @@
 .DS_Store
 
 .powenv
+.blog-space-hash
+.env
 /tmp
 /.divshot-cache

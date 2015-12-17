@@ -1,4 +1,4 @@
-<%= Rouge::Themes::Github.render(:scope => '.highlight') %>
+<%#= Rouge::Themes::Github.render(:scope => '.highlight') %>
 
 .highlight {
   border: 1px solid #ddd;
@@ -10,7 +10,7 @@
 pre {
   padding: 0;
   line-height: 23px;
-  margin-bottom: 30px;
+  margin: 0;
   white-space: pre;
   overflow-x: auto;
   word-break: inherit;
@@ -38,4 +38,8 @@ code {
   display: inline-block;
   font-size: 0.8em;
   padding: 1px 7px;
+}
+.highlight .err {
+  background-color: transparent !important;
+  color: #000 !important;
 }

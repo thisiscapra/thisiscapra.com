@@ -1,7 +1,10 @@
-//= require smooth-scroll.min
-//= require TweenMax.min
-//= require animation.gsap.min
-//= require DrawSVGPlugin
+//= require smooth-scroll.min.js
+//= require ScrollMagic.min.js
+//= require TweenMax.min.js
+//= require animation.gsap.min.js
+//= require DrawSVGPlugin.js
+//= require twitterFetcher_min.js
+//= require instafeed.min.js
 //= require turbolinks
 
 if ( 'querySelector' in document && 'addEventListener' in window ) {
@@ -159,10 +162,48 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
       });
     }
 
+    // Twitter feed
+    twitterWidget = function() {
+      var twitter = document.getElementById('twitter');
+      if(twitter) {
+        var twitterConfig = {
+          "id": '677082141797310464',
+          "domId": 'twitter',
+          "maxTweets": 1,
+          "enableLinks": true,
+          "showUser": false,
+          "showTime": true,
+          "showImages": true,
+          "lang": 'en',
+          "showRetweet": false,
+          "showInteraction": false
+        };
+        twitterFetcher.fetch(twitterConfig);
+      }
+    }
+
+    // Instagram
+    instagramFeed = function() {
+      var instagram = document.getElementById('instagram');
+      if(instagram) {
+        var feed = new Instafeed({
+          get: 'user',
+          userId: '2330146703',
+          target: instagram,
+          resolution: 'standard_resolution',
+          accessToken: '2330146703.a9f0bed.4e841c9b95154d3cb9194229dc406c61',
+          limit: 4
+        });
+        feed.run(); 
+      }
+    }
+
     animations();
     stickyHeader();
     contentTabs();
     respNav();
+    twitterWidget();
+    instagramFeed();
 
   };
 

@@ -10,7 +10,7 @@ Time.zone = "US/Eastern"
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
-page "/404.html", :layout => false
+page "/404.html", layout: false
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -36,28 +36,37 @@ app.data.lab_items.labs.each do |client|
 end
 
 ###
-# Blog
+# Blog / Contentful
 ###
 
-activate :syntax, line_numbers: true
+activate :contentful do |f|
+  f.access_token  = ENV['CONTENTFUL_ACCESS_TOKEN']
+  f.space         = { blog: ENV['CONTENTFUL_SPACE_ID'] }
+  f.content_types = {
+    articles: ENV['CONTENTFUL_POST_KEY']
+  }
+  f.cda_query = {
+    content_type: ENV['CONTENTFUL_POST_KEY'],
+    include: 1
+  }
+end
 
-activate :blog do |blog|
-  blog.layout = "blog"
-  blog.prefix = "blog"
-  blog.sources = "{year}-{month}-{day}-{title}.html"
-  blog.permalink = "{title}.html"
-  blog.paginate = true
-  blog.per_page = 10
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
-  blog.taglink = "tags/{tag}.html"
-  blog.year_link = "{year}.html"
-  blog.month_link = "{year}/{month}.html"
-  blog.day_link = "{year}/{month}/{day}.html"
+app.data.blog.articles.each do |article|
+  proxy "/blog/#{article[1][:slug]}/index.html", "/blog/show.html", locals: { 
+    article: article[1]
+  }, :ignore => true
+end
+
+app.data.blog.articles.map { |article| article[1][:tags] }.flatten.uniq.each do |tag|
+  proxy "/blog/tags/#{tag.downcase}/index.html", "/blog/tag.html", locals: { 
+    tag: tag
+  }, :ignore => true
 end
 
 set :markdown_engine, :redcarpet
-set :markdown, :smartypants => true, :fenced_code_blocks => true
+set :markdown, smartypants: true, fenced_code_blocks: true
+
+activate :syntax, line_numbers: true, lexer_options: { parent: 'plaintext' }
 
 ###
 # Helpers
@@ -65,7 +74,7 @@ set :markdown, :smartypants => true, :fenced_code_blocks => true
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload
+  activate :livereload, no_swf: true
 end
 
 # Methods defined in the helpers block are available in templates
@@ -88,7 +97,7 @@ helpers do
   end
   # Active nav items
   def nav_active(page)
-    current_page.url.start_with?(page) ? {:class => 'active'} : {}
+    current_page.url.start_with?(page) ? { class: 'active' } : {}
   end
   # Custom page classes
   def custom_page_classes
@@ -99,7 +108,7 @@ helpers do
     if tags = article.tags
       content_tag(:div, class: :tags) do
         "This article was filed under: <br>" +
-        article.tags.map{|t| link_to t, "/blog/tags/#{t}"}.to_sentence +
+        article.tags.map{|t| link_to t, "/blog/tags/#{t.downcase}"}.to_sentence +
         "."
       end
     end
@@ -116,13 +125,25 @@ helpers do
   def available?
     return false
   end
+  # Markdown
+  def markdown(content)
+    #Tilt::KramdownTemplate.new { content }.render
+    #Redcarpet::Document.new(content).to_html
+    Tilt['markdown'].new { content }.render(scope=self)
+  end
 end
-
-#activate :twitter_oembed
 
 activate :directory_indexes
 
-#set :fonts_dir, 'fonts'
+###
+# Pagination
+###
+
+# activate :pagination do
+#   pageable_set :articles do
+#     data.blog.articles.sort_by{ |id,a| a[:date] }.reverse
+#   end
+# end
 
 # Build-specific configuration
 configure :build do

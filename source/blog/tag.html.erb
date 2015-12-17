@@ -1,0 +1,26 @@
+<% content_for(:title, "Tag - #{tag}") %>
+
+<section class="blog">
+
+  <header class="section-header">
+    <p>Posts tagged under</p>
+    <h1><%= tag %></h1>  
+  </header>
+
+  <div class="blog-list">
+    
+    <% 
+      tag_posts = data.blog.articles.to_a.select do |article|
+        article[1][:tags].include? tag
+      end
+    %>
+    
+    <% tag_posts.each do |article| %>
+      <%= partial "blog_summary", :locals => { :article => article[1] } %>
+    <% end %>
+
+  </div>
+
+  <%#= link_to "Next page", pagination.next_page.url if pagination.next_page %>
+
+</section>
