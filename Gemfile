@@ -2,7 +2,7 @@
 # the following line to use 'http://'
 source 'https://rubygems.org'
 
-gem "middleman", github: 'middleman/middleman', branch: 'master'
+gem "middleman"
 gem 'middleman-sprockets', github: 'middleman/middleman-sprockets', branch: 'master'
 gem "turbolinks", github: 'rails/turbolinks', branch: 'master', :require => false
 gem 'middleman-livereload'
