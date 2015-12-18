@@ -1,5 +1,4 @@
 //= require smooth-scroll.min
-//= require ScrollMagic.min
 //= require TweenMax.min
 //= require animation.gsap.min
 //= require DrawSVGPlugin
