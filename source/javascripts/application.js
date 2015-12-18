@@ -1,4 +1,4 @@
-//= require ScrollMagic.min
+//= require ScrollMagic
 //= require smooth-scroll.min
 //= require TweenMax.min
 //= require animation.gsap.min
