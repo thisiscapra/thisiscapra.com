@@ -15,8 +15,6 @@
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/642046/css/fonts.css" />
   <% end %>
   <%= stylesheet_link_tag "site.css", "highlighting.css" %>
-  <%# To fix - ScrollMagic bundling is breaking the build %>
-  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>-->
   <%= javascript_include_tag "application" %>
   <%= yield_content :javascript %>
   <!--[if lt IE 9]>
