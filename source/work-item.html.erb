@@ -4,19 +4,19 @@ work_item: true
 
 <% content_for(:title, client.name) %>
 <% content_for(:description, Nokogiri::HTML(client.intro(115)).text) %>
-<% content_for(:page_class, client.url) %>
+<% content_for(:page_class, "#{client.url} work-item") %>
 
 <section class="work work-item">
 
   <header class="work-header">
-    
-    <h1><%= client.name %></h1>
 
-    <p><%= client.home_intro %></p>
+    <div class="work-header-content">
+      
+      <h1><%= client.name %></h1>
 
-    <% if client.link %>
-      <p class="project-link"><%= link_to("Live project", client.link, class: "button", target: "_blank") %></p>
-    <% end %>
+      <p><%= client.home_intro %></p>
+
+    </div>
 
   </header>
 
@@ -39,6 +39,9 @@ work_item: true
             <li><%= item %></li>
           <% end %>
         </ul>
+        <% if client.link %>
+          <p class="project-link"><%= link_to("Live project", client.link, class: "button", target: "_blank") %></p>
+        <% end %>
       </div>
     <% end %>
 

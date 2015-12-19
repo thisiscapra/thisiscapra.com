@@ -1,14 +1,14 @@
-= Capra Website
+# Capra Website
 
 Capra is a design agency based in Ottawa, Canada. We design and build beautiful websites, apps and casual games. We love designing for clients who share our vision for a better world. 
 
-=== This is a Middleman app running with the following:
+### Middleman app running with the following:
 
 * Middleman v4 - https://middlemanapp.com
 * Contentful CMS - https://www.contentful.com/
 * Continous deployment through Netlify - https://www.netlify.com/
 
-=== Some of the useful code within our repo:
+### Some of the useful code within our repo:
 
 * Dynamic pages using yaml files with custom templates
 * Contentful setup for static CMS

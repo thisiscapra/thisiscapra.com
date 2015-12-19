@@ -35,7 +35,7 @@ body {
     font-size: 100%;
   }
 }
-.wrapper {
+.container {
   margin: 0 auto;
   max-width: 1600px;
   position: relative;
@@ -48,6 +48,7 @@ body {
 }
 section {
   padding: gs-gutter(cap, false, true) 0;
+  @include box-sizing(border-box);
 }
 img {
   display: block;
@@ -97,7 +98,9 @@ h1 {
     font-size: 18vw;
   }
 }
-h2, .archive h1 {
+h2, 
+.archive h1, 
+.work-header h1 {
   font-size: 7vw;
   line-height: 1;
   margin: 0 0 0.25em;
@@ -953,18 +956,36 @@ body.dragimals {
   @include colour-scheme($dragimals-color, labs, dragimals/dragimals-featured);
 }
 
+.work-item {
+  padding-top: 0;
+  position: relative;
+  width: 100%;
+  &:before {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    content: "";
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
 .work-header {
-  margin-bottom: 16%;
+  height: 100vh;
   padding: 4% 0 4%;
   text-align: center;
+  @include box-sizing(border-box);
   @extend %clearfix;
   h1 {
     margin-bottom: 0.25em;
     text-align: center;
   }
-  .project-link {
-    margin-top: 1.5em;
-  }
+}
+.work-header-content {
+  @extend %vertical-align;
 }
 .work-content {
   margin-bottom: 8%;
@@ -999,6 +1020,9 @@ body.dragimals {
     margin: 0 0 8%;
     width: 100%;
   }
+}
+.project-link {
+  margin-top: 1.5em;
 }
 .gallery {
   text-align: center;

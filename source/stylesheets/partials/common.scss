@@ -96,17 +96,17 @@ $mink: 'minkregular';
 @mixin colour-scheme($color, $path, $image) {
 
   $url: "../images/#{$path}/#{$image}.jpg";
+  
+  &:before {
+    background-image: url($url);
+  }
 
-  background-image: url($url);
-  background-size: 105% auto;
-  background-repeat: no-repeat;
-  background-position: top center;
-  @media screen and (max-width: 600px) {
-    background-size: 150% auto;
-  }
-  @media screen and (max-width: 450px) {
-    background-size: 160% auto;
-  }
+  // @media screen and (max-width: 600px) {
+  //   background-size: 150% auto;
+  // }
+  // @media screen and (max-width: 450px) {
+  //   background-size: 160% auto;
+  // }
   a:hover {
     color: $color;
   }
@@ -271,7 +271,7 @@ $mink: 'minkregular';
   }
 }
 
-// @extend %first-letter
+// @extend %first-letter;
 %first-letter {
   &:first-letter {
     color: $dark-grey;
@@ -293,7 +293,7 @@ $mink: 'minkregular';
   }
 }
 
-// @extend %vertical-align
+// @extend %vertical-align;
 %vertical-align {
   position: relative;
   top: 50%;
