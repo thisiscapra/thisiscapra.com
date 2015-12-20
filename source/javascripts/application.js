@@ -93,7 +93,7 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
             .to(agSubLayerPaths,2,{ drawSVG: "100%", delay:.5 })
             .to(agTopLayerPaths,3,{ drawSVG: "100%", delay:.3 })
             var goatScene = new ScrollMagic.Scene({
-              triggerElement: document.getElementsByClassName("why-capra"),
+              triggerElement: aboutGoat,
               duration: 500, 
               offset: -200
             })
