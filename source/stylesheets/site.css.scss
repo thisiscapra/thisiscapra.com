@@ -478,9 +478,12 @@ fieldset {
 .resp-nav {
   display: none;
   position: absolute;
-  right: 4%;
-  top: 0;
+  right: 30px;
+  top: -2%;
   z-index: 1000;
+  &:hover {
+    background: transparent;
+  }
   @media screen and (max-width: 600px) {
     display: block;
     .scrolling & {
@@ -622,7 +625,6 @@ fieldset {
   h1 {
     line-height: 0.9;
     margin-bottom: 1em;
-    position: relative;
     text-align: left;
     @include gs-span(cap,3,5);
     @media screen and (max-width: 600px) {
@@ -630,26 +632,29 @@ fieldset {
       margin: 0 0 1em;
       width: 100%;
     }
+    &:after {
+      content: "Goats";
+      display: block;
+      text-decoration: line-through;
+      position: relative;
+      z-index: 1;
+    }
     span {
       display: block;
+      position: relative;
+      &:nth-child(1) {
+        letter-spacing: -8px;
+      }
       &:nth-child(2) {
-        position: relative;
-        z-index: 3;
-        &:after {
-          content: "Goats";
-          display: block;
-          text-decoration: line-through;
-          position: relative;
-          z-index: -1;
-        }
+        z-index: 100;
       }
       &:last-child {
         color: $pantone-green;
         font-family: $mink;
         font-size: 9vw;
-        left: -0.6em;
+        left: 23%;
         letter-spacing: -10px;
-        margin-top: -0.6em;
+        margin-top: 0.4em;
         position: absolute;
         @include transform(rotate(-17deg));
         z-index: 4;
@@ -1445,17 +1450,37 @@ body.dragimals {
     }
     a {
       float: left;
+      position: relative;
       width: 50%;
+      &:after {
+        background-color: rgba($pantone-green, 1);
+        bottom: 0;
+        content: "";
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        mix-blend-mode: screen;
+        top: 0;
+        @include transition(opacity 0.3s ease-in-out);
+        @media screen and (min-width:0\0) { 
+          background-color: rgba($pantone-green, 0.7);
+        }
+      }
       img {
         filter: grayscale(100%);
         -webkit-filter: grayscale(100%);
         width: 100%;
-        @include transition(filter 0.3s ease-in-out);
+        @include transition(all 0.3s ease-in-out);
       }
       &:hover {
         img {
           filter: grayscale(0);
+          opacity: 1;
           -webkit-filter: grayscale(0);
+        }
+        &:after {
+          opacity: 0;
         }
       }
     }
@@ -1463,6 +1488,7 @@ body.dragimals {
 }
 
 #twitter {
+  margin: 0 0 16%;
   text-align: center;
   ul {
     margin: 0;

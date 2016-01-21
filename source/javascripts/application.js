@@ -2,7 +2,7 @@
 //= require smooth-scroll.min
 //= require TweenMax.min
 //= require animation.gsap.min
-//= require DrawSVGPlugin
+//= require DrawSVGPlugin.min
 //= require twitterFetcher_min
 //= require instafeed.min
 //= require turbolinks
@@ -200,20 +200,86 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
 
     // Soundcloud track of the day
     soundcloudWidget = function() {
-      SC.initialize({
-        client_id: '7869138d09320422ec7e924d81b0e2a9'
-      });
+      var clientID = '7869138d09320422ec7e924d81b0e2a9';
+      var $view = document.getElementById('soundcloud');
+      var player = new SoundCloudAudio(clientID);
+      var prettyTime = function (time) {
+        //var newTime = time*1000;
+        var hours = Math.floor(time / 3600);
+        var mins = '0' + Math.floor((time % 3600) / 60);
+        var secs = '0' + Math.floor((time % 60));
+        mins = mins.substr(mins.length - 2);
+        secs = secs.substr(secs.length - 2);
+        if (!isNaN(secs)) {
+          if (hours) {
+            return hours + ':' + mins + ':' + secs;
+            } else {
+              return mins + ':' + secs;
+            }
+        } else {
+          return '00:00';
+        }
+      };
+      var render = function (playlist) {
+        var track = playlist.tracks[playlist.tracks.length-1];
+        console.log(track);
+        // track info
+        var $info = document.createElement('h3');
+        $info.innerText = 'Playing: ' + track.user.username + ' - ' + track.title + ' - ';
+
+        // track timings
+        var $timer = document.createElement('span');
+        var renderTimer = function () {
+          // Convert the milliseconds back to seconds
+          var timeSeconds = track.duration/1000;
+          $timer.innerText = prettyTime(player.audio.currentTime) + '/' + prettyTime(timeSeconds);
+        };
+        // rerender timer on every second
+        player.on('timeupdate', renderTimer);
+        renderTimer();
+        $info.appendChild($timer);
+
+        // album cover
+        var $img = document.createElement('img');
+        artwork = track.artwork_url;
+        largeArtwork = artwork.replace('-large', '-t500x500');
+        $img.src = largeArtwork;
+
+        // play/pause button
+        var $button = document.createElement('button');
+        var toggleButton = function () {
+          if (player.playing) {
+            $button.innerText = 'Play';
+            player.pause();
+          } else {
+            $button.innerText = 'Pause';
+            player.play({playlistIndex: playlist.tracks.length-1});
+          }
+        };
+        $button.style.display = 'block';
+        $button.innerText = 'PLAY';
+        $button.addEventListener('click', toggleButton);
+
+        // clean view
+        $view.removeChild($view.firstChild);
+
+        // append elements
+        $view.appendChild($info);
+        $view.appendChild($img);
+        $view.appendChild($button);
+      };
+      player.resolve('https://soundcloud.com/capra-design/sets/track-of-the-day', render);
     }
 
     animations();
     stickyHeader();
     contentTabs();
     respNav();
-    // Only load the social stuff on the homepage
-    if(hasClass(body, 'page-index')) {
-      twitterWidget();
+    // Only load the social stuff on the about page
+    if(hasClass(body, 'page-about')) {
+      //soundcloudWidget();
       instagramFeed();
-      soundcloudWidget();
+      twitterWidget();
     }
 
   };
@@ -222,7 +288,16 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     ready();
   }, false);
 
+  document.addEventListener("page:receive", function() {
+    var wrapper = document.getElementById('wrapper');
+    removeClass(wrapper, 'fadeInDown');
+    addClass(wrapper, 'fadeOutUp');
+  }, false);
+
   document.addEventListener("page:load", function() {
+    var wrapper = document.getElementById('wrapper');
+    removeClass(wrapper, 'fadeOutUp');
+    addClass(wrapper, 'fadeInDown');
     ready();
   }, false);
 

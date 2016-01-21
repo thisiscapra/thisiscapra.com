@@ -26,9 +26,7 @@
 
   </div>
 
+  <% featured_quote = data.work_items.clients.select{|client| client.featured_testimonial rescue false } %>
+  <%= partial "client_blockquote", :locals => { client: featured_quote.sample(), featured: true } %>
+
 </section>
-
-<% featured_quote = data.work_items.clients.select{|client| client.featured_testimonial rescue false } %>
-<%= partial "client_blockquote", :locals => { client: featured_quote.sample(), featured: true } %>
-
-<%= partial "social" %>

@@ -39,13 +39,8 @@
   </script>
 </head>
 <body id="capra" class="<%= custom_page_classes %>">
-  <div class="container">
-    <% if available? %>
-      <div id="work-bar">
-        We're available for new projects! <%= link_to("Contact us", "/contact/") %>
-      </div>
-    <% end %>
-    <%= partial "header" %>
+  <%= partial "header" %>
+  <div id="wrapper" class="container animated">
     <main role="main">
       <%= yield %>
     </main>
