@@ -19,5 +19,3 @@ Capra is a design agency based in Ottawa, Canada. We design and build beautiful 
 We decided to make this public so anyone looking for help with setting up various parts of this process can use our code. Please don't rip-off the design, it won't be hard to notice if you do!
 
 Contact us for any work enquiries. http://thisiscapra.com/contact
-
-[![Build Status](https://travis-ci.org/thisiscapra/thisiscapra.com.svg?branch=master)](https://travis-ci.org/thisiscapra/thisiscapra.com)
