@@ -46,6 +46,7 @@
     </main>
     <%= partial "footer" %>
   </div>
+  <%= yield_content :work_nav %>
   <% if app.build? %>
     <script>
       ga('send', 'pageview');
