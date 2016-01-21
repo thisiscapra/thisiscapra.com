@@ -288,7 +288,7 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     ready();
   }, false);
 
-  document.addEventListener("page:receive", function() {
+  document.addEventListener("page:fetch", function() {
     var wrapper = document.getElementById('wrapper');
     removeClass(wrapper, 'fadeInDown');
     addClass(wrapper, 'fadeOutUp');
@@ -299,6 +299,12 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     removeClass(wrapper, 'fadeOutUp');
     addClass(wrapper, 'fadeInDown');
     ready();
+  }, false);
+
+  document.addEventListener("page:restore", function() {
+    var wrapper = document.getElementById('wrapper');
+    removeClass(wrapper, 'fadeOutUp');
+    addClass(wrapper, 'fadeInDown');
   }, false);
 
 }
