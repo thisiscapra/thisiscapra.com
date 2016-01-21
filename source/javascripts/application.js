@@ -285,6 +285,9 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
   };
 
   document.addEventListener("DOMContentLoaded", function() {
+    var wrapper = document.getElementById('wrapper');
+    removeClass(wrapper, 'fadeOutUp');
+    addClass(wrapper, 'fadeInDown');
     ready();
   }, false);
 
