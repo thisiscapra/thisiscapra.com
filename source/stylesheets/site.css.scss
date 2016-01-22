@@ -786,6 +786,7 @@ fieldset {
     color: $sports-digest-color;
   }
 }
+
 .home-about-us {
   margin: 16% 0 0;
   h3 {
@@ -906,6 +907,10 @@ fieldset {
 }
 
 // Work / Labs detail page
+
+body.shrimps-matter {
+  @include colour-scheme($shrimps-matter-color, work, shrimps-matter/shrimps-matter-featured);
+}
 
 body.alfred-app {
   @include colour-scheme($alfred-color, work, alfred-app/alfred-app-featured);
