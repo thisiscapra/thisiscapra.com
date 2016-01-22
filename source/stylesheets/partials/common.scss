@@ -118,7 +118,7 @@ $mink: 'minkregular';
     }
   }
   @media screen and (max-width: 600px) {
-    .page-nav {
+    .navigation .page-nav {
       background-color: rgba($color, 0.9);
       a.active,
       a:hover {
