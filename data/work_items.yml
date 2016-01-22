@@ -62,7 +62,7 @@ clients:
     weight: 3
     featured: true
     title: Designed to be productive.
-    home_intro: "See how we designed your computer&#8217;s butler for OSX."
+    home_intro: "See how we designed your computer&#8217;s butler for OSX"
     url: alfred-app
     link: http://alfredapp.com
     intro: "<p>For this project, Ollie was approached by Andrew and Vero Pepperell, a talented developer and marketing team, to create the original design and branding for a quicklauncher that simplifies and speeds up your workflow.</p> <p>Its launch went viral (thanks to web designers and other mac users who love all things beautiful) and has been successful ever since. Alfred App is your computer&#8217;s butler: it is a highly rated and popular productivity app for OSX that is being used by tens of thousands of Apple users worldwide.</p>"
@@ -88,7 +88,7 @@ clients:
     weight: 4
     #featured: false
     title: Beautifully educated.
-    home_intro: "See how we redefined a school&#8217;s online presence."
+    home_intro: "See how we redefined a school&#8217;s online presence"
     url: alton-convent-school
     link: http://altonconvent.org.uk
     intro: "<p>Alton Convent is a highly rated public school located in the picturesque village of Alton, UK. Before approaching Capra, they had an outdated drupal system that was very difficult to update and lacked the flexibility the school needed to move forward.</p> <p>They came to us with a simple brief: &#8220;Make it beautiful, easy to use and stand out from the crowd&#8221;. We built them a lovely design based around full-screen photography and a fully responsive front end build to work across all devices. The new site is built on a customised Wordpress install with extended scalability.</p>"
@@ -115,7 +115,7 @@ clients:
   - name: 8-50 Sports Digest
     weight: 5
     title: Simple sports news.
-    home_intro: "See how we designed a sports app for iPhone and Android."
+    home_intro: "See how we designed a sports app for iPhone and Android"
     url: sports-digest-8-50
     link: http://850sportsapp.com
     intro: "<p>You have just 10 minutes before work starts, and you need to catch up with the sports you missed this weekend. 850 offers a simple, beautiful sports digest, curated and written by talented sports writers.</p> <p>With bold colours and a scannable format, it has lofty goals to become the world&#8217;s best sports app. Capra designed and built this first version.</p>"
@@ -142,7 +142,7 @@ clients:
   # Mind the product
   - name: Mind the Product
     weight: 6
-    home_intro: "See how we designed this popular conference website."
+    home_intro: "See how we designed this popular conference website"
     url: mind-the-product
     link: http://mtpcon.com/
     intro: "<p>Mind the Product is a very popular meetup group for product managers. In 2012 they launched their very first conference in London, UK, and founder Martin Erikkson approached Kat to come up with a simple, elegant design.</p> <p>The <a href=http://mtpcon.com/london/2012 alt=Mind the Product Conference 2012>first year&#8217;s website</a> was a straightforward one-page design, based on their brand&#8217;s colours and logo, where the circles moved as you scrolled.</p>"
@@ -169,7 +169,7 @@ clients:
   # Super Better
   - name: Super Better
     weight: 7
-    home_intro: "See how we designed this game to achieve health goals."
+    home_intro: "See how we designed this game to achieve health goals"
     url: super-better
     link: http://superbetter.com
     intro: "<p>SuperBetter is a game by Jane McGonigal that helps you achieve your health goals &#8212; or recover from an illness or injury &#8212; by increasing your personal resilience.</p> <p>Resilience means staying curious, optimistic and motivated even in the face of the toughest challenges. Kat was involved in designing and building the web and native iOS app.</p>"
@@ -198,7 +198,7 @@ clients:
   # Back Page Football
   - name: Back Page Football
     weight: 7
-    home_intro: "See how we designed this popular football blog."
+    home_intro: "See how we designed this popular football blog"
     url: backpagefootball
     link: http://backpagefootball.com
     intro: "<p>Before coming to us, Backpagefootball&#8217;s founder Kevin&nbsp;Coleman had created a curated newspaper-style blog about football to satisfy his own need for good writing on his favourite sport. When he approached Ollie for design help in 2009, he found Ollie&#8217;s passion for football meant he understood exactly how to create a readable, fully-functioning sports blog.</p> <p>He also coded this stunning design to sit on top of a multi-site Wordpress build so they could roll out other sports blogs at the touch of a button. As their sole designer, Ollie continues to update and refine the site to reflect changing technologies.</p>"
@@ -220,7 +220,7 @@ clients:
   # Cold Claim
   - name: Cold Claim
     weight: 8
-    home_intro: "See how we designed this strategic learning game."
+    home_intro: "See how we designed this strategic learning game"
     url: cold-claim
     link: http://coldclaim.com
     intro: "<p>The place is Antarctica. The year is 2049. Your mission is to locate and extract what is now Earth&#8217;s most precious resource: Paleo Water. As expedition leader, you must prepare to navigate harsh terrain, prospect for Paleo, discover artifacts, and claim coldly contested land... while outwitting your rivals and protecting your reputation!</p> <p>In the spirit of <em>Settlers of Catan</em> and <em>Kingdom Builder</em>, <em>Cold Claim</em> is a strategic board game for two to four players available via iPad Game Center, pass-and-play or the physical board game.</p>"
@@ -253,7 +253,7 @@ clients:
   # Toto
   - name: Toto
     weight: 9
-    home_intro: "See how we designed this e-commerce store."
+    home_intro: "See how we designed this e-commerce store"
     url: toto
     link: http://totomerch.com
     intro: "<p>After demoing a well-received prototype, Totomerch wished to expand their app from a restrictive Flash application to a robust program that reflects all of their user feedback.</p> <p>Their aim was to make it easy for bands to sell one-off merchandise so they wouldn&#8217;t have to keep lots of stock.</p>"

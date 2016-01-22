@@ -987,6 +987,9 @@ body.dragimals {
     margin-bottom: 0.25em;
     text-align: center;
   }
+  p {
+    font-weight: 700;
+  }
 }
 .work-header-content {
   @extend %vertical-align;
