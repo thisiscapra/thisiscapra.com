@@ -734,9 +734,10 @@ fieldset {
     font-family: $mink;
     font-size: 3em;
     letter-spacing: -7px;
-    right: 0;
+    right: 1em;
     position: absolute;
-    width: gs-width(cap, 1, 4, false, true);
+    text-align: right;
+    width: gs-width(cap, 1, 5, false, true);
     @include transform(rotate(-10deg));
     @media screen and (max-width: 600px) {
       bottom: 0.2em;
