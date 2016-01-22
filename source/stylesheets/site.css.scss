@@ -748,7 +748,7 @@ fieldset {
     }
   }
 }
-.ft-pantera {
+.ft-shrimps-matter {
   margin-bottom: 12%;
   @include gs-span(cap,3,7);
   @media screen and (max-width: 600px) {
@@ -758,10 +758,10 @@ fieldset {
   }
   z-index: 3;
   h3 {
-    color: $pantera-color;
+    color: $shrimps-matter-color;
   }
 }
-.ft-alfred-app {
+.ft-pantera {
   margin-bottom: 12%;
   @include gs-span(cap,1,5);
   z-index: 2;
@@ -771,10 +771,10 @@ fieldset {
     width: 100%;
   }
   h3 {
-    color: $alfred-color;
+    color: $pantera-color;
   }
 }
-.ft-sports-digest-8-50 {
+.ft-alfred-app {
   @include gs-span(cap,2,6);
   z-index: 1;
   @media screen and (max-width: 600px) {
@@ -783,7 +783,7 @@ fieldset {
     width: 100%;
   }
   h3 {
-    color: $sports-digest-color;
+    color: $alfred-color;
   }
 }
 
