@@ -844,9 +844,7 @@ fieldset {
     margin-bottom: 4em;
     position: relative;
     @extend %clearfix;
-    &:nth-child(1),
-    &:nth-child(4),
-    &:nth-child(7) {
+    &:nth-child(3n+1) {
       img {
         @include gs-span(cap,3,7);
         @media screen and (max-width: 600px) {
@@ -862,9 +860,7 @@ fieldset {
         }
       }
     } 
-    &:nth-child(2),
-    &:nth-child(5),
-    &:nth-child(8) {
+    &:nth-child(3n+2) {
       img {
         @include gs-span(cap,1,5);
         @media screen and (max-width: 600px) {
@@ -880,9 +876,7 @@ fieldset {
         }
       }
     }
-    &:nth-child(3),
-    &:nth-child(6),
-    &:nth-child(9) {
+    &:nth-child(3n+3) {
       img {
         @include gs-span(cap,2,6);
         @media screen and (max-width: 600px) {
