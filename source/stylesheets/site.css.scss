@@ -1325,9 +1325,6 @@ body.dragimals {
     margin-top: 1.5em;
     width: 100%;
   }
-  > p:first-of-type {
-    @extend %first-letter;
-  }
   figure {
     margin: 0 auto 1.5em;
     width: gs-width(cap, 2, 6, (2,6), true);
