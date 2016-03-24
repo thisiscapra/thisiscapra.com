@@ -1,5 +1,10 @@
 ---
 :id: 5Wdsy8X2fYoWWg4QG8cUKK
+:title: Naked - A Shopify theme
+:date: !ruby/object:DateTime 2015-04-13 00:00:00.000000000 Z
+:slug: naked-a-shopify-theme
+:author:
+- :id: 6wjiRDDynYGowcUeGI8UE6
 :body: "[Naked](https://github.com/thisiscapra/shopify-naked) is a [Shopify](http://www.shopify.com/)
   theme stripped back to the bare essentials. It's based on the [Skeleton theme](https://github.com/Shopify/skeleton-theme)
   from Shopify but has all presentational markup, CSS and JS removed so it can be
@@ -9,13 +14,7 @@
   and I'm not supporting it in any way as it's open source. I will try to keep updating
   it to keep it in line with Skeleton for liquid code updates.\n\n[It's available
   on Github](https://github.com/thisiscapra/shopify-naked)"
-:title: Naked - A Shopify theme
-:slug: naked-a-shopify-theme
-:author:
-- :id: 6wjiRDDynYGowcUeGI8UE6
-  :name: Ollie Kavanagh
-:date: !ruby/object:DateTime 2015-04-13 00:00:00.000000000 Z
-:comments: false
 :tags:
 - Shopify
 - Theme
+:comments: false

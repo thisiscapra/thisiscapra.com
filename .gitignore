@@ -24,3 +24,5 @@
 /.divshot-cache
 .blog-space-hash
 /log
+.env.development
+.env

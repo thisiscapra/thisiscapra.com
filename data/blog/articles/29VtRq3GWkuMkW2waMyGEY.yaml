@@ -1,5 +1,10 @@
 ---
 :id: 29VtRq3GWkuMkW2waMyGEY
+:title: The evolution of Alfred App
+:date: !ruby/object:DateTime 2015-03-05 00:00:00.000000000 Z
+:slug: the-evolution-of-alfred-app
+:author:
+- :id: 6wjiRDDynYGowcUeGI8UE6
 :body: "As [Alfred App](http://www.alfredapp.com) turned 5 years old last week and
   I've been lucky to work on the design, branding and UI during that period, I thought
   I would document how it has evolved.\n\n###Alfred beta\n\nWhen [Vero](https://twitter.com/vero)
@@ -71,12 +76,6 @@
   alt=\"Alfred Remote site\"></figure>\n\nSo there you have it, an overview of how
   the Alfred brand and design has evolved over the last 5 years. Who knows what will
   happen with v3?"
-:title: The evolution of Alfred App
-:slug: the-evolution-of-alfred-app
-:author:
-- :id: 6wjiRDDynYGowcUeGI8UE6
-  :name: Ollie Kavanagh
-:date: !ruby/object:DateTime 2015-03-05 00:00:00.000000000 Z
 :tags:
 - Alfred App
 - Design

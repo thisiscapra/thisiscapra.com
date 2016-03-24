@@ -15,6 +15,10 @@ page "/404.html", layout: false
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
+activate :dotenv
+activate :sprockets
+sprockets.append_path File.join( root, 'source' )
+
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
@@ -45,10 +49,10 @@ activate :contentful do |f|
   f.content_types = {
     articles: ENV['CONTENTFUL_POST_KEY']
   }
-  f.cda_query = {
-    content_type: ENV['CONTENTFUL_POST_KEY'],
-    include: 1
-  }
+  # f.cda_query = {
+  #   content_type: ENV['CONTENTFUL_POST_KEY'],
+  #   include: 1
+  # }
 end
 
 app.data.blog.articles.each do |article|
@@ -71,11 +75,6 @@ activate :syntax, line_numbers: true, lexer_options: { parent: 'plaintext' }
 ###
 # Helpers
 ###
-
-# Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload, no_swf: true
-end
 
 # Methods defined in the helpers block are available in templates
 helpers do
@@ -133,8 +132,6 @@ helpers do
   end
 end
 
-activate :directory_indexes
-
 ###
 # Pagination
 ###
@@ -144,6 +141,16 @@ activate :directory_indexes
 #     data.blog.articles.sort_by{ |id,a| a[:date] }.reverse
 #   end
 # end
+
+activate :directory_indexes
+
+# Development-specific configuration
+configure :development do
+
+  # Reload the browser automatically whenever files change
+  activate :livereload, no_swf: true
+
+end
 
 # Build-specific configuration
 configure :build do

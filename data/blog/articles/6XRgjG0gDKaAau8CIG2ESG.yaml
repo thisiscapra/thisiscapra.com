@@ -1,10 +1,10 @@
 ---
 :id: 6XRgjG0gDKaAau8CIG2ESG
 :title: Wordpress Multisite sub-domains with Pow & Apache
+:date: !ruby/object:DateTime 2015-01-14 00:00:00.000000000 Z
 :slug: wordpress-multisite-sub-domains-with-pow-apache
 :author:
 - :id: 6wjiRDDynYGowcUeGI8UE6
-  :name: Ollie Kavanagh
 :body: "I have my local dev environment set up with Pow and I then make Apache listen
   on Port 81 for any PHP apps I'm doing on `.dev`. I'm currently working on a Wordpress
   Sub-domain multisite yet I was stumped as the sub-domain alias wasn't working for
@@ -16,9 +16,8 @@
   Voilà, the sub-domain is now working.\n\n**%-2 in the VirtualDocumentRoot represents
   the penultimate dot-separated part of foo.com, i.e. foo. You could then have directories
   as you wish that map to the sites**\n\n[From this post on Stackoverflow](https://stackoverflow.com/questions/26575276/wildcard-domains-with-virtualhost-with-apache-on-mac/26636481#26636481)"
-:date: !ruby/object:DateTime 2015-01-14 00:00:00.000000000 Z
-:comments: false
 :tags:
 - Apache
 - Wordpress
 - Pow
+:comments: false

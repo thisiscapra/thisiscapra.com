@@ -1,10 +1,10 @@
 ---
 :id: 2EW19vwrJGoYOuCsSO8aSM
 :title: Rebuilding Capra
+:date: !ruby/object:DateTime 2015-01-10 00:00:00.000000000 Z
 :slug: rebuilding-capra
 :author:
 - :id: 6wjiRDDynYGowcUeGI8UE6
-  :name: Ollie Kavanagh
 :body: "So when we decided to rebuild the Capra website we had a big decision to make
   on technology. The old site was built in Wordpress and while we still love that
   and will use it on client projects ongoing it felt like overkill for our needs.
@@ -92,11 +92,10 @@
   \   deploy:\n      provider: divshot\n      api_key:\n        secure: YOUR_SECURE_API_KEY\n
   \     environment: \n        master: production\n      on:\n        repo: YOUR_REPO\n
   \       skip_cleanup: true\n"
-:date: !ruby/object:DateTime 2015-01-10 00:00:00.000000000 Z
-:comments: false
 :tags:
 - ruby
 - middleman
 - html5
 - css3
 - deployment
+:comments: false

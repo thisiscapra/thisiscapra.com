@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/642046/css/fonts.css" />
   <% end %>
   <%= stylesheet_link_tag "site.css", "highlighting.css" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag :application %>
   <%= yield_content :javascript %>
   <!--[if lt IE 9]>
     <%= javascript_include_tag("html5shiv.min.js") %>
