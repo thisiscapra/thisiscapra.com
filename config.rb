@@ -49,10 +49,10 @@ activate :contentful do |f|
   f.content_types = {
     articles: ENV['CONTENTFUL_POST_KEY']
   }
-  # f.cda_query = {
-  #   content_type: ENV['CONTENTFUL_POST_KEY'],
-  #   include: 1
-  # }
+  f.cda_query = {
+    content_type: ENV['CONTENTFUL_POST_KEY'],
+    include: 1
+  }
 end
 
 app.data.blog.articles.each do |article|

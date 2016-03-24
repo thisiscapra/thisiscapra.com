@@ -5,6 +5,7 @@
 :slug: wordpress-multisite-sub-domains-with-pow-apache
 :author:
 - :id: 6wjiRDDynYGowcUeGI8UE6
+  :name: Ollie Kavanagh
 :body: "I have my local dev environment set up with Pow and I then make Apache listen
   on Port 81 for any PHP apps I'm doing on `.dev`. I'm currently working on a Wordpress
   Sub-domain multisite yet I was stumped as the sub-domain alias wasn't working for
