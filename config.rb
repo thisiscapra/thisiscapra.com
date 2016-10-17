@@ -2,7 +2,7 @@
 # Page options, layouts, aliases and proxies
 ###
 
-Time.zone = "US/Eastern"
+#Time.zone = "US/Eastern"
 
 # Per-page layout changes:
 #
@@ -61,9 +61,9 @@ app.data.blog.articles.each do |article|
   }, :ignore => true
 end
 
-app.data.blog.articles.map { |article| article[1][:tags] }.flatten.uniq.each do |tag|
-  proxy "/blog/tags/#{tag.downcase}/index.html", "/blog/tag.html", locals: { 
-    tag: tag
+app.data.blog.articles.map { |article| article[1][:tags] }.flatten.uniq.each do |tag_name|
+  proxy "/blog/tags/#{tag_name.downcase}/index.html", "/blog/tag.html", locals: { 
+    blog_tag: tag_name
   }, :ignore => true
 end
 
@@ -106,9 +106,8 @@ helpers do
   def sentence_tag_list(article)
     if tags = article.tags
       content_tag(:div, class: :tags) do
-        "This article was filed under: <br>" +
-        article.tags.map{|t| link_to t, "/blog/tags/#{t.downcase}"}.to_sentence +
-        "."
+        "This article was filed under: " +
+        article.tags.map{|t| link_to t.humanize, "/blog/tags/#{t.downcase}"}.join(', ')
       end
     end
   end

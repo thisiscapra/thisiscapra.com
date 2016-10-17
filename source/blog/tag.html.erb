@@ -1,18 +1,18 @@
-<% content_for(:title, "Tag - #{tag}") %>
-<% content_for(:description, "Articles tagged #{tag} on Capra") %>
+<% content_for(:title, "Tag - #{blog_tag}") %>
+<% content_for(:description, "Articles tagged #{blog_tag} on Capra") %>
 
 <section class="blog">
 
   <header class="section-header">
     <p>Articles tagged under</p>
-    <h1><%= tag %></h1>  
+    <h1><%= blog_tag.humanize %></h1>  
   </header>
 
   <div class="blog-list">
     
     <% 
       tag_posts = data.blog.articles.to_a.select do |article|
-        article[1][:tags].include? tag
+        article[1][:tags].include? blog_tag
       end
     %>
     
