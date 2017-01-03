@@ -53,7 +53,7 @@ work_item: true
   <% if client.images %>
     <div class="gallery">
       <% client.images.each_with_index do |image, index| %>
-        <% if index == 1 && client.sub_text %>
+        <% if index == 1 && !client.sub_text.blank? %>
           <p class="sub-text"><%= client.sub_text  %></p>
           <hr>
         <% end %>

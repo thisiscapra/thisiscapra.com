@@ -1,10 +1,88 @@
 clients:
-  # Shrimpsmatter
-  - name: Shrimps Matter
+  # Swing Voter Go
+  - name: SwingVoter Go!
     weight: 1
     featured: true
+    title: Help swing this election!
+    home_intro: "See how we designed a game to defeat Donald Trump"
+    url: swingvoter-go
+    link: https://www.swingvotergo.com
+    intro: "Play the only game that can help swing this election and defeat Donald Trump!"
+    sub_text: ""
+    what_we_did: 
+      - Web design
+      - Responsive build
+    image_path: work/swingvoter-go
+    image_featured: swingvoter-go-featured.jpg
+    image_thumb: swingvoter-go-thumb.jpg
+    images:
+      - shrimps-matter-logo.jpg
+      - shrimps-matter-box.jpg
+      - shrimps-matter-whole-game.jpg
+      - shrimps-matter-home.jpg
+      - shrimps-animation.gif
+    testimonial: ""
+    featured_testimonial: ""
+    cite: ""
+  # GovGuide
+  - name: GovGuide
+    weight: 2
+    featured: true
+    title: A one-stop-shop database on MPs
+    home_intro: "See how we built this comprehensive guide to Canadian MPs"
+    url: govguide
+    link: http://govguide.ca
+    intro: "A comprehensive, one-stop-shop database with up-to-date information on all MPs and Senators in Canada."
+    #sub_text: ""
+    what_we_did: 
+      - Web design
+      - Project management
+      - Wordpress CMS
+      - Responsive build
+      - Faceted Search
+    image_path: work/govguide
+    image_featured: govguide-featured.jpg
+    image_thumb: govguide-thumb.jpg
+    images:
+      - govguide-search.jpg
+      - govguide-profile.jpg
+      - govguide-mobile.jpg
+      - govguide-calendar.jpg
+    #testimonial: ""
+    #featured_testimonial: ""
+    #cite: ""
+  # Taylor Statten Camps
+  - name: Taylor Statten Camps
+    weight: 3
+    featured: true
+    title: Adventure of a Lifetime
+    home_intro: "See how we designed the Camping Adventure of a Lifetime"
+    url: taylor-statten-camps
+    link: http://www.taylorstattencamps.com
+    intro: "The Camping Adventure of a Lifetime"
+    sub_text: ""
+    what_we_did: 
+      - Web design
+      - Project management
+      - Wordpress CMS
+      - Photo Gallery 
+      - Responsive build
+    image_path: work/taylor-statten-camps
+    image_featured: taylor-statten-camps-featured.jpg
+    image_thumb: taylor-statten-camps-thumb.jpg
+    images:
+      - taylor-statten-camps-home.jpg
+      - taylor-statten-camps-mobile.jpg
+      - taylor-statten-camps-typical-day.jpg
+    # testimonial: ""
+    # featured_testimonial: ""
+    # cite: ""
+  # Shrimpsmatter
+  - name: Shrimps Matter
+    weight: 4
+    featured: true
     title: The ocean is interconnected
-    home_intro: "Play a game while exploring the interconnectedness of the ocean"
+    home_intro: "See how we designed a game to expore the ocean"
     url: shrimps-matter
     link: http://shrimpsmatter.com
     intro: "<p>Game designers Tabatha Soltay from <a href='http://tabtalks.ca' target='_blank'>Tab Talks</a> and <a href='http://jpveilleux.ca/' target='_blank'>JP Veilleux</a> wanted to create a beautiful game that helped teach people about the interconnectedness of our oceans. What they designed, and we brought to life with beautiful visuals, is the complex vision of how difficult it is to balance being environmentally responsible with being economically prosperous.<p>The game was designed as part of Ottawa Wavemakers in association with <a href='http://ottawa.the-hub.net/' target='_blank'>Hub Ottawa</a> and <a href='http://www.wwf.ca/' target='_blank'>WWF Canada</a>. We were responsible for everything visual, from the logo to how to simplify concepts using visuals (colour, layout and a common visual language), as well as preparing assets for print. We also had fun making the supporting website! It was launched in December 2015, and is now available for purchase or to use as an open-source game (print and play). </p> <p></p>"
@@ -32,8 +110,8 @@ clients:
     cite: "Tabatha Soltay, <a href='http://tabtalks.ca' target='_blank'>TabTalks</a>"
   # Pantera
   - name: Pantera Carpentry
-    weight: 2
-    featured: true
+    weight: 5
+    #featured: true
     title: For great carpenters.
     home_intro: "See how we constructed a beautiful website for Pantera Carpentry"
     url: pantera
@@ -59,7 +137,7 @@ clients:
     cite: "Pete Mills, Managing Director, Pantera Group"
  # Alfred
   - name: Alfred App
-    weight: 3
+    weight: 6
     featured: true
     title: Designed to be productive.
     home_intro: "See how we designed your computer&#8217;s butler for OSX"
@@ -85,7 +163,7 @@ clients:
       - alfred-remote.jpg
   # Alton Convent School
   - name: Alton Convent
-    weight: 4
+    weight: 7
     #featured: false
     title: Beautifully educated.
     home_intro: "See how we redefined a school&#8217;s online presence"
@@ -113,7 +191,7 @@ clients:
       - alton-convent-site-4.jpg
   # 8-50
   - name: 8-50 Sports Digest
-    weight: 5
+    weight: 8
     title: Simple sports news.
     home_intro: "See how we designed a sports app for iPhone and Android"
     url: sports-digest-8-50
@@ -141,7 +219,7 @@ clients:
     cite: 'Jon Bishop, 850 founder'
   # Mind the product
   - name: Mind the Product
-    weight: 6
+    weight: 9
     home_intro: "See how we designed this popular conference website"
     url: mind-the-product
     link: http://mtpcon.com/
@@ -168,7 +246,7 @@ clients:
     cite: 'Martin Eriksson, founder of Mind The Product'
   # Super Better
   - name: Super Better
-    weight: 7
+    weight: 10
     home_intro: "See how we designed this game to achieve health goals"
     url: super-better
     link: http://superbetter.com
@@ -196,30 +274,30 @@ clients:
     featured_testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I&#8217;ve never found that talent wrapped in such an energetic, positive, problem-solving personality."
     cite: "Chelsea Howe, Game Designer for SuperBetter"
   # Back Page Football
-  - name: Back Page Football
-    weight: 7
-    home_intro: "See how we designed this popular football blog"
-    url: backpagefootball
-    link: http://backpagefootball.com
-    intro: "<p>Before coming to us, Backpagefootball&#8217;s founder Kevin&nbsp;Coleman had created a curated newspaper-style blog about football to satisfy his own need for good writing on his favourite sport. When he approached Ollie for design help in 2009, he found Ollie&#8217;s passion for football meant he understood exactly how to create a readable, fully-functioning sports blog.</p> <p>He also coded this stunning design to sit on top of a multi-site Wordpress build so they could roll out other sports blogs at the touch of a button. As their sole designer, Ollie continues to update and refine the site to reflect changing technologies.</p>"
-    sub_text: "Backpagefootball now has a user base of over 10,000 readers every month and has been featured on inspirational sites including <a href=http://www.siteinspire.com/websites/2298-back-page-football>Site Inspire</a>.  The responsive design and CMS have allowed the site to elvove and expand globally to become one of the top sports blogs of its kind while still staying true to its roots."
-    what_we_did: 
-      - Web design
-      - 'Branding & logo design'
-      - Wordpress Multi-Site
-      - Responsive build
-      - Marketing materials
-    image_path: work/backpagefootball
-    image_featured: backpagefootball-featured.jpg
-    image_thumb: backpagefootball-thumb.jpg
-    images:
-      - backpagefootball-site-1.jpg
-      - backpagefootball-mobile.jpg
-      - backpagefootball-site-2.jpg
-      - backpagefootball-site-3.jpg
+  # - name: Back Page Football
+  #   weight: 7
+  #   home_intro: "See how we designed this popular football blog"
+  #   url: backpagefootball
+  #   link: http://backpagefootball.com
+  #   intro: "<p>Before coming to us, Backpagefootball&#8217;s founder Kevin&nbsp;Coleman had created a curated newspaper-style blog about football to satisfy his own need for good writing on his favourite sport. When he approached Ollie for design help in 2009, he found Ollie&#8217;s passion for football meant he understood exactly how to create a readable, fully-functioning sports blog.</p> <p>He also coded this stunning design to sit on top of a multi-site Wordpress build so they could roll out other sports blogs at the touch of a button. As their sole designer, Ollie continues to update and refine the site to reflect changing technologies.</p>"
+  #   sub_text: "Backpagefootball now has a user base of over 10,000 readers every month and has been featured on inspirational sites including <a href=http://www.siteinspire.com/websites/2298-back-page-football>Site Inspire</a>.  The responsive design and CMS have allowed the site to elvove and expand globally to become one of the top sports blogs of its kind while still staying true to its roots."
+  #   what_we_did: 
+  #     - Web design
+  #     - 'Branding & logo design'
+  #     - Wordpress Multi-Site
+  #     - Responsive build
+  #     - Marketing materials
+  #   image_path: work/backpagefootball
+  #   image_featured: backpagefootball-featured.jpg
+  #   image_thumb: backpagefootball-thumb.jpg
+  #   images:
+  #     - backpagefootball-site-1.jpg
+  #     - backpagefootball-mobile.jpg
+  #     - backpagefootball-site-2.jpg
+  #     - backpagefootball-site-3.jpg
   # Cold Claim
   - name: Cold Claim
-    weight: 8
+    weight: 11
     home_intro: "See how we designed this strategic learning game"
     url: cold-claim
     link: http://coldclaim.com
@@ -250,24 +328,24 @@ clients:
     testimonial: "Kat's relentless optimism and ability to keep the momentum going in the dark times that come with any long-term project make her a true delight to work with. She has my complete trust, total respect, and my highest recommendation."
     featured_testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with."
     cite: "Mathias Crawford, game designer for ColdClaim"
-  # Toto
-  - name: Toto
-    weight: 9
-    home_intro: "See how we designed this e-commerce store"
-    url: toto
-    link: http://totomerch.com
-    intro: "<p>After demoing a well-received prototype, Totomerch wished to expand their app from a restrictive Flash application to a robust program that reflects all of their user feedback.</p> <p>Their aim was to make it easy for bands to sell one-off merchandise so they wouldn&#8217;t have to keep lots of stock.</p>"
-    sub_text: "Toto needed a design that was clean but also up-to-date and modern enough for its hip crowd. The site also needed to be easy to use. We applied neutral backgrounds with subtle textures and bold calls-to-action that lead the users through the website."
-    what_we_did: 
-      - User interface design
-      - Web design
-      - Shop design
-      - Basic white-label design
-    image_path: work/toto
-    image_featured: toto-featured.jpg
-    image_thumb: toto-thumb.jpg
-    images:
-      - toto-home.jpg
-      - toto-choose.jpg
-      - toto-dashboard.jpg
-      - toto-selling-tools.jpg
+  # # Toto
+  # - name: Toto
+  #   weight: 9
+  #   home_intro: "See how we designed this e-commerce store"
+  #   url: toto
+  #   link: http://totomerch.com
+  #   intro: "<p>After demoing a well-received prototype, Totomerch wished to expand their app from a restrictive Flash application to a robust program that reflects all of their user feedback.</p> <p>Their aim was to make it easy for bands to sell one-off merchandise so they wouldn&#8217;t have to keep lots of stock.</p>"
+  #   sub_text: "Toto needed a design that was clean but also up-to-date and modern enough for its hip crowd. The site also needed to be easy to use. We applied neutral backgrounds with subtle textures and bold calls-to-action that lead the users through the website."
+  #   what_we_did: 
+  #     - User interface design
+  #     - Web design
+  #     - Shop design
+  #     - Basic white-label design
+  #   image_path: work/toto
+  #   image_featured: toto-featured.jpg
+  #   image_thumb: toto-thumb.jpg
+  #   images:
+  #     - toto-home.jpg
+  #     - toto-choose.jpg
+  #     - toto-dashboard.jpg
+  #     - toto-selling-tools.jpg

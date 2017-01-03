@@ -749,6 +749,45 @@ fieldset {
     }
   }
 }
+.ft-swingvoter-go {
+  margin-bottom: 12%;
+  @include gs-span(cap,3,7);
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0 0 8%;
+    width: 100%;
+  }
+  z-index: 3;
+  h3 {
+    color: $swingvoter-go-color;
+  }
+}
+.ft-govguide {
+  margin-bottom: 12%;
+  @include gs-span(cap,1,5);
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0 0 8%;
+    width: 100%;
+  }
+  z-index: 3;
+  h3 {
+    color: $govguide-color;
+  }
+}
+.ft-taylor-statten-camps {
+  margin-bottom: 12%;
+  @include gs-span(cap,2,6);
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0 0 8%;
+    width: 100%;
+  }
+  z-index: 3;
+  h3 {
+    color: $taylor-statten-camps-color;
+  }
+}
 .ft-shrimps-matter {
   margin-bottom: 12%;
   @include gs-span(cap,3,7);
@@ -762,19 +801,19 @@ fieldset {
     color: $shrimps-matter-color;
   }
 }
-.ft-pantera {
-  margin-bottom: 12%;
-  @include gs-span(cap,1,5);
-  z-index: 2;
-  @media screen and (max-width: 600px) {
-    float: none;
-    margin: 0 0 8%;
-    width: 100%;
-  }
-  h3 {
-    color: $pantera-color;
-  }
-}
+// .ft-pantera {
+//   margin-bottom: 12%;
+//   @include gs-span(cap,1,5);
+//   z-index: 2;
+//   @media screen and (max-width: 600px) {
+//     float: none;
+//     margin: 0 0 8%;
+//     width: 100%;
+//   }
+//   h3 {
+//     color: $pantera-color;
+//   }
+// }
 .ft-alfred-app {
   @include gs-span(cap,2,6);
   z-index: 1;
@@ -949,6 +988,18 @@ body.pantera {
   @include colour-scheme($pantera-color, work, pantera/pantera-featured);
 }
 
+body.taylor-statten-camps {
+  @include colour-scheme($taylor-statten-camps-color, work, taylor-statten-camps/taylor-statten-camps-featured);
+}
+
+body.govguide {
+  @include colour-scheme($govguide-color, work, govguide/govguide-featured);
+}
+
+body.swingvoter-go {
+  @include colour-scheme($swingvoter-go-color, work, swingvoter-go/swingvoter-go-featured);
+}
+
 body.river-ranger {
   @include colour-scheme($river-ranger-color, labs, river-ranger/river-ranger-featured);
 }
@@ -1046,6 +1097,9 @@ body.dragimals {
   }
   figure {
     margin-bottom: 8%;
+  }
+  img {
+    max-width: 1000px;
   }
 }
 .hire {
