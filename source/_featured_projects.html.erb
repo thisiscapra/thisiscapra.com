@@ -1,5 +1,5 @@
 <div class="featured-projects">
-  <h2>Featured Projects</h2>
+  <h2 class="overlay-text">Featured Projects</h2>
   <% 
     featured = data.work_items.clients.select{|item| item.featured rescue false }
     featured.each_with_index do |client| %>

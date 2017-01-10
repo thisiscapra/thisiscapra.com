@@ -10,10 +10,25 @@ GIT
       middleman-core (~> 4.0)
 
 GIT
-  remote: git://github.com/middleman/middleman-sprockets.git
-  revision: cb88971b1c8ef66ea182e070387940db4cce59fe
+  remote: git://github.com/flori/json.git
+  revision: c7a6e31f3abde6efbf0629dea68b43bebb62c94a
+  branch: v1.8
   specs:
-    middleman-sprockets (4.0.0)
+    json (1.8.5)
+
+GIT
+  remote: git://github.com/jc00ke/middleman-pagination.git
+  revision: 86aa6efd5409352a33fe2bb208bd38e35e28f6ae
+  branch: master
+  specs:
+    middleman-pagination (1.2.0)
+      middleman-core
+
+GIT
+  remote: git://github.com/middleman/middleman-sprockets.git
+  revision: 9b77b2b56d2881b80ddcf4b5d335e68be4c1a7f2
+  specs:
+    middleman-sprockets (4.1.0)
       middleman-core (~> 4.0)
       sprockets (>= 3.0)
 
@@ -37,26 +52,26 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    actionpack (4.2.7.1)
-      actionview (= 4.2.7.1)
-      activesupport (= 4.2.7.1)
-      rack (~> 1.6)
-      rack-test (~> 0.6.2)
-      rails-dom-testing (~> 1.0, >= 1.0.5)
+    actionpack (5.0.1)
+      actionview (= 5.0.1)
+      activesupport (= 5.0.1)
+      rack (~> 2.0)
+      rack-test (~> 0.6.3)
+      rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (4.2.7.1)
-      activesupport (= 4.2.7.1)
+    actionview (5.0.1)
+      activesupport (= 5.0.1)
       builder (~> 3.1)
       erubis (~> 2.7.0)
-      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    activesupport (4.2.7.1)
+    activesupport (5.0.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
-      json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
-      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.4.0)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
     backports (3.6.8)
     builder (3.2.2)
     coffee-rails (4.2.1)
@@ -65,27 +80,27 @@ GEM
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.10.0)
+    coffee-script-source (1.12.2)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-    concurrent-ruby (1.0.2)
+    concurrent-ruby (1.0.4)
     contentful (0.12.0)
       http (~> 1.0)
       json (~> 1.8)
       multi_json (~> 1)
-    contentful-webhook-listener (0.2.1)
+    contentful-webhook-listener (0.3.0)
     contracts (0.13.0)
-    domain_name (0.5.20160826)
+    domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.1)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
-    eventmachine (1.2.0.1)
+    eventmachine (1.2.1)
     execjs (2.7.0)
     fast_blank (1.0.0)
-    fastimage (2.0.0)
+    fastimage (2.0.1)
       addressable (~> 2)
     ffi (1.9.14)
     haml (4.0.7)
@@ -103,27 +118,31 @@ GEM
     http-form_data (1.0.1)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
-    json (1.8.3)
-    kramdown (1.12.0)
-    libv8 (3.16.14.15)
+    kramdown (1.13.1)
+    libv8 (3.16.14.17)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     memoist (0.15.0)
-    middleman (4.1.10)
+    method_source (0.8.2)
+    middleman (4.1.14)
       coffee-script (~> 2.2)
       compass-import-once (= 1.0.5)
       haml (>= 4.0.5)
       kramdown (~> 1.2)
-      middleman-cli (= 4.1.10)
-      middleman-core (= 4.1.10)
+      middleman-cli (= 4.1.14)
+      middleman-core (= 4.1.14)
       sass (>= 3.4.0, < 4.0)
-    middleman-cli (4.1.10)
+    middleman-blog (4.0.1)
+      addressable (~> 2.3)
+      middleman-core (>= 4.0.0)
+      tzinfo (>= 0.3.0)
+    middleman-cli (4.1.14)
       thor (>= 0.17.0, < 2.0)
-    middleman-core (4.1.10)
-      activesupport (~> 4.2)
+    middleman-core (4.1.14)
+      activesupport (>= 4.2, < 5.1)
       addressable (~> 2.3)
       backports (~> 3.6)
       bundler (~> 1.1)
@@ -140,10 +159,10 @@ GEM
       memoist (~> 0.14)
       padrino-helpers (~> 0.13.0)
       parallel
-      rack (>= 1.4.5, < 2.0)
+      rack (>= 1.4.5, < 3)
       sass (>= 3.4)
       servolux
-      tilt (~> 1.4.1)
+      tilt (~> 2.0)
       uglifier (~> 3.0)
     middleman-dotenv (2.0.0)
       dotenv (>= 2.0)
@@ -153,57 +172,56 @@ GEM
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
     mini_portile2 (2.1.0)
-    minitest (5.9.1)
+    minitest (5.10.1)
     multi_json (1.12.1)
-    nokogiri (1.6.8.1)
+    nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
-    oj (2.17.4)
-    padrino-helpers (0.13.3.2)
+    oj (2.18.0)
+    padrino-helpers (0.13.3.3)
       i18n (~> 0.6, >= 0.6.7)
-      padrino-support (= 0.13.3.2)
+      padrino-support (= 0.13.3.3)
       tilt (>= 1.4.1, < 3)
-    padrino-support (0.13.3.2)
+    padrino-support (0.13.3.3)
       activesupport (>= 3.1)
-    parallel (1.9.0)
-    rack (1.6.4)
+    parallel (1.10.0)
+    public_suffix (2.0.5)
+    rack (2.0.1)
     rack-livereload (0.3.16)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rails-deprecated_sanitizer (1.0.3)
-      activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.7)
-      activesupport (>= 4.2.0.beta, < 5.0)
-      nokogiri (~> 1.6.0)
-      rails-deprecated_sanitizer (>= 1.0.1)
+    rails-dom-testing (2.0.2)
+      activesupport (>= 4.2.0, < 6.0)
+      nokogiri (~> 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
-    railties (4.2.7.1)
-      actionpack (= 4.2.7.1)
-      activesupport (= 4.2.7.1)
+    railties (5.0.1)
+      actionpack (= 5.0.1)
+      activesupport (= 5.0.1)
+      method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (11.3.0)
-    rb-fsevent (0.9.7)
+    rake (12.0.0)
+    rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
-    redcarpet (3.3.4)
+    redcarpet (3.4.0)
     ref (2.0.0)
     rouge (1.11.1)
-    sass (3.4.22)
+    sass (3.4.23)
     servolux (0.12.0)
-    sprockets (3.7.0)
+    sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    therubyracer (0.12.2)
-      libv8 (~> 3.16.14.0)
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
       ref
-    thor (0.19.1)
+    thor (0.19.4)
     thread_safe (0.3.5)
-    tilt (1.4.1)
+    tilt (2.0.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.0.2)
+    uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
@@ -214,9 +232,12 @@ PLATFORMS
 
 DEPENDENCIES
   contentful_middleman!
+  json!
   middleman
+  middleman-blog
   middleman-dotenv (~> 2.0)
   middleman-livereload
+  middleman-pagination!
   middleman-sprockets!
   middleman-syntax!
   nokogiri
@@ -226,4 +247,4 @@ DEPENDENCIES
   turbolinks!
 
 BUNDLED WITH
-   1.11.2
+   1.13.7

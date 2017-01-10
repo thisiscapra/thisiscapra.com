@@ -23,4 +23,8 @@
       <%= sentence_tag_list(article) %>
     <% end %>
   </article>
+  <% with_preview(space: ENV['CONTENTFUL_SPACE_ID'], access_token: ENV['CONTENTFUL_ACCESS_TOKEN']) do |preview| %>
+    <% entry = preview.entry('nyancat') %>
+    <p><%= entry.title %></p>
+  <% end %>
 </section>

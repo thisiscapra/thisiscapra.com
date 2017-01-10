@@ -44,6 +44,7 @@ end
 ###
 
 activate :contentful do |f|
+  f.use_preview_api = true
   f.access_token  = ENV['CONTENTFUL_ACCESS_TOKEN']
   f.space         = { blog: ENV['CONTENTFUL_SPACE_ID'] }
   f.content_types = {
@@ -129,7 +130,57 @@ helpers do
     #Redcarpet::Document.new(content).to_html
     Tilt['markdown'].new { content }.render(scope=self)
   end
+  # Responsive images helper
+  def responsive_image_tag(srcset, **options)
+    # Sort the images in the srcset by their value (Their pixel or '1x' width. Either should sort properly).
+    sorted_srcset = srcset.sort_by { |_, value| value }
+
+    # Use the smallest image in the given set as the image fallback. Might not be necessary with Picturefill.
+    options[:src] = image_path_or_url_for_string(sorted_srcset.first[0])
+
+    # Build the srcset attribute. Iterates through the given srcset hash, if a key contains '//' it
+    # is assumed to contain a URL and will not use Rails image_path.
+    options[:srcset] = sorted_srcset.map { |k, v| "#{image_path_or_url_for_string(k)} #{v}w" }.join(', ')
+
+    # Creates a little DSL for the sizes option. The gte_sm, gte_md, etc keys line up with
+    # Bootstraps default breakpoints. You could define your breakpoints somewhere else that
+    # makes sense and adapt this to your needs.
+    # 
+    # Build the sizes attribute if necessary. If the sizes option is a string, just
+    # pass that through to the final img tag.
+    if options[:sizes].present? && options[:sizes].is_a?(Hash)
+      options[:sizes] = options[:sizes].map do |media_query, length|
+        if media_query.is_a? Symbol
+          case media_query
+          when :gte_sm
+            "(min-width: 768px) #{length}"
+          when :gte_md
+            "(min-width: 992px) #{length}"
+          when :gte_lg
+            "(min-width: 1200px) #{length}"
+          when :default
+            length.to_s
+          else
+            nil
+          end
+        else
+          "#{media_query} #{length}"
+        end
+      end.join(', ')
+    end
+
+    # Return the responsive image tag
+    tag(:img, options)
+  end
+
+  # Determines if a given string contains a URL or a path by checking 
+  # for the presence of //.
+  def image_path_or_url_for_string(image_str)
+    image_str =~ /\/\// ? image_str : image_path(image_str)
+  end
 end
+
+activate :directory_indexes
 
 ###
 # Pagination
@@ -140,8 +191,6 @@ end
 #     data.blog.articles.sort_by{ |id,a| a[:date] }.reverse
 #   end
 # end
-
-activate :directory_indexes
 
 # Development-specific configuration
 configure :development do
