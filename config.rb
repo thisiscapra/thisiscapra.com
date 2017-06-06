@@ -53,6 +53,7 @@ activate :contentful do |f|
     content_type: ENV['CONTENTFUL_POST_KEY'],
     include: 1
   }
+  f.use_preview_api = ENV['USE_PREVIEW_API']
 end
 
 app.data.blog.articles.each do |article|
