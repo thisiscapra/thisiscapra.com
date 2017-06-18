@@ -46,21 +46,8 @@ app.data.lab_items.labs.each do |client|
 end
 
 ###
-# Blog / Contentful
+# Blog
 ###
-
-activate :contentful do |f|
-  f.access_token  = ENV['CONTENTFUL_ACCESS_TOKEN']
-  f.space         = { blog: ENV['CONTENTFUL_SPACE_ID'] }
-  f.content_types = {
-    articles: 'articles',
-    work: 'work',
-    lab: 'lab'
-  } 
-  if f.use_preview_api = 'true'
-    f.use_preview_api = ENV['USE_PREVIEW_API']
-  end
-end
 
 app.data.blog.articles.each do |article|
   proxy "/blog/#{article[1][:slug]}/index.html", "/blog/show.html", locals: { 
@@ -68,11 +55,11 @@ app.data.blog.articles.each do |article|
   }, :ignore => true
 end
 
-# app.data.blog.articles.map { |article| article[1][:tags] }.flatten.uniq.each do |tag_name|
-#   proxy "/blog/tags/#{tag_name.downcase}/index.html", "/blog/tag.html", locals: { 
-#     blog_tag: tag_name
-#   }, :ignore => true
-# end
+app.data.blog.articles.map { |article| article[1][:tags] }.flatten.uniq.each do |tag_name|
+  proxy "/blog/tags/#{tag_name.downcase}/index.html", "/blog/tag.html", locals: { 
+    blog_tag: tag_name
+  }, :ignore => true
+end
 
 set :markdown_engine, :redcarpet
 set :markdown, smartypants: true, fenced_code_blocks: true
