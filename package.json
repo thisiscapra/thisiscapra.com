@@ -1,0 +1,42 @@
+{
+  "name": "thisiscapra.com",
+  "version": "1.0.0",
+  "description": "Capra is a design agency based in Ottawa, Canada. We design and build beautiful websites, apps and casual games. We love designing for clients who share our vision for a better world.",
+  "main": "./source/javascripts/application.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thisiscapra/thisiscapra.com.git"
+  },
+  "author": "Capra Design",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thisiscapra/thisiscapra.com/issues"
+  },
+  "homepage": "https://github.com/thisiscapra/thisiscapra.com#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "exports-loader": "^0.6.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "foundation-sites": "^6.3.1",
+    "gsap": "^1.19.1",
+    "imports-loader": "^0.7.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.5",
+    "scrollmagic": "^2.0.5",
+    "style-loader": "^0.18.2",
+    "turbolinks": "^5.0.3",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}

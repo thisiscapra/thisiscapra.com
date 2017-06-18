@@ -1,10 +1,20 @@
 ---
 :id: 6XRgjG0gDKaAau8CIG2ESG
+:_meta:
+  :content_type_id: 2wKn6yEnZewu2SCCkus4as
+  :updated_at: '2015-12-18T16:57:29+00:00'
+  :created_at: '2015-12-15T08:24:08+00:00'
+  :id: 6XRgjG0gDKaAau8CIG2ESG
 :title: Wordpress Multisite sub-domains with Pow & Apache
 :date: !ruby/object:DateTime 2015-01-14 00:00:00.000000000 Z
 :slug: wordpress-multisite-sub-domains-with-pow-apache
 :author:
 - :id: 6wjiRDDynYGowcUeGI8UE6
+  :_meta:
+    :content_type_id: 1kUEViTN4EmGiEaaeC6ouY
+    :updated_at: '2016-01-22T01:40:42+00:00'
+    :created_at: '2015-12-14T16:48:19+00:00'
+    :id: 6wjiRDDynYGowcUeGI8UE6
   :name: Ollie Kavanagh
 :body: "I have my local dev environment set up with Pow and I then make Apache listen
   on Port 81 for any PHP apps I'm doing on `.dev`. I'm currently working on a Wordpress

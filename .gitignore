@@ -26,3 +26,4 @@
 /log
 .env.development
 .env
+node_modules

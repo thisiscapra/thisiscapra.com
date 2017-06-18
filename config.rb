@@ -16,8 +16,14 @@ page "/404.html", layout: false
 # page "/path/to/file.html", layout: :otherlayout
 
 activate :dotenv
-activate :sprockets
-sprockets.append_path File.join( root, 'source' )
+
+activate :external_pipeline,
+         name: :webpack,
+         command: build? ?
+         "./node_modules/webpack/bin/webpack.js --bail -p" :
+         "./node_modules/webpack/bin/webpack.js --watch -d --progress --color",
+         source: ".tmp/dist",
+         latency: 1
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
@@ -47,13 +53,13 @@ activate :contentful do |f|
   f.access_token  = ENV['CONTENTFUL_ACCESS_TOKEN']
   f.space         = { blog: ENV['CONTENTFUL_SPACE_ID'] }
   f.content_types = {
-    articles: ENV['CONTENTFUL_POST_KEY']
-  }
-  f.cda_query = {
-    content_type: ENV['CONTENTFUL_POST_KEY'],
-    include: 1
-  }
-  f.use_preview_api = ENV['USE_PREVIEW_API']
+    articles: 'articles',
+    work: 'work',
+    lab: 'lab'
+  } 
+  if f.use_preview_api = 'true'
+    f.use_preview_api = ENV['USE_PREVIEW_API']
+  end
 end
 
 app.data.blog.articles.each do |article|
@@ -62,11 +68,11 @@ app.data.blog.articles.each do |article|
   }, :ignore => true
 end
 
-app.data.blog.articles.map { |article| article[1][:tags] }.flatten.uniq.each do |tag_name|
-  proxy "/blog/tags/#{tag_name.downcase}/index.html", "/blog/tag.html", locals: { 
-    blog_tag: tag_name
-  }, :ignore => true
-end
+# app.data.blog.articles.map { |article| article[1][:tags] }.flatten.uniq.each do |tag_name|
+#   proxy "/blog/tags/#{tag_name.downcase}/index.html", "/blog/tag.html", locals: { 
+#     blog_tag: tag_name
+#   }, :ignore => true
+# end
 
 set :markdown_engine, :redcarpet
 set :markdown, smartypants: true, fenced_code_blocks: true
@@ -154,6 +160,9 @@ end
 
 # Build-specific configuration
 configure :build do
+
+  # "Ignore" JS so webpack has full control.
+  ignore { |path| path =~ /\/(.*)\.js$/ && $1 != 'all' }
   
   # Minify CSS on build
   activate :minify_css

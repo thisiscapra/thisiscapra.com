@@ -7,6 +7,7 @@
   <meta name="keywords" content="design, web design, HTML5, CSS3, typography, layout, grids, goats, javascript, ruby, ruby on rails, wordpress, php, middleman app, games, web applications, ottawa, ottawa web design, ottawa web development, canada web design"/>
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="turbolinks-cache-control" content="no-preview">
   <script>(function(h){h.className = h.className.replace('no-js', 'js')})(document.documentElement)</script>
   <link href="/images/favicon.ico" rel="shortcut icon"></link>
   <% if app.development? %>
@@ -14,7 +15,7 @@
   <% elsif app.build? %>
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/613014/642046/css/fonts.css" />
   <% end %>
-  <%= stylesheet_link_tag "site.css", "highlighting.css" %>
+  <%= stylesheet_link_tag "application.css", "highlighting.css" %>
   <%= javascript_include_tag :application %>
   <%= yield_content :javascript %>
   <!--[if lt IE 9]>

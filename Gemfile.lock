@@ -10,14 +10,6 @@ GIT
       middleman-core (~> 4.0)
 
 GIT
-  remote: git://github.com/middleman/middleman-sprockets.git
-  revision: 9b77b2b56d2881b80ddcf4b5d335e68be4c1a7f2
-  specs:
-    middleman-sprockets (4.1.0)
-      middleman-core (~> 4.0)
-      sprockets (>= 3.0)
-
-GIT
   remote: git://github.com/rails/turbolinks.git
   revision: 80216ce9d89920bf073709405e3fce6d0a3ccd9a
   branch: master
@@ -157,11 +149,11 @@ GEM
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     oj (3.1.0)
-    padrino-helpers (0.13.3.3)
+    padrino-helpers (0.13.3.4)
       i18n (~> 0.6, >= 0.6.7)
-      padrino-support (= 0.13.3.3)
+      padrino-support (= 0.13.3.4)
       tilt (>= 1.4.1, < 3)
-    padrino-support (0.13.3.3)
+    padrino-support (0.13.3.4)
       activesupport (>= 3.1)
     parallel (1.11.2)
     public_suffix (2.0.5)
@@ -190,9 +182,6 @@ GEM
     rouge (1.11.1)
     sass (3.4.24)
     servolux (0.13.0)
-    sprockets (3.7.1)
-      concurrent-ruby (~> 1.0)
-      rack (> 1, < 3)
     temple (0.8.0)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
@@ -216,7 +205,6 @@ DEPENDENCIES
   middleman
   middleman-dotenv (~> 2.0)
   middleman-livereload
-  middleman-sprockets!
   middleman-syntax!
   nokogiri
   oj

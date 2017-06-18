@@ -1,10 +1,20 @@
 ---
 :id: 29VtRq3GWkuMkW2waMyGEY
+:_meta:
+  :content_type_id: 2wKn6yEnZewu2SCCkus4as
+  :updated_at: '2015-12-15T14:00:34+00:00'
+  :created_at: '2015-12-15T08:26:47+00:00'
+  :id: 29VtRq3GWkuMkW2waMyGEY
 :title: The evolution of Alfred App
 :date: !ruby/object:DateTime 2015-03-05 00:00:00.000000000 Z
 :slug: the-evolution-of-alfred-app
 :author:
 - :id: 6wjiRDDynYGowcUeGI8UE6
+  :_meta:
+    :content_type_id: 1kUEViTN4EmGiEaaeC6ouY
+    :updated_at: '2016-01-22T01:40:42+00:00'
+    :created_at: '2015-12-14T16:48:19+00:00'
+    :id: 6wjiRDDynYGowcUeGI8UE6
   :name: Ollie Kavanagh
 :body: "As [Alfred App](http://www.alfredapp.com) turned 5 years old last week and
   I've been lucky to work on the design, branding and UI during that period, I thought

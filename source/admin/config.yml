@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: thisiscapra/thisiscapra.com # Path to your GitHub repository
+  branch: staging # Branch to update (master by default)
+  site_domain: staging-thisiscapra.netlify.com
+
+#publish_mode: editorial_workflow
+media_folder: "images/uploads"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Post" # Used in the UI, ie.: "New Post"
+    folder: "source/posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}

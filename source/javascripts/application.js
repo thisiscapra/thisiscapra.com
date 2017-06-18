@@ -1,11 +1,11 @@
-//= require ScrollMagic
-//= require smooth-scroll.min
-//= require TweenMax.min
-//= require animation.gsap.min
-//= require DrawSVGPlugin.min
-//= require twitterFetcher_min
-//= require instafeed.min
-//= require turbolinks
+import ScrollMagic from 'scrollmagic/scrollmagic/minified/ScrollMagic.min';  
+import 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min';  
+import 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min';  
+import TweenMax from 'gsap/src/minified/TweenMax.min';
+import './vendor/DrawSVGPlugin.min';
+import Turbolinks from "turbolinks";
+
+Turbolinks.start();
 
 if ( 'querySelector' in document && 'addEventListener' in window ) {
 
@@ -42,7 +42,7 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
       removeClass(html, 'resp');
     }
 
-    animations = function() {
+    var animations = function() {
       // Set up Scroll Magic
       var controller = new ScrollMagic.Controller({
         globalSceneOptions: {
@@ -105,10 +105,10 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
       }
     }
 
-    stickyHeader = function(e) {
+    var stickyHeader = function(e) {
       document.addEventListener('scroll', function() {
         var scrollTop = (document.documentElement.scrollTop||document.body.scrollTop),
-            header = document.querySelector('.site-header');
+            header = document.querySelector('.site-header'),
             headerHeight = header.offsetHeight;
         if(scrollTop >= 5) {
           addClass(body,'scrolling')
@@ -119,7 +119,7 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     }
 
     // Tabs on the contact page
-    contentTabs = function(e) {
+    var contentTabs = function(e) {
       var tab_contents = document.getElementsByClassName("contact-form");
       [].forEach.call(tab_contents, function(tab_content){
         addClass(tab_content, 'hidden');
@@ -149,7 +149,7 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     }
 
     // Responsive navigation class
-    respNav = function() {
+    var respNav = function() {
       respMenu.addEventListener("click", function(e) {
         e.preventDefault();
         if(hasClass(html, 'resp')) {
@@ -163,7 +163,7 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     }
 
     // Twitter feed
-    twitterWidget = function() {
+    var twitterWidget = function() {
       var twitter = document.getElementById('twitter');
       if(twitter) {
         var twitterConfig = {
@@ -183,7 +183,7 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     }
 
     // Instagram
-    instagramFeed = function() {
+    var instagramFeed = function() {
       var instagram = document.getElementById('instagram');
       if(instagram) {
         var feed = new Instafeed({
@@ -199,7 +199,7 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     }
 
     // Soundcloud track of the day
-    soundcloudWidget = function() {
+    var soundcloudWidget = function() {
       var clientID = '7869138d09320422ec7e924d81b0e2a9';
       var $view = document.getElementById('soundcloud');
       var player = new SoundCloudAudio(clientID);
@@ -276,38 +276,37 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     contentTabs();
     respNav();
     // Only load the social stuff on the about page
-    if(hasClass(body, 'page-about')) {
+    //if(hasClass(body, 'page-about')) {
       //soundcloudWidget();
       instagramFeed();
       twitterWidget();
-    }
+    //}
 
   };
 
-  document.addEventListener("DOMContentLoaded", function() {
-    var wrapper = document.getElementById('wrapper');
-    removeClass(wrapper, 'fadeOutUp');
-    addClass(wrapper, 'fadeInDown');
-    ready();
-  }, false);
+  // if (document.documentElement.hasAttribute("data-turbolinks-preview")) {
+  //   var wrapper = document.getElementById('wrapper');
+  //   removeClass(wrapper, 'fadeInDown');
+  //   addClass(wrapper, 'fadeOutUp');
+  // }
 
-  document.addEventListener("page:fetch", function() {
+  document.addEventListener("turbolinks:click", function(e) {
     var wrapper = document.getElementById('wrapper');
     removeClass(wrapper, 'fadeInDown');
     addClass(wrapper, 'fadeOutUp');
   }, false);
 
-  document.addEventListener("page:load", function() {
+  document.addEventListener("turbolinks:load", function(e) {
     var wrapper = document.getElementById('wrapper');
     removeClass(wrapper, 'fadeOutUp');
     addClass(wrapper, 'fadeInDown');
     ready();
   }, false);
 
-  document.addEventListener("page:restore", function() {
-    var wrapper = document.getElementById('wrapper');
-    removeClass(wrapper, 'fadeOutUp');
-    addClass(wrapper, 'fadeInDown');
-  }, false);
+  // document.addEventListener("turbolinks:before-cache", function() {
+  //   var wrapper = document.getElementById('wrapper');
+  //   removeClass(wrapper, 'fadeOutUp');
+  //   addClass(wrapper, 'fadeInDown');
+  // }, false);
 
 }
