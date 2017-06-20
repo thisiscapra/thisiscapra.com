@@ -36,13 +36,12 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Project Intro", name: "body", widget: "markdown"}
       - {label: "What we did", name: "what_we_did", widget: "list"}
       - {label: "Sub content", name: "sub_content", widget: "markdown"}
+      - {label: "Testimonial", name: "testimonial", widget: "string"}
+      - {label: "Featured Testimonial", name: "featured_testimonial", widget: "string"}
+      - {label: "Cite", name: "cite", widget: "string"}
       - {label: "Featured Image", name: "featured_image", widget: "image"}
       - label: "Gallery"
         name: "gallery" 
         widget: "list"
-        optional: true
         fields:
           - {label: "Gallery Image", name: "gallery_image", widget: "image"}
-        - {label: "Testimonial", name: "testimonial", widget: "string"}
-        - {label: "Featured Testimonial", name: "featured_testimonial", widget: "string"}
-        - {label: "Cite", name: "cite", widget: "string"}
