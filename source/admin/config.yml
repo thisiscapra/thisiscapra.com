@@ -30,21 +30,19 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{slug}}"
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Sub Title", name: "sub-title", widget: "string"}
+      - {label: "Sub Title", name: "sub_title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "work-layout"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Project Intro", name: "body", widget: "markdown"}
-      - {label: "What we did", name: "what-we-did", widget: "list"}
-      - {label: "Sub content", name: "sub-content", widget: "markdown"}
-      - {label: "Featured Image", name: "featured-image", widget: "image"}
-      - { 
-          label: "Gallery", 
-          name: "gallery", 
-          widget: "list",
-          optional: true,
-          fields:
-            - {label: "Gallery Image", name: "gallery-image", widget: "image"}
-        }
+      - {label: "What we did", name: "what_we_did", widget: "list"}
+      - {label: "Sub content", name: "sub_content", widget: "markdown"}
+      - {label: "Featured Image", name: "featured_image", widget: "image"}
+      - label: "Gallery"
+        name: "gallery" 
+        widget: "list"
+        optional: true
+        fields:
+          - {label: "Gallery Image", name: "gallery_image", widget: "image"}
         - {label: "Testimonial", name: "testimonial", widget: "string"}
-        - {label: "Featured Testimonial", name: "featured-testimonial", widget: "string"}
+        - {label: "Featured Testimonial", name: "featured_testimonial", widget: "string"}
         - {label: "Cite", name: "cite", widget: "string"}
