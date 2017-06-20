@@ -4,15 +4,47 @@ backend:
   branch: staging # Branch to update (master by default)
   site_domain: staging-thisiscapra.netlify.com
 
-#publish_mode: editorial_workflow
-media_folder: "images/uploads"
+publish_mode: editorial_workflow
+
+media_folder: "source/images/uploads"
+public_folder: "source"
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "source/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
+    sort: "date:asc" # Default is title:asc
+    slug: "{{slug}}"
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post-layout"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+  - name: "work" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Work" # Used in the UI, ie.: "New Post"
+    folder: "source/work" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    sort: "date:asc" # Default is title:asc
+    slug: "{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Sub Title", name: "sub-title", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "work-layout"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Project Intro", name: "body", widget: "markdown"}
+      - {label: "What we did", name: "what-we-did", widget: "list"}
+      - {label: "Sub content", name: "sub-content", widget: "markdown"}
+      - {label: "Featured Image", name: "featured-image", widget: "image"}
+      - { 
+          label: "Gallery", 
+          name: "gallery", 
+          widget: "list",
+          optional: true,
+          fields:
+            - {label: "Gallery Image", name: "gallery-image", widget: "image"}
+        }
+        - {label: "Testimonial", name: "testimonial", widget: "string"}
+        - {label: "Featured Testimonial", name: "featured-testimonial", widget: "string"}
+        - {label: "Cite", name: "cite", widget: "string"}
