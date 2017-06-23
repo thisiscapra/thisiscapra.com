@@ -2,7 +2,6 @@ backend:
   name: github
   repo: thisiscapra/thisiscapra.com # Path to your GitHub repository
   branch: staging # Branch to update (master by default)
-  site_domain: staging-thisiscapra.netlify.com
 
 publish_mode: editorial_workflow
 
@@ -31,17 +30,22 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Sub Title", name: "sub_title", widget: "string"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "work-layout"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Project Intro", name: "body", widget: "markdown"}
-      - {label: "What we did", name: "what_we_did", widget: "list", field: {label: "Item", name: "item", widget: "string"}}
-      - {label: "Sub content", name: "sub_content", widget: "markdown"}
-      - {label: "Testimonial", name: "testimonial", widget: "string"}
-      - {label: "Featured Testimonial", name: "featured_testimonial", widget: "string"}
-      - {label: "Cite", name: "cite", widget: "string"}
+      - label: "What we did" 
+        name: "what_we_did"
+        widget: "list"
+        fields:
+          - {label: "Item", name: "item", widget: "list"}
+      - {label: "Sub content", name: "sub_content", widget: "markdown", required: false}
+      - {label: "Testimonial", name: "testimonial", widget: "string", required: false}
+      - {label: "Featured Testimonial", name: "featured_testimonial", widget: "string", required: false}
+      - {label: "Cite", name: "cite", widget: "string", required: false}
       - {label: "Featured Image", name: "featured_image", widget: "image"}
       - label: "Gallery"
         name: "gallery" 
         widget: "list"
         fields:
           - {label: "Gallery Image", name: "gallery_image", widget: "image"}
+    meta:
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "portfolio-layout"}

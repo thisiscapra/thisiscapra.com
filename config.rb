@@ -12,6 +12,11 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 page "/404.html", layout: false
 
+ignore '/work-item.html'
+ignore '/work.html'
+ignore '/labs.html'
+ignore 'blog/*'
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
@@ -29,52 +34,39 @@ activate :external_pipeline,
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
-app.data.work_items.clients.each do |client|
-  proxy "/work/#{client.url}/index.html", "/work-item.html", locals: { 
-    client: client,
-    work_pages: data.work_items.clients,
-    url: "work"
-  }, :ignore => true
-end
+# app.data.work_items.clients.each do |client|
+#   proxy "/work/#{client.url}/index.html", "/work-item.html", locals: { 
+#     client: client,
+#     work_pages: data.work_items.clients,
+#     url: "work"
+#   }, :ignore => true
+# end
 
-app.data.lab_items.labs.each do |client|
-  proxy "/labs/#{client.url}/index.html", "/work-item.html", locals: { 
-    client: client,
-    work_pages: data.lab_items.labs,
-    url: "labs"
-  }, :ignore => true
-end
+# app.data.lab_items.labs.each do |client|
+#   proxy "/labs/#{client.url}/index.html", "/work-item.html", locals: { 
+#     client: client,
+#     work_pages: data.lab_items.labs,
+#     url: "labs"
+#   }, :ignore => true
+# end
 
 ###
 # Blog / Contentful
 ###
 
-activate :contentful do |f|
-  f.access_token  = ENV['CONTENTFUL_ACCESS_TOKEN']
-  f.space         = { blog: ENV['CONTENTFUL_SPACE_ID'] }
-  f.content_types = {
-    articles: 'articles',
-    work: 'work',
-    lab: 'lab'
-  } 
-  if f.use_preview_api = 'true'
-    f.use_preview_api = ENV['USE_PREVIEW_API']
-  end
-end
+# app.data.blog.articles.each do |article|
+#   proxy "/blog/#{article[1][:slug]}/index.html", "/blog/show.html", locals: { 
+#     article: article[1]
+#   }, :ignore => true
+# end
 
-app.data.blog.articles.each do |article|
-  proxy "/blog/#{article[1][:slug]}/index.html", "/blog/show.html", locals: { 
-    article: article[1]
-  }, :ignore => true
-end
-
-app.data.blog.articles.map { |article| article[1][:tags] }.flatten.uniq.each do |tag_name|
-  unless tag_name.nil?
-    proxy "/blog/tags/#{tag_name.downcase}/index.html", "/blog/tag.html", locals: { 
-      blog_tag: tag_name
-    }, :ignore => true
-  end
-end
+# app.data.blog.articles.map { |article| article[1][:tags] }.flatten.uniq.each do |tag_name|
+#   unless tag_name.nil?
+#     proxy "/blog/tags/#{tag_name.downcase}/index.html", "/blog/tag.html", locals: { 
+#       blog_tag: tag_name
+#     }, :ignore => true
+#   end
+# end
 
 set :markdown_engine, :redcarpet
 set :markdown, smartypants: true, fenced_code_blocks: true
