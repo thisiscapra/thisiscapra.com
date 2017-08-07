@@ -1,8 +1,5 @@
 <% content_for(:title, "Capra is a design agency based in Ottawa, Canada run by husband and wife team Ollie and Kat Kavanagh.") %>
 <% content_for(:description, "We like to collaborate to design and build beautiful websites, apps and casual games. We choose clients who are making a difference. From educational games to productivity tools, our clients share our passion for sports, the environment, and education.") %>
-<% content_for :javascript do %>
-  <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
-<% end %>
 
 <section class="home">
 
@@ -14,7 +11,7 @@
   
   </header>
 
-  <%#= partial "featured_projects" if page("index.html") %>
+  <%= partial "featured_projects" if page("index.html") %>
 
   <div class="home-about-us">
     
@@ -26,7 +23,7 @@
 
   </div>
 
-  <%# featured_quote = data.work_items.clients.select{|client| client.featured_testimonial rescue false } %>
-  <%#= partial "client_blockquote", :locals => { client: featured_quote.sample(), featured: true } %>
+  <% featured_quote = data.work_items.clients.select{|client| client.featured_testimonial rescue false } %>
+  <%= partial "client_blockquote", :locals => { client: featured_quote.sample(), featured: true } %>
 
 </section>

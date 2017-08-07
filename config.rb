@@ -12,9 +12,6 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 page "/404.html", layout: false
 
-ignore '/work-item.html'
-ignore '/work.html'
-ignore '/labs.html'
 ignore 'blog/*'
 
 # With alternative layout
@@ -34,25 +31,50 @@ activate :external_pipeline,
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
-# app.data.work_items.clients.each do |client|
-#   proxy "/work/#{client.url}/index.html", "/work-item.html", locals: { 
-#     client: client,
-#     work_pages: data.work_items.clients,
-#     url: "work"
-#   }, :ignore => true
-# end
+app.data.work_items.clients.each do |client|
+  proxy "/work/#{client.url}/index.html", "/work-item.html", locals: { 
+    client: client,
+    work_pages: data.work_items.clients,
+    url: "work"
+  }, :ignore => true
+end
 
-# app.data.lab_items.labs.each do |client|
-#   proxy "/labs/#{client.url}/index.html", "/work-item.html", locals: { 
-#     client: client,
-#     work_pages: data.lab_items.labs,
-#     url: "labs"
-#   }, :ignore => true
-# end
+app.data.lab_items.labs.each do |client|
+  proxy "/labs/#{client.url}/index.html", "/work-item.html", locals: { 
+    client: client,
+    work_pages: data.lab_items.labs,
+    url: "labs"
+  }, :ignore => true
+end
 
 ###
 # Blog / Contentful
 ###
+
+activate :blog do |blog|
+  # This will add a prefix to all links, template references and source paths
+  blog.prefix = "blog"
+
+  # blog.permalink = "{year}/{month}/{day}/{title}.html"
+  # Matcher for blog source files
+  # blog.sources = "{year}-{month}-{day}-{title}.html"
+  # blog.taglink = "tags/{tag}.html"
+  # blog.layout = "layout"
+  # blog.summary_separator = /(READMORE)/
+  # blog.summary_length = 50
+  # blog.year_link = "{year}.html"
+  # blog.month_link = "{year}/{month}.html"
+  # blog.day_link = "{year}/{month}/{day}.html"
+  blog.default_extension = ".md"
+
+  blog.tag_template = "tag.html"
+  blog.calendar_template = "calendar.html"
+
+  # Enable pagination
+  blog.paginate = true
+  blog.per_page = 10
+  blog.page_link = "page/{num}"
+end
 
 # app.data.blog.articles.each do |article|
 #   proxy "/blog/#{article[1][:slug]}/index.html", "/blog/show.html", locals: { 
@@ -148,7 +170,7 @@ activate :directory_indexes
 configure :development do
 
   # Reload the browser automatically whenever files change
-  activate :livereload, no_swf: true
+  # activate :livereload, no_swf: true
 
 end
 

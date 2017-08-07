@@ -1,13 +1,13 @@
-<ul class="work-list">
+<div class="work-list">
   <% items.each do |l| %>
-    <li class="<%= l.url %>">
+    <article class="<%= l.url %> work-list-item">
       <% link_to("/#{path}/#{l.url}/") do %>
         <%= image_tag("#{l.image_path}/#{l.image_featured}", :alt => "") %>
-        <div class="content">
+        <div class="work-list-content">
           <h2><%= l.name %></h2>
           <p>View project details</p>
         </div>
       <% end %>
-    </li>
+    </article>
   <% end %>
-</ul>
+</div>

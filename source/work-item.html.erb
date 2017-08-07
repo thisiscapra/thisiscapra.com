@@ -23,17 +23,17 @@ work_item: true
 
   </header>
 
-  <div class="work-content">
+  <div class="work-content row">
 
     <% if client.intro %>
-      <div class="work-intro">
+      <div class="columns medium-8">
         <h3>The project</h3>    
         <%= client.intro.html_safe %>
       </div>
     <% end %>
 
     <% if client.what_we_did %>
-      <div class="what-we-did">
+      <div class="columns medium-4">
         <h3>Our role</h3>  
         <ul>
           <% client.what_we_did.each_with_index do |item, index| %>
@@ -48,14 +48,11 @@ work_item: true
 
   </div>
 
-  <hr>
-
   <% if client.images %>
     <div class="gallery">
       <% client.images.each_with_index do |image, index| %>
         <% if index == 1 && client.sub_text %>
           <p class="sub-text"><%= client.sub_text  %></p>
-          <hr>
         <% end %>
         <% if index == 2 && client.testimonial %>
           <%= partial "client_blockquote", :locals => {:client => client, featured: false}  %>

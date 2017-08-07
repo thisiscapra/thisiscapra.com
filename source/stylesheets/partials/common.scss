@@ -36,6 +36,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
 
 
 $margin-normal: gs-gutter(cap, false, true);
+$global-margin: 4rem;
 
 // Fonts
 
@@ -89,6 +90,7 @@ $margin-normal: gs-gutter(cap, false, true);
 $sentinel: 'Sentinel SSm A', 'Sentinel SSm B', 'Georgia', serif;
 $quarto: 'Quarto A', 'Quarto B', 'Georgia', serif;
 $mink: 'minkregular';
+$inkwell: "Inkwell Sans A", "Inkwell Sans B", serif;
 
 // Mixins
 

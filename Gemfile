@@ -6,7 +6,7 @@ gem 'middleman'
 gem "turbolinks", github: 'rails/turbolinks', branch: 'master', :require => false
 gem 'middleman-livereload'
 gem "middleman-syntax", github: 'thisiscapra/middleman-syntax', branch: 'master'
-gem "contentful_middleman", github: 'contentful/contentful_middleman', branch: 'dl/upgrade-to-v4'
+gem "middleman-blog"
 gem "nokogiri"
 gem "redcarpet"
 gem 'therubyracer'
