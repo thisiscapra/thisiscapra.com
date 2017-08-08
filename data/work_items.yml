@@ -7,8 +7,8 @@ clients:
     home_intro: "A block party unlike anything you've ever experienced!"
     url: glowfair-festival
     link: http://glowfairfestival.ca
-    main_text: "<p>Game designers Tabatha Soltay from <a href='http://tabtalks.ca' target='_blank'>Tab Talks</a> and <a href='http://jpveilleux.ca/' target='_blank'>JP Veilleux</a> wanted to create a beautiful game that helped teach people about the interconnectedness of our oceans. What they designed, and we brought to life with beautiful visuals, is the complex vision of how difficult it is to balance being environmentally responsible with being economically prosperous.<p>The game was designed as part of Ottawa Wavemakers in association with <a href='http://ottawa.the-hub.net/' target='_blank'>Hub Ottawa</a> and <a href='http://www.wwf.ca/' target='_blank'>WWF Canada</a>. We were responsible for everything visual, from the logo to how to simplify concepts using visuals (colour, layout and a common visual language), as well as preparing assets for print. We also had fun making the supporting website! It was launched in December 2015, and is now available for purchase or to use as an open-source game (print and play). </p> <p></p>"
-    sub_text: ""
+    main_text: "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    sub_text: "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
     what_we_did: 
       - Icon Design
       - Web design
@@ -19,13 +19,62 @@ clients:
     images:
       - glowfair-gallery-1.jpg
       - glowfair-gallery-2.jpg
-    testimonial: "LOVE IT!! Seriously, it is like you are a mind reader and are able to deliver exactly what we want - when we don't (or at least I don't) know what I want!"
-    featured_testimonial: "LOVE IT!! Seriously, it is like you are a mind reader and are able to deliver exactly what we want - when we don't (or at least I don't) know what I want!"
+      - glowfair-gallery-3.jpg
+    testimonial: 
+    featured_testimonial: 
+    cite: 
+  # GovGuide
+  - name: GovGuide
+    weight: 2
+    featured: true
+    intro: "The essential resource for Parliament Hill"
+    home_intro: "The essential resource for Parliament Hill"
+    url: govguide
+    link: https://govguide.ca
+    main_text: "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    sub_text: "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    what_we_did: 
+      - Icon Design
+      - Web design
+      - Responsive build
+      - Wordpress Multi-Site
+      - Faceted Search & Filtering
+    image_path: work/govguide
+    image_featured: govguide-featured.jpg
+    images:
+      - govguide-gallery-1.jpg
+      - govguide-gallery-2.jpg
+      - govguide-gallery-3.jpg
+    testimonial: "We are definitely not techies, so the thought of building a website was daunting. But Kat and Ollie walked us through all the steps and provided great advice along the way. In the end they put together a beautiful product that we are very happy with and our clients are raving about."
+    featured_testimonial: "Kat and Ollie always delivered on time and with the utmost professionalism and quality. From the development to the launch phase of our project, the GovGuide, they provided innovative and creative solutions to meet our needs."
+    cite: "Yamina and Danelia, <a href='http://alpheusgroup.ca' target='_blank'>The Alpheus Group</a>"
+  # Taylor Statten Camps
+  - name: Taylor Statten Camps
+    weight: 3
+    featured: true
+    intro: "Your camping adventure of a lifetime!"
+    home_intro: "Your camping adventure of a lifetime!"
+    url: taylorstattencamps
+    link: http://www.taylorstattencamps.com/
+    main_text: "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    sub_text: "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    what_we_did: 
+      - Icon Design
+      - Web design
+      - Responsive build
+      - Wordpress Multi-Site
+    image_path: work/taylorstattencamps
+    image_featured: taylorstattencamps-featured.jpg
+    images:
+      - taylorstattencamps-gallery-1.jpg
+      - taylorstattencamps-gallery-2.jpg
+      - taylorstattencamps-gallery-3.jpg
+    testimonial: ""
+    featured_testimonial: ""
     cite: "Tabatha Soltay, <a href='http://tabtalks.ca' target='_blank'>TabTalks</a>"
   # Shrimpsmatter
   - name: Shrimps Matter
-    weight: 2
-    featured: true
+    weight: 4
     title: The ocean is interconnected
     home_intro: "Play a game while exploring the interconnectedness of the ocean"
     url: shrimps-matter
@@ -43,7 +92,6 @@ clients:
       - Responsive build
     image_path: work/shrimps-matter
     image_featured: shrimps-matter-featured.jpg
-    image_thumb: pantera-thumb.jpg
     images:
       - shrimps-matter-logo.jpg
       - shrimps-matter-box.jpg
@@ -55,14 +103,13 @@ clients:
     cite: "Tabatha Soltay, <a href='http://tabtalks.ca' target='_blank'>TabTalks</a>"
  # Alfred
   - name: Alfred App
-    weight: 3
-    featured: true
+    weight: 5
     title: Designed to be productive.
     home_intro: "See how we designed your computer&#8217;s butler for OSX"
     url: alfred-app
     link: http://alfredapp.com
-    intro: "<p>For this project, Ollie was approached by Andrew and Vero Pepperell, a talented developer and marketing team, to create the original design and branding for a quicklauncher that simplifies and speeds up your workflow.</p> <p>Its launch went viral (thanks to web designers and other mac users who love all things beautiful) and has been successful ever since. Alfred App is your computer&#8217;s butler: it is a highly rated and popular productivity app for OSX that is being used by tens of thousands of Apple users worldwide.</p>"
-    sub_text: "Capra continues to design for Alfred, working on everything from OSX icon design and branding to marketing materials and web presence. Over the five years since its launch, the product has evolved many new features and expanded to users all over the world."
+    main_text: "<p>For this project, Ollie was approached by Andrew and Vero Pepperell, a talented developer and marketing team, to create the original design and branding for a quicklauncher that simplifies and speeds up your workflow.</p> <p>Its launch went viral (thanks to web designers and other mac users who love all things beautiful) and has been successful ever since. Alfred App is your computer&#8217;s butler: it is a highly rated and popular productivity app for OSX that is being used by tens of thousands of Apple users worldwide.</p>"
+    sub_text: "<p>Capra continues to design for Alfred, working on everything from OSX icon design and branding to marketing materials and web presence. Over the five years since its launch, the product has evolved many new features and expanded to users all over the world.</p>"
     what_we_did: 
       - 'Branding & logo design'
       - Web design
@@ -72,20 +119,16 @@ clients:
       - OSX Application design
     image_path: work/alfred-app
     image_featured: alfred-app-featured.jpg
-    image_thumb: alfred-app-thumb.jpg
     images:
-      - alfred-logo.jpg
-      - alfred-icons.jpg
-      - alfred-site.jpg
-      - alfred-mobile.jpg
-      - alfred-remote.jpg
+      - alfred-app-gallery-1.jpg
+      - alfred-app-gallery-2.jpg
   # Mind the product
   - name: Mind the Product
     weight: 6
     home_intro: "See how we designed this popular conference website"
     url: mind-the-product
     link: http://mtpcon.com/
-    intro: "<p>Mind the Product is a very popular meetup group for product managers. In 2012 they launched their very first conference in London, UK, and founder Martin Erikkson approached Kat to come up with a simple, elegant design.</p> <p>The <a href=http://mtpcon.com/london/2012 alt=Mind the Product Conference 2012>first year&#8217;s website</a> was a straightforward one-page design, based on their brand&#8217;s colours and logo, where the circles moved as you scrolled.</p>"
+    main_text: "<p>Mind the Product is a very popular meetup group for product managers. In 2012 they launched their very first conference in London, UK, and founder Martin Erikkson approached Kat to come up with a simple, elegant design.</p> <p>The <a href=http://mtpcon.com/london/2012 alt=Mind the Product Conference 2012>first year&#8217;s website</a> was a straightforward one-page design, based on their brand&#8217;s colours and logo, where the circles moved as you scrolled.</p>"
     sub_text: "Since we were both so pleased with the first year&#8217;s website, we knew we had to come up with something fun and different for the second year. So the <a href=http://mtpcon.com/london/2013 alt=Mind The Product Conference 2013>2013</a> website features a video background from the previous year&#8217;s conference. This website was designed to inspire product managers to make great, innovative products.  <br /><br />Then in <a href=http://mtpcon.com/london/2014 alt=Mind The Product Conference 2014>2014</a>, the founders decided to go for simple, practical and elegant.  We created a website that could be modified through Wordpress and could be reused in future years. The build needed to be flexible for <a href=http://mtpcon.com>the 2015 version</a> to adapt to multiple locations (San Francisco and London this year!), pre-conference (no speakers, just teasers), full conference (speakers, tickets for sale) and post conference (wrap up, thank you and archiving).  We continue to work with Martin and the rest of the Mind The Product team to keep their website fresh!"
     what_we_did: 
       - Web design
@@ -94,15 +137,11 @@ clients:
       - Wordpress Multi-Site
     image_path: work/mind-the-product
     image_featured: mind-the-product-featured.jpg
-    image_thumb: mtp-thumb.jpg
     images:
-      - mtp-2012.png
-      - mtp-2012-2013-mobile.jpg
-      - mtp-2013.png
-      - mtp-location-2013.png
-      - mtp-2014-mobile.jpg
-      - mtp-2015.jpg
-      - mtp-sf.jpg
+      - mind-the-product-gallery-1.jpg
+      - mind-the-product-gallery-2.jpg
+      - mind-the-product-gallery-3.jpg
+      - mind-the-product-gallery-4.jpg
     testimonial: "Kat is a superstar designer and a true partner to Mind the Product. She has developed all of our conference websites off minimal briefs and built amazing, engaging sites that truly represent and help elevate our forward thinking brand."
     featured_testimonial: "Capra are superstar designers and true partners to Mind the Product."
     cite: 'Martin Eriksson, founder of Mind The Product'
@@ -112,7 +151,7 @@ clients:
     home_intro: "See how we designed this game to achieve health goals"
     url: super-better
     link: http://superbetter.com
-    intro: "<p>SuperBetter is a game by Jane McGonigal that helps you achieve your health goals &#8212; or recover from an illness or injury &#8212; by increasing your personal resilience.</p> <p>Resilience means staying curious, optimistic and motivated even in the face of the toughest challenges. Kat was involved in designing and building the web and native iOS app.</p>"
+    main_text: "<p>SuperBetter is a game by Jane McGonigal that helps you achieve your health goals &#8212; or recover from an illness or injury &#8212; by increasing your personal resilience.</p> <p>Resilience means staying curious, optimistic and motivated even in the face of the toughest challenges. Kat was involved in designing and building the web and native iOS app.</p>"
     sub_text: "After implementing the front end html/css into a Ruby platform for Superbetter Version 1 (designed by <a href=http://largeprintgiveth.com/>Ryan Larson</a>), Kat got involved in designing Version 2. She worked on making history and tracking progress more gameful and delightful. She was also the designer for the original version of the iPhone app, which was built to focus users on quick and easy access to their daily gaming activities. Her design simplified forms, focused on quick-entry, and integrated fun images and celebrations."
     what_we_did: 
       - Concept design
@@ -122,16 +161,11 @@ clients:
       - iOS app design
     image_path: work/super-better
     image_featured: super-better-featured.jpg
-    image_thumb: super-better-thumb.jpg
     images:
-      - sb-app-quest.jpg
-      - sb-app-completion.jpg
-      - sb-web-hq.jpg
-      - sb-web-quest-list.jpg
-      - sb-quest.jpg
-      - sb-web-powerup.jpg
-      - sb-web-badguy.jpg
-      - sb-web-complete.jpg
+      - super-better-gallery-1.jpg
+      - super-better-gallery-2.jpg
+      - super-better-gallery-3.jpg
+      - super-better-gallery-4.jpg
     testimonial: "Kat&#8217;s turnaround speed, realtime iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. I would work with her again in a heartbeat and wish I could have her on every project."
     featured_testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I&#8217;ve never found that talent wrapped in such an energetic, positive, problem-solving personality."
     cite: "Chelsea Howe, Game Designer for SuperBetter"
@@ -141,7 +175,7 @@ clients:
     home_intro: "See how we designed this strategic learning game"
     url: cold-claim
     link: http://coldclaim.com
-    intro: "<p>The place is Antarctica. The year is 2049. Your mission is to locate and extract what is now Earth&#8217;s most precious resource: Paleo Water. As expedition leader, you must prepare to navigate harsh terrain, prospect for Paleo, discover artifacts, and claim coldly contested land... while outwitting your rivals and protecting your reputation!</p> <p>In the spirit of <em>Settlers of Catan</em> and <em>Kingdom Builder</em>, <em>Cold Claim</em> is a strategic board game for two to four players available via iPad Game Center, pass-and-play or the physical board game.</p>"
+    main_text: "<p>The place is Antarctica. The year is 2049. Your mission is to locate and extract what is now Earth&#8217;s most precious resource: Paleo Water. As expedition leader, you must prepare to navigate harsh terrain, prospect for Paleo, discover artifacts, and claim coldly contested land... while outwitting your rivals and protecting your reputation!</p> <p>In the spirit of <em>Settlers of Catan</em> and <em>Kingdom Builder</em>, <em>Cold Claim</em> is a strategic board game for two to four players available via iPad Game Center, pass-and-play or the physical board game.</p>"
     sub_text: "Kat was lead designer for this iPad game, board game and supporting website. She was actively involved in planning, testing and producing this strategic game. ColdClaim was designed in collaboration with <a href=http://natronbaxter.com>Natron Baxter</a>. "
     what_we_did: 
       - Game design

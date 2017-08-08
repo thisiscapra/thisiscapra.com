@@ -1,4 +1,15 @@
 GIT
+  remote: git://github.com/contentful/contentful_middleman.git
+  revision: 0dd21328378bf57ef01649bf331b4c3e8b7de96d
+  branch: dl/upgrade-to-v4
+  specs:
+    contentful_middleman (2.1.1)
+      contentful (~> 2.1)
+      contentful-webhook-listener (~> 0.1)
+      middleman-cli (~> 4.0)
+      middleman-core (~> 4.0)
+
+GIT
   remote: git://github.com/rails/turbolinks.git
   revision: 80216ce9d89920bf073709405e3fce6d0a3ccd9a
   branch: master
@@ -50,7 +61,13 @@ GEM
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.5)
+    contentful (2.1.2)
+      http (> 0.8, < 3.0)
+      multi_json (~> 1)
+    contentful-webhook-listener (0.3.0)
     contracts (0.13.0)
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.1)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -67,6 +84,14 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hashie (3.5.6)
+    http (2.2.2)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 1.0.1)
+      http_parser.rb (~> 0.6.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    http-form_data (1.0.3)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
     kramdown (1.14.0)
@@ -124,6 +149,7 @@ GEM
       rack-livereload (~> 0.3.15)
     mini_portile2 (2.2.0)
     minitest (5.10.3)
+    multi_json (1.12.1)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     oj (3.3.4)
@@ -171,11 +197,15 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  contentful_middleman!
   middleman
   middleman-blog
   middleman-dotenv (~> 2.0)
@@ -188,4 +218,4 @@ DEPENDENCIES
   turbolinks!
 
 BUNDLED WITH
-   1.15.1
+   1.15.3

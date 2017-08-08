@@ -1,0 +1,34 @@
+---
+:id: 6XRgjG0gDKaAau8CIG2ESG
+:_meta:
+  :content_type_id: 2wKn6yEnZewu2SCCkus4as
+  :updated_at: '2015-12-18T16:57:29+00:00'
+  :created_at: '2015-12-15T08:26:38+00:00'
+  :id: 6XRgjG0gDKaAau8CIG2ESG
+:title: Wordpress Multisite sub-domains with Pow & Apache
+:date: !ruby/object:DateTime 2015-01-14 00:00:00.000000000 Z
+:slug: wordpress-multisite-sub-domains-with-pow-apache
+:author:
+- :id: 6wjiRDDynYGowcUeGI8UE6
+  :_meta:
+    :content_type_id: 1kUEViTN4EmGiEaaeC6ouY
+    :updated_at: '2016-01-21T00:24:28+00:00'
+    :created_at: '2015-12-15T14:05:00+00:00'
+    :id: 6wjiRDDynYGowcUeGI8UE6
+  :name: Ollie Kavanagh
+:body: "I have my local dev environment set up with Pow and I then make Apache listen
+  on Port 81 for any PHP apps I'm doing on `.dev`. I'm currently working on a Wordpress
+  Sub-domain multisite yet I was stumped as the sub-domain alias wasn't working for
+  me locally using the following...\n\n    <Directory \"/Users/olliekav/Sites/\">\n
+  \     AllowOverride All\n      Require all granted\n    </Directory>\n    \n    <VirtualHost
+  127.0.0.1:81>\n      ServerName any.dev\n      ServerAlias *.dev\n      VirtualDocumentRoot
+  \"/Users/olliekav/Sites/%1\"\n    </VirtualHost>\n\nIt turns out I needed to change
+  the VirtualDocumentRoot to the following...\n\n    VirtualDocumentRoot \"/Users/olliekav/Sites/%-2\"\n\nAnd
+  Voilà, the sub-domain is now working.\n\n**%-2 in the VirtualDocumentRoot represents
+  the penultimate dot-separated part of foo.com, i.e. foo. You could then have directories
+  as you wish that map to the sites**\n\n[From this post on Stackoverflow](https://stackoverflow.com/questions/26575276/wildcard-domains-with-virtualhost-with-apache-on-mac/26636481#26636481)"
+:tags:
+- Apache
+- Wordpress
+- Pow
+:comments: false

@@ -1,6 +1,6 @@
 <div class="work-list">
   <% items.each do |l| %>
-    <article class="<%= l.url %> work-list-item">
+    <article class="work-list-item wl-<%= l.url %>">
       <% link_to("/#{path}/#{l.url}/") do %>
         <%= image_tag("#{l.image_path}/#{l.image_featured}", :alt => "") %>
         <div class="work-list-content">

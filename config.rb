@@ -12,7 +12,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 page "/404.html", layout: false
 
-ignore 'blog/*'
+# ignore 'blog/*'
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
@@ -51,44 +51,63 @@ end
 # Blog / Contentful
 ###
 
-activate :blog do |blog|
-  # This will add a prefix to all links, template references and source paths
-  blog.prefix = "blog"
-
-  # blog.permalink = "{year}/{month}/{day}/{title}.html"
-  # Matcher for blog source files
-  # blog.sources = "{year}-{month}-{day}-{title}.html"
-  # blog.taglink = "tags/{tag}.html"
-  # blog.layout = "layout"
-  # blog.summary_separator = /(READMORE)/
-  # blog.summary_length = 50
-  # blog.year_link = "{year}.html"
-  # blog.month_link = "{year}/{month}.html"
-  # blog.day_link = "{year}/{month}/{day}.html"
-  blog.default_extension = ".md"
-
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
-
-  # Enable pagination
-  blog.paginate = true
-  blog.per_page = 10
-  blog.page_link = "page/{num}"
+activate :contentful do |f|
+  f.access_token  = ENV['CONTENTFUL_ACCESS_TOKEN']
+  f.space         = { blog: ENV['CONTENTFUL_SPACE_ID'] }
+  f.content_types = {
+    articles: ENV['CONTENTFUL_POST_KEY']
+  }
+  #f.rebuild_on_webhook = true
+  f.cda_query = {
+    content_type: ENV['CONTENTFUL_POST_KEY'],
+    include: 1
+  }
 end
 
-# app.data.blog.articles.each do |article|
-#   proxy "/blog/#{article[1][:slug]}/index.html", "/blog/show.html", locals: { 
-#     article: article[1]
-#   }, :ignore => true
+# #if Dir.exist?(config.data_dir)
+#   app.data.blog.articles.each do |article|
+#     proxy "/blog/#{article.slug}", "/blog/show.html", locals: { article: article }, ignore: true
+#   end
+# #end
+
+# activate :blog do |blog|
+#   # This will add a prefix to all links, template references and source paths
+#   blog.prefix = "blog"
+
+#   # blog.permalink = "{year}/{month}/{day}/{title}.html"
+#   # Matcher for blog source files
+#   # blog.sources = "{year}-{month}-{day}-{title}.html"
+#   # blog.taglink = "tags/{tag}.html"
+#   # blog.layout = "layout"
+#   # blog.summary_separator = /(READMORE)/
+#   # blog.summary_length = 50
+#   # blog.year_link = "{year}.html"
+#   # blog.month_link = "{year}/{month}.html"
+#   # blog.day_link = "{year}/{month}/{day}.html"
+#   blog.default_extension = ".md"
+
+#   blog.tag_template = "tag.html"
+#   blog.calendar_template = "calendar.html"
+
+#   # Enable pagination
+#   blog.paginate = true
+#   blog.per_page = 10
+#   blog.page_link = "page/{num}"
 # end
 
-# app.data.blog.articles.map { |article| article[1][:tags] }.flatten.uniq.each do |tag_name|
-#   unless tag_name.nil?
-#     proxy "/blog/tags/#{tag_name.downcase}/index.html", "/blog/tag.html", locals: { 
-#       blog_tag: tag_name
-#     }, :ignore => true
-#   end
-# end
+app.data.blog.articles.each do |article|
+  proxy "/blog/#{article[1][:slug]}/index.html", "/blog/show.html", locals: { 
+    article: article[1]
+  }, :ignore => true
+end
+
+app.data.blog.articles.map { |article| article[1][:tags] }.flatten.uniq.each do |tag_name|
+  unless tag_name.nil?
+    proxy "/blog/tags/#{tag_name.downcase}/index.html", "/blog/tag.html", locals: { 
+      blog_tag: tag_name
+    }, :ignore => true
+  end
+end
 
 set :markdown_engine, :redcarpet
 set :markdown, smartypants: true, fenced_code_blocks: true

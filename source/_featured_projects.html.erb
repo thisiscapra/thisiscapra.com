@@ -2,7 +2,7 @@
   <% 
     featured = data.work_items.clients.select{|item| item.featured rescue false }
     featured.each_with_index do |client| %>
-    <article class="ft-<%= client.url %> work-list-item">
+    <article class="work-list-item wl-<%= client.url %>">
       <% link_to("/work/#{client.url}/") do %>
         <%= image_tag("#{client.image_path}/#{client.image_featured}", :alt => "") %>
         <div class="work-list-content">

@@ -18,9 +18,6 @@
   <%= stylesheet_link_tag "application.css", "highlighting.css" %>
   <%= javascript_include_tag :application %>
   <%= yield_content :javascript %>
-  <!--[if lt IE 9]>
-    <%= javascript_include_tag("html5shiv.min.js") %>
-  <![endif]-->
   <% if app.development? %>
     <script src="https://get.gridsetapp.com/34301/overlay/"></script>
     <style>
@@ -41,13 +38,12 @@
 </head>
 <body id="capra" class="<%= custom_page_classes %>">
   <%= partial "header" %>
-  <div id="wrapper" class="container animated">
+  <div id="wrapper" class="animated">
     <main role="main">
       <%= yield %>
     </main>
     <%= partial "footer" %>
   </div>
-  <%= yield_content :work_nav %>
   <% if app.build? %>
     <script>
       ga('send', 'pageview');

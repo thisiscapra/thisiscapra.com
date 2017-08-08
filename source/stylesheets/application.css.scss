@@ -54,9 +54,10 @@ body {
 }
 .container {
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: $max-width;
   position: relative;
   width: 92%;
+  @extend %clearfix;
   @media screen and (max-width: 600px) {
     max-width: 100%;
     padding: 0 8%;
@@ -116,8 +117,7 @@ h1 {
   }
 }
 h2, 
-.archive h1, 
-.work-header h1 {
+.archive h1 {
   font-size: 7vw;
   line-height: 1;
   margin: 0 0 0.25em;
@@ -129,9 +129,9 @@ h2,
   margin-bottom: 1em;
 }
 h3 {
-  font-size: 3.2em;
+  font-size: 6rem;
   line-height: 1.2;
-  margin: 0 0 0.6em;
+  margin: 0 0 1rem;
   @media screen and (max-width: 600px) {
     line-height: 1;
     margin: 0 0 0.6em;
@@ -308,7 +308,7 @@ fieldset {
 // Header 
 
 .site-header {
-  background-color: rgba(255,255,255,0);
+  background-color: rgba($white,0);
   left: 0;
   margin: 0 auto;
   padding: 2% 0;
@@ -317,12 +317,12 @@ fieldset {
   top: 0;
   z-index: 1000;
   @extend %clearfix;
-  @include transition(all 0.3s ease-in-out);
+  @include transition(all 0.6s ease-in-out);
   @media screen and (max-width: 600px) {
     padding: 4% 0;
   }
   .scrolling & {
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba($white,0.95);
     padding: 1% 0;
     @media screen and (max-width: 600px) {
       padding: 2% 0;
@@ -333,50 +333,60 @@ fieldset {
 // Logo 
 
 .logo {
+  position: relative;
   @include gs-span(cap,1,false);
   @media screen and (max-width: 600px) {
     float: none;
     margin: 0;
     width: 100px;
   }
-  svg {
-    height: 81px;
-    width: 90px;
-    @media screen and (max-width: 1200px) {
-      height: 72px;
-      width: 80px;
+  a {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  path {
+    fill: rgba($pantone-green,1);
+    pointer-events: fill;
+    @include transition(fill 0.3s ease-in-out);
+  }
+  a:hover + svg {
+    path {
+      fill: $dark-grey;
     }
-    @media screen and (max-width: 1000px) {
-      height: 63px;
-      width: 70px;
-    }
-    @media screen and (max-width: 800px) {
-      height: 54px;
-      width: 60px;
-    }
-    @media screen and (max-width: 600px) {
+  }
+}
+
+.logo-svg {
+  height: 81px;
+  width: 90px;
+  @media screen and (max-width: 1200px) {
+    height: 72px;
+    width: 80px;
+  }
+  @media screen and (max-width: 1000px) {
+    height: 63px;
+    width: 70px;
+  }
+  @media screen and (max-width: 800px) {
+    height: 54px;
+    width: 60px;
+  }
+  @media screen and (max-width: 600px) {
+    height: 45px;
+    width: 50px;
+  }
+  @include transition(all 0.3s ease-in-out);
+  .scrolling & {
+    @media screen and (min-width: 600px) {
       height: 45px;
       width: 50px;
     }
-    @include transition(all 0.3s ease-in-out);
-    .scrolling & {
-      @media screen and (min-width: 600px) {
-        height: 45px;
-        width: 50px;
-      }
-      @media screen and (max-width: 600px) {
-        height: 32px;
-        width: 35px;
-      }
-    }
-  }
-  path {
-    fill: $pantone-green;
-    @include transition(fill 0.3s ease-in-out);
-  }
-  &:hover {
-    path {
-      fill: $dark-grey;
+    @media screen and (max-width: 600px) {
+      height: 32px;
+      width: 35px;
     }
   }
 }
@@ -435,6 +445,13 @@ fieldset {
         font-family: $quarto;
         font-weight: 800;
         text-decoration: none;
+        .work-item:not(.scrolling) & {
+          color: $white;
+          &:hover,
+          &.active {
+            color: $pantone-green;
+          }
+        }
         &:hover,
         &.active {
           color: $pantone-green;
@@ -643,7 +660,7 @@ fieldset {
   @extend %clearfix;
   h1 {
     line-height: 0.9;
-    margin-bottom: 12rem;
+    margin-bottom: $global-margin*6;
     text-align: left;
     @include gs-span(cap,3,5);
     @media screen and (max-width: 600px) {
@@ -669,13 +686,13 @@ fieldset {
       }
       &:last-child {
         color: $pantone-green;
-        font-family: $inkwell;
-        font-size: 12vw;
+        font-family: $mink;
+        font-size: 9vw;
         left: 23%;
-        letter-spacing: -12px;
-        margin-top: 0;
+        letter-spacing: -15px;
+        margin-top: 0.4em;
         position: absolute;
-        @include transform(rotate(-13deg));
+        @include transform(rotate(-17deg));
         z-index: 4;
         .char5 {
           margin-left: -0.25em;
@@ -705,6 +722,7 @@ fieldset {
   }
   p {
     clear: both;
+    font-size: 2.8rem;
     @extend %first-letter;
     @include gs-span(cap,4,6);
     @media screen and (max-width: 600px) {
@@ -746,28 +764,26 @@ fieldset {
 
 .work-list {
   list-style: none;
-  margin: 0;
-  padding: 0;
   h2 {
-    // background-color: $white;
-    // box-decoration-break: clone;
-    display: inline;
-    // padding: 0.1em 1em;
+    color: $pantone-green;
     white-space: pre-wrap;
   }
   p {
     font-family: $quarto;
-    font-size: 1.4em;
+    font-size: 3.2rem;
     font-weight: 800;
   }
-  // a {
-  //   color: $pantone-green;
-  // }
+  a {
+    color: $pantone-green;
+  }
 }
 .work-list-item {
-  margin-bottom: 4rem;
+  margin-bottom: $global-margin*2;
   position: relative;
   @extend %clearfix;
+  img {
+    box-shadow: 0 0 3rem rgba($dark-grey, 0.4);
+  }
   &:nth-child(3n+1) {
     img {
       @include gs-span(cap,3,7);
@@ -821,11 +837,11 @@ fieldset {
     position: relative;
     @include transition(opacity 0.3s ease-in-out);
   }
-  &:hover {
-    img {
-      opacity: 0.8;
-    }
-  }
+  // &:hover {
+  //   img {
+  //     opacity: 0.8;
+  //   }
+  // }
 }
 .work-list-content {
   padding-top: gs-gutter(cap, false, true);
@@ -841,62 +857,112 @@ fieldset {
   }
 }
 
-// Work / Labs detail page
-
-body.shrimps-matter {
-  @include colour-scheme($shrimps-matter-color, work, shrimps-matter/shrimps-matter-featured);
+.shrimps-matter {
+  @include colour-scheme($shrimps-matter-color);
+}
+.wl-shrimps-matter {
+  a, h2 {
+    color: $shrimps-matter-color;
+  }
 }
 
-body.alfred-app {
-  @include colour-scheme($alfred-color, work, alfred-app/alfred-app-featured);
+.alfred-app {
+  @include colour-scheme($alfred-color);
+}
+.wl-alfred-app {
+  a, h2 {
+    color: $alfred-color;
+  }
 }
 
-body.sports-digest-8-50 {
-  @include colour-scheme($sports-digest-color, work, sports-digest-8-50/8-50-featured);
+.mind-the-product {
+  @include colour-scheme($mtp-color);
+}
+.wl-mind-the-product {
+  a, h2 {
+    color: $mtp-color;
+  }
 }
 
-body.alton-convent-school {
-  @include colour-scheme($alton-convent-color, work, alton-convent-school/alton-convent-featured);
+.backpagefootball {
+  @include colour-scheme($backpagefootball-color);
+}
+.wl-backpagefootball {
+  a, h2 {
+    color: $backpagefootball-color;
+  }
 }
 
-body.mind-the-product {
-  @include colour-scheme($mtp-color, work, mind-the-product/mind-the-product-featured);
+.cold-claim {
+  @include colour-scheme($cold-claim-color);
+}
+.wl-cold-claim {
+  a, h2 {
+    color: $cold-claim-color;
+  }
 }
 
-body.backpagefootball {
-  @include colour-scheme($backpagefootball-color, work, backpagefootball/backpagefootball-featured);
+.super-better {
+  @include colour-scheme($super-better-color);
+}
+.wl-super-better {
+  a, h2 {
+    color: $super-better-color;
+  }
 }
 
-body.toto {
-  @include colour-scheme($toto-color, work, toto/toto-featured);
+.river-ranger {
+  @include colour-scheme($river-ranger-color);
+}
+.wl-river-ranger {
+  a, h2 {
+    color: $river-ranger-color;
+  }
 }
 
-body.cold-claim {
-  @include colour-scheme($cold-claim-color, work, cold-claim/cold-claim-featured);
+.hip-hop-quoted {
+  @include colour-scheme($hip-hop-quoted-color);
+}
+.wl-hip-hop-quoted {
+  a, h2 {
+    color: $hip-hop-quoted-color;
+  }
 }
 
-body.super-better {
-  @include colour-scheme($super-better-color, work, super-better/super-better-featured);
+.dragimals {
+  @include colour-scheme($dragimals-color);
+}
+.wl-dragimals {
+  a, h2 {
+    color: $dragimals-color;
+  }
 }
 
-body.pantera {
-  @include colour-scheme($pantera-color, work, pantera/pantera-featured);
+.govguide {
+  @include colour-scheme($govguide-color);
+}
+.wl-govguide {
+  a, h2 {
+    color: $govguide-color;
+  }
 }
 
-body.river-ranger {
-  @include colour-scheme($river-ranger-color, labs, river-ranger/river-ranger-featured);
+.glowfair-festival {
+  @include colour-scheme($glowfair-color);
+}
+.wl-glowfair-festival {
+  a, h2 {
+    color: $glowfair-color;
+  }
 }
 
-body.hip-hop-quoted {
-  @include colour-scheme($hip-hop-quoted-color, labs, hip-hop-quoted/hip-hop-quoted-featured);
+.taylorstattencamps {
+  @include colour-scheme($taylorstattencamps-color);
 }
-
-body.dragimals {
-  @include colour-scheme($dragimals-color, labs, dragimals/dragimals-featured);
-}
-
-body.glowfair-festival {
-  @include colour-scheme($pantone-green, work, glowfair-festival/glowfair-featured);
+.wl-taylorstattencamps {
+  a, h2 {
+    color: $taylorstattencamps-color;
+  }
 }
 
 .work-item {
@@ -917,28 +983,63 @@ body.glowfair-festival {
 }
 
 .work-header {
+  background-color: $dark-grey;
   height: 100vh;
-  padding: 4% 0 4%;
-  text-align: center;
+  padding: 0 4%;
+  position: relative;
+  overflow: hidden;
   @include box-sizing(border-box);
   @extend %clearfix;
   h1 {
     color: $white;
-    margin-bottom: 0.25em;
-    opacity: 0.9;
-    text-align: center;
-    word-spacing: 3000px; 
+    margin-bottom: 2.2rem;
+    text-align: left;
+    // word-spacing: 2000px; 
   }
   p {
     color: $white;
     font-weight: 500;
   }
 }
+.work-header-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  padding: 4% 0 4%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 .work-header-content {
+  opacity: 1;
+  @include gs-span(cap,2,6);
   @extend %vertical-align;
+  float: none;
 }
 .work-content {
-  margin: $global-margin 0;
+  margin-top: $global-margin*2;
+  margin-bottom: $global-margin*2;
+  @extend %clearfix;
+
+  .column:first-of-type {
+    @include gs-span(cap,2,4);
+  }
+  .column:last-of-type {
+    @include gs-span(cap,5,6);
+  }
+}
+.sub-text {
+  margin: $global-margin*2 0;
+  text-align: left;
+  @extend %clearfix;
+  > .column {
+    @include gs-span(cap,2,5);
+  }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
 }
 .project-link {
   margin-top: 1.5em;
@@ -963,60 +1064,41 @@ body.glowfair-festival {
   font-family: $quarto;
   font-size: 3em;
   font-weight: 800;
+  margin: $global-margin*2 0;
   text-align: center;
   @media screen and (max-width: 600px) {
     font-size: 1.6em;
   }
 }
 .work-nav {
-  list-style: none;
-  margin: 0;
+  @include flexbox();
+  @include flex-flow(row nowrap);
   @extend %clearfix;
-  li {
-    font-size: 0.9em;
-    position: fixed;
-    top: 50%;
-    a {
-      cursor: pointer;
-      display: inline-block;
-      font-family: $sentinel;
-      font-weight: 800;
-      font-size: 1.6em;
-      height: 50px;
-      margin-top: -25px;
-      line-height: 42px;
-      text-decoration: none;
-      text-align: center;
-      width: 50px;
-      @include transition(background-color 0.3s ease-in-out);
-    }
-    span {
-      display: none;
-    }
-    &.next {
-      right: 0;
-    }
-    &.prev {
-      left: 0;
-    }
-    @media screen and (max-width: 600px) {
-      bottom: 0;
-      margin: 0;
-      top: auto;
-      width: 50%;
-      &.first,
-      &.last {
-        width: 100%;
-      }
-      &:nth-child(2) {
-        border-left: 1px solid rgba(255,255,255,0.5);
-      }
-      a {
-        height: 50px;
-        line-height: 50px;
-        margin-top: 0;
-        width: 100%;
-      }
+}
+.work-nav-item {
+  background-color: $dark-grey;
+  min-height: 40rem;
+  justify-content: center;
+  overflow: hidden;
+  width: 50%;
+  @include flexbox();
+  @include flex(1);
+  @include flex-flow(column);
+
+  a {
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $white;
+    display: block;
+    justify-content: center;
+    height: 100%;
+    padding: 0 8%;
+    @include flex(1);
+    @include transform(scale(1));
+    @include transition(all .3s ease-in-out);
+    &:hover {
+      color: $pantone-green;
+      @include transform(scale(1.05));
     }
   }
 }

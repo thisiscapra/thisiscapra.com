@@ -7,6 +7,7 @@ $dark-grey: #1A1A1A;
 $link-blue: #0645AD;
 $about-red: #D60054;
 $contact-green: #00C36A;
+$white: #ffffff;
 
 $shrimps-matter-color: #c94800;
 $alfred-color: #5C1F87;
@@ -17,13 +18,14 @@ $mtp-color: #00afef;
 $backpagefootball-color: #9bcb5d;
 $toto-color: #c44249;
 $cold-claim-color: #1e2f39;
-$super-better-color: #e91c7f;
+$super-better-color: #4558A7;
 $pantera-color: #8b1d1d;
 $hip-hop-quoted-color: #650b0b;
 $river-ranger-color: #273f59;
 $dragimals-color: #004f33;
-
-$white: #ffffff;
+$govguide-color: #57ac2d;
+$glowfair-color: #EC1164;
+$taylorstattencamps-color: #D53630;
 
 $button-width: 46px;                    // The width of the button area
 $button-height: 46px;                   // The height of the button area
@@ -37,6 +39,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
 
 $margin-normal: gs-gutter(cap, false, true);
 $global-margin: 4rem;
+$max-width: 1600px;
 
 // Fonts
 
@@ -96,27 +99,16 @@ $inkwell: "Inkwell Sans A", "Inkwell Sans B", serif;
 
 // Color schemes
 
-@mixin colour-scheme($color, $path, $image) {
-
-  $url: "../images/#{$path}/#{$image}.jpg";
-  
-  &:before {
-    background-image: url($url);
-  }
-
-  // @media screen and (max-width: 600px) {
-  //   background-size: 150% auto;
-  // }
-  // @media screen and (max-width: 450px) {
-  //   background-size: 160% auto;
-  // }
+@mixin colour-scheme($color) {
   a:hover {
     color: $color;
   }
-  .navigation {
-    a.active,
-    a:hover {
-      color: $color;
+  &.work-item {
+    .navigation a {
+      &:hover,
+      &.active {
+        color: $color !important;
+      }
     }
   }
   @media screen and (max-width: 600px) {
@@ -132,7 +124,7 @@ $inkwell: "Inkwell Sans A", "Inkwell Sans B", serif;
     a {
       color: $color;
       &:hover {
-        color: $dark-grey;
+        color: $white;
       }
       @media screen and (max-width: 600px) {
         color: $white;
@@ -156,7 +148,7 @@ $inkwell: "Inkwell Sans A", "Inkwell Sans B", serif;
       fill: $color;
     }
     &:hover path {
-      fill: $dark-grey;
+      fill: $white;
     }
   }
   #work-bar {
@@ -169,13 +161,6 @@ $inkwell: "Inkwell Sans A", "Inkwell Sans B", serif;
       }
     }
   }
-  // .work-header {
-  //   h1+p {
-  //     background-color: rgba($dark-grey,0.4);
-  //     display: inline-block;
-  //     padding: 0.2em;
-  //   }
-  // }
   .client-intro {
     p:first-of-type:first-letter {
       color: $color;
@@ -303,6 +288,37 @@ $inkwell: "Inkwell Sans A", "Inkwell Sans B", serif;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+// Flexbox
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+  -ms-flex-flow: $flow;
+  flex-flow: $flow;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
 }
 
 // Animations

@@ -103,6 +103,22 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
             .addTo(controller);
         }
       }
+      // Animate the work intro header
+      var workIntro = document.getElementById('work-item-intro');
+      if(workIntro) {
+        var wi = new TimelineMax(),
+            workIntroImage = document.querySelector('.work-header-image'),
+            workIntroContent = document.querySelector('.work-header-content');
+        wi
+          .to(workIntroImage, 1, { scale: "1.4", opacity: 0, ease:Power0.easeNone })
+          .to(workIntroContent, 1.4, { y: '-400', opacity: 0, ease:Power0.easeNone }, '-=1')
+        var workIntroScene = new ScrollMagic.Scene({
+          triggerHook: 0,
+          duration: "100%"
+        })
+        .setTween(wi)
+        .addTo(controller);
+      }
     }
 
     var stickyHeader = function(e) {
