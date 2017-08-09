@@ -417,6 +417,44 @@ fieldset {
   }
 }
 
+.photo-credits {
+  max-width: 600px;
+  margin: 2rem auto;
+
+  > p {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+}
+
+// From Unsplash
+.photo-credit-item {
+  background-color:black;
+  color:white;
+  text-decoration:none;
+  padding:4px 6px;
+  font-family:-apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
+  font-size:12px;
+  font-weight:bold;
+  line-height:1.2;
+  display:inline-block;
+  border-radius:3px;
+
+  span {
+    display:inline-block;
+    padding:2px 3px;
+  }
+
+  svg {
+    height:12px;
+    width:auto;
+    position:relative;
+    vertical-align:middle;
+    top:-1px;
+    fill:white;
+  }
+}
+
 // Navigation 
 
 .navigation {
@@ -911,12 +949,12 @@ fieldset {
   }
 }
 
-.river-ranger {
-  @include colour-scheme($river-ranger-color);
+.water-rangers {
+  @include colour-scheme($water-rangers-color);
 }
-.wl-river-ranger {
+.wl-water-rangers {
   a, h2 {
-    color: $river-ranger-color;
+    color: $water-rangers-color;
   }
 }
 

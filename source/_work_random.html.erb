@@ -1,4 +1,6 @@
-<% work_pages = data.work_items.clients.delete_if {|p| "/work/#{p.url}" == current_resource.url } %>
+<% 
+  work_pages = data.work_items.clients.delete_if {|p| "/work/#{p.url}" == current_resource.url } 
+%>
 <div class="work-list container">
   <% work_pages.sample(2).each_with_index do |p, index| %>
     <article class="work-list-item wl-<%= p.url %>">
