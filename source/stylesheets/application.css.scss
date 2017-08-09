@@ -162,10 +162,10 @@ figcaption {
 }
 blockquote {
   color: $pantone-green;
-  font-family: $inkwell;
-  font-size: 6rem;
-  font-weight: 800;
-  letter-spacing: -1px;
+  font-family: $quarto;
+  font-size: 5rem;
+  font-weight: 400;
+  font-style: italic;
   line-height: 1.2;
   margin: 0 auto;
   position: relative;
@@ -348,7 +348,7 @@ fieldset {
     top: 0;
   }
   path {
-    fill: rgba($pantone-green,1);
+    fill: rgba($primary-color,1);
     pointer-events: fill;
     @include transition(fill 0.3s ease-in-out);
   }
@@ -736,8 +736,8 @@ fieldset {
 .home-about-us {
   margin: 16% 0 0;
   h3 {
-    @include gs-span(cap,5,7);
-    @include gs-float(cap, right);
+    @include gs-span(cap,5,6);
+    //@include gs-float(cap, right);
     position: relative;
     top: -0.3em;
     @media screen and (max-width: 600px) {
@@ -965,6 +965,15 @@ fieldset {
   }
 }
 
+.mvl-architects {
+  @include colour-scheme($mvl-architects-color);
+}
+.wl-mvl-architects {
+  a, h2 {
+    color: $mvl-architects-color;
+  }
+}
+
 .work-item {
   padding-top: 0;
   position: relative;
@@ -1029,6 +1038,9 @@ fieldset {
   .column:last-of-type {
     @include gs-span(cap,5,6);
   }
+}
+.what-we-did {
+  font-size: 2rem;
 }
 .sub-text {
   margin: $global-margin*2 0;

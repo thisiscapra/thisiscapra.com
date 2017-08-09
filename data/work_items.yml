@@ -69,12 +69,35 @@ clients:
       - taylorstattencamps-gallery-1.jpg
       - taylorstattencamps-gallery-2.jpg
       - taylorstattencamps-gallery-3.jpg
-    testimonial: ""
-    featured_testimonial: ""
-    cite: "Tabatha Soltay, <a href='http://tabtalks.ca' target='_blank'>TabTalks</a>"
+    testimonial: 
+    featured_testimonial: 
+    cite:
+  # MVL Architects
+  - name: MVL Architects
+    weight: 4
+    title: Acclaimed architectural design
+    home_intro: "Acclaimed architectural design"
+    url: mvl-architects
+    link: http://www.mvl-architects.co.uk
+    main_text: "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    sub_text: "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    what_we_did: 
+      - Web design
+      - Responsive build
+      - Wordpress Multi-Site
+    image_path: work/mvl-architects
+    image_featured: mvl-architects-featured.jpg
+    images:
+      - mvl-architects-gallery-1.jpg
+      - mvl-architects-gallery-2.jpg
+      - mvl-architects-gallery-3.jpg
+      - mvl-architects-gallery-4.jpg
+    testimonial: 
+    featured_testimonial: 
+    cite:  
   # Shrimpsmatter
   - name: Shrimps Matter
-    weight: 4
+    weight: 5
     title: The ocean is interconnected
     home_intro: "Play a game while exploring the interconnectedness of the ocean"
     url: shrimps-matter
@@ -103,7 +126,7 @@ clients:
     cite: "Tabatha Soltay, <a href='http://tabtalks.ca' target='_blank'>TabTalks</a>"
  # Alfred
   - name: Alfred App
-    weight: 5
+    weight: 6
     title: Designed to be productive.
     home_intro: "See how we designed your computer&#8217;s butler for OSX"
     url: alfred-app
@@ -124,7 +147,7 @@ clients:
       - alfred-app-gallery-2.jpg
   # Mind the product
   - name: Mind the Product
-    weight: 6
+    weight: 7
     home_intro: "See how we designed this popular conference website"
     url: mind-the-product
     link: http://mtpcon.com/
@@ -147,7 +170,7 @@ clients:
     cite: 'Martin Eriksson, founder of Mind The Product'
   # Super Better
   - name: Super Better
-    weight: 7
+    weight: 8
     home_intro: "See how we designed this game to achieve health goals"
     url: super-better
     link: http://superbetter.com
@@ -165,13 +188,12 @@ clients:
       - super-better-gallery-1.jpg
       - super-better-gallery-2.jpg
       - super-better-gallery-3.jpg
-      - super-better-gallery-4.jpg
     testimonial: "Kat&#8217;s turnaround speed, realtime iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. I would work with her again in a heartbeat and wish I could have her on every project."
     featured_testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I&#8217;ve never found that talent wrapped in such an energetic, positive, problem-solving personality."
     cite: "Chelsea Howe, Game Designer for SuperBetter"
   # Cold Claim
   - name: Cold Claim
-    weight: 8
+    weight: 9
     home_intro: "See how we designed this strategic learning game"
     url: cold-claim
     link: http://coldclaim.com
@@ -190,15 +212,10 @@ clients:
       - Physical board game prototype
     image_path: work/cold-claim
     image_featured: cold-claim-featured.jpg
-    image_thumb: cold-claim-thumb.jpg
     images:
-      - cold-claim-logo.jpg
-      - cold-claim-zoomed-out.jpg
-      - cold-claim-zoomed-in.jpg
-      - cold-claim-detail.jpg
-      - cold-claim-board-game.jpg
-      - cold-claim-web.jpg
-      - cold-claim-mobile.jpg
+      - cold-claim-gallery-1.jpg
+      - cold-claim-gallery-2.jpg
+      - cold-claim-gallery-3.jpg
     testimonial: "Kat's relentless optimism and ability to keep the momentum going in the dark times that come with any long-term project make her a true delight to work with. She has my complete trust, total respect, and my highest recommendation."
     featured_testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with."
     cite: "Mathias Crawford, game designer for ColdClaim"

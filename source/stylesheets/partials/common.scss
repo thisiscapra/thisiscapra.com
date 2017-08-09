@@ -4,10 +4,12 @@
 
 $pantone-green: #009B77;
 $dark-grey: #1A1A1A;
+$mid-grey: #808080;
 $link-blue: #0645AD;
 $about-red: #D60054;
 $contact-green: #00C36A;
 $white: #ffffff;
+$primary-color: $pantone-green;
 
 $shrimps-matter-color: #c94800;
 $alfred-color: #5C1F87;
@@ -16,16 +18,15 @@ $sports-digest-color: #00ae5a;
 $alton-convent-color: #003f77;
 $mtp-color: #00afef;
 $backpagefootball-color: #9bcb5d;
-$toto-color: #c44249;
-$cold-claim-color: #1e2f39;
-$super-better-color: #4558A7;
-$pantera-color: #8b1d1d;
+$cold-claim-color: #16BDF7;
+$super-better-color: #981A63;
 $hip-hop-quoted-color: #650b0b;
 $river-ranger-color: #273f59;
 $dragimals-color: #004f33;
 $govguide-color: #57ac2d;
 $glowfair-color: #EC1164;
 $taylorstattencamps-color: #D53630;
+$mvl-architects-color: #29176D;
 
 $button-width: 46px;                    // The width of the button area
 $button-height: 46px;                   // The height of the button area
@@ -100,9 +101,6 @@ $inkwell: "Inkwell Sans A", "Inkwell Sans B", serif;
 // Color schemes
 
 @mixin colour-scheme($color) {
-  a:hover {
-    color: $color;
-  }
   &.work-item {
     .navigation a {
       &:hover,
@@ -149,6 +147,11 @@ $inkwell: "Inkwell Sans A", "Inkwell Sans B", serif;
     }
     &:hover path {
       fill: $white;
+    }
+  }
+  &.scrolling {
+    .logo:hover path {
+      fill: $dark-grey;
     }
   }
   #work-bar {
