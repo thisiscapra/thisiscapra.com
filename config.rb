@@ -197,7 +197,7 @@ end
 configure :build do
 
   # "Ignore" JS so webpack has full control.
-  ignore { |path| path =~ /\/(.*)\.js$/ && $1 != 'all' }
+  # ignore { |path| path =~ /\/(.*)\.js$/ && $1 != 'all' }
   
   # Minify CSS on build
   activate :minify_css
