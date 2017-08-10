@@ -129,12 +129,13 @@ h2,
   margin-bottom: 1em;
 }
 h3 {
-  font-size: 6rem;
+  font-size: 8rem;
   line-height: 1.2;
   margin: 0 0 1rem;
   @media screen and (max-width: 600px) {
     line-height: 1;
-    margin: 0 0 0.6em;
+    font-size: 6rem;
+    margin: 0 0 0.5rem;
   }
 }
 h4 {
@@ -418,7 +419,8 @@ fieldset {
 }
 
 .photo-credits {
-  max-width: 600px;
+  line-height: 1.2;
+  max-width: 680px;
   margin: 2rem auto;
 
   > p {
@@ -439,6 +441,13 @@ fieldset {
   line-height:1.2;
   display:inline-block;
   border-radius:3px;
+
+  @include transition(all .3s ease-in-out);
+
+  &:hover {
+    background-color: $primary-color;
+    color: $white;
+  }
 
   span {
     display:inline-block;
@@ -774,7 +783,7 @@ fieldset {
 .home-about-us {
   margin: 16% 0 0;
   h3 {
-    @include gs-span(cap,5,6);
+    @include gs-span(cap,5,7);
     //@include gs-float(cap, right);
     position: relative;
     top: -0.3em;
@@ -785,6 +794,7 @@ fieldset {
     }
   }
   .content {
+    font-size: 2.8rem;
     @include gs-span(cap,2,4);
     @media screen and (max-width: 600px) {
       float: none;
@@ -1210,9 +1220,9 @@ fieldset {
 }
 .what-we-do-intro {
   @include gs-span(cap,1,3, (2,7));
-  p:first-child {
-    @extend %first-letter;
-  }
+  // p:first-child {
+  //   @extend %first-letter;
+  // }
   @media screen and (max-width: 600px) {
     float: none;
     margin: 0 0 8%;
@@ -1249,9 +1259,9 @@ fieldset {
 }
 .why-capra-intro {
   @include gs-span(cap,2,4,(2,7));
-  p:first-child {
-    @extend %first-letter
-  }
+  // p:first-child {
+  //   @extend %first-letter
+  // }
   @media screen and (max-width: 600px) {
     float: none;
     margin: 0;
@@ -1259,9 +1269,13 @@ fieldset {
   }
 }
 .the-tribe {
+  color: $primary-color;
   margin: 0 0 8% 0;
   position: relative;
   @extend %clearfix;
+  h2 {
+    color: $primary-color;
+  }
   img {
     @include gs-span(cap,1,5);
     @media screen and (max-width: 600px) {
@@ -1287,9 +1301,6 @@ fieldset {
 .team-members {
   margin: 0 0 8% gs-marginleft(cap, 2, false, true);
   @extend %clearfix;
-  p:first-of-type {
-    @extend %first-letter
-  }
   @media screen and (max-width: 600px) {
     margin: 0 0 8%;
   }

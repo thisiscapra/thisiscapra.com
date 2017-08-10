@@ -41,6 +41,7 @@ labs:
       - hip-hop-quoted-gallery-2.jpg
       - hip-hop-quoted-gallery-3.jpg
       - hip-hop-quoted-gallery-4.jpg
+      - hip-hop-quoted-gallery-5.jpg
   - name: Dragimals
     weight: 2
     home_intro: The interactive iPad game for babies
@@ -54,15 +55,12 @@ labs:
     url: dragimals
     link: http://dragimals.com
     image_featured: dragimals-featured.jpg
-    image_thumb: dragimals-thumb.jpg
-    logo: dragimals-logo.svg
     image_path: labs/dragimals
     images:
-      - dragimals-tablet-1.png
-      - dragimals-iphone-1.png
-      - dragimals-tablet-2.png
-      - dragimals-tablet-3.png
-      - dragimals-site-1.jpg
+      - dragimals-gallery-1.jpg
+      - dragimals-gallery-2.jpg
+      - dragimals-gallery-3.jpg
+      - dragimals-gallery-4.jpg
   - name: Back Page Football
     weight: 7
     home_intro: "Award-winning original football writing since 2009"
