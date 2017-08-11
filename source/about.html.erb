@@ -129,13 +129,7 @@
 
   <%#= partial "social" %>
   
-  <figure class="client-blockquote">
-    <blockquote>
-      <p>Kat has a unstoppable drive, a wonderful eye for detail, and is a great pleasure to work and collaborate with.</p>
-    </blockquote>
-    <figcaption>
-      Jaison Green, iOS developer and partner-in-crime for <a href="http://thisiscapra.com/work/super-better/"> Superbetter app</a>
-    </figcaption>
-  </figure>
+  <% featured_quote = data.work_items.clients.select{|client| client.featured_testimonial rescue false } %>
+  <%= partial "client_blockquote", :locals => { client: featured_quote.sample(), featured: true } %>
 
 </section>

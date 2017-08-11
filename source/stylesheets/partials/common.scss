@@ -111,10 +111,10 @@ $inkwell: "Inkwell Sans A", "Inkwell Sans B", serif;
   }
   @media screen and (max-width: 600px) {
     .navigation .page-nav {
-      background-color: rgba($color, 0.9);
+      background-color: rgba($dark-grey, 0.95);
       a.active,
       a:hover {
-        color: $dark-grey;
+        color: $color;
       }
     }
   }

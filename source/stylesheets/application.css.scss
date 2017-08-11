@@ -48,8 +48,8 @@ body {
   @media screen and (max-width: 1150px) {
     font-size: 1.8rem;
   }
-  @media screen and (max-width: 1000px) {
-    font-size: 1.6rem;
+  @media screen and (max-width: 600px) {
+    padding-top: 22%;
   }
 }
 .container {
@@ -108,7 +108,7 @@ h1, h2, h3, h4,
   margin: 0;
 }
 h1 {
-  font-size: 10vw;
+  font-size: 12vw;
   line-height: 0.9;
   margin-bottom: 0.25em;
   text-align: center;
@@ -130,12 +130,14 @@ h2,
 }
 h3 {
   font-size: 8rem;
-  line-height: 1.2;
+  line-height: 1;
   margin: 0 0 1rem;
+  @media screen and (max-width: 900px) {
+    font-size: 6rem;
+  }
   @media screen and (max-width: 600px) {
     line-height: 1;
-    font-size: 6rem;
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.8rem;
   }
 }
 h4 {
@@ -163,23 +165,30 @@ figcaption {
 }
 blockquote {
   color: $pantone-green;
-  font-family: $quarto;
+  font-family: $mink;
   font-size: 5rem;
   font-weight: 400;
-  font-style: italic;
   line-height: 1.2;
+  letter-spacing: -5px;
   margin: 0 auto;
   position: relative;
   text-align: center;
   width: gs-width(cap,2,6,false,true);
   @media screen and (max-width: 1000px) {
+    font-size: 4rem;
+    line-height: 1.3;
     width: gs-width(cap,1,7,false,true);
   }
   @media screen and (max-width: 600px) {
-    font-size: 4rem;
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  .work-item & {
+    font-size: 3rem;
+    line-height: 1.5;
   }
   p {
-    margin-bottom: 1em;
+    margin: 1em 0;
     &:before {
       content: '“';
     }
@@ -219,8 +228,8 @@ input, textarea {
   box-shadow: none;
   display: block;
   font-family: $sentinel;
-  font-size: 1.6em;
-  padding: 0.6em;
+  font-size: 2.4rem;
+  padding: 0.5em;
   @include box-sizing(border-box);
   width: 100%;
   &[type="radio"],
@@ -229,6 +238,9 @@ input, textarea {
     padding: 0;
     vertical-align: middle;
     width: auto;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 1.6rem;
   }
 }
 textarea {
@@ -262,24 +274,27 @@ fieldset {
   font-weight: 800;
 }
 ::-webkit-input-placeholder {
-   color: #999;
-   font-size: 0.6em;
-   line-height: 2;
+  color: #999;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  @media screen and (max-width: 600px) {
+    font-size: 1.6rem;
+  }
 }
 :-moz-placeholder { /* Firefox 18- */
-   color: #999;
-   font-size: 0.6em;
-   line-height: 2;
+  color: #999;
+  font-size: 2.4rem;
+  line-height: 1.2;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #999;
-   font-size: 0.6em;
-   line-height: 2;
+  color: #999;
+  font-size: 2.4rem;
+  line-height: 1.2;
 }
 :-ms-input-placeholder {  
-   color: #999;
-   font-size: 0.6em;
-   line-height: 2;
+  color: #999;
+  font-size: 2.4rem;
+  line-height: 1.2;
 }
 .button {
   background-color: $pantone-green;
@@ -289,7 +304,7 @@ fieldset {
   display: inline-block;
   font-family: $quarto;
   font-weight: 800;
-  font-size: 1.2em;
+  font-size: 2.6rem;
   margin: 0 auto;
   padding:0.6em 1.6em;
   text-align: center;
@@ -340,6 +355,7 @@ fieldset {
     float: none;
     margin: 0;
     width: 100px;
+    z-index: 1500;
   }
   a {
     bottom: 0;
@@ -442,6 +458,10 @@ fieldset {
   display:inline-block;
   border-radius:3px;
 
+  @media screen and (max-width: 600px) {
+    margin-top: 0.3rem;
+  } 
+
   @include transition(all .3s ease-in-out);
 
   &:hover {
@@ -508,7 +528,7 @@ fieldset {
   }
   @media screen and (max-width: 600px) {
     .page-nav {
-      background-color: rgba($pantone-green, 0.9);
+      background-color: rgba($dark-grey, 0.95);
       bottom: 0;
       float: none;
       left: 0;
@@ -535,7 +555,7 @@ fieldset {
           color: $white;
           &.active,
           &:hover {
-            color: $dark-grey;
+            color: $primary-color;
           }
         }
         &:not(.social) {
@@ -609,6 +629,9 @@ fieldset {
   right: $button-pad;
   height: $bar-thickness;
   background: $dark-grey;
+  .work-item:not(.scrolling) & {
+    background: $white;
+  }
 }
 .c-hamburger span::before,
 .c-hamburger span::after {
@@ -620,6 +643,9 @@ fieldset {
   height: $bar-thickness;
   background-color: $dark-grey;
   content: "";
+  .work-item:not(.scrolling) & {
+    background-color: $white;
+  }
 }
 .c-hamburger span::before {
   top: -$bar-thickness - $button-bar-space;
@@ -707,7 +733,7 @@ fieldset {
   @extend %clearfix;
   h1 {
     line-height: 0.9;
-    margin-bottom: $global-margin*6;
+    margin-bottom: 12%;
     text-align: left;
     @include gs-span(cap,3,5);
     @media screen and (max-width: 600px) {
@@ -734,7 +760,7 @@ fieldset {
       &:last-child {
         color: $pantone-green;
         font-family: $mink;
-        font-size: 9vw;
+        font-size: 11vw;
         left: 23%;
         letter-spacing: -15px;
         margin-top: 0.4em;
@@ -772,33 +798,38 @@ fieldset {
     font-size: 2.8rem;
     @extend %first-letter;
     @include gs-span(cap,4,6);
+    @media screen and (max-width: 1000px) {
+      @include gs-span(cap,3,7);
+      font-size: 2rem;
+    }
     @media screen and (max-width: 600px) {
       float: none;
-      margin: gs-gutter(cap, false, true) 0;
+      font-size: 1.8rem;
+      margin: $global-margin*3 0 $global-margin;
       width: 100%;
     }
   }
 }
 
 .home-about-us {
-  margin: 16% 0 0;
+  margin: 16% 0 8%;
   h3 {
     @include gs-span(cap,5,7);
-    //@include gs-float(cap, right);
+    @include gs-float(cap, right);
     position: relative;
-    top: -0.3em;
+    top: -2rem;
     @media screen and (max-width: 600px) {
       float: none;
       margin: 0 0 4%;
+      top: 0;
       width: 100%;
     }
   }
   .content {
-    font-size: 2.8rem;
     @include gs-span(cap,2,4);
     @media screen and (max-width: 600px) {
       float: none;
-      margin: 0 0 4%;
+      margin: 0 0 8%;
       width: 100%;
     }
     > p:first-child {
@@ -829,6 +860,9 @@ fieldset {
   margin-bottom: $global-margin*2;
   position: relative;
   @extend %clearfix;
+  @media screen and (max-width: 600px) {
+    margin-bottom: $global-margin;
+  }
   img {
     box-shadow: 0 0 3rem rgba($dark-grey, 0.4);
   }
@@ -1057,6 +1091,10 @@ fieldset {
     color: $white;
     font-weight: 500;
   }
+
+  @media screen and (max-width: 900px) {
+    height: 80vh;
+  }
 }
 .work-header-image {
   background-size: cover;
@@ -1064,7 +1102,7 @@ fieldset {
   bottom: 0;
   height: 100%;
   left: 0;
-  padding: 4% 0 4%;
+  padding: 4% 0;
   position: absolute;
   top: 0;
   right: 0;
@@ -1074,17 +1112,44 @@ fieldset {
   @include gs-span(cap,2,6);
   @extend %vertical-align;
   float: none;
+
+  @media screen and (max-width: 600px) {
+    margin: 0;
+    padding: 0 4%;
+    width: 100%;
+  }
 }
 .work-content {
   margin-top: $global-margin*2;
   margin-bottom: $global-margin*2;
   @extend %clearfix;
 
+  @media screen and (max-width: 1000px) {
+    margin-top: $global-margin;
+    margin-bottom: $global-margin;
+  }
+
   .column:first-of-type {
     @include gs-span(cap,2,4);
+    @media screen and (max-width: 900px) {
+      @include gs-span(cap,1,4);
+    }
+    @media screen and (max-width: 600px) {
+      float: none;
+      margin: 0 0 $global-margin;
+      width: 100%;
+    }
   }
   .column:last-of-type {
     @include gs-span(cap,5,6);
+    @media screen and (max-width: 900px) {
+      @include gs-span(cap,5,7);
+    }
+    @media screen and (max-width: 600px) {
+      float: none;
+      margin: 0 0 $global-margin;
+      width: 100%;
+    }
   }
 }
 .what-we-did {
@@ -1099,6 +1164,18 @@ fieldset {
   }
   p:last-of-type {
     margin-bottom: 0;
+  }
+  @media screen and (max-width: 900px) {
+    > .column {
+      @include gs-span(cap,1,5);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    margin: $global-margin 0;
+    > .column {
+      margin: 0;
+      width: 100%;
+    }
   }
 }
 .project-link {
@@ -1122,12 +1199,13 @@ fieldset {
 }
 .hire {
   font-family: $quarto;
-  font-size: 3em;
+  font-size: 6rem;
   font-weight: 800;
   margin: $global-margin*2 0;
   text-align: center;
   @media screen and (max-width: 600px) {
-    font-size: 1.6em;
+    font-size: 3rem;
+    margin: $global-margin 0;
   }
 }
 .work-nav {
