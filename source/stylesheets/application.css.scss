@@ -162,15 +162,10 @@ blockquote {
   @media screen and (max-width: 1000px) {
     font-size: 4rem;
     line-height: 1.3;
-    letter-spacing: -3px;
     width: gs-width(cap,1,7,false,true);
   }
   @media screen and (max-width: 600px) {
     font-size: 3rem;
-    line-height: 1.5;
-  }
-  .work-item & {
-    font-size: 4rem;
     line-height: 1.5;
   }
   p {
