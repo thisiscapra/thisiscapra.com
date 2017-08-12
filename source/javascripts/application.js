@@ -294,8 +294,8 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
     // Only load the social stuff on the about page
     //if(hasClass(body, 'page-about')) {
       //soundcloudWidget();
-      instagramFeed();
-      twitterWidget();
+      //instagramFeed();
+      //twitterWidget();
     //}
 
   };
