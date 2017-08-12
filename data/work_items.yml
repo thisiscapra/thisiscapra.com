@@ -10,10 +10,11 @@ clients:
     main_text: "<p>GlowFair is a festival based in Ottawa that takes over 10 blocks with a magical world of music+light+art. They approached us to refresh their online identity and re-build the wordpress site into a multi-site capable of supporting future events and archiving the past ones. The design had to convey the expressive feel of the festival whilst providing an easy, accessible information hub for peopple attending the event.</p>"
     sub_text: "<p>Using the concept of neon lights we came up with an animated street based approach with a character strolling down Bank Street and exploring the various blocks and stages. To accompany this we created a set of animated icons for each block that would be used online and in print around the city.</p>"
     what_we_did: 
-      - Icon Design
+      - Icon design
+      - UX design
       - Web design
-      - Responsive build
-      - Wordpress Multi-Site
+      - Responsively build
+      - WordPress CMS Multi-Site
     image_path: work/glowfair-festival
     image_featured: glowfair-featured.jpg
     images:
@@ -34,9 +35,10 @@ clients:
     main_text: "<p>iPolitics have been a client of Capra for the past 2 years and approached us with an idea for an searchable & filterable database of all Canadian MPs & Sentors. Using our extensive knowledge of wordpress we created a full faceted search with custom fields that could be easily customised and extended. The design had to be flexible enough to support both the Green & Red Chambers but all contained within one Wordpress install for easily switching between Senators & MPS.</p>"
     sub_text: "<p>The responsive mobile build was a key part of this offering to enable Politicians and Researchers to access information from anywhere. We are constantly working on new features based on user and client feedback, we've recently added a Legislative calendar, the Daily Watch, SEO changes and a full re-design of the MP profiles to orgainse the information in a tabbed view.</p>"
     what_we_did: 
+      - UX design
       - Web design
-      - Responsive build
-      - Wordpress Multi-Site
+      - Responsively build
+      - WordPress CMS Multi-Site
       - Faceted Search & Filtering
     image_path: work/govguide
     image_featured: govguide-featured.jpg
@@ -55,13 +57,13 @@ clients:
     home_intro: "Your camping adventure of a lifetime!"
     url: taylorstattencamps
     link: http://www.taylorstattencamps.com/
-    main_text: "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
-    sub_text: "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    main_text: "<p>Taylor Statten Camps have been around for over a century, and they have a reputation for immersive canoeing and camping experiences that allow kids to disconnect from technology, learn skills and create lasting memories. Their website, which was a few years old, wasn’t representing their ethos of simplicity any more as they grew and it became overly complex.</p>"
+    sub_text: "<p>We redesigned this rustic camp website to simplify their user’s journey, to help them increase registrations and to maintain their reputation as a canoe camp in Algonquin Park. This redesign saw them increase their camp registrations in the first year. New and old campers loved the focus on imagery, showing the distinct separation between boys and girls camps, and the improved navigation helped them find the information they needed.</p>"
     what_we_did: 
-      - Icon Design
+      - UX design
       - Web design
-      - Responsive build
-      - Wordpress Multi-Site
+      - Responsively build
+      - WordPress CMS Multi-Site
     image_path: work/taylorstattencamps
     image_featured: taylorstattencamps-featured.jpg
     images:
@@ -81,9 +83,10 @@ clients:
     main_text: "<p>Chris from MVL contacted us in need of help refreshing their website. Adding new projects had become a real pain and the current website didn't reflect the dynamic, professional approach to projects. We came up with a bold, photo-led design that really showed off the companies acclaimed design skills on a broad range of projects. The Wordpress build enables Chris and his team to easily add new work and assign these into categories for prospective clients to sort under.</p>"
     sub_text: "<p>We also created a custom SEO framework so MVL can create specialised landing pages and funnels to show of their featured services, analysis, modelling and studies. The website has been a resounding success and we continue to work with trhe team to refine and add new features based on feedback.</p>"
     what_we_did: 
+      - UX design
       - Web design
-      - Responsive build
-      - Wordpress Multi-Site
+      - Responsively build
+      - WordPress CMS Multi-Site
     image_path: work/mvl-architects
     image_featured: mvl-architects-featured.jpg
     images:
