@@ -71,11 +71,10 @@ hr {
   margin: 0 0 12%;
   > p {
     margin: 0 auto;
-    padding: 0 gs-gutter(cap, false, true);
+    padding: 0;
     text-align: center;
     width: gs-width(cap, 2, 6, false, true);
     @media screen and (max-width: 600px) {
-      padding: 0;
       width: 100%;
     }
   }
@@ -789,6 +788,9 @@ fieldset {
       margin: $global-margin*3 0 $global-margin;
       width: 100%;
     }
+  }
+  a {
+    white-space: nowrap;
   }
 }
 
