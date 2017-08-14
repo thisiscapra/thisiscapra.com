@@ -1,4 +1,5 @@
-import ScrollMagic from 'scrollmagic/scrollmagic/minified/ScrollMagic.min';  
+import ScrollMagic from 'scrollmagic/scrollmagic/minified/ScrollMagic.min'; 
+import SmoothScroll from 'smooth-scroll/dist/js/smooth-scroll.min';  
 import 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min';  
 import 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min';  
 import TweenMax from 'gsap/src/minified/TweenMax.min';
@@ -136,7 +137,8 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
 
     // Tabs on the contact page
     var contentTabs = function(e) {
-      var tab_contents = document.getElementsByClassName("contact-form");
+      var tab_contents = document.getElementsByClassName("contact-form"),
+          contactScroll = document.getElementById('contact-scroll');
       [].forEach.call(tab_contents, function(tab_content){
         addClass(tab_content, 'hidden');
       });
@@ -144,7 +146,8 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
       var tabs = document.getElementsByClassName("tab");
       [].forEach.call(tabs, function(tab){
         tab.addEventListener("click", function(event){
-          var actives = document.querySelectorAll('.active');
+          var actives = document.querySelectorAll('.active'),
+              target = event.target;
           // deactivate existing active tab and panel
           for (var i=0; i < actives.length; i++){
             actives[i].className = actives[i].className.replace('active', '');
@@ -152,11 +155,11 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
           event.target.parentElement.className += 'active';
           document.getElementById(event.target.href.split('#')[1]).className += ' active';
           var anchor = event.target.href.split('#')[1],
-            offset = 100;
-              //offset = document.querySelector('#header').offsetHeight;
-            console.log(offset)
+              offset = 100;
           event.preventDefault();
-          smoothScroll.animateScroll( null, '#contact-scroll', {
+          var scroll = new SmoothScroll();
+          console.log(target);
+          scroll.animateScroll(contactScroll, target, {
             "offset": offset,
             "updateURL": false
           });

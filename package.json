@@ -38,5 +38,8 @@
     "turbolinks": "^5.0.3",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "smooth-scroll": "github:cferdinandi/smooth-scroll"
   }
 }
