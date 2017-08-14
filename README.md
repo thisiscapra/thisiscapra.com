@@ -7,6 +7,7 @@ Capra is a design agency based in Ottawa, Canada. We design and build beautiful 
 * Middleman v4 - https://middlemanapp.com
 * Contentful CMS - https://www.contentful.com/
 * Continous deployment through Netlify - https://www.netlify.com/
+* Assets managed through Webpack - https://webpack.js.org
 
 ### Some of the useful code within our repo:
 
