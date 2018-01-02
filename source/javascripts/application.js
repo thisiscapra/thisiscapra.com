@@ -311,14 +311,14 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
 
   document.addEventListener("turbolinks:click", function(e) {
     var wrapper = document.getElementById('wrapper');
-    removeClass(wrapper, 'fadeInDown');
-    addClass(wrapper, 'fadeOutUp');
+    removeClass(wrapper, 'fade-in-down');
+    addClass(wrapper, 'fade-out-up');
   }, false);
 
   document.addEventListener("turbolinks:load", function(e) {
     var wrapper = document.getElementById('wrapper');
-    removeClass(wrapper, 'fadeOutUp');
-    addClass(wrapper, 'fadeInDown');
+    removeClass(wrapper, 'fade-out-up');
+    addClass(wrapper, 'fade-in-down');
     ready();
   }, false);
 
