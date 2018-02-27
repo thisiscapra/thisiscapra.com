@@ -17,9 +17,12 @@
 
     <div id="project" class="contact-form">
       <h2>Project enquiry</h2>
-      <form accept-charset="UTF-8" name="project-enquiry" action="/thank-you" netlify>
+      <form accept-charset="UTF-8" name="project-enquiry" netlify-honeypot="project-bot-field" action="/thank-you" netlify>
         <input type="hidden" name="utf8" value="✓">
         <fieldset>
+          <div style="display: none;">
+            <label>Don’t fill this out: <input name="project-bot-field"></label>
+          </div>
           <div>
             <label>Your name <abbr class="req" title="required">*</abbr></label>
             <input type="text" name="name" required>
@@ -62,6 +65,9 @@
             <h3>Project description <abbr class="req" title="required">*</abbr></h3>
             <textarea name="description" placeholder="Describe to us the purpose of your project and anything else you think we need to know..."></textarea>
           </div>
+          <div>
+            <div netlify-recaptcha></div>
+          </div>
           <input type="submit" name="" value="Send enquiry" class="button">
         </fieldset>
       </form>
@@ -69,9 +75,12 @@
 
     <div id="general" class="contact-form">
       <h2>Hello!</h2>
-      <form accept-charset="UTF-8" name="general-enquiry" action="/thank-you" netlify>
+      <form accept-charset="UTF-8" netlify-honeypot="contact-bot-field" name="general-enquiry" action="/thank-you" netlify>
         <input type="hidden" name="utf8" value="✓">
         <fieldset>
+          <div style="display: none;">
+            <label>Don’t fill this out: <input name="contact-bot-field"></label>
+          </div>
           <div>
             <label for="general_name">Your name <abbr class="req" title="required">*</abbr></label>
             <input type="text" name="general_name" required>
@@ -83,6 +92,9 @@
           <div>
             <label for="general_email">Your message <abbr class="req" title="required">*</abbr></label>
             <textarea name="general_description" required></textarea>
+          </div>
+          <div>
+            <div netlify-recaptcha></div>
           </div>
           <div>
             <input type="submit" name="" value="Send enquiry" class="button">
