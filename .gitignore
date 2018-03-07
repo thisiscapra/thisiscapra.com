@@ -28,4 +28,3 @@
 .env.development
 .env
 node_modules
-/data

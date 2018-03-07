@@ -1,0 +1,221 @@
+clients:
+  # GlowFair Festival
+  - name: GlowFair Festival
+    weight: 1
+    featured: true
+    intro: "A block party unlike anything you've ever experienced!"
+    home_intro: "A block party unlike anything you've ever experienced!"
+    url: glowfair-festival
+    link: http://glowfairfestival.ca
+    main_text: "<p>GlowFair is a festival based in Ottawa that takes over 10 blocks with a magical world of music+light+art. They approached us to refresh their online identity and re-build the wordpress site into a multi-site capable of supporting future events and archiving the past ones. The design had to convey the expressive feel of the festival whilst providing an easy, accessible information hub for peopple attending the event.</p>"
+    sub_text: "<p>Using the concept of neon lights we came up with an animated street based approach with a character strolling down Bank Street and exploring the various blocks and stages. To accompany this we created a set of animated icons for each block that would be used online and in print around the city.</p>"
+    what_we_did: 
+      - Icon design
+      - UX design
+      - Web design
+      - Responsively build
+      - WordPress CMS Multi-Site
+    image_path: work/glowfair-festival
+    image_featured: glowfair-featured.jpg
+    images:
+      - glowfair-gallery-1.jpg
+      - glowfair-gallery-2.jpg
+      - glowfair-gallery-3.jpg
+    testimonial: 
+    featured_testimonial: 
+    cite: 
+  # GovGuide
+  - name: GovGuide
+    weight: 2
+    featured: true
+    intro: "The essential resource for Parliament Hill"
+    home_intro: "The essential resource for Parliament Hill"
+    url: govguide
+    link: https://govguide.ca
+    main_text: "<p>iPolitics have been a client of Capra for the past 2 years and approached us with an idea for an searchable & filterable database of all Canadian MPs & Sentors. Using our extensive knowledge of wordpress we created a full faceted search with custom fields that could be easily customised and extended. The design had to be flexible enough to support both the Green & Red Chambers but all contained within one Wordpress install for easily switching between Senators & MPS.</p>"
+    sub_text: "<p>The responsive mobile build was a key part of this offering to enable Politicians and Researchers to access information from anywhere. We are constantly working on new features based on user and client feedback, we've recently added a Legislative calendar, the Daily Watch, SEO changes and a full re-design of the MP profiles to orgainse the information in a tabbed view.</p>"
+    what_we_did: 
+      - UX design
+      - Web design
+      - Responsively build
+      - WordPress CMS Multi-Site
+      - Faceted Search & Filtering
+    image_path: work/govguide
+    image_featured: govguide-featured.jpg
+    images:
+      - govguide-gallery-1.jpg
+      - govguide-gallery-2.jpg
+      - govguide-gallery-3.jpg
+    testimonial: "We are definitely not techies, so the thought of building a website was daunting. But Kat and Ollie walked us through all the steps and provided great advice along the way. In the end they put together a beautiful product that we are very happy with and our clients are raving about."
+    featured_testimonial: "Kat and Ollie always delivered on time and with the utmost professionalism and quality. From the development to the launch phase of our project, the GovGuide, they provided innovative and creative solutions to meet our needs."
+    cite: "Yamina and Danelia, <a href='http://alpheusgroup.ca' target='_blank'>The Alpheus Group</a>"
+  # Taylor Statten Camps
+  - name: Taylor Statten Camps
+    weight: 3
+    featured: true
+    intro: "Your camping adventure of a lifetime!"
+    home_intro: "Your camping adventure of a lifetime!"
+    url: taylorstattencamps
+    link: http://www.taylorstattencamps.com/
+    main_text: "<p>Taylor Statten Camps have been around for over a century, and they have a reputation for immersive canoeing and camping experiences that allow kids to disconnect from technology, learn skills and create lasting memories. Their website, which was a few years old, wasn’t representing their ethos of simplicity any more as they grew and it became overly complex.</p>"
+    sub_text: "<p>We redesigned this rustic camp website to simplify their user’s journey, to help them increase registrations and to maintain their reputation as a canoe camp in Algonquin Park. This redesign saw them increase their camp registrations in the first year. New and old campers loved the focus on imagery, showing the distinct separation between boys and girls camps, and the improved navigation helped them find the information they needed.</p>"
+    what_we_did: 
+      - UX design
+      - Web design
+      - Responsively build
+      - WordPress CMS Multi-Site
+    image_path: work/taylorstattencamps
+    image_featured: taylorstattencamps-featured.jpg
+    images:
+      - taylorstattencamps-gallery-1.jpg
+      - taylorstattencamps-gallery-2.jpg
+      - taylorstattencamps-gallery-3.jpg
+    testimonial: 
+    featured_testimonial: 
+    cite:
+  # MVL Architects
+  - name: MVL Architects
+    weight: 4
+    title: Acclaimed architectural design
+    home_intro: "Acclaimed architectural design"
+    url: mvl-architects
+    link: http://www.mvl-architects.co.uk
+    main_text: "<p>Chris from MVL contacted us in need of help refreshing their website. Adding new projects had become a real pain and the current website didn't reflect the dynamic, professional approach to projects. We came up with a bold, photo-led design that really showed off the companies acclaimed design skills on a broad range of projects. The Wordpress build enables Chris and his team to easily add new work and assign these into categories for prospective clients to sort under.</p>"
+    sub_text: "<p>We also created a custom SEO framework so MVL can create specialised landing pages and funnels to show of their featured services, analysis, modelling and studies. The website has been a resounding success and we continue to work with trhe team to refine and add new features based on feedback.</p>"
+    what_we_did: 
+      - UX design
+      - Web design
+      - Responsively build
+      - WordPress CMS Multi-Site
+    image_path: work/mvl-architects
+    image_featured: mvl-architects-featured.jpg
+    images:
+      - mvl-architects-gallery-1.jpg
+      - mvl-architects-gallery-2.jpg
+      - mvl-architects-gallery-3.jpg
+      - mvl-architects-gallery-4.jpg
+    testimonial: 
+    featured_testimonial: 
+    cite:  
+  # Shrimpsmatter
+  - name: Shrimps Matter
+    weight: 5
+    title: The ocean is interconnected
+    home_intro: "Play a game while exploring the interconnectedness of the ocean"
+    url: shrimps-matter
+    link: http://shrimpsmatter.com
+    main_text: "<p>Game designers Tabatha Soltay from <a href='http://tabtalks.ca' target='_blank'>Tab Talks</a> and <a href='http://jpveilleux.ca/' target='_blank'>JP Veilleux</a> wanted to create a beautiful game that helped teach people about the interconnectedness of our oceans. What they designed, and we brought to life with beautiful visuals, is the complex vision of how difficult it is to balance being environmentally responsible with being economically prosperous. The game was designed as part of Ottawa Wavemakers in association with <a href='http://ottawa.the-hub.net/' target='_blank'>Hub Ottawa</a> and <a href='http://www.wwf.ca/' target='_blank'>WWF Canada</a>.<p>"
+    sub_text: "<p>We were responsible for everything visual, from the logo to how to simplify concepts using visuals (colour, layout and a common visual language), as well as preparing assets for print. We also had fun making the supporting website! It was launched in December 2015, and is now available for purchase or to use as an open-source game (print and play).</p>"
+    what_we_did: 
+      - Logo design
+      - Visual game design
+      - Box and game piece design
+      - French and English versions
+      - Instruction book design
+      - Open-source game creation
+      - Web design
+      - Responsive build
+    image_path: work/shrimps-matter
+    image_featured: shrimps-matter-featured.jpg
+    images:
+      - shrimps-matter-gallery-1.jpg
+      - shrimps-matter-gallery-2.jpg
+      - shrimps-matter-gallery-3.jpg
+    testimonial: "LOVE IT!! Seriously, it is like you are a mind reader and are able to deliver exactly what we want - when we don't (or at least I don't) know what I want!"
+    featured_testimonial: "LOVE IT!! Seriously, it is like you are a mind reader and are able to deliver exactly what we want - when we don't (or at least I don't) know what I want!"
+    cite: "Tabatha Soltay, <a href='http://tabtalks.ca' target='_blank'>TabTalks</a>"
+ # Alfred
+  - name: Alfred App
+    weight: 6
+    title: Designed to be productive.
+    home_intro: "See how we designed your computer&#8217;s butler for OSX"
+    url: alfred-app
+    link: http://alfredapp.com
+    main_text: "<p>For this project, Ollie was approached by Andrew and Vero Pepperell, a talented developer and marketing team, to create the original design and branding for a quicklauncher that simplifies and speeds up your workflow.</p> <p>Its launch went viral (thanks to web designers and other mac users who love all things beautiful) and has been successful ever since. Alfred App is your computer&#8217;s butler: it is a highly rated and popular productivity app for OSX that is being used by tens of thousands of Apple users worldwide.</p>"
+    sub_text: "<p>Capra continues to design for Alfred, working on everything from OSX icon design and branding to marketing materials and web presence. Over the five years since its launch, the product has evolved many new features and expanded to users all over the world.</p>"
+    what_we_did: 
+      - 'Branding & logo design'
+      - Web design
+      - Responsive build
+      - Marketing materials
+      - Iconography
+      - OSX Application design
+    image_path: work/alfred-app
+    image_featured: alfred-app-featured.jpg
+    images:
+      - alfred-app-gallery-1.jpg
+      - alfred-app-gallery-2.jpg
+  # Mind the product
+  - name: Mind the Product
+    weight: 7
+    home_intro: "See how we designed this popular conference website"
+    url: mind-the-product
+    link: http://mtpcon.com/
+    main_text: "<p>Mind the Product is a very popular meetup group for product managers. In 2012 they launched their very first conference in London, UK, and founder Martin Erikkson approached Kat to come up with a simple, elegant design.</p> <p>The <a href=http://mtpcon.com/london/2012 alt=Mind the Product Conference 2012>first year&#8217;s website</a> was a straightforward one-page design, based on their brand&#8217;s colours and logo, where the circles moved as you scrolled.</p>"
+    sub_text: "Since we were both so pleased with the first year&#8217;s website, we knew we had to come up with something fun and different for the second year. So the <a href=http://mtpcon.com/london/2013 alt=Mind The Product Conference 2013>2013</a> website features a video background from the previous year&#8217;s conference. This website was designed to inspire product managers to make great, innovative products.  <br /><br />Then in <a href=http://mtpcon.com/london/2014 alt=Mind The Product Conference 2014>2014</a>, the founders decided to go for simple, practical and elegant.  We created a website that could be modified through Wordpress and could be reused in future years. The build needed to be flexible for <a href=http://mtpcon.com>the 2015 version</a> to adapt to multiple locations (San Francisco and London this year!), pre-conference (no speakers, just teasers), full conference (speakers, tickets for sale) and post conference (wrap up, thank you and archiving).  We continue to work with Martin and the rest of the Mind The Product team to keep their website fresh!"
+    what_we_did: 
+      - Web design
+      - Responsive build
+      - HTML/CSS integration
+      - Wordpress Multi-Site
+    image_path: work/mind-the-product
+    image_featured: mind-the-product-featured.jpg
+    images:
+      - mind-the-product-gallery-1.jpg
+      - mind-the-product-gallery-2.jpg
+      - mind-the-product-gallery-3.jpg
+      - mind-the-product-gallery-4.jpg
+    testimonial: "Kat is a superstar designer and a true partner to Mind the Product. She has developed all of our conference websites off minimal briefs and built amazing, engaging sites that truly represent and help elevate our forward thinking brand."
+    featured_testimonial: "Capra are superstar designers and true partners to Mind the Product."
+    cite: 'Martin Eriksson, founder of Mind The Product'
+  # Super Better
+  - name: Super Better
+    weight: 8
+    home_intro: "See how we designed this game to achieve health goals"
+    url: super-better
+    link: http://superbetter.com
+    main_text: "<p>SuperBetter is a game by Jane McGonigal that helps you achieve your health goals &#8212; or recover from an illness or injury &#8212; by increasing your personal resilience.</p> <p>Resilience means staying curious, optimistic and motivated even in the face of the toughest challenges. Kat was involved in designing and building the web and native iOS app.</p>"
+    sub_text: "After implementing the front end html/css into a Ruby platform for Superbetter Version 1 (designed by <a href=http://largeprintgiveth.com/>Ryan Larson</a>), Kat got involved in designing Version 2. She worked on making history and tracking progress more gameful and delightful. She was also the designer for the original version of the iPhone app, which was built to focus users on quick and easy access to their daily gaming activities. Her design simplified forms, focused on quick-entry, and integrated fun images and celebrations."
+    what_we_did: 
+      - Concept design
+      - Game design
+      - Interface design
+      - HTML/CSS integration in Ruby backend
+      - iOS app design
+    image_path: work/super-better
+    image_featured: super-better-featured.jpg
+    images:
+      - super-better-gallery-1.jpg
+      - super-better-gallery-2.jpg
+      - super-better-gallery-3.jpg
+    testimonial: "Kat&#8217;s turnaround speed, realtime iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. I would work with her again in a heartbeat and wish I could have her on every project."
+    featured_testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I&#8217;ve never found that talent wrapped in such an energetic, positive, problem-solving personality."
+    cite: "Chelsea Howe, Game Designer for SuperBetter"
+  # Cold Claim
+  - name: Cold Claim
+    weight: 9
+    home_intro: "See how we designed this strategic learning game"
+    url: cold-claim
+    link: http://coldclaim.com
+    main_text: "<p>The place is Antarctica. The year is 2049. Your mission is to locate and extract what is now Earth&#8217;s most precious resource: Paleo Water. As expedition leader, you must prepare to navigate harsh terrain, prospect for Paleo, discover artifacts, and claim coldly contested land... while outwitting your rivals and protecting your reputation!</p> <p>In the spirit of <em>Settlers of Catan</em> and <em>Kingdom Builder</em>, <em>Cold Claim</em> is a strategic board game for two to four players available via iPad Game Center, pass-and-play or the physical board game.</p>"
+    sub_text: "Kat was lead designer for this iPad game, board game and supporting website. She was actively involved in planning, testing and producing this strategic game. ColdClaim was designed in collaboration with <a href=http://natronbaxter.com>Natron Baxter</a>. "
+    what_we_did: 
+      - Game design
+      - Interface design
+      - Writing simple AI
+      - Illustration
+      - Copy editing
+      - Branding
+      - Project management
+      - Web design
+      - Testing
+      - Physical board game prototype
+    image_path: work/cold-claim
+    image_featured: cold-claim-featured.jpg
+    images:
+      - cold-claim-gallery-1.jpg
+      - cold-claim-gallery-2.jpg
+      - cold-claim-gallery-3.jpg
+    testimonial: "Kat's relentless optimism and ability to keep the momentum going in the dark times that come with any long-term project make her a true delight to work with. She has my complete trust, total respect, and my highest recommendation."
+    featured_testimonial: "Kat is the most talented, comprehensive, and personable designers I have ever had the pleasure to work with."
+    cite: "Mathias Crawford, game designer for ColdClaim"
