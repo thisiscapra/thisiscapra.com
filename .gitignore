@@ -19,6 +19,7 @@
 
 .powenv
 .blog-space-hash
+.*-space-hash
 .env
 /tmp
 /.divshot-cache
@@ -27,3 +28,4 @@
 .env.development
 .env
 node_modules
+/data
