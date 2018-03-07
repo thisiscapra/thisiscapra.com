@@ -41,7 +41,7 @@ module.exports = {
         exclude: /node_modules|\.tmp|vendor/,
         loader: 'babel-loader',
         query: {
-          presets: ['env', 'stage-0'],
+          presets: ['env'],
         },
       },
       {
