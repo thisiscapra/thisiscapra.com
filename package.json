@@ -36,7 +36,7 @@
     "smooth-scroll": "github:cferdinandi/smooth-scroll",
     "style-loader": "^0.18.2",
     "turbolinks": "^5.0.3",
-    "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.11.2"
   }
 }
