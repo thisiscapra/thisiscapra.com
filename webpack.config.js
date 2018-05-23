@@ -35,7 +35,7 @@ module.exports = {
     filename: 'javascripts/[name].js',
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /source\/javascripts\/.*\.js$/,
         exclude: /node_modules|\.tmp|vendor/,
