@@ -1,5 +1,5 @@
 import ScrollMagic from 'scrollmagic/scrollmagic/minified/ScrollMagic.min'; 
-import SmoothScroll from 'smooth-scroll/dist/js/smooth-scroll.min';  
+import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.min';  
 import 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min';  
 import 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min';  
 import TweenMax from 'gsap/src/minified/TweenMax.min';
