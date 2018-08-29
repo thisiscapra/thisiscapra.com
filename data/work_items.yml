@@ -11,8 +11,7 @@ clients:
     sub_text: "<p>Using the concept of neon lights we came up with an animated street based approach with a character strolling down Bank Street and exploring the various blocks and stages. To accompany this we created a set of animated icons for each block that would be used online and in print around the city.</p>"
     what_we_did: 
       - Icon design
-      - UX design
-      - Web design
+      - UX/UI design
       - Responsive build
       - WordPress CMS Multi-Site
     image_path: work/glowfair-festival
@@ -35,8 +34,7 @@ clients:
     main_text: "<p>iPolitics have been a client of Capra for the past 2 years and approached us with an idea for an searchable & filterable database of all Canadian MPs & Sentors. Using our extensive knowledge of wordpress we created a full faceted search with custom fields that could be easily customised and extended. The design had to be flexible enough to support both the Green & Red Chambers but all contained within one Wordpress install for easily switching between Senators & MPS.</p>"
     sub_text: "<p>The responsive mobile build was a key part of this offering to enable Politicians and Researchers to access information from anywhere. We are constantly working on new features based on user and client feedback, we've recently added a Legislative calendar, the Daily Watch, SEO changes and a full re-design of the MP profiles to orgainse the information in a tabbed view.</p>"
     what_we_did: 
-      - UX design
-      - Web design
+      - UX/UI design
       - Responsive build
       - WordPress CMS Multi-Site
       - Faceted Search & Filtering
@@ -60,8 +58,7 @@ clients:
     main_text: "<p>Taylor Statten Camps have been around for over a century, and they have a reputation for immersive canoeing and camping experiences that allow kids to disconnect from technology, learn skills and create lasting memories. Their website, which was a few years old, wasn’t representing their ethos of simplicity any more as they grew and it became overly complex.</p>"
     sub_text: "<p>We redesigned this rustic camp website to simplify their user’s journey, to help them increase registrations and to maintain their reputation as a canoe camp in Algonquin Park. This redesign saw them increase their camp registrations in the first year. New and old campers loved the focus on imagery, showing the distinct separation between boys and girls camps, and the improved navigation helped them find the information they needed.</p>"
     what_we_did: 
-      - UX design
-      - Web design
+      - UX/UI design
       - Responsive build
       - WordPress CMS Multi-Site
     image_path: work/taylorstattencamps
@@ -83,8 +80,7 @@ clients:
     main_text: "<p>Chris from MVL contacted us in need of help refreshing their website. Adding new projects had become a real pain and the current website didn't reflect the dynamic, professional approach to projects. We came up with a bold, photo-led design that really showed off the companies acclaimed design skills on a broad range of projects. The Wordpress build enables Chris and his team to easily add new work and assign these into categories for prospective clients to sort under.</p>"
     sub_text: "<p>We also created a custom SEO framework so MVL can create specialised landing pages and funnels to show of their featured services, analysis, modelling and studies. The website has been a resounding success and we continue to work with trhe team to refine and add new features based on feedback.</p>"
     what_we_did: 
-      - UX design
-      - Web design
+      - UX/UI design
       - Responsive build
       - WordPress CMS Multi-Site
     image_path: work/mvl-architects
@@ -135,7 +131,7 @@ clients:
     sub_text: "<p>Capra continues to design for Alfred, working on everything from OSX icon design and branding to marketing materials and web presence. Over the five years since its launch, the product has evolved many new features and expanded to users all over the world.</p>"
     what_we_did: 
       - 'Branding & logo design'
-      - Web design
+      - UX/UI design
       - Responsive build
       - Marketing materials
       - Iconography
@@ -154,7 +150,7 @@ clients:
     main_text: "<p>Mind the Product is a very popular meetup group for product managers. In 2012 they launched their very first conference in London, UK, and founder Martin Erikkson approached Kat to come up with a simple, elegant design.</p> <p>The <a href=http://mtpcon.com/london/2012 alt=Mind the Product Conference 2012>first year&#8217;s website</a> was a straightforward one-page design, based on their brand&#8217;s colours and logo, where the circles moved as you scrolled.</p>"
     sub_text: "Since we were both so pleased with the first year&#8217;s website, we knew we had to come up with something fun and different for the second year. So the <a href=http://mtpcon.com/london/2013 alt=Mind The Product Conference 2013>2013</a> website features a video background from the previous year&#8217;s conference. This website was designed to inspire product managers to make great, innovative products.  <br /><br />Then in <a href=http://mtpcon.com/london/2014 alt=Mind The Product Conference 2014>2014</a>, the founders decided to go for simple, practical and elegant.  We created a website that could be modified through Wordpress and could be reused in future years. The build needed to be flexible for <a href=http://mtpcon.com>the 2015 version</a> to adapt to multiple locations (San Francisco and London this year!), pre-conference (no speakers, just teasers), full conference (speakers, tickets for sale) and post conference (wrap up, thank you and archiving).  We continue to work with Martin and the rest of the Mind The Product team to keep their website fresh!"
     what_we_did: 
-      - Web design
+      - UX/UI design
       - Responsive build
       - HTML/CSS integration
       - Wordpress Multi-Site
