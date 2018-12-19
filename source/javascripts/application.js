@@ -1,8 +1,7 @@
-import ScrollMagic from 'scrollmagic/scrollmagic/minified/ScrollMagic.min'; 
-import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.min';  
-import 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min';  
-import 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min';  
-import TweenMax from 'gsap/src/minified/TweenMax.min';
+import TweenMax from 'TweenMax';
+import ScrollMagic from 'ScrollMagic'; 
+import SmoothScroll from 'SmoothScroll';  
+import 'animation.gsap';
 import './vendor/DrawSVGPlugin.min';
 import Turbolinks from "turbolinks";
 
