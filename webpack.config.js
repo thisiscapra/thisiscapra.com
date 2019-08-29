@@ -4,6 +4,7 @@ const webpack = require("webpack");
 const isProduction = process.env.NODE_ENV === 'production';
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const cssLoaders = [
   {
@@ -45,16 +46,24 @@ module.exports = {
         test: /source\/javascripts\/.*\.js$/,
         exclude: /node_modules|\.tmp|vendor/,
         loader: 'babel-loader',
-        query: {
-          presets: ['env'],
-        },
+          options: {
+          presets: ['@babel/preset-env']
+        }
       },
       {
-        test: /\.(sass|scss)$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              // you can specify a publicPath here
+              // by default it uses publicPath in webpackOptions.output
+              publicPath: '../',
+              hmr: process.env.NODE_ENV === 'development',
+            },
+          },
+          'css-loader',
+        ],
       },
     ],//end rules
   },
@@ -74,6 +83,13 @@ module.exports = {
   },
 
   plugins: [
-    new CompressionPlugin()
+    new CompressionPlugin(),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // all options are optional
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+      ignoreOrder: false, // Enable to remove warnings about conflicting order
+    })
   ],
 };

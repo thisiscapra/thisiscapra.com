@@ -307,23 +307,45 @@ fieldset {
   background-color: rgba($white,0);
   left: 0;
   margin: 0 auto;
-  padding: 2% 0;
+  padding: 0;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 1000;
   @extend %clearfix;
   @include transition(all 0.6s ease-in-out);
-  @media screen and (max-width: 600px) {
-    padding: 4% 0;
-  }
+
   .scrolling & {
     background-color: rgba($white,0.95);
-    padding: 1% 0;
+  }
+}
+
+.site-header .container {
+  padding-bottom: 2%;
+  padding-top: 2%;
+
+  @media screen and (max-width: 600px) {
+    padding-bottom: 4%;
+    padding-top: 4%;
+  }
+
+  .scrolling & {
+    padding-bottom: 1%;
+    padding-top: 1%;
+
     @media screen and (max-width: 600px) {
-      padding: 2% 0;
+      padding-bottom: 2%;
+      padding-top: 2%;
     }
   }
+}
+
+.alert-message {
+  background-color: $primary-color;
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 1rem;
 }
 
 // Logo 
