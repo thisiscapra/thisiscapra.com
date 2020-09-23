@@ -17,8 +17,6 @@ page "/404.html", layout: false
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
-activate :dotenv
-
 activate :external_pipeline,
          name: :webpack,
          command: build? ? './node_modules/webpack/bin/webpack.js --bail' : './node_modules/webpack/bin/webpack.js',
@@ -48,19 +46,6 @@ end
 ###
 # Blog / Contentful
 ###
-
-activate :contentful do |f|
-  f.access_token  = ENV['CONTENTFUL_ACCESS_TOKEN']
-  f.space         = { blog: ENV['CONTENTFUL_SPACE_ID'] }
-  f.content_types = {
-    articles: ENV['CONTENTFUL_POST_KEY']
-  }
-  #f.rebuild_on_webhook = true
-  f.cda_query = {
-    content_type: ENV['CONTENTFUL_POST_KEY'],
-    include: 1
-  }
-end
 
 # #if Dir.exist?(config.data_dir)
 #   app.data.blog.articles.each do |article|
