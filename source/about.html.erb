@@ -78,55 +78,6 @@
 
   </div>
 
-  <div class="the-tribe">
-
-    <div class="content">
-
-      <h2>The Capra Tribe</h2>
-
-      <p>(Yes, &ldquo;tribe&rdquo; really is the plural form for goats!)</p>
-      
-    </div>
-    
-    <%= image_tag("about.jpg", alt: "") %>
-
-  </div>
-
-  <div class="team-members">
-
-    <div class="member ollie">
-      <h3>Ollie Kavanagh</h3>
-      <!-- <h4>Designer, coder, problem solver</h4> -->
-      <p>Ollie is a rare designer: he is equally comfortable designing beautiful, elegant interfaces (with superb typography) as he is delving into the front-end code. A natural problem solver with over 10 years experience in both web and print, he eagerly takes on any challenge and works hard until he solves it. He is responsible for setting up processes for Capra&#8217;s technology. Ollie is constantly trying out new technologies to make his designs more beautiful and exciting.</p>
-      <p>Ollie is originally from England and has just immigrated to Canada! He is an avid Liverpool football supporter, has an unhealthy obsession with Nike trainers, loves DJing drum &amp; bass, hip-Hop and house music, and hopes to someday become an expert snowboarder.</p>
-      <p><%= link_to("olliekav.com", "http://olliekav.com") %></p>
-      <%= partial "social_links", :locals => { 
-          twitter_link: "olliekav", 
-          github_link: "olliekav", 
-          linkedin_link: "in/olliekav", 
-          behance_link: "olliekav",
-          dribbble_link: "olliekav"
-        }
-      %>
-    </div>
-    
-    <div class="member kat">
-      <h3>Kat Kavanagh</h3>
-      <!-- <h4>Designer, coder, ideas generator</h4> -->
-      <p>Kat loves coming up with new ideas. Her focus is on designing and building interfaces and games that are beautiful as well as engaging. With over 10 years experience in print and web design, she is obsessed with creating fun as well as clarity in her designs, and so user experience is always part of her process. She is also responsible for more of the business operations at Capra.</p>
-      <p>Kat is known for being incredibly enthusiastic and passionate about everything she does, and she pours this passion into creating great experiences for people. She has just returned to Canada after 8 years in England. She loves Canada&#8217;s great outdoors especially hiking with the family dogs, Kenny and Phoebe (and is currently training the dogs to become agility champions). She also loves gardening, sewing and snowboarding.</p>
-      <p><%= link_to("safetygoat.com", "http://safetygoat.com") %></p>
-      <%= partial "social_links", :locals => { 
-          twitter_link: "kassy4", 
-          github_link: "kassy4", 
-          linkedin_link: "in/kassy4",
-          dribbble_link: "kassy4"
-        }
-      %>
-    </div>
-
-  </div>
-
   <%#= partial "social" %>
   
   <% featured_quote = data.work_items.clients.select{|client| client.featured_testimonial rescue false } %>
