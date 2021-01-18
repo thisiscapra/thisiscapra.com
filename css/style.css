@@ -1,0 +1,414 @@
+/* Capra stylesheet */
+
+:root {
+  --color-blue: #00B5FF;
+  --color-black: #0D0D0D;
+  --color-white: #EBEAE2;
+  --flow-space: 2rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utilities */
+
+.flow > * + * {
+  margin-top: var(--flow-space, 2rem);
+}
+
+.text--center {
+  text-align: center;
+}
+
+.vertical-offset {
+  margin-top: 8rem;
+}
+
+/* Grid */
+
+.grid > * {
+  margin: 4rem 0;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-gap: 8rem 4rem;
+  }
+  .grid > * {
+    grid-column: col-start / span 12;
+    margin: 0;
+  }
+  .col-1 {
+    grid-column: 1 / span 1;
+  }
+  .col-2 {
+    grid-column: 1 / span 2;
+  }
+  .col-3 {
+    grid-column: 1 / span 3;
+  }
+  .col-4 {
+    grid-column: 1 / span 4;
+  }
+  .col-5 {
+    grid-column: 1 / span 5;
+  }
+  .col-6 {
+    grid-column: 1 / span 6;
+  }
+  .col-7 {
+    grid-column: 1 / span 7;
+  }
+  .col-8 {
+    grid-column: 1 / span 8;
+  }
+  .col-9 {
+    grid-column: 1 / span 9;
+  }
+  .col-10 {
+    grid-column: 1 / span 10;
+  }
+  .col-11 {
+    grid-column: 1 / span 11;
+  }
+  .col-12 {
+    grid-column: 1 / span 12;
+  }
+  .offset-1 {
+    grid-column-start: 2;
+  }
+  .offset-2 {
+    grid-column-start: 3;
+  }
+  .offset-3 {
+    grid-column-start: 4;
+  }
+  .offset-4 {
+    grid-column-start: 5;
+  }
+  .offset-5 {
+    grid-column-start: 6;
+  }
+  .offset-6 {
+    grid-column-start: 7;
+  }
+  .offset-7 {
+    grid-column-start: 8;
+  }
+  .offset-8 {
+    grid-column-start: 9;
+  }
+  .offset-9 {
+    grid-column-start: 10;
+  }
+}
+
+/* Site styles */
+
+html {
+  font-size: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-family: "Sentinel SSm A", "Sentinel SSm B", serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin: 0 auto;
+  max-width: 2800px;
+  padding: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 1.6rem;
+    padding: 4rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+}
+
+hr {
+  background-color: #DAD9CE;
+  border: 0;
+  height: 1px;
+  margin-top: -1px;
+  position: relative;
+  width: 100%;
+}
+
+hr:after {
+  background: var(--color-white) url('images/logo.svg') center no-repeat;
+  background-size: 20px;
+  content: '';
+  height: 40px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  width: 40px;
+}
+
+.grid + hr {
+  margin-top: 4rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .grid + hr {
+    margin-top: 8rem;
+  }
+  hr {
+    background-color: rgba(250,250,250, .2);
+  }
+  hr:after {
+    background-color: var(--color-black);
+  }
+}
+
+/* Links */
+
+a:link,
+a:visited {
+  color: var(--color-black);
+}
+
+@media (prefers-color-scheme: dark) {
+  a:link,
+  a:visited {
+    color: var(--color-white);
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Typography */
+
+h1,h2,h3,h4 {
+  color: var(--color-blue);
+  font-family: "Quarto A", "Quarto B", serif;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.2;
+  min-height: 0vw;
+  margin-bottom: 1.4rem;
+}
+
+h1 {
+  font-size: 10vw;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: clamp(6rem, 8vw, 10rem);
+  }
+  h2 {
+    font-size: 6rem;
+  }
+
+  h3 {
+    font-size: 4rem;
+  } 
+}
+
+p {
+  margin-bottom: 1.4rem;
+}
+
+p.intro {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 700px) {
+  p.intro  {
+    font-size: 2rem;
+  }
+}
+
+p:last-child {
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 2rem;
+}
+
+figcaption small {
+  opacity: .6;
+}
+
+/* Header */
+
+.header {
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    margin-bottom: 8rem;
+  }
+}
+
+.header__hero {
+  color: var(--color-white);
+  position: relative;
+}
+
+.header__title {
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media screen and (min-width: 700px) {
+  .header__title {
+    padding: 8rem 4rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .header__title {
+    padding: 12rem 4rem;
+  }
+}
+
+.header__image {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  fill: var(--color-blue);
+  height: auto;
+  margin-bottom: 4rem;
+  width: 90px;
+}
+
+.logo--small {
+  margin-bottom: 2rem;
+  width: 60px;
+}
+
+.logo:hover {
+  fill: var(--color-black);
+  transition: all .3s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo:hover {
+    fill: var(--color-white);
+  }
+}
+
+/* Footer */
+
+.footer {
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 700px) {
+  .footer {
+    padding: 4rem 0;
+  }
+}
