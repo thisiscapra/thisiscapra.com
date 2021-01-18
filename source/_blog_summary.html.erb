@@ -1,7 +1,0 @@
-<article class="summary">
-  <h2><%= link_to article['title'], "/blog/#{article['slug']}" %></h2>
-  <time class="meta" datetime="article['date'].strftime('%b %e %G')"><%= article['date'].strftime('%b %e, %G') %></time>
-  <% if article[:author] %>
-    <span itemprop="author"> : <%= article[:author][0][:name] %></span>
-  <% end %>
-</article>
