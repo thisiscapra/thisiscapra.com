@@ -149,7 +149,7 @@ figcaption {
   clear: both;
 }
 blockquote {
-  color: $pantone-green;
+  color: $primary-color;
   font-family: $quarto;
   font-size: 5rem;
   font-weight: 600;
@@ -277,7 +277,7 @@ fieldset {
   line-height: 1.2;
 }
 .button {
-  background-color: $pantone-green;
+  background-color: $primary-color;
   border: none;
   border-radius: 0;
   color: #fff;
@@ -518,12 +518,12 @@ fieldset {
           color: $white;
           &:hover,
           &.active {
-            color: $pantone-green;
+            color: $primary-color;
           }
         }
         &:hover,
         &.active {
-          color: $pantone-green;
+          color: $primary-color;
         }
       }
     }
@@ -705,7 +705,7 @@ fieldset {
     }
   }
   a {
-    color: $pantone-green;
+    color: $primary-color;
     text-decoration: none;
     &:hover {
       color: $dark-grey;
@@ -760,7 +760,7 @@ fieldset {
         z-index: 100;
       }
       &:last-child {
-        color: $pantone-green;
+        color: $primary-color;
         font-family: $mink;
         font-size: 11vw;
         left: 23%;
@@ -849,7 +849,7 @@ fieldset {
 .work-list {
   list-style: none;
   h2 {
-    color: $pantone-green;
+    color: $primary-color;
     white-space: pre-wrap;
   }
   p {
@@ -858,7 +858,7 @@ fieldset {
     font-weight: 800;
   }
   a {
-    color: $pantone-green;
+    color: $primary-color;
   }
 }
 .work-list-item {
@@ -1240,7 +1240,7 @@ fieldset {
     @include transform(scale(1));
     @include transition(all .3s ease-in-out);
     &:hover {
-      color: $pantone-green;
+      color: $primary-color;
       @include transform(scale(1.05));
     }
   }
@@ -1535,7 +1535,7 @@ fieldset {
     &:hover,
     &.active {
       a {
-        color: $pantone-green;
+        color: $primary-color;
         text-decoration: none;
       }
     }
@@ -1605,7 +1605,7 @@ fieldset {
       position: relative;
       width: 50%;
       &:after {
-        background-color: rgba($pantone-green, 1);
+        background-color: rgba($primary-color, 1);
         bottom: 0;
         content: "";
         left: 0;
@@ -1616,7 +1616,7 @@ fieldset {
         top: 0;
         @include transition(opacity 0.3s ease-in-out);
         @media screen and (min-width:0\0) { 
-          background-color: rgba($pantone-green, 0.7);
+          background-color: rgba($primary-color, 0.7);
         }
       }
       img {
@@ -1651,7 +1651,7 @@ fieldset {
   }
 }
 .tweet {
-  color: $pantone-green;
+  color: $primary-color;
   font-family: $mink;
   font-size: 2em;
   letter-spacing: -3px;
