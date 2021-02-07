@@ -2,8 +2,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const isProduction = process.env.NODE_ENV === 'production';
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const cssLoaders = [
@@ -26,13 +25,13 @@ module.exports = {
   },
   resolve: {
     alias: {
-      "TweenLite": path.resolve('node_modules', 'gsap/src/minified/TweenLite.min.js'),
-      "TweenMax": path.resolve('node_modules', 'gsap/src/minified/TweenMax.min.js'),
-      "TimelineLite": path.resolve('node_modules', 'gsap/src/minified/TimelineLite.min.js'),
-      "TimelineMax": path.resolve('node_modules', 'gsap/src/minified/TimelineMax.min.js'),
+      // "TweenLite": path.resolve('node_modules', 'gsap/src/minified/TweenLite.min.js'),
+      // "TweenMax": path.resolve('node_modules', 'gsap/src/minified/TweenMax.min.js'),
+      // "TimelineLite": path.resolve('node_modules', 'gsap/src/minified/TimelineLite.min.js'),
+      // "TimelineMax": path.resolve('node_modules', 'gsap/src/minified/TimelineMax.min.js'),
       "SmoothScroll": path.resolve('node_modules', 'smooth-scroll/dist/smooth-scroll.min'),
-      "ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/ScrollMagic.min.js'),
-      "animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js'),
+      // "ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/ScrollMagic.min.js'),
+      // "animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js'),
       "debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js')
     },
   },
@@ -71,13 +70,8 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [
-      new UglifyJsPlugin({
-        sourceMap: true,
+      new TerserPlugin({
         test: /\.js(\?.*)?$/i,
-        uglifyOptions: {
-          warnings: false,
-          mangle: true
-        }
       })
     ]
   },

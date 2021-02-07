@@ -1,9 +1,13 @@
-import TweenMax from 'TweenMax';
-import ScrollMagic from 'ScrollMagic'; 
+import * as ScrollMagic from 'scrollmagic';
+import { gsap } from 'gsap';
+import { TimelineMax, TweenMax, TweenLite } from 'gsap/all';
 import SmoothScroll from 'SmoothScroll';  
-import 'animation.gsap';
-import './vendor/DrawSVGPlugin.min';
+import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
+import { DrawSVGPlugin } from './vendor/DrawSVGPlugin.min';
 import Turbolinks from "turbolinks";
+
+ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax, TweenLite);
+gsap.registerPlugin(DrawSVGPlugin);
 
 Turbolinks.start();
 
