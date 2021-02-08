@@ -4,7 +4,7 @@
   "description": "Capra is a design agency based in Ottawa, Canada. We design and build beautiful websites, apps and casual games. We love designing for clients who share our vision for a better world.",
   "scripts": {
     "start": "NODE_ENV=development webpack -d --watch --config ./webpack.config.js --color --display-error-details",
-    "build": "NODE_ENV=production webpack -p --config ./webpack.config.js --progress --color --display-error-details --bail"
+    "build": "NODE_ENV=production webpack --config ./webpack.config.js --progress --color --display-error-details --bail"
   },
   "repository": {
     "type": "git",

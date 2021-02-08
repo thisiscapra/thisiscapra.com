@@ -72,6 +72,14 @@ module.exports = {
     minimizer: [
       new TerserPlugin({
         test: /\.js(\?.*)?$/i,
+        terserOptions: {
+          ecma: 6,
+          compress: true,
+          output: {
+            comments: false,
+            beautify: false
+          }
+        }
       })
     ]
   },
