@@ -114,8 +114,8 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
             workIntroImage = document.querySelector('.work-header-image'),
             workIntroContent = document.querySelector('.work-header-content');
         wi
-          .to(workIntroImage, 1, { scale: "1.4", opacity: 0, ease:Power0.easeNone })
-          .to(workIntroContent, 1.4, { y: '-400', opacity: 0, ease:Power0.easeNone }, '-=1')
+          .to(workIntroImage, 1, { scale: '1.4', opacity: 0, ease: 'none' })
+          .to(workIntroContent, 1.4, { y: '-400', opacity: 0, ease: 'none' }, '-=1')
         var workIntroScene = new ScrollMagic.Scene({
           triggerHook: 0,
           duration: "100%"

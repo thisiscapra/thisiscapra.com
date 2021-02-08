@@ -103,7 +103,7 @@ h1 {
 }
 h2, 
 .archive h1 {
-  font-size: 7vw;
+  font-size: 8vw;
   line-height: 1;
   margin: 0 0 0.25em;
   @media screen and (max-width: 600px) {
@@ -147,6 +147,13 @@ figure {
 figcaption {
   color: $dark-grey;
   clear: both;
+  margin: 0 auto;
+  width: gs-width(cap,2,6,false,true);
+  @media screen and (max-width: 1000px) {
+    font-size: 4rem;
+    line-height: 1.3;
+    width: gs-width(cap,1,7,false,true);
+  }
 }
 blockquote {
   color: $primary-color;
@@ -489,7 +496,7 @@ fieldset {
 // Navigation 
 
 .navigation {
-  @include gs-span(cap,2,7);
+  @include gs-span(cap,3,7);
   .page-nav {
     margin: 1.2em 0 0;
     @include transition(all 0.3s ease-in-out);
@@ -506,7 +513,7 @@ fieldset {
       display: inline;
       float: left;
       margin-right: 4.698%;
-      width: gs-width(cap, 1, false, (2 , 7), true);
+      width: gs-width(cap,1,false,(4,7),true);
       &:last-child {
         margin: 0;
       }
@@ -750,7 +757,7 @@ fieldset {
       position: relative;
       z-index: 1;
     }
-    span {
+    > span {
       display: block;
       position: relative;
       &:nth-child(1) {
@@ -769,13 +776,16 @@ fieldset {
         position: absolute;
         @include transform(rotate(-17deg));
         z-index: 4;
-        .char5 {
-          margin-left: -0.25em;
+        .chr1 {
+          letter-spacing: -50px;
         }
         @media screen and (max-width: 600px) {
           font-size: 16vw;
           letter-spacing: -10px;
           left: -0.2em;
+          .chr1 {
+            letter-spacing: -43px;
+          }
         }
       }
     }
@@ -944,123 +954,6 @@ fieldset {
   }
 }
 
-.shrimps-matter {
-  @include colour-scheme($shrimps-matter-color);
-}
-.wl-shrimps-matter {
-  a, h2 {
-    color: $shrimps-matter-color;
-  }
-}
-
-.alfred-app {
-  @include colour-scheme($alfred-color);
-}
-.wl-alfred-app {
-  a, h2 {
-    color: $alfred-color;
-  }
-}
-
-.mind-the-product {
-  @include colour-scheme($mtp-color);
-}
-.wl-mind-the-product {
-  a, h2 {
-    color: $mtp-color;
-  }
-}
-
-.backpagefootball {
-  @include colour-scheme($backpagefootball-color);
-}
-.wl-backpagefootball {
-  a, h2 {
-    color: $backpagefootball-color;
-  }
-}
-
-.cold-claim {
-  @include colour-scheme($cold-claim-color);
-}
-.wl-cold-claim {
-  a, h2 {
-    color: $cold-claim-color;
-  }
-}
-
-.super-better {
-  @include colour-scheme($super-better-color);
-}
-.wl-super-better {
-  a, h2 {
-    color: $super-better-color;
-  }
-}
-
-.water-rangers {
-  @include colour-scheme($water-rangers-color);
-}
-.wl-water-rangers {
-  a, h2 {
-    color: $water-rangers-color;
-  }
-}
-
-.hip-hop-quoted {
-  @include colour-scheme($hip-hop-quoted-color);
-}
-.wl-hip-hop-quoted {
-  a, h2 {
-    color: $hip-hop-quoted-color;
-  }
-}
-
-.dragimals {
-  @include colour-scheme($dragimals-color);
-}
-.wl-dragimals {
-  a, h2 {
-    color: $dragimals-color;
-  }
-}
-
-.govguide {
-  @include colour-scheme($govguide-color);
-}
-.wl-govguide {
-  a, h2 {
-    color: $govguide-color;
-  }
-}
-
-.glowfair-festival {
-  @include colour-scheme($glowfair-color);
-}
-.wl-glowfair-festival {
-  a, h2 {
-    color: $glowfair-color;
-  }
-}
-
-.taylorstattencamps {
-  @include colour-scheme($taylorstattencamps-color);
-}
-.wl-taylorstattencamps {
-  a, h2 {
-    color: $taylorstattencamps-color;
-  }
-}
-
-.mvl-architects {
-  @include colour-scheme($mvl-architects-color);
-}
-.wl-mvl-architects {
-  a, h2 {
-    color: $mvl-architects-color;
-  }
-}
-
 .work-item {
   padding-top: 0;
   position: relative;
@@ -1088,7 +981,7 @@ fieldset {
   @extend %clearfix;
   h1 {
     color: $white;
-    margin-bottom: 2.2rem;
+    margin-bottom: 4.8rem;
     text-align: left;
     // word-spacing: 2000px; 
   }
