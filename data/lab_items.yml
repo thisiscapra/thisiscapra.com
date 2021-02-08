@@ -1,46 +1,27 @@
 labs:
-  - name: Water Rangers
-    weight: 1
-    home_intro: "Citizen science for Rivers & Lakes"
-    main_text: "In May 2015, Ollie and Kat participated in Aquahacking, an event to create apps for the Ottawa River. Our team created River Ranger, a platform to educate and engage the public to learn about what's happening on the river. It was presented during Ottawa's Water Summit, where decision-makers got together to try and create solutions for the river. We received joint first place for our project."
-    sub_text: "Because Kat grew up next to a lake, water issues are close to her heart. She headed up the branding and marketing as well as the UX and HTML/CSS. It was designed with the old-fashioned camp days ethos, as she wanted to re-engage people's minds to their lost childhood exploring the waterways. Ollie worked on creating graphs to show data trends and a map that found you or could be searched."
-    what_we_did:
-      - 'Logo & Branding'
-      - Web design
-      - Responsive build
-      - Art direction
-      - Front-end build
-      - Map integration
-      - Test kit design
-      - Public speaking
-    url: water-rangers
-    link: https://app.waterrangers.ca
-    image_featured: water-rangers-featured.jpg
-    image_path: labs/water-rangers
+  # Super Better
+  - name: Super Better
+    weight: 8
+    home_intro: "See how we designed this game to achieve health goals"
+    url: super-better
+    link: http://superbetter.com
+    main_text: "<p>SuperBetter is a game by Jane McGonigal that helps you achieve your health goals &#8212; or recover from an illness or injury &#8212; by increasing your personal resilience.</p> <p>Resilience means staying curious, optimistic and motivated even in the face of the toughest challenges. Kat was involved in designing and building the web and native iOS app.</p>"
+    sub_text: "After implementing the front end html/css into a Ruby platform for Superbetter Version 1 (designed by <a href=http://largeprintgiveth.com/>Ryan Larson</a>), Kat got involved in designing Version 2. She worked on making history and tracking progress more gameful and delightful. She was also the designer for the original version of the iPhone app, which was built to focus users on quick and easy access to their daily gaming activities. Her design simplified forms, focused on quick-entry, and integrated fun images and celebrations."
+    what_we_did: 
+      - Concept design
+      - Game design
+      - Interface design
+      - HTML/CSS integration in Ruby backend
+      - iOS app design
+    image_path: work/super-better
+    image_featured: super-better-featured.jpg
     images:
-      - water-rangers-gallery-1.jpg
-      - water-rangers-gallery-2.jpg
-      - water-rangers-gallery-3.jpg
-  - name: Hip-Hop Quoted
-    weight: 1
-    home_intro: "Hip-Hop brought to life with Typography"
-    main_text: "Hip-Hop Quoted started out as a labour of love in 2008 to combine two of Ollie&#8217;s loves in life: Hip-Hop and Typography. He also used it as a medium to explore some of the web&#8217;s capabilities to design and build interesting layouts. "
-    sub_text: "It was originally built in Wordpress but over time became quite difficult to manage and scale. So, in 2014 he rebuilt the site to take advantage of new web technologies such as HTML5, CSS3, webfonts and advanced layout tools. He uses SVGs for images and it is now fully responsive to work across a multitude of devices and screen sizes."
-    what_we_did:
-      - 'Logo & Branding'
-      - Web design
-      - Responsive build
-      - Art direction
-    url: hip-hop-quoted
-    link: http://hiphopquoted.com
-    image_featured: hip-hop-quoted-featured.jpg
-    image_path: labs/hip-hop-quoted
-    images:
-      - hip-hop-quoted-gallery-1.jpg
-      - hip-hop-quoted-gallery-2.jpg
-      - hip-hop-quoted-gallery-3.jpg
-      - hip-hop-quoted-gallery-4.jpg
-      - hip-hop-quoted-gallery-5.jpg
+      - super-better-gallery-1.jpg
+      - super-better-gallery-2.jpg
+      - super-better-gallery-3.jpg
+    testimonial: "Kat&#8217;s turnaround speed, realtime iteration, and ceaseless dedication to getting something right are unparalleled, and she does it all with a laugh and a smile. I would work with her again in a heartbeat and wish I could have her on every project."
+    featured_testimonial: "People with both deep technical skill and formidable artistic chops are rare - and I&#8217;ve never found that talent wrapped in such an energetic, positive, problem-solving personality."
+    cite: "Chelsea Howe, Game Designer for SuperBetter"
   - name: Dragimals
     weight: 2
     home_intro: The interactive iPad game for babies
@@ -60,22 +41,3 @@ labs:
       - dragimals-gallery-2.jpg
       - dragimals-gallery-3.jpg
       - dragimals-gallery-4.jpg
-  - name: Back Page Football
-    weight: 7
-    home_intro: "Award-winning original football writing since 2009"
-    url: backpagefootball
-    link: http://backpagefootball.com
-    main_text: "<p>Before coming to us, Backpagefootball&#8217;s founder Kevin&nbsp;Coleman had created a curated newspaper-style blog about football to satisfy his own need for good writing on his favourite sport. When he approached Ollie for design help in 2009, he found Ollie&#8217;s passion for football meant he understood exactly how to create a readable, fully-functioning sports blog.</p> <p>He also coded this stunning design to sit on top of a multi-site Wordpress build so they could roll out other sports blogs at the touch of a button. As their sole designer, Ollie continues to update and refine the site to reflect changing technologies.</p>"
-    sub_text: "Backpagefootball now has a user base of over 10,000 readers every month and has been featured on inspirational sites including <a href=http://www.siteinspire.com/websites/2298-back-page-football>Site Inspire</a>.  The responsive design and CMS have allowed the site to elvove and expand globally to become one of the top sports blogs of its kind while still staying true to its roots."
-    what_we_did: 
-      - Web design
-      - 'Branding & logo design'
-      - Wordpress Multi-Site
-      - Responsive build
-      - Marketing materials
-    image_path: labs/backpagefootball
-    image_featured: backpagefootball-featured.jpg
-    images:
-      - backpagefootball-gallery-1.jpg
-      - backpagefootball-gallery-2.jpg
-      - backpagefootball-gallery-3.jpg

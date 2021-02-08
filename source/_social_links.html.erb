@@ -1,8 +1,5 @@
 <ul class="social-links">
   <%= content_tag(:li, link_to("<span>Twitter</span>", "https://twitter.com/#{twitter_link}", class: "icon-twitter", target: "_blank")) if locals.key? :twitter_link %>
-  <%= content_tag(:li, link_to("<span>Facebook</span>", "https://facebook.com/#{facebook_link}", class: "icon-facebook", target: "_blank")) if locals.key? :facebook_link %>
   <%= content_tag(:li, link_to("<span>Github</span>", "https://github.com/#{github_link}", class: "icon-github", target: "_blank")) if locals.key? :github_link  %>
-  <%= content_tag(:li, link_to("<span>Dribbble</span>", "https://dribbble.com/#{dribbble_link}", class: "icon-dribbble", target: "_blank")) if locals.key? :dribbble_link %>
   <%= content_tag(:li, link_to("<span>Linkedin</span>", "https://linkedin.com/#{linkedin_link}", class: "icon-linkedin", target: "_blank")) if locals.key? :linkedin_link %>
-  <%= content_tag(:li, link_to("<span>Behance</span>", "https://behance.net/#{behance_link}", class: "icon-behance", target: "_blank")) if locals.key? :behance_link %>
 </ul>
